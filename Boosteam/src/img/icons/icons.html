@@ -1,0 +1,67 @@
+<!doctype>
+<html lang="en">
+
+<head>
+  <title>SVG Sprite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <style>
+    html {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetical Neue", sans-serif;
+      font-size: 1.125rem;
+      text-align: center
+    }
+
+    h1 {
+      font-weight: 100;
+      margin-bottom: 1em
+    }
+
+    small {
+      font-size: .34em
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      margin: .5em;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- SVG Sprite -->
+  <svg width="0" height="0" class="hidden">
+    <symbol fill='currentColor' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 40" id="telegram">
+      <path
+        d="M43.1.5c-.8-.6-1.9-.7-3.1-.2C38.7.8 3.7 15.8 2.3 16.4c-.3.1-2.5 1-2.3 2.9.2 1.7 2 2.4 2.2 2.5l8.9 3c.6 2 2.8 9.2 3.2 10.8.3 1 .8 2.2 1.6 2.5.8.3 1.5 0 2-.4l5.4-5 8.8 6.8.2.1c.6.3 1.2.4 1.7.4.4 0 .8-.1 1.2-.2 1.3-.5 1.8-1.8 1.9-1.9l6.6-34.1c.5-1.9 0-2.8-.6-3.3zM19 26l-3 8-3-10L36 7 19 26z">
+      </path>
+    </symbol>
+    <symbol fill='currentColor' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 21.1" id="twitter">
+      <path
+        d="M26 2.5c-1 .4-2 .7-3.1.8 1.1-.7 1.9-1.7 2.3-3-1 .6-2.2 1.1-3.4 1.3-1-1-2.4-1.7-3.9-1.7-2.9 0-5.3 2.4-5.3 5.3 0 .4 0 .8.1 1.2C8.4 6.3 4.4 4.2 1.8 1c-.4.8-.7 1.7-.7 2.7 0 1.9.9 3.5 2.4 4.4-.9 0-1.7-.3-2.5-.7v.1c0 2.6 1.8 4.7 4.3 5.2-.4.1-.9.2-1.4.2-.3 0-.7 0-1-.1.7 2.1 2.6 3.7 5 3.7-1.8 1.4-4.1 2.3-6.6 2.3-.4 0-.9 0-1.3-.1 2.4 1.5 5.2 2.4 8.2 2.4C18 21.1 23.4 13 23.4 6v-.7c1-.8 1.9-1.7 2.6-2.8z">
+      </path>
+    </symbol>
+  </svg>
+  <h1>
+    SVG Sprite Demo
+    <br />
+    <small>
+      created with <a href="https://svgsprit.es/">svgsprit.es</a>
+    </small>
+  </h1>
+  <svg class="icon">
+    <use xlink:href="#telegram"></use>
+  </svg><svg class="icon">
+    <use xlink:href="#twitter"></use>
+  </svg>
+</body>

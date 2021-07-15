@@ -1,0 +1,48 @@
+header.header
+  .container.header__container
+    .header__statistic
+      img(src="./img/icons/chart.png", alt="icon")
+      table
+        tr 
+          td Новых за 24 часа:
+          td 1250
+        tr
+          td Участников:
+          td 15.250
+        tr 
+          td Выплачено:
+          td 172.520тыс.Р
+        tr 
+          td Действий сегодня
+          td 432
+    a(href="./").header__logo
+      img(src="./img/logos/logo.png", alt="logo")
+    nav.header-nav
+      ul.header-nav__list.header-nav__list_left
+        li.header-nav__item 
+          a(href="#").header-nav__link главная
+        li.header-nav__item 
+          a(href="#").header-nav__link вопросы-ответы
+      ul.header-nav__list.header-nav__list_right
+        li.header-nav__item 
+          a(href="#").header-nav__link правила
+        li.header-nav__item 
+          a(href="#").header-nav__link топ-исполнителей
+
+    .header__right 
+      .header__right-content
+        a(href="#").button.button_style-1 Регистрация 
+        .header__right-content-bottom
+          ul.socials.header__socials
+            li.socials__item 
+              a(href="#").socials__link
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#telegram')
+            li.socials__item 
+              a(href="#").socials__link
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#twitter')
+          a(href="#").button.button_style-2.header__small-btn поддержка
+
+
+           

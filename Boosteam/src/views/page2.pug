@@ -1,0 +1,71 @@
+extends layout/layout
+block variables
+  -var title = sitename+' - Вторая страницы'
+block content
+
+  section.section 
+    .container
+      h2.section__title.text-center ТОП исполнитлей
+      .tab-head 
+        a(href="javascript:void(0);").tab-head__element.is-active
+          span за час
+        a(href="javascript:void(0);").tab-head__element
+          span за день
+        a(href="javascript:void(0);").tab-head__element
+          span за неделю
+        a(href="javascript:void(0);").tab-head__element
+          span за месяц
+        a(href="javascript:void(0);").tab-head__element
+          span за год
+
+  section.section 
+    .container
+      h2.section__title.text-center ТОП по заработку
+
+      .table
+        table.top-table 
+          tr 
+            th МЕСТО
+            th ПОЛЬЗОВАТЕЛЬ
+            th ЗАДАНИЙ
+            th ЗАРАБОТАНО 
+          tr 
+            td 
+              span.top-table__index 1
+            td
+              .top-table__user-container
+                img(src="./img/user2.png", alt="icon").icon
+                span KAPUCHINO201
+            td 5252
+            td
+              span.top-table__cash 52000
+          tr 
+            td 
+              span.top-table__index 2
+            td
+              .top-table__user-container
+                img(src="./img/user2.png", alt="icon").icon
+                span KAPUCHINO201
+            td 5252
+            td
+              span.top-table__cash 52000
+          tr 
+            td 
+              span.top-table__index 3
+            td
+              .top-table__user-container
+                img(src="./img/user2.png", alt="icon").icon
+                span KAPUCHINO201
+            td 5252
+            td
+              span.top-table__cash 52000
+          tr 
+            td 
+              span.top-table__index 4
+            td
+              .top-table__user-container
+                img(src="./img/user2.png", alt="icon").icon
+                span KAPUCHINO201
+            td 5252
+            td
+              span.top-table__cash 52000

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Boosteam — Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <!--color-->
+    <meta name="theme-color" content="#000">
+    <!--favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+    <!--open graph-->
+    <meta property="og:title" content="Заголовок сайта">
+    <meta property="og:site_name" content="Boosteam">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Описание сайта">
+    <meta property="og:image" content="">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <!--styles-->
+    <link rel="stylesheet" href="./styles/common.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="image image_cover main-background"><img class="lazyload" data-src="./img/background.png" alt="img"></div>
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__statistic"><img src="./img/icons/chart.png" alt="icon">
+            <table>
+              <tr>
+                <td>Новых за 24 часа:</td>
+                <td>1250</td>
+              </tr>
+              <tr>
+                <td>Участников:</td>
+                <td>15.250</td>
+              </tr>
+              <tr>
+                <td>Выплачено:</td>
+                <td>172.520 тыс.Р</td>
+              </tr>
+              <tr>
+                <td>Действий сегодня</td>
+                <td>432</td>
+              </tr>
+            </table>
+          </div><a class="header__logo" href="./"><img src="./img/logos/logo.png" alt="logo"></a>
+          <nav class="header-nav">
+            <ul class="header-nav__list header-nav__list_left">
+              <li class="header-nav__item"> <a class="header-nav__link" href="#">главная</a></li>
+              <li class="header-nav__item"> <a class="header-nav__link" href="#">вопросы-ответы</a></li>
+            </ul>
+            <ul class="header-nav__list header-nav__list_right">
+              <li class="header-nav__item"> <a class="header-nav__link" href="#">правила</a></li>
+              <li class="header-nav__item"> <a class="header-nav__link" href="#">топ-исполнителей</a></li>
+            </ul>
+          </nav>
+          <div class="header__right">
+            <div class="header__right-content"><a class="button button_style-1" href="#">Регистрация </a>
+              <div class="header__right-content-bottom">
+                <ul class="socials header__socials">
+                  <li class="socials__item"> <a class="socials__link" href="#">
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#telegram"></use>
+                      </svg></a></li>
+                  <li class="socials__item"> <a class="socials__link" href="#">
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#twitter"></use>
+                      </svg></a></li>
+                </ul><a class="button button_style-2 header__small-btn" href="#">поддержка</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="users-counter"> <span>125</span>чел</div>
+        <section class="section home-screen">
+          <div class="container home-screen__container">
+            <div class="home-screen__text-content">
+              <h1 class="home-screen__title">BOOSTEAM</h1>
+              <h2 class="home-screen__desription"> <span>делай столько,<br> сколько сможешь</span><span>работа разделена<br> на микрозадачи</span></h2>
+            </div>
+            <div class="auth-block"><img class="icon auth-block__icon" src="./img/icons/user.png" alt="icon">
+              <div class="auth-block__content" data-tabs="parent">
+                <div class="auth-block__head"><a class="auth-block__tab-button is-active" href="javascript:void(0);" data-tabs="link"><span>вход</span></a><a class="auth-block__tab-button" href="javascript:void(0);" data-tabs="link"><span>регистрация</span></a></div>
+                <div class="auth-block__content" data-tabs="wrapper">
+                  <div class="auth-block__tab is-active" data-tabs="block">
+                    <form class="form">
+                      <div class="form__element">
+                        <label class="input"> <img class="icon" src="./img/icons/user.png" alt="icon">
+                          <input class="input__element" type="text" placeholder="имя">
+                        </label>
+                      </div>
+                      <div class="form__element">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="save" checked>
+                          <label class="checkbox__label" for="save">запомнить меня</label>
+                        </div>
+                      </div>
+                      <div class="form__submit">
+                        <div class="error-message"> <img class="icon" src="./img/icons/error.png" alt="icon"><span>такой пользователь не найден</span></div>
+                        <button class="button button_style-3">войти</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="auth-block__tab" data-tabs="block">
+                    <form class="form">
+                      <div class="form__element">
+                        <label class="input"> <img class="icon" src="./img/icons/user.png" alt="icon">
+                          <input class="input__element" type="text" placeholder="имя">
+                        </label>
+                      </div>
+                      <div class="form__element">
+                        <label class="input"> <img class="icon" src="./img/icons/envelope.png" alt="icon">
+                          <input class="input__element" type="email" placeholder="почта">
+                        </label>
+                      </div>
+                      <div class="form__submit">
+                        <button class="button button_style-3">зарегистрироваться</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section-statistics">
+          <div class="container">
+            <div class="statistics-headline section-statistics__headline">
+              <svg class="statistics-headline__bg" viewBox="0 0 1060 82" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M1058 39L1026 3L36 1L2 39L36 81H1026L1058 39Z" fill="black" stroke="white" stroke-width="2"></path>
+              </svg>
+              <div class="statistics-headline__content">
+                <div class="statistics-headline__item" data-aos="zoom-in"><img class="icon" src="./img/icons/user.png" alt="icon"><span>онлайн</span><span>100</span></div>
+                <div class="statistics-headline__item" data-aos="zoom-in" data-aos-delay="50"><img class="icon" src="./img/icons/money-turnover.png" alt="icon"><span>заработано</span><span>500 тыс Р</span></div>
+                <div class="statistics-headline__item" data-aos="zoom-in" data-aos-delay="100"><img class="icon" src="./img/icons/users.png" alt="icon"><span>пользователи</span><span>723</span></div>
+                <div class="statistics-headline__item" data-aos="zoom-in" data-aos-delay="150"><img class="icon" src="./img/icons/24hours.png" alt="icon"><span>за 24 часа</span><span>723</span></div>
+                <div class="statistics-headline__item" data-aos="zoom-in" data-aos-delay="200"> <img class="icon" src="./img/icons/cash-payment.png" alt="icon"><span>всего</span><span>142тыс</span></div>
+              </div>
+            </div>
+            <div class="section-statistics__content">
+              <div class="statistics-box" data-custom-interaction data-aos="fade-up-right" data-aos-duration="500">
+                <div class="statistics-box__head">
+                  <h4 class="statistics-box__title">ТОП ЗАРОБОТКА</h4>
+                  <div class="image image_contain statistics-box__head-image"><img src="./img/icons/cup.png" alt="image"></div>
+                </div>
+                <div class="statistics-box__container">
+                  <!--element-->
+                  <div class="statistics-box__element">
+                    <div class="statistics-box__element-left">
+                      <div class="statistics-box__element-index"> <img class="icon" src="./img/icons/star.png" alt="icon"><span>1</span></div>
+                      <div class="statistics-box__element-image image image_cover"> <img class="lazyload" data-src="./img/icons/portrait.png" alt="image"></div>
+                      <div class="statistics-box__element-name">Alex.n</div>
+                    </div>
+                    <div class="statistics-box__element-right"><img class="icon statistics-box__element-monet" src="./img/icons/monet.png" alt="icon">
+                      <div class="statistics-box__element-total"> <span>125.8</span><span>тыс.руб</span></div>
+                    </div>
+                  </div>
+                  <!--element-->
+                  <div class="statistics-box__element">
+                    <div class="statistics-box__element-left">
+                      <div class="statistics-box__element-index"> <img class="icon" src="./img/icons/star.png" alt="icon"><span>2</span></div>
+                      <div class="statistics-box__element-image image image_cover"> <img class="lazyload" data-src="./img/icons/portrait.png" alt="image"></div>
+                      <div class="statistics-box__element-name">Alex.n</div>
+                    </div>
+                    <div class="statistics-box__element-right"><img class="icon statistics-box__element-monet" src="./img/icons/monet.png" alt="icon">
+                      <div class="statistics-box__element-total"> <span>125.8</span><span>тыс.руб</span></div>
+                    </div>
+                  </div>
+                  <!--element-->
+                  <div class="statistics-box__element">
+                    <div class="statistics-box__element-left">
+                      <div class="statistics-box__element-index"> <img class="icon" src="./img/icons/star.png" alt="icon"><span>3</span></div>
+                      <div class="statistics-box__element-image image image_cover"> <img class="lazyload" data-src="./img/icons/portrait.png" alt="image"></div>
+                      <div class="statistics-box__element-name">Alex.n</div>
+                    </div>
+                    <div class="statistics-box__element-right"><img class="icon statistics-box__element-monet" src="./img/icons/monet.png" alt="icon">
+                      <div class="statistics-box__element-total"> <span>125.8</span><span>тыс.руб</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="statistics-box" data-custom-interaction data-aos="fade-up-left" data-aos-delay="100" data-aos-duration="500">
+                <div class="statistics-box__head">
+                  <h4 class="statistics-box__title">ТОП ВЫВОДА</h4>
+                  <div class="image image_contain statistics-box__head-image"><img src="./img/icons/cup.png" alt="image"></div>
+                </div>
+                <div class="statistics-box__container">
+                  <!--element-->
+                  <div class="statistics-box__element">
+                    <div class="statistics-box__element-left">
+                      <div class="statistics-box__element-index"> <img class="icon" src="./img/icons/star.png" alt="icon"><span>1</span></div>
+                      <div class="statistics-box__element-image image image_cover"> <img class="lazyload" data-src="./img/icons/portrait.png" alt="image"></div>
+                      <div class="statistics-box__element-name">Alex.n</div>
+                    </div>
+                    <div class="statistics-box__element-right"><img class="icon statistics-box__element-monet" src="./img/icons/monet.png" alt="icon">
+                      <div class="statistics-box__element-total"> <span>125.8</span><span>тыс.руб</span></div>
+                    </div>
+                  </div>
+                  <!--element-->
+                  <div class="statistics-box__element">
+                    <div class="statistics-box__element-left">
+                      <div class="statistics-box__element-index"> <img class="icon" src="./img/icons/star.png" alt="icon"><span>2</span></div>
+                      <div class="statistics-box__element-image image image_cover"> <img class="lazyload" data-src="./img/icons/portrait.png" alt="image"></div>
+                      <div class="statistics-box__element-name">Alex.n</div>
+                    </div>
+                    <div class="statistics-box__element-right"><img class="icon statistics-box__element-monet" src="./img/icons/monet.png" alt="icon">
+                      <div class="statistics-box__element-total"> <span>125.8</span><span>тыс.руб</span></div>
+                    </div>
+                  </div>
+                  <!--element-->
+                  <div class="statistics-box__element">
+                    <div class="statistics-box__element-left">
+                      <div class="statistics-box__element-index"> <img class="icon" src="./img/icons/star.png" alt="icon"><span>3</span></div>
+                      <div class="statistics-box__element-image image image_cover"> <img class="lazyload" data-src="./img/icons/portrait.png" alt="image"></div>
+                      <div class="statistics-box__element-name">Alex.n</div>
+                    </div>
+                    <div class="statistics-box__element-right"><img class="icon statistics-box__element-monet" src="./img/icons/monet.png" alt="icon">
+                      <div class="statistics-box__element-total"> <span>125.8</span><span>тыс.руб</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section-about">
+          <div class="container">
+            <div class="section-about__head">
+              <h2 class="section-about__title">Основные принципы Boosteam </h2>
+              <p class="section-about__description">Boosteam — не просто биржа заданий, это в первую очередь команда людей, которых обьединяет тема зароботка в интернете. мы общаемся, делимся информацией вместе!</p>
+            </div>
+            <div class="section-about__items">
+              <div class="section-about__item" data-aos="fade-up-right"><img class="icon" src="./img/icons/pass.png" alt="icon">
+                <p>Зарегестрируйтесь<br> на сайте</p>
+              </div>
+              <div class="section-about__item" data-aos="fade-up-right" data-aos-delay="50"> <img class="icon" src="./img/icons/wool.png" alt="icon">
+                <p>Выполняй<br> задачи</p>
+              </div>
+              <div class="section-about__item" data-aos="fade-up" data-aos-delay="100"><img class="icon" src="./img/icons/money-turnover.png" alt="icon">
+                <p>Получай<br> вознагрождение</p>
+              </div>
+              <div class="section-about__item" data-aos="fade-up-left" data-aos-delay="150"> <img class="icon" src="./img/icons/reputation.png" alt="icon">
+                <p>Повышай<br> репутацию</p>
+              </div>
+              <div class="section-about__item" data-aos="fade-up-left" data-aos-delay="200"> <img class="icon" src="./img/icons/chart.png" alt="icon">
+                <p>Полуйчай<br> больше</p>
+              </div>
+            </div>
+            <div class="section-about__payment">
+              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up-right">
+                <div class="image"><img class="lazyload" data-src="./img/sber-white.png" alt="icon"></div>
+                <div class="image"><img class="lazyload" data-src="./img/sber.png" alt="icon"></div>
+              </div>
+              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up-right" data-aos-delay="50">
+                <div class="image"><img class="lazyload" data-src="./img/webmoney-white.png" alt="icon"></div>
+                <div class="image"><img class="lazyload" data-src="./img/webmoney.png" alt="icon"></div>
+              </div>
+              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up" data-aos-delay="100">
+                <div class="image"><img class="lazyload" data-src="./img/qiwi-white.png" alt="icon"></div>
+                <div class="image"><img class="lazyload" data-src="./img/qiwi.png" alt="icon"></div>
+              </div>
+              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up-left" data-aos-delay="150">
+                <div class="image"><img class="lazyload" data-src="./img/master-white.png" alt="icon"></div>
+                <div class="image"><img class="lazyload" data-src="./img/master.png" alt="icon"></div>
+              </div>
+              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up-left" data-aos-delay="200">
+                <div class="image"><img class="lazyload" data-src="./img/pay-white.png" alt="icon"></div>
+                <div class="image"><img class="lazyload" data-src="./img/pay.png" alt="icon"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section-features">
+          <div class="container section-features__container"> <img class="lazyload section-features__line section-features__line_1" data-src="./img/line1.png" alt="line" data-aos="zoom-in" data-aos-anchor=".section-features__content"><img class="lazyload section-features__line section-features__line_2" data-src="./img/line2.png" alt="line" data-aos="zoom-in" data-aos-anchor=".section-features__content" data-aos-delay="200"><img class="lazyload section-features__line section-features__line_3" data-src="./img/line3.png" alt="line" data-aos="zoom-in" data-aos-anchor=".section-features__content" data-aos-delay="400"><img class="lazyload section-features__line section-features__line_4" data-src="./img/line4.png" alt="line" data-aos="zoom-in" data-aos-anchor=".section-features__content" data-aos-delay="600"><img class="lazyload section-features__man" data-src="./img/man.png" alt="line">
+            <div class="section-features__content">
+              <div class="section-features__item" data-aos="zoom-in" data-aos-anchor=".section-features__content" data-aos-delay="100">
+                <div class="section-features__item-icon"><img class="icon" src="./img/icons/check-list.png" alt="icon"></div><span>Работа разбита на микрозадачи<br> нету таймера и капчи!</span>
+              </div>
+              <div class="section-features__item" data-aos="zoom-in" data-aos-anchor=".section-features__content" data-aos-delay="300">
+                <div class="section-features__item-icon"><img class="icon" src="./img/icons/user-experience.png" alt="icon"></div><span>стоимость зависит от опыта,<br> который растет с вашим уровнем</span>
+              </div>
+              <div class="section-features__item" data-aos="zoom-in" data-aos-anchor=".section-features__content" data-aos-delay="500">
+                <div class="section-features__item-icon"><img class="icon" src="./img/icons/football-referree.png" alt="icon"></div><span>10 рублй за рефереала<br> Стоимость действий от 1р</span>
+              </div>
+              <div class="section-features__item" data-aos="zoom-in" data-aos-anchor=".section-features__content" data-aos-delay="700">
+                <div class="section-features__item-icon"><img class="icon" src="./img/icons/prize.png" alt="icon"></div><span>Призы для активных<br> постоянные конкурсы до 10 тыс.р</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer__container-1">
+            <div class="footer__container-1-top"><a class="footer__logo" href="./"><img src="./img/logos/logo2.png" alt="logo"></a>
+              <ul class="socials footer__socials">
+                <li class="socials__item footer__socials-item"><a class="socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons.svg#telegram"></use>
+                    </svg></a></li>
+                <li class="socials__item footer__socials-item"><a class="socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons.svg#twitter"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <div class="footer__copyright">© 2018-2021 Boosteam.</div>
+            <div class="footer__info">Powered by Steam, a registered trademark of Valve Corporation. Valve, the Valve logo, the Steam logo, Counter-Strike and the Counter-Strike logo are trademarks and/or registered trademarks of Valve Corporation. All other trademarks are property of their respective owners</div>
+          </div>
+          <div class="footer__container-2">
+            <div class="footer__statistics">
+              <div class="footer__statistics-item"> <img class="icon" src="./img/icons/task.png" alt="icon"><span>100.234</span><span>выполненых<br> задания</span></div>
+              <div class="footer__statistics-item"> <img class="icon" src="./img/icons/payment.png" alt="icon"><span>750.234</span><span>вывод<br> средств</span></div>
+              <div class="footer__statistics-item"> <img class="icon" src="./img/icons/users.png" alt="icon"><span>50.234</span><span>пользователей<br> всего</span></div>
+              <div class="footer__statistics-item"> <img class="icon" src="./img/icons/user.png" alt="icon" style="padding:2px;"><span>243</span><span>онлайн </span></div>
+            </div>
+            <ul class="footer__nav">
+              <li class="footer__nav-item"> <a class="footer__nav-link" href="#">ПОЛИТИКА КОНФИДИЦИАЛЬНОСТИ </a></li>
+              <li class="footer__nav-item"> <a class="footer__nav-link" href="#">КОНТАКТЫ</a></li>
+            </ul>
+            <div class="footer__payment">
+              <div class="payment-item footer__payment-item" data-custom-interaction>
+                <div class="image"><img class="lazyload" data-src="./img/sber-white.png" alt="icon"></div>
+                <div class="image"><img class="lazyload" data-src="./img/sber.png" alt="icon"></div>
+              </div>
+              <div class="payment-item footer__payment-item" data-custom-interaction>
+                <div class="image"><img class="lazyload" data-src="./img/webmoney-white.png" alt="icon"></div>
+                <div class="image"><img class="lazyload" data-src="./img/webmoney.png" alt="icon"></div>
+              </div>
+              <div class="payment-item footer__payment-item" data-custom-interaction>
+                <div class="image"><img class="lazyload" data-src="./img/qiwi-white.png" alt="icon"></div>
+                <div class="image"><img class="lazyload" data-src="./img/qiwi.png" alt="icon"></div>
+              </div>
+              <div class="payment-item footer__payment-item" data-custom-interaction>
+                <div class="image"><img class="lazyload" data-src="./img/master-white.png" alt="icon"></div>
+                <div class="image"><img class="lazyload" data-src="./img/master.png" alt="icon"></div>
+              </div>
+              <div class="payment-item footer__payment-item" data-custom-interaction>
+                <div class="image"><img class="lazyload" data-src="./img/pay-white.png" alt="icon"></div>
+                <div class="image"><img class="lazyload" data-src="./img/pay.png" alt="icon"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--scripts-->
+    <script src="./scripts/libs/modernizr-custom.js"></script>
+    <script src="./scripts/libs/current-device.min.js"></script>
+    <script src="./scripts/libs/lazysizes.min.js"></script>
+    <script src="./scripts/libs/scroll-lock.min.js"></script>
+    <script>
+      lazySizes.cfg.preloadAfterLoad = true;
+      
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="./scripts/scripts.js"> </script>
+    <!--preview only-->
+    <link rel="stylesheet" href="./styles/helper.css">
+    <div class="helper"><a class="helper__trigger" href="javascript:void(0);">
+        <svg class="icon" viewBox="0 0 100 100" fill="currentColor">
+          <g transform="translate(50 50)">
+            <g>
+              <animatetransform attributeName="transform" type="rotate" values="0;51.42857142857143" keyTimes="0;1" dur="0.6s" repeatCount="indefinite"></animatetransform>
+              <path d="M31.448370387032774 -10 L46.448370387032774 -10 L46.448370387032774 10 L31.448370387032774 10 A33 33 0 0 1 27.42605304607143 18.352428022310185 L27.42605304607143 18.352428022310185 L36.77840007395243 30.079900259330632 L21.141770424591833 42.5496962965053 L11.789423396710829 30.82222405948486 A33 33 0 0 1 2.7513583718916075 32.885103422513694 L2.7513583718916075 32.885103422513694 L-0.5864556374531071 47.509022105241044 L-20.085013881089584 43.05860342611476 L-16.74719987174487 28.434684743387407 A33 33 0 0 1 -23.995165273805295 22.654625211703866 L-23.995165273805295 22.654625211703866 L-37.50969829234158 29.16288129846724 L-46.18737307469275 11.143503940418853 L-32.67284005615647 4.635247853655478 A33 33 0 0 1 -32.67284005615647 -4.63524785365547 L-32.67284005615647 -4.63524785365547 L-46.18737307469276 -11.143503940418839 L-37.50969829234159 -29.162881298467227 L-23.995165273805302 -22.654625211703856 A33 33 0 0 1 -16.747199871744876 -28.434684743387404 L-16.747199871744876 -28.434684743387404 L-20.085013881089594 -43.05860342611476 L-0.5864556374531196 -47.509022105241044 L2.751358371891599 -32.885103422513694 A33 33 0 0 1 11.78942339671082 -30.82222405948486 L11.78942339671082 -30.82222405948486 L21.141770424591822 -42.54969629650531 L36.778400073952426 -30.079900259330635 L27.426053046071427 -18.35242802231019 A33 33 0 0 1 31.448370387032774 -10.000000000000009 M0 -20A20 20 0 1 0 0 20 A20 20 0 1 0 0 -20"></path>
+            </g>
+          </g>
+        </svg></a>
+      <div class="helper__container">
+        <!--section-->
+        <div class="helper__section"><span class="helper__section-title">Страницы:</span>
+          <div class="helper__section-content"><a class="helper__section-button" href="index.html">Главная</a><a class="helper__section-button" href="page2.html">Вторая страница</a></div>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/helper.js"></script>
+  </body>
+</html>
