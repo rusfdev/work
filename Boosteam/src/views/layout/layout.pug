@@ -35,20 +35,13 @@ html(lang='ru')
         block content
       include ../blocks/footer
     
-    //scripts
+    //libs
     script(src="./scripts/libs/modernizr-custom.js")
     script(src="./scripts/libs/current-device.min.js")
     script(src="./scripts/libs/lazysizes.min.js")
-    script(src="./scripts/libs/scroll-lock.min.js")
     script.
       lazySizes.cfg.preloadAfterLoad = true;
-
-    script(src='https://unpkg.com/aos@next/dist/aos.js')
-    link(rel='stylesheet' href='https://unpkg.com/aos@next/dist/aos.css')
-
-
-
-    script(src="./scripts/scripts.js") 
-
-    //preview only
-    include ../blocks/helper
+    script(src='./scripts/libs/aos/aos.js')
+    script(src='./scripts/libs/aos/aos.css')
+    //scripts
+    script(src="./scripts/scripts.js")

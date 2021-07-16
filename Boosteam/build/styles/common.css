@@ -2002,6 +2002,13 @@ img.icon {
   -o-object-fit: contain;
      object-fit: contain; }
 
+@media (max-width: 575.98px) {
+  .table {
+    padding-bottom: 15px;
+    overflow: auto;
+    margin: 0 calc(var(--container-gutter-x) * -1);
+    margin-bottom: -15px; } }
+
 /*========== Layout ==========*/
 .wrapper {
   position: relative;
@@ -2023,15 +2030,19 @@ img.icon {
     margin-bottom: 50px; }
   @media (max-width: 767.98px) {
     .section {
-      margin-bottom: 140px; } }
+      margin-bottom: 140px; }
+      .section:first-child {
+        padding-top: 140px; } }
   @media (max-width: 575.98px) {
     .section {
-      margin-bottom: 120px; } }
+      margin-bottom: 120px; }
+      .section:first-child {
+        padding-top: 120px; } }
 
 .main-background {
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   top: 0;
   left: 0; }
   .main-background::after {
@@ -2941,6 +2952,23 @@ ol:not([class]) {
       pointer-events: none; }
     .tab-head__element[data-touch] span, .tab-head__element[data-hover] span {
       transform: scale(1.05); }
+  @media (max-width: 1279.98px) {
+    .tab-head {
+      background-color: transparent;
+      border: none;
+      margin: 0 calc(var(--bs-gutter-x) * -1) calc(var(--bs-gutter-x) * -1) 0;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .tab-head__element {
+        background: rgba(171, 171, 171, 0.5);
+        margin: 0 var(--bs-gutter-x) var(--bs-gutter-x) 0;
+        flex: 0 0 auto;
+        padding: 16px 18px;
+        font-size: 1.25rem; } }
+  @media (max-width: 767.98px) {
+    .tab-head__element {
+      font-size: 0.875rem;
+      padding: 16px; } }
 
 .top-table {
   min-width: 100%;
@@ -2960,7 +2988,13 @@ ol:not([class]) {
     .top-table__user-container .icon {
       width: 35px;
       height: 35px;
-      margin-right: 25px; }
+      margin-right: 25px;
+      flex-shrink: 0; }
+    .top-table__user-container span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
   .top-table th {
     font-weight: 700;
     font-size: 0.875rem;
@@ -2973,11 +3007,11 @@ ol:not([class]) {
       padding-left: 60px; }
   .top-table tr:nth-child(even) td {
     background: rgba(171, 171, 171, 0.5); }
-  .top-table tr:nth-child(even)[data-touch], .top-table tr:nth-child(even)[data-hover] td {
+  .top-table tr:nth-child(even)[data-touch] td, .top-table tr:nth-child(even)[data-hover] td {
     background: rgba(171, 171, 171, 0.7); }
   .top-table tr:nth-child(odd) td {
     background: rgba(121, 116, 116, 0.5); }
-  .top-table tr:nth-child(odd)[data-touch], .top-table tr:nth-child(odd)[data-hover] td {
+  .top-table tr:nth-child(odd)[data-touch] td, .top-table tr:nth-child(odd)[data-hover] td {
     background: rgba(121, 116, 116, 0.7); }
   .top-table tr td {
     padding: 25px;
@@ -2993,6 +3027,45 @@ ol:not([class]) {
       border-width: 1px 0 1px 1px;
       padding-left: 60px;
       width: 160px; }
+  @media (max-width: 1023.98px) {
+    .top-table tr th:last-child {
+      padding-right: 40px; }
+    .top-table tr th:first-child {
+      padding-left: 40px; }
+    .top-table tr td:last-child {
+      padding-right: 40px; }
+    .top-table tr td:first-child {
+      padding-left: 40px;
+      width: initial; } }
+  @media (max-width: 767.98px) {
+    .top-table__user-container {
+      max-width: 200px; }
+    .top-table__index {
+      font-size: 1.5rem; }
+    .top-table tr th {
+      padding: 10px;
+      font-size: 0.75rem; }
+    .top-table tr th:last-child {
+      padding-right: 20px; }
+    .top-table tr th:first-child {
+      padding-left: 20px; }
+    .top-table tr td {
+      padding: 10px; }
+      .top-table tr td:last-child {
+        padding-right: 20px; }
+      .top-table tr td:first-child {
+        padding-left: 20px; } }
+  @media (max-width: 575.98px) {
+    .top-table tr th:last-child {
+      padding-right: var(--container-gutter-x); }
+    .top-table tr th:first-child {
+      padding-left: var(--container-gutter-x); }
+    .top-table tr td {
+      padding: 10px; }
+      .top-table tr td:last-child {
+        padding-right: var(--container-gutter-x); }
+      .top-table tr td:first-child {
+        padding-left: var(--container-gutter-x); } }
 
 /*========== Header ==========*/
 .header {
@@ -3061,7 +3134,7 @@ ol:not([class]) {
       position: fixed;
       transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out; }
       .header_fixed {
-        background-color: #000;
+        background-color: #202020;
         padding: 20px 0; }
       .header__right {
         display: none; }

@@ -45,3 +45,12 @@ img {
 img.icon {
   object-fit: contain;
 }
+
+.table {
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 15px;
+    overflow: auto;
+    margin: 0 calc(var(--container-gutter-x) * -1);
+    margin-bottom: -15px;
+  }
+}
