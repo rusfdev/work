@@ -29,6 +29,18 @@
       <div class="image image_cover main-background"><img class="lazyload" data-src="./img/background.png" alt="img"></div>
       <header class="header">
         <div class="container header__container">
+          <div class="header-mobile-dropdown"><a class="header-mobile-dropdown__button nav-toggle" href="javascript:void(0);"><span> </span><span></span><span></span></a>
+            <div class="header-mobile-dropdown__content">
+              <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                  <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#"> <img class="icon" src="./img/icons/c.png" alt="icon">правила</a></li>
+                  <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#"> <img class="icon" src="./img/icons/users.png" alt="icon">топ-исполнителей</a></li>
+                  <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#"> <img class="icon" src="./img/icons/house.png" alt="icon">главная</a></li>
+                  <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#"> <img class="icon" src="./img/icons/question.png" alt="icon">вопросы-ответы</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
           <div class="header__statistic"><img src="./img/icons/chart.png" alt="icon">
             <table>
               <tr>
@@ -48,7 +60,7 @@
                 <td>432</td>
               </tr>
             </table>
-          </div><a class="header__logo" href="./"><img src="./img/logos/logo.png" alt="logo"></a>
+          </div><a class="header__logo" href="./"><img class="d-none d-xl-block" src="./img/logos/logo.png" alt="logo"><img class="d-xl-none" src="./img/logos/mobile-logo.png" alt="logo"></a>
           <nav class="header-nav">
             <ul class="header-nav__list header-nav__list_left">
               <li class="header-nav__item"> <a class="header-nav__link" href="#">главная</a></li>
@@ -74,6 +86,9 @@
                 </ul><a class="button button_style-2 header__small-btn" href="#">поддержка</a>
               </div>
             </div>
+          </div>
+          <div class="header-mobile-dropdown"><a class="header-mobile-dropdown__button" href="javascript:void(0);"><img class="icon" src="./img/icons/user-small.png" alt="icon"></a>
+            <div class="header-mobile-dropdown__content header-mobile-dropdown__content_right"><a class="button button_style-1 header__mobile-auth-button" href="#">Регистрация</a><a class="button button_style-3 header__mobile-auth-button" href="#">Вход</a></div>
           </div>
         </div>
       </header>

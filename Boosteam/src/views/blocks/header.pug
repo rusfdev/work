@@ -1,5 +1,30 @@
 header.header
   .container.header__container
+    .header-mobile-dropdown
+      a(href="javascript:void(0);").header-mobile-dropdown__button.nav-toggle
+        span 
+        span
+        span
+      .header-mobile-dropdown__content
+        nav.mobile-nav 
+          ul.mobile-nav__list 
+            li.mobile-nav__item 
+              a(href="#").mobile-nav__link 
+                img(src="./img/icons/c.png", alt="icon").icon
+                | правила
+            li.mobile-nav__item 
+              a(href="#").mobile-nav__link 
+                img(src="./img/icons/users.png", alt="icon").icon
+                | топ-исполнителей
+            li.mobile-nav__item 
+              a(href="#").mobile-nav__link 
+                img(src="./img/icons/house.png", alt="icon").icon
+                | главная
+            li.mobile-nav__item 
+              a(href="#").mobile-nav__link 
+                img(src="./img/icons/question.png", alt="icon").icon
+                | вопросы-ответы
+
     .header__statistic
       img(src="./img/icons/chart.png", alt="icon")
       table
@@ -16,7 +41,8 @@ header.header
           td Действий сегодня
           td 432
     a(href="./").header__logo
-      img(src="./img/logos/logo.png", alt="logo")
+      img(src="./img/logos/logo.png", alt="logo").d-none.d-xl-block
+      img(src="./img/logos/mobile-logo.png", alt="logo").d-xl-none
     nav.header-nav
       ul.header-nav__list.header-nav__list_left
         li.header-nav__item 
@@ -28,7 +54,6 @@ header.header
           a(href="#").header-nav__link правила
         li.header-nav__item 
           a(href="#").header-nav__link топ-исполнителей
-
     .header__right 
       .header__right-content
         a(href="#").button.button_style-1 Регистрация 
@@ -45,4 +70,10 @@ header.header
           a(href="#").button.button_style-2.header__small-btn поддержка
 
 
+    .header-mobile-dropdown
+      a(href="javascript:void(0);").header-mobile-dropdown__button
+        img(src="./img/icons/user-small.png", alt="icon").icon
+      .header-mobile-dropdown__content.header-mobile-dropdown__content_right
+        a(href="#").button.button_style-1.header__mobile-auth-button Регистрация
+        a(href="#").button.button_style-3.header__mobile-auth-button Вход
            

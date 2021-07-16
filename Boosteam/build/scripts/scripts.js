@@ -11,19 +11,23 @@ const $header = document.querySelector('.header');
 
 document.addEventListener("DOMContentLoaded", function() {
   CustomInteractionEvents.init();
+  Header.init();
   
-  if(window.innerWidth >= brakepoints.xl) { 
-    AOS.init({
-      easing: 'ease-out'
-    });
-  }
+  //aos
+  AOS.init({
+    easing: 'ease-out',
+    offset: 0
+  });
 
-  //tabs
+  //tab
   document.querySelectorAll('[data-tabs="parent"]').forEach($this => {
     new TabsElement($this).init();
   })
+  //mobile dropdown
+  document.querySelectorAll('.header-mobile-dropdown').forEach($this => {
+    new HeaderMobileDropdown($this).init();
+  })
 });
-
 
 
 const CustomInteractionEvents = Object.create({
@@ -99,6 +103,27 @@ const CustomInteractionEvents = Object.create({
   }
 })
 
+const Header = {
+  $element: document.querySelector('.header'),
+
+  init: function () {
+    window.addEventListener('scroll', () => {
+      this.check();
+    })
+    this.check();
+  },
+
+  check: function () {
+    let y = window.pageYOffset,
+        fixed = this.$element.classList.contains('header_fixed');
+
+    if (y > 0 && !fixed) {
+      this.$element.classList.add('header_fixed');
+    } else if (y<=0 && fixed) {
+      this.$element.classList.remove('header_fixed');
+    }
+  }
+}
 
 class TabsElement {
   constructor($parent) {
@@ -143,5 +168,41 @@ class TabsElement {
       subtree: true
     });
     window.addEventListener('resize', this.resize);
+  }
+}
+
+class HeaderMobileDropdown {
+  constructor($parent) {
+    this.$parent = $parent;
+  }
+
+  init() {
+    this.$toggle = this.$parent.querySelector('.header-mobile-dropdown__button');
+    this.$content = this.$parent.querySelector('.header-mobile-dropdown__content');
+
+    this.$toggle.addEventListener('click', () => {
+      if(!this.state) this.show();
+      else this.hide();
+    })
+
+
+    this.closeEvent = (event) => {
+      let target = event.target !== document ? event.target.closest('.header-mobile-dropdown') : null;
+      if(!target || target!==this.$parent) this.hide();
+    }
+    document.addEventListener('click', this.closeEvent)
+    document.addEventListener('touchstart', this.closeEvent)
+  }
+
+  show() {
+    this.state = true;
+    this.$content.classList.add('is-active');
+    this.$toggle.classList.add('is-active');
+  }
+
+  hide() {
+    this.state = false;
+    this.$content.classList.remove('is-active');
+    this.$toggle.classList.remove('is-active');
   }
 }

@@ -29,6 +29,18 @@
       <div class="image image_cover main-background"><img class="lazyload" data-src="./img/background.png" alt="img"></div>
       <header class="header">
         <div class="container header__container">
+          <div class="header-mobile-dropdown"><a class="header-mobile-dropdown__button nav-toggle" href="javascript:void(0);"><span> </span><span></span><span></span></a>
+            <div class="header-mobile-dropdown__content">
+              <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                  <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#"> <img class="icon" src="./img/icons/c.png" alt="icon">правила</a></li>
+                  <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#"> <img class="icon" src="./img/icons/users.png" alt="icon">топ-исполнителей</a></li>
+                  <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#"> <img class="icon" src="./img/icons/house.png" alt="icon">главная</a></li>
+                  <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#"> <img class="icon" src="./img/icons/question.png" alt="icon">вопросы-ответы</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
           <div class="header__statistic"><img src="./img/icons/chart.png" alt="icon">
             <table>
               <tr>
@@ -48,7 +60,7 @@
                 <td>432</td>
               </tr>
             </table>
-          </div><a class="header__logo" href="./"><img src="./img/logos/logo.png" alt="logo"></a>
+          </div><a class="header__logo" href="./"><img class="d-none d-xl-block" src="./img/logos/logo.png" alt="logo"><img class="d-xl-none" src="./img/logos/mobile-logo.png" alt="logo"></a>
           <nav class="header-nav">
             <ul class="header-nav__list header-nav__list_left">
               <li class="header-nav__item"> <a class="header-nav__link" href="#">главная</a></li>
@@ -75,6 +87,9 @@
               </div>
             </div>
           </div>
+          <div class="header-mobile-dropdown"><a class="header-mobile-dropdown__button" href="javascript:void(0);"><img class="icon" src="./img/icons/user-small.png" alt="icon"></a>
+            <div class="header-mobile-dropdown__content header-mobile-dropdown__content_right"><a class="button button_style-1 header__mobile-auth-button" href="#">Регистрация</a><a class="button button_style-3 header__mobile-auth-button" href="#">Вход</a></div>
+          </div>
         </div>
       </header>
       <main class="main">
@@ -85,7 +100,7 @@
               <h1 class="home-screen__title">BOOSTEAM</h1>
               <h2 class="home-screen__desription"> <span>делай столько,<br> сколько сможешь</span><span>работа разделена<br> на микрозадачи</span></h2>
             </div>
-            <div class="auth-block"><img class="icon auth-block__icon" src="./img/icons/user.png" alt="icon">
+            <div class="auth-block home-screen__auth-block"><img class="icon auth-block__icon" src="./img/icons/user.png" alt="icon">
               <div class="auth-block__content" data-tabs="parent">
                 <div class="auth-block__head"><a class="auth-block__tab-button is-active" href="javascript:void(0);" data-tabs="link"><span>вход</span></a><a class="auth-block__tab-button" href="javascript:void(0);" data-tabs="link"><span>регистрация</span></a></div>
                 <div class="auth-block__content" data-tabs="wrapper">
@@ -138,10 +153,10 @@
               </svg>
               <div class="statistics-headline__content">
                 <div class="statistics-headline__item" data-aos="zoom-in"><img class="icon" src="./img/icons/user.png" alt="icon"><span>онлайн</span><span>100</span></div>
-                <div class="statistics-headline__item" data-aos="zoom-in" data-aos-delay="50"><img class="icon" src="./img/icons/money-turnover.png" alt="icon"><span>заработано</span><span>500 тыс Р</span></div>
-                <div class="statistics-headline__item" data-aos="zoom-in" data-aos-delay="100"><img class="icon" src="./img/icons/users.png" alt="icon"><span>пользователи</span><span>723</span></div>
-                <div class="statistics-headline__item" data-aos="zoom-in" data-aos-delay="150"><img class="icon" src="./img/icons/24hours.png" alt="icon"><span>за 24 часа</span><span>723</span></div>
-                <div class="statistics-headline__item" data-aos="zoom-in" data-aos-delay="200"> <img class="icon" src="./img/icons/cash-payment.png" alt="icon"><span>всего</span><span>142тыс</span></div>
+                <div class="statistics-headline__item" data-aos="zoom-in" data-aos-delay="50" data-aos-anchor=".statistics-headline__content"><img class="icon" src="./img/icons/money-turnover.png" alt="icon"><span>заработано</span><span>500 тыс Р</span></div>
+                <div class="statistics-headline__item" data-aos="zoom-in" data-aos-delay="100" data-aos-anchor=".statistics-headline__content"><img class="icon" src="./img/icons/users.png" alt="icon"><span>пользователи</span><span>723</span></div>
+                <div class="statistics-headline__item" data-aos="zoom-in" data-aos-delay="150" data-aos-anchor=".statistics-headline__content"><img class="icon" src="./img/icons/24hours.png" alt="icon"><span>за 24 часа</span><span>723</span></div>
+                <div class="statistics-headline__item" data-aos="zoom-in" data-aos-delay="200" data-aos-anchor=".statistics-headline__content"> <img class="icon" src="./img/icons/cash-payment.png" alt="icon"><span>всего</span><span>142тыс</span></div>
               </div>
             </div>
             <div class="section-statistics__content">
@@ -237,40 +252,40 @@
               <p class="section-about__description">Boosteam — не просто биржа заданий, это в первую очередь команда людей, которых обьединяет тема зароботка в интернете. мы общаемся, делимся информацией вместе!</p>
             </div>
             <div class="section-about__items">
-              <div class="section-about__item" data-aos="fade-up-right"><img class="icon" src="./img/icons/pass.png" alt="icon">
+              <div class="section-about__item" data-aos="fade-up-right" data-aos-anchor=".section-about__items"><img class="icon" src="./img/icons/pass.png" alt="icon">
                 <p>Зарегестрируйтесь<br> на сайте</p>
               </div>
-              <div class="section-about__item" data-aos="fade-up-right" data-aos-delay="50"> <img class="icon" src="./img/icons/wool.png" alt="icon">
+              <div class="section-about__item" data-aos="fade-up-right" data-aos-delay="50" data-aos-anchor=".section-about__items"> <img class="icon" src="./img/icons/wool.png" alt="icon">
                 <p>Выполняй<br> задачи</p>
               </div>
-              <div class="section-about__item" data-aos="fade-up" data-aos-delay="100"><img class="icon" src="./img/icons/money-turnover.png" alt="icon">
+              <div class="section-about__item" data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".section-about__items"><img class="icon" src="./img/icons/money-turnover.png" alt="icon">
                 <p>Получай<br> вознагрождение</p>
               </div>
-              <div class="section-about__item" data-aos="fade-up-left" data-aos-delay="150"> <img class="icon" src="./img/icons/reputation.png" alt="icon">
+              <div class="section-about__item" data-aos="fade-up-left" data-aos-delay="150" data-aos-anchor=".section-about__items"> <img class="icon" src="./img/icons/reputation.png" alt="icon">
                 <p>Повышай<br> репутацию</p>
               </div>
-              <div class="section-about__item" data-aos="fade-up-left" data-aos-delay="200"> <img class="icon" src="./img/icons/chart.png" alt="icon">
+              <div class="section-about__item" data-aos="fade-up-left" data-aos-delay="200" data-aos-anchor=".section-about__items"> <img class="icon" src="./img/icons/chart.png" alt="icon">
                 <p>Полуйчай<br> больше</p>
               </div>
             </div>
             <div class="section-about__payment">
-              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up-right">
+              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up-right" data-aos-anchor=".section-about__payment">
                 <div class="image"><img class="lazyload" data-src="./img/sber-white.png" alt="icon"></div>
                 <div class="image"><img class="lazyload" data-src="./img/sber.png" alt="icon"></div>
               </div>
-              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up-right" data-aos-delay="50">
+              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up-right" data-aos-delay="50" data-aos-anchor=".section-about__payment">
                 <div class="image"><img class="lazyload" data-src="./img/webmoney-white.png" alt="icon"></div>
                 <div class="image"><img class="lazyload" data-src="./img/webmoney.png" alt="icon"></div>
               </div>
-              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up" data-aos-delay="100">
+              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".section-about__payment">
                 <div class="image"><img class="lazyload" data-src="./img/qiwi-white.png" alt="icon"></div>
                 <div class="image"><img class="lazyload" data-src="./img/qiwi.png" alt="icon"></div>
               </div>
-              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up-left" data-aos-delay="150">
+              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up-left" data-aos-delay="150" data-aos-anchor=".section-about__payment">
                 <div class="image"><img class="lazyload" data-src="./img/master-white.png" alt="icon"></div>
                 <div class="image"><img class="lazyload" data-src="./img/master.png" alt="icon"></div>
               </div>
-              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up-left" data-aos-delay="200">
+              <div class="payment-item section-about__payment-item" data-custom-interaction data-aos="fade-up-left" data-aos-delay="200" data-aos-anchor=".section-about__payment">
                 <div class="image"><img class="lazyload" data-src="./img/pay-white.png" alt="icon"></div>
                 <div class="image"><img class="lazyload" data-src="./img/pay.png" alt="icon"></div>
               </div>

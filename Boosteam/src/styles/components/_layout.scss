@@ -20,8 +20,11 @@
     font-style: italic;
     margin-bottom: 50px;
   }
-  @include media-breakpoint-down(xxl) {
-    margin-bottom: 180px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 140px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 120px;
   }
 }
 
