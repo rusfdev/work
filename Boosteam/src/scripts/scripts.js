@@ -12,6 +12,7 @@ const $header = document.querySelector('.header');
 document.addEventListener("DOMContentLoaded", function() {
   CustomInteractionEvents.init();
   Header.init();
+  Cookie.init();
   
   //aos
   AOS.init({
@@ -100,6 +101,32 @@ const CustomInteractionEvents = Object.create({
     document.addEventListener('mousedown',   this.events);
     document.addEventListener('mouseup',     this.events);
     document.addEventListener('contextmenu', this.events);
+  }
+})
+
+const Cookie = Object.create({
+  init() {
+    this.$element = document.querySelector('.cookie-message');
+    this.$close = document.querySelector('.cookie-message__accept');
+
+    setTimeout(() => {
+      this.show();
+    }, 1000);
+
+    this.$close.addEventListener('click', () => {
+      this.hide();
+    })
+  },
+
+  show() {
+    this.$element.classList.add('is-active');
+  },
+
+  hide() {
+    this.$element.classList.remove('is-active');
+    setTimeout(() => {
+      this.$element.remove();
+    }, 500);
   }
 })
 

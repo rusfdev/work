@@ -34,6 +34,16 @@ html(lang='ru')
       main.main
         block content
       include ../blocks/footer
+
+      .cookie-message(style='opacity:0;visibility:hidden;')
+        .cookie-message__text
+          .cookie-message__head
+            img(src="./img/cookie.png", alt="icon").icon
+            h5.cookie-message__title COOKIE файлы
+          p Наш сайт использует COOKIE файлы для корректной работы в вашем браузере. Если вы согласны, то нажмите ОК, если нет, то пожалуйста покиньте данную страницу
+        .cookie-message__buttons 
+          a(href="javascript:void(0);").cookie-message__accept Принять COOKIE
+          a(href="#").cookie-message__link Узнать подробнее
     
     //libs
     script(src="./scripts/libs/modernizr-custom.js")
