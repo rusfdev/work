@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll('[data-tabs="parent"]').forEach($this => {
     new TabsElement($this).init();
   })
+  //toggle
+  document.querySelectorAll('[data-toggle="parent"]').forEach($this => {
+    new ToggleElement($this).init();
+  })
   //mobile dropdown
   document.querySelectorAll('.header-mobile-dropdown').forEach($this => {
     new HeaderMobileDropdown($this).init();
@@ -188,13 +192,45 @@ class TabsElement {
         this.set(index);
       })
     })
-
+    
     this.observer = new MutationObserver(this.resize);
     this.observer.observe(this.$wrapper, {
       childList: true,
       subtree: true
     });
     window.addEventListener('resize', this.resize);
+
+  }
+}
+
+class ToggleElement {
+  constructor($parent) {
+    this.$parent = $parent;
+  }
+
+  init() {
+    this.$trigger = this.$parent.querySelector('[data-toggle="trigger"]');
+    this.$block = this.$parent.querySelector('[data-toggle="content"]');
+
+    this.$trigger.addEventListener('click', () => {
+      let state = this.$parent.classList.contains('is-active');
+
+      if(!state) this.open();
+      else this.close();
+    })
+    
+  }
+
+  open() {
+    for(let $el of [this.$parent, this.$trigger, this.$block]) {
+      $el.classList.add('is-active')
+    }
+  }
+
+  close() {
+    for(let $el of [this.$parent, this.$trigger, this.$block]) {
+      $el.classList.remove('is-active')
+    }
   }
 }
 

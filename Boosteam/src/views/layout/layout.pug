@@ -35,7 +35,7 @@ html(lang='ru')
         block content
       include ../blocks/footer
 
-      .cookie-message(style='opacity:0;visibility:hidden;')
+      .cookie-message(style='opacity:0;visibility:hidden;display:none;')
         .cookie-message__text
           .cookie-message__head
             img(src="./img/cookie.png", alt="icon").icon
@@ -51,7 +51,8 @@ html(lang='ru')
     script(src="./scripts/libs/lazysizes.min.js")
     script.
       lazySizes.cfg.preloadAfterLoad = true;
+    //aos
     script(src='./scripts/libs/aos/aos.js')
-    script(src='./scripts/libs/aos/aos.css')
+    link(rel="stylesheet" href="./scripts/libs/aos/aos.css")
     //scripts
     script(src="./scripts/scripts.js")

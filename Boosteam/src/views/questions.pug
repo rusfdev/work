@@ -1,0 +1,47 @@
+extends layout/layout
+block variables
+  -var title = sitename+' - Вопросы'
+block content
+  section.section 
+    .container
+      h2.section__title.text-center Как это работает?
+      .icon-text-items
+        .icon-text-items__item(data-aos="fade-up-right" data-aos-anchor=".section-about__items")
+          img(src="./img/icons/pass.png", alt="icon").icon
+          p Зарегестрируйтесь<br> на сайте
+        .icon-text-items__item(data-aos="fade-up-right" data-aos-delay="50" data-aos-anchor=".section-about__items") 
+          img(src="./img/icons/wool.png", alt="icon").icon
+          p Выполняй<br> задачи
+        .icon-text-items__item(data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".section-about__items")
+          img(src="./img/icons/money-turnover.png", alt="icon").icon
+          p Получай<br> вознагрождение
+        .icon-text-items__item(data-aos="fade-up-left" data-aos-delay="150" data-aos-anchor=".section-about__items") 
+          img(src="./img/icons/reputation.png", alt="icon").icon
+          p Повышай<br> репутацию
+        .icon-text-items__item(data-aos="fade-up-left" data-aos-delay="200" data-aos-anchor=".section-about__items") 
+          img(src="./img/icons/chart.png", alt="icon").icon
+          p Полуйчай<br> больше
+
+  section.section 
+    .container
+      h2.section__title.text-center Часто задаваемые вопросы
+      .faq-items  
+        .faq-items__content
+          mixin block()
+            .faq-block(data-toggle='parent')
+              .faq-block__head(data-toggle='trigger' data-custom-interaction) Я открыл кейс, но вещь не приходит, в чем проблема?
+              .faq-block__content(data-toggle='content')
+                .faq-block__text 
+                  p Зайдите в свой профиль и кликните по ссылке 'ЗАБРАТЬ' на интересующем вас предмете.
+                .faq-block__buttons
+                  a(href="javascript:void(0);").button.button_style-3.faq-block__button это решает проблему
+                  a(href="javascript:void(0);").button.button_style-3.faq-block__button это НЕ решает проблему
+          +block()
+          +block()
+          +block()
+
+        .faq-items__alert 
+          img(src="./img/icons/alert.png", alt="icon").icon
+          h4.faq-items__alert-title ВНИМАНИЕ
+          p Если вы не нашли ответа на свой вопрос в данном разделе, то напишите на почту
+          a(href="mailto:support@boosteam.ru").faq-items__alert-link support@boosteam.ru
