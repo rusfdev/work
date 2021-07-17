@@ -3266,7 +3266,8 @@ ol:not([class]) {
   margin-right: 60px;
   margin-bottom: 40px;
   padding-bottom: 15px;
-  position: relative; }
+  position: relative;
+  transition: color 0.15s ease-in-out; }
   .rules-tabs__link::after {
     content: '';
     display: block;
@@ -3283,6 +3284,8 @@ ol:not([class]) {
     .rules-tabs__link.is-active::after {
       background-color: currentColor;
       transform: scaleX(1); }
+  .rules-tabs__link[data-touch], .rules-tabs__link[data-hover] {
+    color: var(--color-accent); }
 
 .rules-tabs__tab {
   position: absolute;
