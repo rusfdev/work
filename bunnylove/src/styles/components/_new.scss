@@ -558,3 +558,19 @@
     }
   }
 }
+
+.text-content-section {
+  &__container {
+    padding: 0 100px;
+  }
+  @media (max-width: 1023px) {
+    &__container {
+      padding: 0 60px;
+    }
+  }
+  @media (max-width: 767px) {
+    &__container {
+      padding: 0;
+    }
+  }
+}

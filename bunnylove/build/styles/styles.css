@@ -25765,6 +25765,17 @@ textarea.input {
     margin: 25px 0 15px 0;
     padding: 0; }
 
+.text-content-section__container {
+  padding: 0 100px; }
+
+@media (max-width: 1023px) {
+  .text-content-section__container {
+    padding: 0 60px; } }
+
+@media (max-width: 767px) {
+  .text-content-section__container {
+    padding: 0; } }
+
 .noty_layout_mixin, #noty_layout__top, #noty_layout__topLeft, #noty_layout__topCenter, #noty_layout__topRight, #noty_layout__bottom, #noty_layout__bottomLeft, #noty_layout__bottomCenter, #noty_layout__bottomRight, #noty_layout__center, #noty_layout__centerLeft, #noty_layout__centerRight {
   position: fixed;
   margin: 0;
