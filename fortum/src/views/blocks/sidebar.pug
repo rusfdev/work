@@ -1,0 +1,45 @@
+.lc-sidebar-area.toggle-section(data-out-hide)
+  button(aria-label='open nav').lc-mobile-nav-btn.toggle-section__trigger
+    span 
+    span Меню личного кабинета
+  .lc-sidebar-area__content.toggle-section__content
+    h2.lc-sidebar-area__title Личный кабинет
+    .lc-sidebar-area__head
+      img(src='/static/images/user.svg' alt='icon').lc-sidebar-area__image
+      span.lc-sidebar-area__name Лужецкий<br> Дмитрий Александрович
+    .lc-sidebar-area__bottom
+      span.lc-sidebar-area__company Fancymedia
+      a(href="/").lc-text-link.lc-sidebar-area__exit
+        span Выйти
+        svg.icon(viewBox='0 0 22 22' stroke='currentColor' stroke-width='2' fill='none')
+          path(d='M10 18V21H21V1H10V4')
+          path(d='M12 11H2')
+          path(d='M6 6L2 11L6 16')
+    ul.lc-sidebar-area__nav-list
+      li.lc-sidebar-area__nav-item 
+        a(href=href+"/lk2.html" class=index==0?'active':'').lc-sidebar-area__nav-link
+          img(src=href+"/img/ico-message.svg", alt="image").icon
+          .lc-sidebar-area__nav-link-txt Главная
+      li.lc-sidebar-area__nav-item 
+        a(href=href+"/lk3.html" class=index==1?'active':'').lc-sidebar-area__nav-link
+          img(src=href+"/img/ico-shovel.svg", alt="image").icon
+          .lc-sidebar-area__nav-link-txt Показания
+      li.lc-sidebar-area__nav-item 
+        a(href=href+"/lk4.html" class=index==2?'active':'').lc-sidebar-area__nav-link
+          img(src=href+"/img/ico-message.svg", alt="image").icon
+          .lc-sidebar-area__nav-link-txt История
+      li.lc-sidebar-area__nav-item 
+        a(href=href+"/lk5.html" class=index==3?'active':'').lc-sidebar-area__nav-link
+          img(src=href+"/img/ico-message.svg", alt="image").icon
+          .lc-sidebar-area__nav-link-txt Сообщения
+            span 3
+      li.lc-sidebar-area__nav-item 
+        a(href=href+"/lk6.html" class=index==4?'active':'').lc-sidebar-area__nav-link
+          img(src=href+"/img/ico-profile.svg", alt="image").icon
+          .lc-sidebar-area__nav-link-txt Профиль
+      li.lc-sidebar-area__nav-item 
+        a(href=href+"/lk7.html" class=index==5?'active':'').lc-sidebar-area__nav-link
+          img(src=href+"/img/ico-shovel.svg", alt="image").icon
+          .lc-sidebar-area__nav-link-txt Взаиморасчеты
+  
+    

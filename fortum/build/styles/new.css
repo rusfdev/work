@@ -1,0 +1,17 @@
+.dropdown_form_toggler {
+  min-height: 60px; }
+  @media (max-width: 900px) {
+    .dropdown_form_toggler {
+      min-height: 49px; } }
+
+.dinner__summary .single_goal__form__no_margin {
+  margin-bottom: 20px; }
+
+.dinner__summary label.radio {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  max-width: 100%;
+  margin: 0 30px 10px 0; }
+
+/*# sourceMappingURL=maps/new.css.map */

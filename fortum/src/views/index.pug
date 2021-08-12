@@ -1,0 +1,188 @@
+extends layout/layout
+block content
+  .page_body__wrapper
+    .row
+      .col-12
+        // заголовок страницы с выпадашкой быстрого фильтра - начало
+        .main_headline__wrapper
+          .row
+            .col-12
+              h1 Заказ здорового питания
+        // заголовок страницы с выпадашкой быстрого фильтра - конец
+      .col-12.col-sm-8
+        h2
+          | Обед первый
+          | (16 августа 2021 г.)
+        .dish__element
+          .dinner_title.pl-2 Салат
+          .dinner_value.pl-2 Салат "Ленинградский"
+          .dinner_description.pl-2
+            p капуста б/к свежая, огурец свежий, морковь
+        .dish__element
+          .dinner_title.pl-2 Первое блюдо
+          .dinner_value.pl-2 Суп-лапша с курицей
+          .dinner_description.pl-2
+            p Мясо куриное, лук, морковь, укроп, лапша
+        .dish__element
+          .dinner_title.pl-2 Второе блюдо
+          .dinner_value.pl-2 Котлета рыбная
+          .dinner_description.pl-2
+            p
+              | Филе минтая (или другой нежирной рыбы), черствый хлеб (белый), молоко, яйцо, соль.
+        .dish__element
+          .dinner_title.pl-2 Дополнительно
+          .dinner_value.pl-2 Яблоко
+          .dinner_description.pl-2 Напиток
+        h2
+          | Обед второй
+          | (18 августа 2021 г.)
+        .dish__element
+          .dinner_title.pl-2 Салат
+          .dinner_value.pl-2 Винегрет овощной
+          .dinner_description.pl-2
+            p
+              | Картофель, свекла, морковь, огурец соленый, капуста белокочанная, квашеная, лук зеленый, оливковое масло
+        .dish__element
+          .dinner_title.pl-2 Первое блюдо
+          .dinner_value.pl-2 Щи из свежей капусты со сметаной
+          .dinner_description.pl-2
+            p
+              | Бульон мясной, капуста белокочанная, картофель, морковь, корень петрушки, лук репчатый, помидоры, оливковое масло, сметана, зелень, перец горошком, соль, лавровый лист
+        .dish__element
+          .dinner_title.pl-2 Второе блюдо
+          .dinner_value.pl-2 Рис Ризотто и Люля-кебаб из куриного филе
+          .dinner_description.pl-2
+            p Куриное филе, репчатый лук, чеснок, петрушка, соль, перец черный молотый
+        .dish__element
+          .dinner_title.pl-2 Дополнительно
+          .dinner_value.pl-2 Яблоко
+          .dinner_description.pl-2 Напиток
+        h2
+          | Обед третий
+          | (20 августа 2021 г.)
+        .dish__element
+          .dinner_title.pl-2 Салат
+          .dinner_value.pl-2 Салат "Волжанка"
+          .dinner_description.pl-2
+            p Капуста морская, капуста пекинская, огурец свежий, горошек зеленый, фасоль
+        .dish__element
+          .dinner_title.pl-2 Первое блюдо
+          .dinner_value.pl-2 Суп "Кудрявый"
+          .dinner_description.pl-2
+            p Суп овощной со сметаной 
+        .dish__element
+          .dinner_title.pl-2 Второе блюдо
+          .dinner_value.pl-2 Биточек паровой
+          .dinner_description.pl-2
+            p Филе куриной грудки, яйцо, лук репчатый, чеснок
+        .dish__element
+          .dinner_title.pl-2 Дополнительно
+          .dinner_value.pl-2 Яблоко
+          .dinner_description.pl-2 Напиток
+      .col-12.col-sm-4
+        form.dinner__summary(action='' method='post')
+          input(type='hidden' name='csrfmiddlewaretoken' value='n1fJrmHSJTEFKtt6B63aOxwDzburW2r9tjQaTwGPzAxQJ50cdWOwxZTzmvKWmq9l')
+          h3.dinner__summary__headline Ваш заказ
+          strong
+            | Первый обед
+            | (16.08.2021)
+          p калорийность: 322 ккал.
+          p.mb-2 стоимость: 90 руб.
+          p.dinner-approve-radio
+            span.mr-2
+              input(type='radio' name='dinner_approve__92' value='1' checked='')
+            | Заказать
+            span.mr-2
+              input(type='radio' name='dinner_approve__92' value='0')
+            | Отказаться
+          strong
+            | Второй обед
+            | (18.08.2021)
+          p калорийность: 331 ккал.
+          p.mb-2 стоимость: 90 руб.
+          p.dinner-approve-radio
+            span.mr-2
+              input(type='radio' name='dinner_approve__93' value='1' checked='')
+            | Заказать
+            span.mr-2
+              input(type='radio' name='dinner_approve__93' value='0')
+            | Отказаться
+          strong
+            | Третий обед
+            | (20.08.2021)
+          p калорийность: 334 ккал.
+          p.mb-2 стоимость: 90 руб.
+          p.dinner-approve-radio
+            span.mr-2
+              input(type='radio' name='dinner_approve__94' value='1' checked='')
+            | Заказать
+            span.mr-2
+              input(type='radio' name='dinner_approve__94' value='0')
+            | Отказаться
+          // инпут - выпадающий список - начало
+          p.mt-2.dinner_title_form Место получения
+          .dropdown_form_input.mt-0
+            input#id_sub(type='hidden' name='sub')
+            a.dropdown_form_toggler(href='#')
+              span.toggler_placeholder Место получения
+              span.toggler_value
+            ul
+              li
+                a(href='#' data-option-value='') ---------
+              li
+                a(href='#' data-option-value='11') ЧЭР
+              li
+                a(href='#' data-option-value='6') Челябинская ТЭЦ-4
+              li
+                a(href='#' data-option-value='5') Челябинская ТЭЦ-3
+              li
+                a(href='#' data-option-value='4') Челябинская ТЭЦ-2
+              li
+                a(href='#' data-option-value='2') Челябинская ТЭЦ-1
+              li
+                a(href='#' data-option-value='15') Тюменская ТЭЦ-2
+              li
+                a(href='#' data-option-value='8') Тюменская ТЭЦ-1
+              li
+                a(href='#' data-option-value='10') Няганская ГРЭС
+              li
+                a(href='#' data-option-value='14') Исполнительный аппарат Челябинск
+              li
+                a(href='#' data-option-value='13') Исполнительный аппарат Москва
+              li
+                a(href='#' data-option-value='7') Аргаяшская ТЭЦ
+          p.dinner_title_form.mt-2 Департамент
+          .dropdown_form_input.mt-0
+            input#id_place(type='hidden' name='place')
+            a.dropdown_form_toggler(href='#')
+              span.toggler_placeholder Департамент
+              span.toggler_value
+            ul
+              li
+                a(href='#' data-option-value='') ---------
+              li
+                a(href='#' data-option-value='1') ЧЭР
+              li
+                a(href='#' data-option-value='2') Челябинская ТЭЦ-4
+              li
+                a(href='#' data-option-value='3') Челябинская ТЭЦ-3
+              li
+                a(href='#' data-option-value='4') Челябинская ТЭЦ-2
+              li
+                a(href='#' data-option-value='5') Челябинская ТЭЦ-1
+              li
+                a(href='#' data-option-value='6') Тюменская ТЭЦ-2
+              li
+                a(href='#' data-option-value='7') Тюменская ТЭЦ-1
+              li
+                a(href='#' data-option-value='8') Няганская ГРЭС
+              li
+                a(href='#' data-option-value='13') ИА и ИД Челябинск
+              li
+                a(href='#' data-option-value='12') ИА и ИД Тюмень
+              li
+                a(href='#' data-option-value='11') Аргаяшская ТЭЦ
+          p.mt-2.dinner_title_form Табельный номер
+          input#id_personnel_number.w-100(type='text' name='personnel_number' value='001' placeholder='Табельный номер' required='' maxlength='64')
+          button.btn.btn-success.mt-2(type='submit') Оформить заказ
+  
