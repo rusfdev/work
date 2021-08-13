@@ -1337,6 +1337,7 @@ header {
     background-color: var(--color-lk-items-hover-bg, #DEE1E4); }
 
 .product-item--banner a {
+  height: 380px;
   overflow: hidden; }
   .product-item--banner a img {
     transition: transform 0.25s ease-out; }
