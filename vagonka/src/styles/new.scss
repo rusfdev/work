@@ -258,8 +258,10 @@ header {
 }
 
 .home-banner {
-  margin: 0;
-  overflow: hidden;
+  & + .conditional-section_bg {
+    margin-top: -40px;
+  }
+
   .owl-stage {
     display: flex;
   }
@@ -330,6 +332,13 @@ header {
   }
   .owl-next {
     right: 20px;
+  }
+  @media screen and (min-width:992px) {
+    & + .home-categories {
+      .home-categories__container {
+        margin-top: -87px;
+      }
+    }
   }
   @media screen and (max-width:991px) {
     .owl-dots {
@@ -1012,7 +1021,7 @@ header {
 .conditional-section {
   margin-bottom: 40px;
   position: relative;
-  &:first-child:not(.conditional-section_bg) {
+  &:first-child:not(.conditional-section_bg):not(.home-banner) {
     margin-top: 40px;
   }
   .container {
@@ -1026,7 +1035,7 @@ header {
     padding: 40px 0;
     background-size: cover;
     background-position: center;
-    & + .conditional-section_bg, & + .section-dark, & + .section-first-alter {
+    & + .conditional-section_bg, & + .section-dark, & + .section-first-alter, & + .home-banner {
       margin-top: -40px;
     }
     & > img {
@@ -1994,16 +2003,9 @@ header {
     &__container {
       position: relative;
       z-index: 2;
-      margin-top: -47px;
-    }
-    &.conditional-section_bg {
-      .home-categories__container {
-        margin-top: -87px;
-      }
     }
   }
   @media screen and (max-width:991px) {
-    padding-top: 20px;
     &__block {
       flex: 1 1 50%;
       max-width: 50%;

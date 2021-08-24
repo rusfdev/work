@@ -63,24 +63,9 @@ block scripts
 block variables
   -var bodyClass = 'frontpage wide-mode'
 block content
-  //new banner
-  .home-banner.owl-carousel
-    .home-banner__slide.image.image_cover
-      img(src='https://vagonka-brus-doska.ru/media/slides/big_slides/%D0%91%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D1%81%D0%BB%D0%BA_3_82FT1YE.jpg', alt="image")
-    .home-banner__slide.image.image_cover
-      img(src='https://vagonka-brus-doska.ru/media/slides/big_slides/%D0%91%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D1%81%D0%BB%D0%BA_3_82FT1YE.jpg', alt="image")
-  
-  section.home-categories.conditional-section.conditional-section_bg(style=`background-color:#f5f5f5;`)
-    .container.home-categories__container
-      .grid
-        include blocks/cards
-        -var grid = 'grid__block home-categories__block'
-        +card2('Деревянные дома', href+'/img/56dcc810efa71925168c0d36d5c3fbf7.png', grid)
-        +card2('Кровельные работы', href+'/img/7eaf93e9c47993e5b22277de3a30b89e.png', grid)
-        +card2('Пропитки для бревен', href+'/img/767773b7699f15e02052b250d92c0c7f.png', grid)
-        +card2('Проектирование', href+'/img/e79cec4f0a120d2e96a1701cf4ef8db3.png', grid)
-  
-  section.conditional-section.conditional-section_bg(style=`background-image:url("${href}/img/dd.jpg");`)
+
+  //Шаблон старт
+  section.conditional-section.conditional-section_bg(style=`background-color:#9cc18d;`)
     .container
       .main-slider
         .owl-carousel(data-autoplay-timeout='5')
@@ -93,8 +78,125 @@ block content
               a(href='http://box6.stroyker.pro/news/promo/klassnay-akzia/' title='Пример 2')
                 img(src='https://vagonka-brus-doska.ru/media/slides/big_slides/%D0%91%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D1%81%D0%BB%D0%BA_3_82FT1YE.jpg' alt='')
 
+  section.home-banner.conditional-section
+    .owl-carousel
+      .home-banner__slide.image.image_cover
+        img(src='https://via.placeholder.com/1920x600/b0d4a1', alt="image")
+      .home-banner__slide.image.image_cover
+        img(src='https://via.placeholder.com/1920x600/b0d4a1', alt="image")
+      .home-banner__slide.image.image_cover
+        img(src='https://via.placeholder.com/1920x600/b0d4a1', alt="image")
 
-  section.section.section-first-alter
+  section.home-categories.conditional-section.conditional-section_bg(style=`background-color:#9cc18d;`)
+    .container.home-categories__container
+      .grid
+        include blocks/cards
+        -var grid = 'grid__block home-categories__block'
+        +card2('Деревянные дома', href+'/img/56dcc810efa71925168c0d36d5c3fbf7.png', grid)
+        +card2('Кровельные работы', href+'/img/7eaf93e9c47993e5b22277de3a30b89e.png', grid)
+        +card2('Пропитки для бревен', href+'/img/767773b7699f15e02052b250d92c0c7f.png', grid)
+        +card2('Проектирование', href+'/img/e79cec4f0a120d2e96a1701cf4ef8db3.png', grid)
+
+  section.conditional-section.conditional-section_bg(style=`background-color:#b0d4a1;`)
+    .container 
+      span.content-title.product-set-title.h2 Категории товаров
+      .category-slider
+        .owl-carousel
+          .item
+            a.catalog-menu-item(href='/catalog/brevno-ocilindrovannoe/' title="Перейти на страницу раздела 'Бревно оцилиндрованное'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/b1/58/b158304fe92f29220831dbef5fd675fe.jpg' alt='Бревно оцилиндрованное')
+              span.catalog-menu-item__name Бревно оцилиндрованное
+            a.catalog-menu-item(href='/catalog/vagonka-i-evrovagonka/' title="Перейти на страницу раздела 'Вагонка и Евровагонка'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/d2/a6/d2a67425e46b69e8bdf92a9d154b06d2.jpg' alt='Вагонка и Евровагонка')
+              span.catalog-menu-item__name Вагонка и Евровагонка
+          .item
+            a.catalog-menu-item(href='/catalog/blok-haus/' title="Перейти на страницу раздела 'Блок Хаус'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/e8/16/e816bf9b4b9ed15ad5bebfbdc6edad60.jpg' alt='Блок Хаус')
+              span.catalog-menu-item__name Блок Хаус
+            a.catalog-menu-item(href='/catalog/imitaciya-brusa/' title="Перейти на страницу раздела 'Имитация бруса'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/4d/e0/4de04029d45fe71d643ef56fd550274b.jpg' alt='Имитация бруса')
+              span.catalog-menu-item__name Имитация бруса
+          .item
+            a.catalog-menu-item(href='/catalog/doska-pola/' title="Перейти на страницу раздела 'Доска пола'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/3f/47/3f47a48ba0c3c6e53037e7a64aabe6b0.jpg' alt='Доска пола')
+              span.catalog-menu-item__name Доска пола
+            a.catalog-menu-item(href='/catalog/brus-i-doska-suhie-strogannye/' title="Перейти на страницу раздела 'Брус и Доска'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/5b/94/5b94a9e8281ac988e782e500406b353c.jpg' alt='Брус и Доска')
+              span.catalog-menu-item__name Брус и Доска
+          .item
+            a.catalog-menu-item(href='/catalog/derevianniy-dekor/' title="Перейти на страницу раздела 'Деревянный декор'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/91/06/910629f5994e38374c37855f313adcd7.jpg' alt='Деревянный декор')
+              span.catalog-menu-item__name Деревянный декор
+            a.catalog-menu-item(href='/catalog/elementy-lestnic/' title="Перейти на страницу раздела 'Элементы лестниц'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/20/b2/20b29673886ea3ef1b3bcd1bb29569a8.jpg' alt='Элементы лестниц')
+              span.catalog-menu-item__name Элементы лестниц
+          .item
+            a.catalog-menu-item(href='/catalog/dveri-i-okna/' title="Перейти на страницу раздела 'Двери и окна'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/f5/1f/f51f0eb2e2764a446b214d543070a634.jpg' alt='Двери и окна')
+              span.catalog-menu-item__name Двери и окна
+            a.catalog-menu-item(href='/catalog/materialy-iz-lipy/' title="Перейти на страницу раздела 'Материалы из липы и абаши'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/46/70/4670e2b078e93bd3b2b3cbbb97b058db.jpg' alt='Материалы из липы и абаши')
+              span.catalog-menu-item__name Материалы из липы и абаши
+          .item
+            a.catalog-menu-item(href='/catalog/materialy-iz-listvennicy/' title="Перейти на страницу раздела 'Материалы из лиственницы'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/34/08/3408eb6a5dbccc78ae73df6aaa1fac25.jpg' alt='Материалы из лиственницы')
+              span.catalog-menu-item__name Материалы из лиственницы
+            a.catalog-menu-item(href='/catalog/materialy-ih-osiny-i-abashi/' title="Перейти на страницу раздела 'Материалы из осины'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/5f/81/5f819dd99f980d31157b1fb3accc0597.jpg' alt='Материалы из осины')
+              span.catalog-menu-item__name Материалы из осины
+          .item
+            a.catalog-menu-item(href='/catalog/fanera-osb-dsp-dvp-tssp/' title="Перейти на страницу раздела 'Фанера, ОСБ, ДСП, ДВП'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/44/5c/445cf48975b39af56b55c4ccdc928bfd.jpg' alt='Фанера, ОСБ, ДСП, ДВП')
+              span.catalog-menu-item__name Фанера, ОСБ, ДСП, ДВП
+            a.catalog-menu-item(href='/catalog/utepliteli/' title="Перейти на страницу раздела 'Утеплители'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/29/0b/290bb56d18fd2a039320e5f7dc05048c.jpg' alt='Утеплители')
+              span.catalog-menu-item__name Утеплители
+          .item
+            a.catalog-menu-item(href='/catalog/rulonnie-izoliyzionnie-materialy/' title="Перейти на страницу раздела 'Рулонные изоляционные материалы'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/f8/b2/f8b2f8f0a1921cf459513c6dbf53707f.png' alt='Рулонные изоляционные материалы')
+              span.catalog-menu-item__name Рулонные изоляционные материалы
+            a.catalog-menu-item(href='/catalog/propitki-dlya-drevesiny/' title="Перейти на страницу раздела 'Пропитки для древесины'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/75/05/7505c5104c47d846a0dbab98c1d96eb9.jpg' alt='Пропитки для древесины')
+              span.catalog-menu-item__name Пропитки для древесины
+          .item
+            a.catalog-menu-item(href='/catalog/derevyannye-igrushki/' title="Перейти на страницу раздела 'Деревянные игрушки'")
+              span.catalog-menu-item__image
+                img(src='/media/vagonkabrus_cache/07/31/0731b9d7bb4c8cd30695b03a4b98b923.jpg' alt='Деревянные игрушки')
+              span.catalog-menu-item__name Деревянные игрушки
+      
+  section.conditional-section.conditional-section_bg(style=`background-color:#9cc18d;`)
+    .container 
+      h2.mobile-center Удобные функции В2В 24/7
+      .privilege-block
+        .privilege-item(style='border-top: solid 3px #318F35;')
+          span.privilege-item__title Калькулятор доставки
+          p Откройте для себя наш удобный инструмент для расчета стоимости доставки
+          a.btn-border.btn-border--lg(href='/cart/delivery_calculator/' style='background-color:#318F35; color:#fff; width:150px;') Рассчитать
+        .privilege-item
+          span.privilege-item__title Экономьте свое время
+          p Выставите счет в корзине или отправьте запрос менеджеру в свободной форме
+          a.btn-border.btn-border--lg(href='/cart/' style='background-color:#318F35; color:#fff; width:150px;') Получить счёт
+          img(src='/media/uploads/logo_skl.png' alt='' style='margin-bottom: -87px;')
+
+  //Шаблон конец
+
+  section.conditional-section
     .container
       .catalog-side.mobile-show
         span.catalog-side__title
@@ -138,99 +240,9 @@ block content
               a(href='/catalog/propitki-dlya-drevesiny/') Пропитки для древесины
             li.menu-item.current
               a(href='/catalog/derevyannye-igrushki/') Деревянные игрушки
-      .content-block
+      .content-block      
         
-        span.content-title.product-set-title.h2 Категории товаров
-        .category-slider
-          .owl-carousel
-            .item
-              a.catalog-menu-item(href='/catalog/brevno-ocilindrovannoe/' title="Перейти на страницу раздела 'Бревно оцилиндрованное'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/b1/58/b158304fe92f29220831dbef5fd675fe.jpg' alt='Бревно оцилиндрованное')
-                span.catalog-menu-item__name Бревно оцилиндрованное
-              a.catalog-menu-item(href='/catalog/vagonka-i-evrovagonka/' title="Перейти на страницу раздела 'Вагонка и Евровагонка'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/d2/a6/d2a67425e46b69e8bdf92a9d154b06d2.jpg' alt='Вагонка и Евровагонка')
-                span.catalog-menu-item__name Вагонка и Евровагонка
-            .item
-              a.catalog-menu-item(href='/catalog/blok-haus/' title="Перейти на страницу раздела 'Блок Хаус'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/e8/16/e816bf9b4b9ed15ad5bebfbdc6edad60.jpg' alt='Блок Хаус')
-                span.catalog-menu-item__name Блок Хаус
-              a.catalog-menu-item(href='/catalog/imitaciya-brusa/' title="Перейти на страницу раздела 'Имитация бруса'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/4d/e0/4de04029d45fe71d643ef56fd550274b.jpg' alt='Имитация бруса')
-                span.catalog-menu-item__name Имитация бруса
-            .item
-              a.catalog-menu-item(href='/catalog/doska-pola/' title="Перейти на страницу раздела 'Доска пола'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/3f/47/3f47a48ba0c3c6e53037e7a64aabe6b0.jpg' alt='Доска пола')
-                span.catalog-menu-item__name Доска пола
-              a.catalog-menu-item(href='/catalog/brus-i-doska-suhie-strogannye/' title="Перейти на страницу раздела 'Брус и Доска'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/5b/94/5b94a9e8281ac988e782e500406b353c.jpg' alt='Брус и Доска')
-                span.catalog-menu-item__name Брус и Доска
-            .item
-              a.catalog-menu-item(href='/catalog/derevianniy-dekor/' title="Перейти на страницу раздела 'Деревянный декор'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/91/06/910629f5994e38374c37855f313adcd7.jpg' alt='Деревянный декор')
-                span.catalog-menu-item__name Деревянный декор
-              a.catalog-menu-item(href='/catalog/elementy-lestnic/' title="Перейти на страницу раздела 'Элементы лестниц'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/20/b2/20b29673886ea3ef1b3bcd1bb29569a8.jpg' alt='Элементы лестниц')
-                span.catalog-menu-item__name Элементы лестниц
-            .item
-              a.catalog-menu-item(href='/catalog/dveri-i-okna/' title="Перейти на страницу раздела 'Двери и окна'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/f5/1f/f51f0eb2e2764a446b214d543070a634.jpg' alt='Двери и окна')
-                span.catalog-menu-item__name Двери и окна
-              a.catalog-menu-item(href='/catalog/materialy-iz-lipy/' title="Перейти на страницу раздела 'Материалы из липы и абаши'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/46/70/4670e2b078e93bd3b2b3cbbb97b058db.jpg' alt='Материалы из липы и абаши')
-                span.catalog-menu-item__name Материалы из липы и абаши
-            .item
-              a.catalog-menu-item(href='/catalog/materialy-iz-listvennicy/' title="Перейти на страницу раздела 'Материалы из лиственницы'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/34/08/3408eb6a5dbccc78ae73df6aaa1fac25.jpg' alt='Материалы из лиственницы')
-                span.catalog-menu-item__name Материалы из лиственницы
-              a.catalog-menu-item(href='/catalog/materialy-ih-osiny-i-abashi/' title="Перейти на страницу раздела 'Материалы из осины'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/5f/81/5f819dd99f980d31157b1fb3accc0597.jpg' alt='Материалы из осины')
-                span.catalog-menu-item__name Материалы из осины
-            .item
-              a.catalog-menu-item(href='/catalog/fanera-osb-dsp-dvp-tssp/' title="Перейти на страницу раздела 'Фанера, ОСБ, ДСП, ДВП'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/44/5c/445cf48975b39af56b55c4ccdc928bfd.jpg' alt='Фанера, ОСБ, ДСП, ДВП')
-                span.catalog-menu-item__name Фанера, ОСБ, ДСП, ДВП
-              a.catalog-menu-item(href='/catalog/utepliteli/' title="Перейти на страницу раздела 'Утеплители'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/29/0b/290bb56d18fd2a039320e5f7dc05048c.jpg' alt='Утеплители')
-                span.catalog-menu-item__name Утеплители
-            .item
-              a.catalog-menu-item(href='/catalog/rulonnie-izoliyzionnie-materialy/' title="Перейти на страницу раздела 'Рулонные изоляционные материалы'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/f8/b2/f8b2f8f0a1921cf459513c6dbf53707f.png' alt='Рулонные изоляционные материалы')
-                span.catalog-menu-item__name Рулонные изоляционные материалы
-              a.catalog-menu-item(href='/catalog/propitki-dlya-drevesiny/' title="Перейти на страницу раздела 'Пропитки для древесины'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/75/05/7505c5104c47d846a0dbab98c1d96eb9.jpg' alt='Пропитки для древесины')
-                span.catalog-menu-item__name Пропитки для древесины
-            .item
-              a.catalog-menu-item(href='/catalog/derevyannye-igrushki/' title="Перейти на страницу раздела 'Деревянные игрушки'")
-                span.catalog-menu-item__image
-                  img(src='/media/vagonkabrus_cache/07/31/0731b9d7bb4c8cd30695b03a4b98b923.jpg' alt='Деревянные игрушки')
-                span.catalog-menu-item__name Деревянные игрушки
-        h2.mobile-center Удобные функции В2В 24/7
-        .privilege-block
-          .privilege-item(style='border-top: solid 3px #318F35;')
-            span.privilege-item__title Калькулятор доставки
-            p Откройте для себя наш удобный инструмент для расчета стоимости доставки
-            a.btn-border.btn-border--lg(href='/cart/delivery_calculator/' style='background-color:#318F35; color:#fff; width:150px;') Рассчитать
-          .privilege-item
-            span.privilege-item__title Экономьте свое время
-            p Выставите счет в корзине или отправьте запрос менеджеру в свободной форме
-            a.btn-border.btn-border--lg(href='/cart/' style='background-color:#318F35; color:#fff; width:150px;') Получить счёт
-            img(src='/media/uploads/logo_skl.png' alt='' style='margin-bottom: -87px;')
+        
   
   
   section.conditional-section
