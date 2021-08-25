@@ -343,7 +343,7 @@ header {
   .contact-text-line p:last-child {
     margin: 0; }
 
-.home-banner + .conditional-section_bg {
+.home-banner + .conditional-section_bg, .home-banner + .home-banner {
   margin-top: -40px; }
 
 .home-banner .owl-stage {
@@ -379,10 +379,37 @@ header {
   height: 100%; }
 
 .home-banner__slide {
-  overflow: hidden; }
-  .home-banner__slide img {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  height: 100%; }
+  .home-banner__slide .image:first-child img {
     position: relative;
     height: auto; }
+  .home-banner__slide .image:not(:first-child) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+
+.home-banner__slide-container {
+  min-height: 400px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 120px; }
+
+.home-banner__slide-content {
+  width: 400px;
+  border-radius: 4px; }
+  .home-banner__slide-content_bg {
+    padding: 20px;
+    background-color: var(--color-banner-content-bg, #fff); }
+  .home-banner__slide-content_right {
+    margin: 0 0 0 auto; }
 
 .home-banner .owl-prev, .home-banner .owl-next {
   position: absolute;
@@ -414,52 +441,62 @@ header {
   .home-banner + .home-categories .home-categories__container {
     margin-top: -87px; } }
 
+@media screen and (max-width: 1279px) {
+  .home-banner .owl-prev {
+    left: 10px; }
+  .home-banner .owl-next {
+    right: 10px; }
+  .home-banner__slide-content {
+    margin: 0 0 0 50px; }
+    .home-banner__slide-content_right {
+      margin: 0 50px 0 auto; } }
+
 @media screen and (max-width: 991px) {
   .home-banner .owl-dots {
     bottom: 20px; }
-  .home-banner .owl-prev {
-    left: 15px; }
-  .home-banner .owl-next {
-    right: 15px; }
   .home-banner__slide {
     overflow: hidden; }
-    .home-banner__slide img {
+    .home-banner__slide .image:first-child img {
       width: 150% !important;
       max-width: initial !important;
-      transform: translateX(-33.33%); } }
+      transform: translateX(-33.33%); }
+  .home-banner__slide-container {
+    padding-top: 40px;
+    padding-bottom: 70px;
+    min-height: 350px; } }
+
+@media screen and (max-width: 767px) {
+  .home-banner__slide-content .btn, .home-banner__slide-content .btn-download {
+    margin: 0;
+    width: auto;
+    padding: 0 30px; } }
 
 @media screen and (max-width: 575px) {
   .home-banner .owl-prev, .home-banner .owl-next {
     display: none; }
-  .home-banner .owl-dots {
-    bottom: 16px; } }
+  .home-banner__slide-container {
+    padding-bottom: 60px;
+    justify-content: center;
+    min-height: 250px; }
+  .home-banner__slide-content {
+    width: calc(100% - 50px);
+    margin: 0; } }
 
 .category-card {
   font-size: 0.875rem;
   line-height: 1.25rem; }
   .category-card__container {
-    min-height: 130px;
     color: #fff;
     border-radius: 2px;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
     text-decoration: none;
-    height: 100%;
-    position: relative;
-    /* &:after {
+    position: relative; }
+    .category-card__container:after {
       content: '';
       display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background-color: #000;
-      opacity: 0.6;
-      transition: background-color $trs1, opacity $trs1;
-      z-index: 2;
-    } */ }
+      padding-top: 46.42%; }
     .category-card__container .image {
       position: absolute;
       top: 0;
@@ -469,13 +506,8 @@ header {
       z-index: 1; }
       .category-card__container .image img {
         transition: filter 0.25s ease-out; }
-    .category-card__container:hover {
-      /* &:after {
-        background-color: var(--preview-bg-hover-color, #2363D1);
-        opacity: 0.8;
-      } */ }
-      .category-card__container:hover .image img {
-        filter: grayscale(0); }
+    .category-card__container:hover .image img {
+      filter: grayscale(0); }
   .category-card__title {
     font-size: 1.125rem;
     line-height: 1.5rem;
@@ -484,7 +516,9 @@ header {
     z-index: 4;
     margin: 0;
     color: inherit;
-    position: relative; }
+    position: absolute;
+    bottom: 0;
+    left: 0; }
     .category-card__title .icon {
       position: absolute;
       width: 18px;
@@ -1610,7 +1644,7 @@ header {
 
 .faq-element {
   position: relative;
-  background-color: #f5f5f5; }
+  background-color: var(--color-faq-element-bg, #f5f5f5); }
   .faq-element:not(:last-child) {
     margin-bottom: 15px; }
   .faq-element__head {

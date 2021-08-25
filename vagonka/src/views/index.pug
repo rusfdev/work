@@ -64,8 +64,70 @@ block variables
   -var bodyClass = 'frontpage wide-mode'
 block content
 
-  //Шаблон старт
-  section.conditional-section.conditional-section_bg(style=`background-color:#9cc18d;`)
+  section.home-banner.conditional-section
+    .owl-carousel
+      //slide
+      a(href="#").home-banner__slide
+        .image.image_cover
+          img(src='https://vagonka-brus-doska.ru/media/slides/big_slides/%D0%91%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D1%81%D0%BB%D0%BA_PN8u4t0_1.jpg', alt="image")
+      //slide
+      a(href="#").home-banner__slide
+        .image.image_cover
+          img(src='https://vagonka-brus-doska.ru/media/slides/big_slides/%D0%91%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D1%81%D0%BB%D0%BA_PN8u4t0_1.jpg', alt="image")
+
+
+  section.home-categories.conditional-section.conditional-section_bg(style=`background-color:#f5f5f5;`)
+    .container.home-categories__container
+      .grid
+        include blocks/cards
+        -var grid = 'grid__block home-categories__block'
+        +card2('Деревянные дома', href+'/img/56dcc810efa71925168c0d36d5c3fbf7.png', grid)
+        +card2('Кровельные работы', href+'/img/7eaf93e9c47993e5b22277de3a30b89e.png', grid)
+        +card2('Пропитки для бревен', href+'/img/767773b7699f15e02052b250d92c0c7f.png', grid)
+        +card2('Проектирование', href+'/img/e79cec4f0a120d2e96a1701cf4ef8db3.png', grid)
+
+
+  section.home-banner.conditional-section
+    .owl-carousel
+
+      //slide
+      .home-banner__slide
+        .home-banner__slide-container.container 
+          //Если нужен фон, добавляется модификатор home-banner__slide-content_bg
+          //Если вертикальное выравнивание по правой стороне, добавляется модификатор home-banner__slide-content_right
+          .home-banner__slide-content.home-banner__slide-content_right
+            h3 Заголовок слайда
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sunt ipsum repellat reiciendis laudantium.
+            a(href="#").btn.btn--main-min Кнопка
+        //image
+        .image.image_cover
+          img(src='https://via.placeholder.com/1920x600/9cc18d/9cc18d', alt="image")
+
+      //slide
+      .home-banner__slide
+        .home-banner__slide-container.container
+          //Если нужен фон, добавляется модификатор home-banner__slide-content_bg
+          //Если вертикальное выравнивание по правой стороне, добавляется модификатор home-banner__slide-content_right
+          .home-banner__slide-content.home-banner__slide-content_bg 
+            h3 Заголовок слайда
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sunt ipsum repellat.
+            a(href="#").btn.btn--main-min Кнопка
+        //image
+        .image.image_cover
+          img(src=href+'/img/image 56.png', alt="image")
+
+  section.home-categories.conditional-section.conditional-section_bg(style=`background-color:#9cc18d;`)
+    .container.home-categories__container
+      .grid
+        include blocks/cards
+        -var grid = 'grid__block home-categories__block'
+        +card2('Деревянные дома', href+'/img/56dcc810efa71925168c0d36d5c3fbf7.png', grid)
+        +card2('Кровельные работы', href+'/img/7eaf93e9c47993e5b22277de3a30b89e.png', grid)
+        +card2('Пропитки для бревен', href+'/img/767773b7699f15e02052b250d92c0c7f.png', grid)
+        +card2('Проектирование', href+'/img/e79cec4f0a120d2e96a1701cf4ef8db3.png', grid)
+
+
+  section.conditional-section.conditional-section_bg(style=`background-color:#b0d4a1;`)
     .container
       .main-slider
         .owl-carousel(data-autoplay-timeout='5')
@@ -78,26 +140,8 @@ block content
               a(href='http://box6.stroyker.pro/news/promo/klassnay-akzia/' title='Пример 2')
                 img(src='https://vagonka-brus-doska.ru/media/slides/big_slides/%D0%91%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D1%81%D0%BB%D0%BA_3_82FT1YE.jpg' alt='')
 
-  section.home-banner.conditional-section
-    .owl-carousel
-      .home-banner__slide.image.image_cover
-        img(src='https://via.placeholder.com/1920x600/b0d4a1', alt="image")
-      .home-banner__slide.image.image_cover
-        img(src='https://via.placeholder.com/1920x600/b0d4a1', alt="image")
-      .home-banner__slide.image.image_cover
-        img(src='https://via.placeholder.com/1920x600/b0d4a1', alt="image")
-
-  section.home-categories.conditional-section.conditional-section_bg(style=`background-color:#9cc18d;`)
-    .container.home-categories__container
-      .grid
-        include blocks/cards
-        -var grid = 'grid__block home-categories__block'
-        +card2('Деревянные дома', href+'/img/56dcc810efa71925168c0d36d5c3fbf7.png', grid)
-        +card2('Кровельные работы', href+'/img/7eaf93e9c47993e5b22277de3a30b89e.png', grid)
-        +card2('Пропитки для бревен', href+'/img/767773b7699f15e02052b250d92c0c7f.png', grid)
-        +card2('Проектирование', href+'/img/e79cec4f0a120d2e96a1701cf4ef8db3.png', grid)
-
-  section.conditional-section.conditional-section_bg(style=`background-color:#b0d4a1;`)
+  
+  section.conditional-section.conditional-section_bg(style=`background-color:#9cc18d;`)
     .container 
       span.content-title.product-set-title.h2 Категории товаров
       .category-slider
@@ -180,7 +224,7 @@ block content
                 img(src='/media/vagonkabrus_cache/07/31/0731b9d7bb4c8cd30695b03a4b98b923.jpg' alt='Деревянные игрушки')
               span.catalog-menu-item__name Деревянные игрушки
       
-  section.conditional-section.conditional-section_bg(style=`background-color:#9cc18d;`)
+  section.conditional-section.conditional-section_bg(style=`background-color:#b0d4a1;`)
     .container 
       h2.mobile-center Удобные функции В2В 24/7
       .privilege-block
@@ -194,7 +238,6 @@ block content
           a.btn-border.btn-border--lg(href='/cart/' style='background-color:#318F35; color:#fff; width:150px;') Получить счёт
           img(src='/media/uploads/logo_skl.png' alt='' style='margin-bottom: -87px;')
 
-  //Шаблон конец
 
   section.conditional-section
     .container
