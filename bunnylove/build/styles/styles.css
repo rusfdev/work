@@ -25776,6 +25776,12 @@ textarea.input {
   .text-content-section__container {
     padding: 0; } }
 
+.product-shops-available-list {
+  display: block;
+  color: #797985;
+  font-size: 0.875rem;
+  margin: -6px 0 16px 0; }
+
 .noty_layout_mixin, #noty_layout__top, #noty_layout__topLeft, #noty_layout__topCenter, #noty_layout__topRight, #noty_layout__bottom, #noty_layout__bottomLeft, #noty_layout__bottomCenter, #noty_layout__bottomRight, #noty_layout__center, #noty_layout__centerLeft, #noty_layout__centerRight {
   position: fixed;
   margin: 0;
