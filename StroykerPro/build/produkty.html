@@ -1,0 +1,334 @@
+
+<html lang="ru">
+  <head>
+    <base href="https://stroyker.pro/"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="keywords" content="Список, проектов"/>
+    <title>Шаблон</title>
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="/static/css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="/static/css/jquery.mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" href="/static/libs/bootstrap/css/bootstrap-grid.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&amp;family=Russo+One&amp;display=swap&amp;family=Montserrat:wght@800&amp;display=swap" rel="stylesheet"/>
+    <!--script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js')-->
+    <meta property="og:title" content="STROYKER.PRO"/>
+    <meta property="og:site_name" content="Разработка сайтов"/>
+    <!--ссылка на текущую страницу абсолютная-->
+    <meta property="og:url" content="http://localhost:9000"/>
+    <meta property="og:description" content="Умные интернет магазины стройматериалов и сайты для строительных компаний"/>
+    <!--Абсолютная ссылка на картинку-->
+    <meta property="og:image" content="https://stroyker.pro/media/cache/ed/06/ed067a64f0861f0286893179167192cf.jpg"/>
+    <link rel="stylesheet" href="http://localhost:9000/styles/main.css"/>
+    <link rel="stylesheet" href="http://localhost:9000/styles/media.css"/>
+    <link rel="stylesheet" href="http://localhost:9000/styles/custom.css"/>
+    <link rel="stylesheet" href="http://localhost:9000/styles/new.css"/>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!--header-->
+      <header class="header" data-scroll-lock-fill-gap="data-scroll-lock-fill-gap">
+        <div class="header__top">
+          <div class="container">
+            <!--logo-->
+            <div class="logo header__logo"> <a class="logo__link" href="index.html"><img src="../../img/" alt=""/></a></div>
+            <!--nav-->
+            <div class="header-nav">
+              <ul class="header-nav__list">
+                                <li class="header-nav__item"><a class="header-nav__link" href="#">Проекты</a></li>
+                                <li class="header-nav__item"><a class="header-nav__link" href="#">Услуги</a></li>
+                                <li class="header-nav__item"><a class="header-nav__link" href="#">Реализованные объекты</a></li>
+                                <li class="header-nav__item"><a class="header-nav__link" href="#">Акции</a></li>
+                                <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <!--else-->
+            <div class="header__contact-group">
+              <div class="header__city"><a class="header__city-link" href="#cities" data-popup-open="data-popup-open">Самара
+                  <svg class="icon">
+                    <use xlink:href="img/icons/icons-sprite.svg#arrow-down"></use>
+                  </svg></a>
+                <div class="small-popup city-question-popup"><span class="city-question-popup__text">Ваш город Нижний Новгород?</span>
+                  <div class="city-question-popup__buttons row">
+                    <div class="col-auto"><a class="button button_style-2 city-question-popup__button" href="javascript:void(0);" data-popup-close="data-popup-close">Да</a></div>
+                    <div class="col-auto"><a class="button button_style-1 city-question-popup__button" href="#cities" data-popup-open="data-popup-open" data-popup-close="data-popup-close">Нет</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__contact-items"><a class="header__phone" href="tel:+79874433777">+7 987 443-37-77</a><a class="button button_style-1" href="#feedback" data-popup-open="data-popup-open">Заказать звонок</a></div>
+              <!--nav toggle--><a class="nav-toggle" href="javascript:void(0);"><span></span><span></span><span></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom" data-scroll-lock-fill-gap="data-scroll-lock-fill-gap">
+          <div class="container">
+            <div class="search header__search">
+              <form class="search__form" action="#">
+                <input class="search__input" type="text" placeholder="Введите название, бренд..."/>
+                <button class="search__button">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/icons-sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <div class="header__buttons-group">
+              <!--btn--><a class="header__small-button header__small-button_auth" href="#">
+                <svg class="icon">
+                  <use xlink:href="img/icons/icons-sprite.svg#user"></use>
+                </svg><span>“Строймонтаж”</span></a>
+              <!--btn--><a class="header__small-button header__small-button_comparison" href="#">
+                <svg class="icon">
+                  <use xlink:href="img/icons/icons-sprite.svg#comparison"></use>
+                </svg><span>0</span></a>
+              <!--btn--><a class="header__small-button header__small-button_cart" href="#"> 
+                <svg class="icon">
+                  <use xlink:href="img/icons/icons-sprite.svg#subtract"></use>
+                </svg><span>12</span></a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="heading-box">
+          <div class="container">
+            <ul class="breadcrumbs">
+              <li><a title="Главная" href="/">Главная</a></li>
+              <li>Продукты</li>
+            </ul>
+            <h1>Продукты</h1>
+          </div>
+        </div>
+        <div class="info-box info-box-white">
+          <div class="container">
+            <div class="info-frames">
+              <div class="row">
+                <div class="col-md-4 col-sm-12">
+                  <div class="frame with-tringle frame-yellow">
+                    <div class="ico"><img src="/static/img/fr1.svg" alt=""/></div>
+                    <div class="h3">СТРОЙКЕР - <br/>СТРОИТЕЛЬ 1.0</div>
+                    <p>Умный сайт - платформа, специально разработанный для строительных компаний и бригад. <br/>Ждать не надо - сайт работает сразу</p>
+                    <div class="price">от 50.000<span class="sign"><img src="/static/img/" alt=""/></span></div><a class="link" href="/catalog/product/stroyker-builder-10/#tab3">Акция! можно получить бесплатно</a><a class="btn btn-more" href="/catalog/product/stroyker-builder-10/">Подробнее</a>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                  <div class="frame with-tringle frame-green">
+                    <div class="ico"><img src="/static/img/fr2.svg" alt=""/></div>
+                    <div class="h3">СТРОЙКЕР - <br/>ДИСТРИБЬЮТОР 1.0</div>
+                    <p>Умный сайт-платформа, специально разработанный для профессиональных продавцов строительных материалов. <br/>Покупаете и сразу начинаете работать</p>
+                    <div class="price">от 100.000 <span class="sign"><img src="/static/img/rub.svg" alt=""/></span></div><a class="link" href="/catalog/product/stroyker-dis-10/">Есть тестовый период и рассрочка</a><a class="btn btn-more" href="/catalog/product/stroyker-dis-10/">Подробнее</a>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                  <div class="frame with-tringle frame-blue">
+                    <div class="ico"><img src="/static/img/fr3.svg" alt=""/></div>
+                    <div class="h3">СТРОЙКЕР - <br/>ПРОИЗВОДИТЕЛЬ 1.0</div>
+                    <p>Умный сайт-платформа, специально разработанный для производителей. Отлаженный модуль для В2В сегмента<br/>Ждать не надо - сайт работает сразу</p>
+                    <div class="price">от 50.000 <span class="sign"><img src="/static/img/rub.svg" alt=""/></span></div><a class="link" href="/catalog/product/stroyker-manufacturer-10/">Есть тестовый период и рассрочка</a><a class="btn btn-more" href="/catalog/product/stroyker-manufacturer-10/">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="info-bg-box info-frames">
+              <div class="row">
+                <div class="col-md-4 col-sm-12">
+                  <div class="frame with-tringle frame-black">
+                    <div class="h3">СТРОЙКЕР - <br/>КОРПОРАЦИЯ</div>
+                    <p>Наш опыт позволяет воплотить в реальность абсолютно любую вашу задачу. <br/>Если у вас достаточно денег для реализации ваших целей Стройкер Про готов воплотить ваши задачи в жизнь на высоком техническом уровне. Сложность проекта не имеет значения!</p>
+                    <div class="price">от 1000.000 <span class="sign"><img src="/static/img/rub.svg" alt=""/></span></div><a class="btn btn-more" href="/catalog/product/iq-cajt-platforma-stroykercorporation/">Подробнее</a>
+                  </div>
+                </div>
+                <div class="col-md-8 col-sm-12">
+                  <div class="text-frame with-tringle">
+                    <div class="ico"><img src="/static/img/logo-angle.svg" alt=""/></div>
+                    <div class="h3">ИНТЕРНЕТ-ВИТРИНА КРАСНАЯЦЕНА.РФ</div>
+                    <p>Наш главный сетевой продукт. Лучшее добавление к вашему торговому бизнесу. Это не франшиза и не маркет плэйс.</p>
+                    <p>Это технологический инструмент дающий бесспорное примущество над конкурентами в области продаж строительных товаров.</p>
+                    <ul class="list">
+                      <li>Ваши контакты</li>
+                      <li>Бесплатные лиды</li>
+                      <li>Ваши товары</li>
+                      <li>Информация</li>
+                      <li>Ваши цены</li>
+                    </ul><a class="btn btn-more btn-more-red" href="/catalog/product/redprice/">Подробнее о проекте</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="statictext-box">
+          <div class="container">
+            <div class="wrap content">
+              <h1 style="text-align:center">Не заказывайте сайт в вебстудии! Покупайте в Стройкер Про и сразу пользуйтесь!</h1>
+              <ul>
+                <li>87% сайтов в строительной тематике не отвечают требованиям поисковых систем и современным тенденциям IT-технологий и маркетинга. ООО СтройкерПро - это компания создающая передовое программное обеспечение исключительно для строительного рынка. Мы предлагаем передовые маркетинговые IT-решения для продажи строительных материалов в В2В и В2С секторе.<br/></li>
+                <li>Говоря простым языком вы сможете заказать умный сайт платформу для строительной компании, сайт для производителей и интернет магазин для продажи стройматериалов.<br/></li>
+                <li>Почему мы так смело заявляем о том, что наше платформенное решение лучше для строительного бизнеса?<br/></li>
+                <li>Во первых 90% сайтов и интернет магазинов сделано на устаревших движках а многие популярные движки с подпиской и продлением лицензии сделаны для всех секторов и рассчитанный только на прибыль компании продающей программное обеспечение а не на интересы заказчика.<br/></li>
+                <li>Мы сконцентрированы только на строительном секторе, более того мы имеем более 10 лет успешного опыта в продаже строительных материалов и нам явно есть чем похвастаться. Это нормально, что сайты созданные обычными веб студиями для строительного рынка не эффективны - просто потому, что их создают дизайнеры, программист и студенты которые абсолютно не разбираются в тонкостях бизнеса а самое главное им абсолютно всёравно. Мы знаем лучше всех как привлечь клиентов или обслужить их через интернет ресурсы, наш опыт в продажах стройматериалов и постоянная оптимизация расходов на отдел продаж, рекламу и аналитику привёл к созданию эффективных и главное проверенных инструментов в виде наших it разработок.<br/></li>
+                <li>Задумайтесь! Компания СтройкерПро занимается исключительно одним сектором рынка - строительным. Пока вы управляете торговой базой, производством, пока веб студия сделавшая вам сайт клепает очередному клиенту интернет магазин безделушек или суши лендинг мы 24/7 улучшаем и совершенствуем свои технологи только в одной тематике.<br/></li>
+                <li>На страницах нашего сайта вы найдёте информацию о наших предложениях, разработках и услугах. Так же мы раскрываем несколько профессиональных секретов и щедро делимся ими. Прочитайте внимательно о наших разработках и чем наши платформы отличаются от остальных, принимайте профессиональные решения и начинайте доминировать над конкурентами.<br/></li>
+                <li>Купить сайт платформу или интернет магазин очень просто так же как и управлять им. Всё уже готово! Активация в течении 24 часов на вашем сервере или на сервере компании Стройкер Про. Нет ожидания готовности производства сайта и миллиона вопросов по согласованию, всё уже предусмотрено. С помщью конструктора меняйте дизайн сайта самостоятель а сео модуль не требует дополнительных затрат на продвижение.Так же Стройкер Про предлагает интересное партнёрское решение которое мы называем Витрина это успешный сайт Краснаяцена.рф Уважаемые предпринематели, нас и так не много, не пропускайте возможности из за лени или невнимательности, изучите пожалуйста наши предложения а если будут вопросы мы готовы вести диалог и оказать любую помощь в достижение результата.<br/></li>
+                <li>90% людей всегда отрицают прогресс но потом живут в нём а остальные 10 это предпринематели.</li>
+                <li>Спасибо за внимание и добро пожаловать!<br/><br/><img alt="" src="/media/uploads/2020/06/09/3_CkfHTD7.jpg"/></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="form-box question-form">
+          <div class="container">
+            <div class="wrap">
+              <div class="title">Есть вопросы? Напишите нам</div>
+              <form class="default-form crm-form" id="feedback-message-request-form" action="/crm/message/" method="post">
+                <input type="hidden" name="csrfmiddlewaretoken" value="5F1dMAEMYhNJoBwQTd8jBQRyPSO2BdPyPyLxH9ZM4F4KfUp93vaUDk6INxrHlArr"/>
+                <input type="hidden" name="url" value="/catalog/product/"/>
+                <div class="row">
+                  <div class="col-sm-6 col-xs-12">
+                    <div class="inp-wr">
+                      <input type="text" placeholder="Имя" name="name" autocomplete="off" required=""/>
+                    </div>
+                    <div class="inp-wr">
+                      <input class="phone" type="text" placeholder="+7 (999) 123 45 67" name="phone" autocomplete="off" required=""/>
+                    </div>
+                    <div class="inp-wr">
+                      <input type="text" placeholder="email@example.com" name="email" autocomplete="off" required=""/>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xs-12">
+                    <div class="inp-wr">
+                      <textarea name="message" autocomplete="off" required="" placeholder="Ваше сообщение"></textarea>
+                    </div>
+                    <div class="btn-wr">
+                      <input class="btn" type="submit" value="Отправить"/>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="row wr">
+            <div class="col-lg-3 col-lg-push-9 col-md-push-8 col-md-4 col-sm-12">
+              <div class="email-bx">
+                <div class="t1">Оставайтесь на связи!</div>
+                <div class="t2">Подписка: Новинки, скидки, предложения</div>
+                <form class="search-form email-form footer-subscribe" id="footer-subscription-form" method="POST" action="/subscription/new/">
+                  <input type="hidden" name="csrfmiddlewaretoken" value="yhBXhqyc03tJ5qwDJ0L3Rce7YNAJWFcqSFLW54f4fuP0ESE4ETHXVB2V0v33dKxM"/>
+                  <input type="email" name="email" placeholder="E-mail" autocomplete="off" required=""/>
+                  <input type="submit" value="Ok"/>
+                </form>
+                <ul class="social">
+                  <li><a href="#"><img src="/static/img/sc1.svg" alt=""/></a></li>
+                  <li><a href="https://www.instagram.com/stroyker.pro/"><img src="/static/img/sc2.svg" alt=""/></a></li>
+                  <li><a href="#"><img src="/static/img/sc3.svg" alt=""/></a></li>
+                  <li><a href="#"><img src="/static/img/sc4.svg" alt=""/></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-lg-pull-3 col-md-pull-4 col-md-3 col-sm-12">
+              <div class="cont-bx">
+                <div class="flogo hidden-xs hidden-sm"><img src="/media/Логотип Стройкер (7).svg" alt="Главная страница сайта"/></div>
+                <div class="tel"><a class="phone" href="tel:78462111129">+7 (846) 211-11-29</a></div>
+                <div class="adr">г. Самара, пр. Кирова, 318</div>
+                <div class="adr"><a href="mailto:info@stroyker.pro">info@stroyker.pro</a></div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-lg-pull-3 col-md-pull-4 col-md-5 col-sm-12">
+              <ul class="list">
+                <li><b>Платформы</b></li>
+                <li><a title="Дистрибьютор" href="/catalog/product/stroyker-dis-10/">Дистрибьютор</a></li>
+                <li><a title="Производитель" href="/catalog/product/stroyker-manufacturer-10/">Производитель</a></li>
+                <li><a title="Строитель" href="/catalog/product/stroyker-builder-10/">Строитель</a></li>
+                <li><a title="КраснаяЦена.рф" href="/catalog/product/redprice/">КраснаяЦена.рф</a></li>
+              </ul>
+              <ul class="list">
+                <li><b>Клиентам</b></li>
+                <li><a title="Каталог услуг" href="/catalog/">Каталог услуг</a></li>
+                <li><a title="Портфолио" href="/portfolio/">Портфолио</a></li>
+              </ul>
+              <ul class="list">
+                <li><b>О компании</b></li>
+                <li><a title="Новости" href="/news/">Новости</a></li>
+                <li><a title="Контакты" href="/contacts/">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row bot">
+            <div class="col-sm-4 col-xs-12 col-sm-push-8">
+              <div class="log"><img width="115" src="/media/Логотип Стройкер (7)_H5iz7Gn.svg" alt="Главная страница сайта"/></div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+              <div class="polit"><a href="">Политика обработки данных</a></div>
+            </div>
+            <div class="col-sm-4 col-xs-12 col-sm-pull-8">
+              <div class="copy">© 2020 Стройкер. Все права защищены</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="overlay" style="display: none;"></div>
+    <div class="popup popup-call" style="display: none;">
+      <div class="close"><img src="/static/img/close.svg" alt=""/></div>
+      <div class="title">Заказать обратный звонок</div>
+      <form class="default-form lk-form crm-form" id="callme-request-form" action="/crm/callme-request/">
+        <input type="hidden" name="csrfmiddlewaretoken" value="5F1dMAEMYhNJoBwQTd8jBQRyPSO2BdPyPyLxH9ZM4F4KfUp93vaUDk6INxrHlArr"/>
+        <input type="hidden" name="url" value="/catalog/product/"/>
+        <div class="inp-wr">
+          <input class="form-control" type="text" name="name" autocomplete="off" placeholder="Как к Вам обращаться" required=""/>
+        </div>
+        <div class="inp-wr">
+          <input class="form-control phone" type="text" name="phone" autocomplete="off" placeholder="+7 (999) 123 45 67" required=""/>
+        </div>
+        <input class="btn" type="submit" value="Отправить"/>
+        <div class="pol">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с <a href="">политикой конфиденциальности</a></div>
+      </form>
+    </div>
+    <div class="popup popup-tnx">
+      <div class="ico"><img src="/static/img/tnx.svg" alt=""/></div>
+      <div class="title">Сообщение отправлено!</div><a class="btn btn-close" href="">ОК</a>
+    </div>
+    <!--if lt IE 9
+    script(src='/static/libs/html5shiv/es5-shim.min.js')
+    script(src='/static/libs/html5shiv/html5shiv.min.js')
+    script(src='/static/libs/html5shiv/html5shiv-printshiv.min.js')
+    script(src='/static/libs/respond/respond.min.js')
+    -->
+    <script src="/static/libs/jquery/jquery-1.11.2.min.js"></script>
+    <script src="/static/js/ajax_setup.js"></script>
+    <script src="/static/js/owl.carousel.js"></script>
+    <script src="/static/js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="/static/js/jquery.mask.min.js"></script>
+    <script src="/static/js/jcf.js"></script>
+    <script src="/static/js/jcf.select.js"></script>
+    <script src="/static/js/jcf.file.js"></script>
+    <script src="/static/cart/js/cart.js"></script>
+    <script src="/static/js/new.js"></script>
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/custom.js"></script>
+    <script src="/static/catalog/js/catalog.js"></script>
+    <script src="/static/crm/js/crm_forms.js"></script>
+    <script src="/static/subscription/js/subscription.js"></script>
+    <!--newjs-->
+    <script src="http://localhost:9000/scripts/new.js"></script>
+    <!--helper-->
+    <script src="http://localhost:9000/scripts/helper.js"></script>
+    <link rel="stylesheet" href="http://localhost:9000/styles/helper.css"/>
+    <div class="helper"><a class="helper__trigger" href="javascript:void(0);"> 
+        <svg class="icon" viewBox="0 0 100 100" fill="currentColor">
+          <path d="M94,39.7h-4c-3.2,0-5.9-2.8-5.9-6.1c0-1.7,0.7-3.2,2-4.3l2.6-2.5c2.5-2.5,2.5-6.6,0-9.1L82.8,12c-1.1-1.1-2.8-1.8-4.6-1.8      c-1.7,0-3.4,0.7-4.6,1.8l-2.5,2.4c-1.2,1.3-2.7,2-4.4,2c-3.3,0-6.1-2.7-6.1-5.9v-4C60.6,3,57.8,0,54.2,0h-7.9C42.8,0,40,3,40,6.5v4      c0,3.2-2.8,5.9-6.1,5.9c-1.7,0-3.2-0.7-4.3-1.9L27,12c-1.1-1.2-2.8-1.8-4.6-1.8c-1.7,0-3.4,0.7-4.6,1.8L12,17.7      c-2.5,2.5-2.5,6.6,0,9.1l2.5,2.4c1.3,1.2,2,2.7,2,4.4c0,3.3-2.7,6.1-5.9,6.1h-4C3,39.7,0,42.5,0,46v4v4c0,3.5,3,6.3,6.6,6.3h4      c3.2,0,5.9,2.8,5.9,6.1c0,1.7-0.7,3.2-2,4.4L12,73.2c-2.5,2.5-2.5,6.6,0,9.1l5.8,5.8c1.1,1.2,2.8,1.8,4.6,1.8c1.7,0,3.4-0.7,4.6-1.8      l2.5-2.5c1.1-1.2,2.7-1.9,4.3-1.9c3.3,0,6.1,2.7,6.1,5.9v4c0,3.5,2.8,6.5,6.4,6.5h7.9c3.5,0,6.4-3,6.4-6.5v-4c0-3.2,2.8-5.9,6.1-5.9      c1.7,0,3.2,0.7,4.4,2l2.5,2.4c1.2,1.1,2.8,1.8,4.6,1.8s3.4-0.7,4.6-1.8l5.8-5.8c2.5-2.5,2.5-6.6,0-9.1L86,70.7c-1.3-1.1-2-2.7-2-4.3      c0-3.3,2.7-6.1,5.9-6.1h4c3.5,0,6.1-2.8,6.1-6.3v-4v-4C100.1,42.5,97.5,39.7,94,39.7z M71.1,50L71.1,50c0,11.5-9.3,20.8-20.9,20.8      S29.4,61.5,29.4,50l0,0l0,0c0-11.5,9.3-20.8,20.9-20.8S71.1,38.5,71.1,50L71.1,50z"></path>
+        </svg></a>
+      <div class="helper__container">
+        <!--section-->
+        <div class="helper__section"><span class="helper__section-title">Страницы:</span>
+          <div class="helper__section-content"><a class="helper__section-button" href="http://localhost:9000/index.html">Главная</a><a class="helper__section-button" href="http://localhost:9000/portfolio.html">Портфолио</a><a class="helper__section-button" href="http://localhost:9000/project.html">Проект</a><a class="helper__section-button" href="http://localhost:9000/produkty.html">Продукты</a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,15 +1,26 @@
-//vars
-$color-accent: #353535 !important;
-$color-active: #ca2323 !important;
-$color-hover: #000 !important;
-$trs: .25s ease-in-out !important;
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+//variables
+$color-accent: #353535;
+$color-active: #ca2323;
+$color-hover: #000;
+$border-color: #D9D9DE;
+$bg-color: #fff;
+$btn-color: #fff;
+$shadow: 3px 3px 3px 0px rgba(0,0,0,0.05);
+$trs: .25s ease-in-out;
+$font1: 'Roboto', sans-serif;
+$font2: 'Open Sans', sans-serif;
+
 
 .helper {
+  font-family: $font1;
   position: fixed;
+  z-index: 1000;
   left: 0;
   top: 50%;
   transform: translate(-100%, -50%);
-  z-index: 1000;
   transition: transform $trs;
   width: 100%;
   max-width: 280px;
@@ -23,9 +34,9 @@ $trs: .25s ease-in-out !important;
     border-radius: 0 2px 2px 0;
     border-width: 1px 1px 1px 0;
     border-style: solid;
-    border-color: #D9D9DE !important;
-    background-color: #fff;
-    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.05);
+    border-color: $border-color;
+    background-color: $bg-color;
+    box-shadow: $shadow;
     display: flex;
     z-index: 2;
     color: $color-accent;
@@ -36,6 +47,8 @@ $trs: .25s ease-in-out !important;
       height: 18px;
       color: inherit;
       transition: transform $trs;
+      animation: 5s linear rotation infinite;
+
     }
     &:hover {
       color: $color-active;
@@ -45,13 +58,13 @@ $trs: .25s ease-in-out !important;
     position: relative;
     z-index: 1;
     padding: 20px 15px;
-    background-color: #fff;
-    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.05);
+    background-color: $bg-color;
+    box-shadow: $shadow;
     width: 100%;
     border-radius: 0 0 2px 0;
     border-width: 1px 1px 1px 0;
     border-style: solid;
-    border-color: #D9D9DE;
+    border-color: $border-color;
   }
   &__section {
     &:not(:last-child) {
@@ -62,6 +75,7 @@ $trs: .25s ease-in-out !important;
       font-weight: 500;
       display: block;
       margin: 0 0 10px 0;
+      font-family: $font2;
     }
     &-content {
       margin: 0 -5px -5px 0;
@@ -70,13 +84,15 @@ $trs: .25s ease-in-out !important;
     }
     &-button {
       margin: 0 5px 5px 0;
-      font-size: 10px;
-      font-weight: 500;
+      font-size: 12px;
+      font-weight: 400;
       text-align: center;
       background-color: $color-accent;
-      color: #fff !important;
+      color: $btn-color !important;
       transition: background-color $trs;
       line-height: 32px;
+      min-height: 32px;
+      min-width: 32px;
       padding: 0 10px;
       border-radius: 2px;
       text-decoration: none;
@@ -97,5 +113,14 @@ $trs: .25s ease-in-out !important;
         transform: rotate(180deg);
       }
     }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

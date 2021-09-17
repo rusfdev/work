@@ -1,3 +1,17 @@
+/*========== Layout ==========*/
+#wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.main {
+  flex: 1 0 auto; }
+
+/*========== Header ==========*/
+/*========== Footer ==========*/
+.footer {
+  flex: 0 0 auto; }
+
 .checkbox-element {
   position: relative; }
   .checkbox-element__input {
@@ -262,7 +276,8 @@
     display: block;
     top: 0;
     left: 0;
-    object-fit: cover; }
+    -o-object-fit: cover;
+       object-fit: cover; }
   .form-section__content {
     background-color: #fff;
     padding: 50px 40px;

@@ -11,562 +11,86 @@
     <link rel="stylesheet" href="/static/css/owl.theme.default.min.css"/>
     <link rel="stylesheet" href="/static/css/jquery.mCustomScrollbar.min.css"/>
     <link rel="stylesheet" href="/static/libs/bootstrap/css/bootstrap-grid.min.css"/>
-    <link rel="stylesheet" href="/static/css/main.css"/>
-    <link rel="stylesheet" href="/static/css/media.css"/>
-    <link rel="stylesheet" href="/static/css/custom.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&amp;family=Russo+One&amp;display=swap&amp;family=Montserrat:wght@800&amp;display=swap" rel="stylesheet"/>
     <!--script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js')-->
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/StroykerPro/build/styles/new.css"/>
-    <!--new-->
     <meta property="og:title" content="STROYKER.PRO"/>
     <meta property="og:site_name" content="Разработка сайтов"/>
     <!--ссылка на текущую страницу абсолютная-->
-    <meta property="og:url" content="https://ruslanmmr.github.io/work/StroykerPro/build"/>
+    <meta property="og:url" content="http://localhost:9000"/>
     <meta property="og:description" content="Умные интернет магазины стройматериалов и сайты для строительных компаний"/>
     <!--Абсолютная ссылка на картинку-->
     <meta property="og:image" content="https://stroyker.pro/media/cache/ed/06/ed067a64f0861f0286893179167192cf.jpg"/>
+    <link rel="stylesheet" href="http://localhost:9000/styles/main.css"/>
+    <link rel="stylesheet" href="http://localhost:9000/styles/media.css"/>
+    <link rel="stylesheet" href="http://localhost:9000/styles/custom.css"/>
+    <link rel="stylesheet" href="http://localhost:9000/styles/new.css"/>
   </head>
   <body>
     <div id="wrapper">
-      <header class="header">
-        <div class="container">
-          <div class="logo"><a href="/"><img src="/media/Логотип Стройкер с подписью.svg" alt="Главная страница сайта"/></a></div>
-          <div class="icon-bx">
-            <div class="lk"><a href="/account/login/">
-                <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="8" cy="4" r="4" fill="#16151A"></circle>
-                  <path d="M0 18C0 13.5817 3.58172 10 8 10C12.4183 10 16 13.5817 16 18V19H0V18Z" fill="#16151A"></path>
-                </svg></a></div>
-            <div class="basket"><a href="/cart/">
-                <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path class="line" d="M5.5 5H23.5L21 15H8L5.5 5Z" fill="#16151A"></path>
-                  <path d="M0 1H4L8.5 14.5" stroke="#16151A" stroke-width="2"></path>
-                  <circle cx="9.5" cy="18.5" r="1.5" fill="#16151A"></circle>
-                  <circle cx="19.5" cy="18.5" r="1.5" fill="#16151A"></circle>
-                </svg><span class="n cart-number">0</span></a></div>
+      <!--header-->
+      <header class="header" data-scroll-lock-fill-gap="data-scroll-lock-fill-gap">
+        <div class="header__top">
+          <div class="container">
+            <!--logo-->
+            <div class="logo header__logo"> <a class="logo__link" href="index.html"><img src="../../img/" alt=""/></a></div>
+            <!--nav-->
+            <div class="header-nav">
+              <ul class="header-nav__list">
+                                <li class="header-nav__item"><a class="header-nav__link" href="#">Проекты</a></li>
+                                <li class="header-nav__item"><a class="header-nav__link" href="#">Услуги</a></li>
+                                <li class="header-nav__item"><a class="header-nav__link" href="#">Реализованные объекты</a></li>
+                                <li class="header-nav__item"><a class="header-nav__link" href="#">Акции</a></li>
+                                <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <!--else-->
+            <div class="header__contact-group">
+              <div class="header__city"><a class="header__city-link" href="#cities" data-popup-open="data-popup-open">Самара
+                  <svg class="icon">
+                    <use xlink:href="img/icons/icons-sprite.svg#arrow-down"></use>
+                  </svg></a>
+                <div class="small-popup city-question-popup"><span class="city-question-popup__text">Ваш город Нижний Новгород?</span>
+                  <div class="city-question-popup__buttons row">
+                    <div class="col-auto"><a class="button button_style-2 city-question-popup__button" href="javascript:void(0);" data-popup-close="data-popup-close">Да</a></div>
+                    <div class="col-auto"><a class="button button_style-1 city-question-popup__button" href="#cities" data-popup-open="data-popup-open" data-popup-close="data-popup-close">Нет</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__contact-items"><a class="header__phone" href="tel:+79874433777">+7 987 443-37-77</a><a class="button button_style-1" href="#feedback" data-popup-open="data-popup-open">Заказать звонок</a></div>
+              <!--nav toggle--><a class="nav-toggle" href="javascript:void(0);"><span></span><span></span><span></span></a>
+            </div>
           </div>
-          <div class="toggle_mnu"><span class="sandwich"><span class="sw-topper"></span><span class="sw-bottom"></span><span class="sw-footer"></span></span></div>
-          <div class="mob-mnu-bx"><a class="lk-link" href="/account/login/">Личный кабинет</a>
-            <ul class="menu">
-              <li><a title="Платформы" href="/catalog/product/">Платформы</a></li>
-              <li><a title="Услуги" href="/catalog/">Услуги</a></li>
-              <li><a class="active" title="Портфолио" href="/portfolio/">Портфолио</a></li>
-              <li><a title="Бизнес" href="/agents/">Бизнес</a></li>
-              <li><a title="Контакты" href="/contacts/">Контакты</a></li>
-            </ul>
-            <div class="ph-bx">
-              <div class="phone">+7 (846) 211-11-29</div><a class="btn btn-call pop-open1" href="">Заказать звонок</a>
+        </div>
+        <div class="header__bottom" data-scroll-lock-fill-gap="data-scroll-lock-fill-gap">
+          <div class="container">
+            <div class="search header__search">
+              <form class="search__form" action="#">
+                <input class="search__input" type="text" placeholder="Введите название, бренд..."/>
+                <button class="search__button">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/icons-sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <div class="header__buttons-group">
+              <!--btn--><a class="header__small-button header__small-button_auth" href="#">
+                <svg class="icon">
+                  <use xlink:href="img/icons/icons-sprite.svg#user"></use>
+                </svg><span>“Строймонтаж”</span></a>
+              <!--btn--><a class="header__small-button header__small-button_comparison" href="#">
+                <svg class="icon">
+                  <use xlink:href="img/icons/icons-sprite.svg#comparison"></use>
+                </svg><span>0</span></a>
+              <!--btn--><a class="header__small-button header__small-button_cart" href="#"> 
+                <svg class="icon">
+                  <use xlink:href="img/icons/icons-sprite.svg#subtract"></use>
+                </svg><span>12</span></a>
             </div>
           </div>
         </div>
       </header>
       <main class="main">
-        <div class="top-slider owl-carousel" data-autoplay-timeout="5">
-          <div class="item slide-bx" style="background-image: url(/media/slides/big_slides/%D0%91%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D0%9E%D0%A4%D0%A4%D0%95%D0%A0_1_6ckFlnK.jpg);">
-            <div class="container">
-              <div class="vh">
-                <div class="text">
-                  <div class="vh">
-                    <div class="text">
-                      <div class="t1">ДЕЛАЕМ САЙТЫ ДЛЯ<br/>СТРОЙБИЗА</div>
-                      <div class="t3">- ПЛАТФОРМЫ ДЛЯ СТРОЙ-БИЗНЕСА</div>
-                      <div class="t3">- ВАШ САЙТ ГОТОВ К РАБОТЕ СРАЗУ</div>
-                      <div class="t3">- ВЫ НЕ ПЛАТИТЕ ЗА СЕО ПРОДВИЖЕНИЕ </div>
-                      <div class="t3">- ВЫ МОЖЕТЕ САМИ МЕНЯТЬ ДИЗАЙН</div>
-                      <div class="t3">- СОЗДАВАЙТЕ СВОЙ АВТОПАРК И ЦЕНЫ  </div>
-                      <div class="t3">- СИНХРОНИЗИРУЙТЕ 1С И СРМ  </div>
-                      <div class="t3">- ФУНКЦИИ АВТО-СЧЁТ И АВТО-ПРАЙС  </div>
-                      <div class="t3">- ВСЕ ФОРМЫ ДЛЯ ЛИДОГЕНЕРАЦИИ  </div>
-                      <div class="t2">__________________________________ ГОТОВЫ ДВИГАТЬСЯ ВПЕРЕД?</div><a class="btn" href="/catalog/product/">Узнать больше</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item slide-bx" style="background-image: url(/media/slides/big_slides/%D0%9E%D1%84%D1%84%D0%B5%D1%80_%D0%BC%D0%B0%D0%BB%D0%B5%D0%BD%D1%8C%D0%BA%D0%B8%D0%B9_6.jpg);">
-            <div class="container">
-              <div class="vh">
-                <div class="text">
-                  <div class="vh">
-                    <div class="text">
-                      <div class="t2">Хотите развиваться, но не хватает капитала?</div>
-                      <div class="t1">АРЕНДА<br/> УМНОГО САЙТА</div>
-                      <div class="t2">Мы вас поддержим! Аренда любой платформы с правом выкупа с бесплатным продвижением!</div><a class="btn" href="/catalog/category/arenda-sajtov/">Узнать про аренду</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item slide-bx" style="background-image: url(/media/slides/big_slides/%D0%91%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82_%D0%9A.%D0%A6._4.jpg);">
-            <div class="container">
-              <div class="vh">
-                <div class="text">
-                  <div class="vh">
-                    <div class="text">
-                      <div class="t2">Объединяем продавцов стройматериалов</div>
-                      <div class="t1">К КОМУ<br/> ОТПРАВЛЯТЬ<br/>КЛИЕНТОВ?</div>
-                      <div class="t2">Подключайтесь к партнерской сети для борьбы с конкурентами и иностранными сетями</div><a class="btn" href="/catalog/product/redprice//" style="background:#FFFFFF;">Это не франшиза и не маркетплейс</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item slide-bx" style="background-image: url(/media/slides/big_slides/%D0%A1%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B5%D1%80_%D0%9A%D0%9E%D0%A0%D0%9F%D0%9E%D0%A0%D0%90%D0%A2%D0%98%D0%92_5.jpg);">
-            <div class="container">
-              <div class="vh">
-                <div class="text">
-                  <div class="vh">
-                    <div class="text">
-                      <div class="t2">ЛУЧШИЙ ИНДИВИДУАЛЬНЫЙ ПОДХОД </div>
-                      <div class="t1">КРУТО!<br/> БЫСТРО! ВЫГОДНО!</div>
-                      <div class="t2">Время заменить ваш устаревший сайт на продвинутый </div><a class="btn" href="/catalog/product/iq-cajt-platforma-stroykercorporacion/" style="background:#E20318;">Узнать больше</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="info-box">
-          <div class="container">
-            <div class="info-frames">
-              <div class="row">
-                <div class="col-md-4 col-sm-12">
-                  <div class="frame with-tringle frame-yellow">
-                    <div class="ico"><img src="/static/img/fr1.svg" alt=""/></div>
-                    <div class="h3">СТРОЙКЕР - <br/>СТРОИТЕЛЬ 1.0</div>
-                    <p>Умный сайт - платформа, специально разработанный для строительных компаний и бригад. <br/>Ждать не надо - сайт работает сразу</p>
-                    <div class="price">от 50.000<span class="sign"><img src="/static/img/" alt=""/></span></div><a class="link" href="/catalog/product/stroyker-builder-10/#tab3">Акция! можно получить бесплатно</a><a class="btn btn-more" href="/catalog/product/stroyker-builder-10/">Подробнее</a>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                  <div class="frame with-tringle frame-green">
-                    <div class="ico"><img src="/static/img/fr2.svg" alt=""/></div>
-                    <div class="h3">СТРОЙКЕР - <br/>ДИСТРИБЬЮТОР 1.0</div>
-                    <p>Умный сайт-платформа, специально разработанный для профессиональных продавцов строительных материалов. <br/>Покупаете и сразу начинаете работать</p>
-                    <div class="price">от 100.000 <span class="sign"><img src="/static/img/rub.svg" alt=""/></span></div><a class="link" href="/catalog/product/stroyker-dis-10/">Есть тестовый период и рассрочка</a><a class="btn btn-more" href="/catalog/product/stroyker-dis-10/">Подробнее</a>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                  <div class="frame with-tringle frame-blue">
-                    <div class="ico"><img src="/static/img/fr3.svg" alt=""/></div>
-                    <div class="h3">СТРОЙКЕР - <br/>ПРОИЗВОДИТЕЛЬ 1.0</div>
-                    <p>Умный сайт-платформа, специально разработанный для производителей. Отлаженный модуль для В2В сегмента<br/>Ждать не надо - сайт работает сразу</p>
-                    <div class="price">от 100.000 <span class="sign"><img src="/static/img/rub.svg" alt=""/></span></div><a class="link" href="/catalog/product/stroyker-manufacturer-10/">Есть тестовый период и рассрочка</a><a class="btn btn-more" href="/catalog/product/stroyker-manufacturer-10/">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="info-bg-box">
-              <div class="text-frame with-tringle">
-                <div class="ico"><img src="/static/img/log.svg" alt=""/></div>
-                <div class="h3">ИНТЕРНЕТ-ВИТРИНА КРАСНАЯЦЕНА.РФ</div>
-                <p>Подключайте свой торговый бизнес к нашему сообществу и получайте клиентов почти бесплатно! Витрина - наш главный сетевой продукт. Лучшее добавление к вашему торговому бизнесу. Это не франшиза и не маркетплейс.</p>
-                <p>Это технологичный инструмент, дающий бесспорное преимущество над конкурентами в области продаж строительных товаров.</p>
-                <ul class="list">
-                  <li>Ваши контакты</li>
-                  <li>Бесплатные лиды</li>
-                  <li>Ваши товары</li>
-                  <li>Информация</li>
-                  <li>Ваши цены</li>
-                </ul><a class="btn btn-more btn-more-red" href="/catalog/product/redprice/">Подробнее</a>
-              </div>
-              <div class="bg-imgs"><img class="bg1" src="/static/img/bg-map.png" alt=""/><img class="bg2" src="/static/img/comp.png" alt=""/><img class="bg3" src="/static/img/hid-bg.png" alt=""/></div>
-            </div>
-          </div>
-        </div>
-        <section class="section form-section">
-          <div class="container">
-            <div class="row form-section__container">
-              <div class="col-md-6 col-xs-12">
-                <div class="form-section__content">
-                  <h2 class="section__title title">Акция! Выберите подарок от STROYKER.PRO</h2>
-                  <form class="form-section__form default-form lk-form" action="#">
-                    <div class="form-section__group row">
-                      <div class="form-section__item col-xs-12">
-                        <div class="radio-element">
-                          <input class="radio-element__input" id="1" type="radio" name="dddd"/>
-                          <label class="radio-element__label" for="1">Бесплатный аудит вашего сайта</label>
-                        </div>
-                      </div>
-                      <div class="form-section__item col-xs-12">
-                        <div class="radio-element">
-                          <input class="radio-element__input" id="2" type="radio" name="dddd"/>
-                          <label class="radio-element__label" for="2">Бесплатное SEO продвижение на год</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-section__group row"> 
-                      <div class="form-section__item col-sm-6 col-xs-12">
-                        <input type="text" name="name" required="required" placeholder="Адрес вашего сайта"/>
-                      </div>
-                      <div class="form-section__item col-sm-6 col-xs-12">
-                        <input type="text" name="name2" required="required" placeholder="Номер телефона"/>
-                      </div>
-                    </div>
-                    <div class="form-section__group row">
-                      <div class="form-section__item col-sm-6 col-xs-12">
-                        <input class="btn" type="submit" value="Кнопка"/>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="form-section__slider col-md-6 col-xs-12">
-                <div class="owl-carousel">
-                  <div class="item form-section__slide"><img class="owl-lazy" data-src="https://stroyker.pro/media/cache/62/2b/622bfee6542cdab7e8c3a2292b914180.jpg" alt="image"/></div>
-                  <div class="item form-section__slide"><img class="owl-lazy" data-src="https://stroyker.pro/media/cache/63/d7/63d7cfb5cc8911987945eb40d8c5304a.jpg" alt="image"/></div>
-                  <div class="item form-section__slide"><img class="owl-lazy" data-src="https://stroyker.pro/media/cache/bc/96/bc96de566b67977edd9e513cf141e2a8.jpg" alt="image"/></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div class="carousel-box">
-          <div class="container">
-            <div class="title">Новости</div>
-            <div class="slider-items with-arrows owl-carousel">
-              <div class="item">
-                <div class="news-item"><a class="over" href="/news/zalili-promo-vide-po-vitrine-krasnayacenarf/"></a>
-                  <div class="img"><img src="/media/cache/bc/96/bc96de566b67977edd9e513cf141e2a8.jpg" alt="Залили промо видео о Витрине Краснаяцена.рф"/></div>
-                  <div class="tt">
-                    <div class="date">16 июля 2020 г.</div>
-                    <p>Залили промо видео о Витрине Краснаяцена.рф</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item"><a class="over" href="/news/videoskrinkasty-kak-polzovatsya-sajtom/"></a>
-                  <div class="img"><img src="/media/cache/63/d7/63d7cfb5cc8911987945eb40d8c5304a.jpg" alt="Видеоскринкасты как пользоваться сайтом!"/></div>
-                  <div class="tt">
-                    <div class="date">8 июля 2020 г.</div>
-                    <p>Видеоскринкасты как пользоваться сайтом!</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item"><a class="over" href="/news/video-o-platforme-10/"></a>
-                  <div class="img"><img src="/media/cache/62/2b/622bfee6542cdab7e8c3a2292b914180.jpg" alt="Видео о платформе 1.0"/></div>
-                  <div class="tt">
-                    <div class="date">30 июня 2020 г.</div>
-                    <p>Видео о платформе 1.0</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item"><a class="over" href="/news/reliz-platformy-dlya-stroitelej-perenesyon/"></a>
-                  <div class="img"><img src="/media/cache/24/0d/240d83eff079469c7b29cb5fd472d3a7.jpg" alt="Что с платформой для строителей?"/></div>
-                  <div class="tt">
-                    <div class="date">29 мая 2020 г.</div>
-                    <p>Что с платформой для строителей?</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item"><a class="over" href="/news/o-optimizaciya/"></a>
-                  <div class="img"><img src="/media/cache/66/39/6639b485bbe1f329c584e4599e00665d.jpg" alt="О - оптимизация"/></div>
-                  <div class="tt">
-                    <div class="date">25 апреля 2020 г.</div>
-                    <p>О - оптимизация</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item"><a class="over" href="/news/holodnyj-obzvon/"></a>
-                  <div class="img"><img src="/media/cache/e5/15/e5158ce48ebf25fd890ccf48b1710398.jpg" alt="Холодный обзвон"/></div>
-                  <div class="tt">
-                    <div class="date">23 апреля 2020 г.</div>
-                    <p>Холодный обзвон</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item"><a class="over" href="/news/statistika/"></a>
-                  <div class="img"><img src="/media/cache/1c/18/1c185d630fc2e65a3d18bcd80ac565f7.jpg" alt="Статистика"/></div>
-                  <div class="tt">
-                    <div class="date">16 апреля 2020 г.</div>
-                    <p>Статистика</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item"><a class="over" href="/news/dizajn-snaruzhi-tehnologii-vnutri/"></a>
-                  <div class="img"><img src="/media/cache/38/9e/389e5050fe7461abb8f93ecea2e78659.jpg" alt="Дизайн снаружи - технологии внутри!"/></div>
-                  <div class="tt">
-                    <div class="date">15 апреля 2020 г.</div>
-                    <p>Дизайн снаружи - технологии внутри!</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item"><a class="over" href="/news/stroker-vygodnee-tachki/"></a>
-                  <div class="img"><img src="/media/cache/a0/b7/a0b710f91e09dc0eae049f96901c350e.jpg" alt="STROKER - выгоднее тачки"/></div>
-                  <div class="tt">
-                    <div class="date">13 апреля 2020 г.</div>
-                    <p>STROKER - выгоднее тачки</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item"><a class="over" href="/news/start-prodazh/"></a>
-                  <div class="img"><img src="/media/cache/c2/72/c272d6b49d65f90a635eb1098739abbe.jpg" alt="START продаж"/></div>
-                  <div class="tt">
-                    <div class="date">9 апреля 2020 г.</div>
-                    <p>START продаж</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-box">
-          <div class="container">
-            <div class="title">Наши работы</div>
-            <div class="slider-items2 with-arrows owl-carousel">
-              <div class="item">
-                <div class="news-item work-item"><a class="over" href="/portfolio/kreptonn/"></a>
-                  <div class="img"><a href="/portfolio/kreptonn/"><img src="/media/cache/4e/4a/4e4a95fe49aa35cb23295cec7e630c61.jpg" alt="KREPTONN.RU крепёжные системы, снабжение объектов"/></a></div>
-                  <div class="tt">
-                    <div class="tag" style="background-color: #C3E27F">Дистрибьютор</div>
-                    <p>KREPTONN.RU крепёжные системы, снабжение объектов</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item work-item"><a class="over" href="/portfolio/nabeton/"></a>
-                  <div class="img"><a href="/portfolio/nabeton/"><img src="/media/cache/2b/0d/2b0df8dfb473b1af93fb824ebc5c9656.jpg" alt="NABETON.RU ООО&quot;Ремал&quot; грунты, клея, составы."/></a></div>
-                  <div class="tt">
-                    <div class="tag" style="background-color: #7FD1EB">Производитель</div>
-                    <p>NABETON.RU ООО"Ремал" грунты, клея, составы.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item work-item"><a class="over" href="/portfolio/formaplit/"></a>
-                  <div class="img"><a href="/portfolio/formaplit/"><img src="/media/cache/10/b2/10b240e339f4e2130a97053b418cadac.jpg" alt="FORMAPLIT.RU Производство крепкой тротуарной плитки"/></a></div>
-                  <div class="tt">
-                    <div class="tag" style="background-color: #7FD1EB">Производитель</div>
-                    <p>FORMAPLIT.RU Производство крепкой тротуарной плитки</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item work-item"><a class="over" href="/portfolio/strojkerpro-sajt-na-kotorom-vy-nahodites-tozhe-soz/"></a>
-                  <div class="img"><a href="/portfolio/strojkerpro-sajt-na-kotorom-vy-nahodites-tozhe-soz/"><img src="/media/cache/a5/4f/a54f126131ff122ad934cbbf5034b80e.jpg" alt="STROYKER.PRO - так же создан на платформе стройкер"/></a></div>
-                  <div class="tt">
-                    <div class="tag" style="background-color: #7FD1EB">Производитель</div>
-                    <p>STROYKER.PRO - так же создан на платформе …</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item work-item"><a class="over" href="/portfolio/good-eraru/"></a>
-                  <div class="img"><a href="/portfolio/good-eraru/"><img src="/media/cache/2b/51/2b51a01a0795c9f6abb2d87c01f352ed.jpg" alt="GOOD-ERA.RU раскрученный интернет-магазин для кровли"/></a></div>
-                  <div class="tt">
-                    <div class="tag" style="background-color: #FF0000">Сдаётся в аренду</div>
-                    <p>GOOD-ERA.RU раскрученный интернет-магазин для кровли</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item work-item"><a class="over" href="/portfolio/severnaya-lesnaya-kompaniya/"></a>
-                  <div class="img"><a href="/portfolio/severnaya-lesnaya-kompaniya/"><img src="/media/cache/b0/4b/b04b02ac2602263d2cee4fd0a465b180.jpg" alt="SLKMARKET.RU Т.С.К. Северная Лесная Компания - пиломатериалы"/></a></div>
-                  <div class="tt">
-                    <div class="tag" style="background-color: #FFEC2E">Ритейл проекты</div>
-                    <p>SLKMARKET.RU Т.С.К. Северная Лесная Компания - пиломатериалы</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item work-item"><a class="over" href="/portfolio/otdel-prodazh-teploizolyacii/"></a>
-                  <div class="img"><a href="/portfolio/otdel-prodazh-teploizolyacii/"><img src="/media/cache/ef/df/efdf4b6869c4d0464f2f39aec658cd5f.jpg" alt="UTEPLITEL-CENA.RU - Сайт заполнен, проиндексирован и готов к работе!"/></a></div>
-                  <div class="tt">
-                    <div class="tag" style="background-color: #FF0000">Сдаётся в аренду</div>
-                    <p>UTEPLITEL-CENA.RU - Сайт заполнен, проиндексирован и готов …</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item work-item"><a class="over" href="/portfolio/krasnayacenarf/"></a>
-                  <div class="img"><a href="/portfolio/krasnayacenarf/"><img src="/media/cache/37/ef/37ef1dcc0164c43771a15e204a6a136f.jpg" alt="КРАСНАЯЦЕНА.РФ  Партнёрская сеть продавцов стройматериалов"/></a></div>
-                  <div class="tt">
-                    <div class="tag" style="background-color: #FFEC2E">Ритейл проекты</div>
-                    <p>КРАСНАЯЦЕНА.РФ Партнёрская сеть продавцов стройматериалов</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item work-item"><a class="over" href="/portfolio/minibaniniru-proizvoditel-mini-ban/"></a>
-                  <div class="img"><a href="/portfolio/minibaniniru-proizvoditel-mini-ban/"><img src="/media/cache/e9/31/e93150f95df0804d2002e8530810a6a7.jpg" alt="MINIBANINI.RU - Производитель мини-бань"/></a></div>
-                  <div class="tt">
-                    <div class="tag" style="background-color: #46BFFF">Строитель</div>
-                    <p>MINIBANINI.RU - Производитель мини-бань</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item work-item"><a class="over" href="/portfolio/distorium/"></a>
-                  <div class="img"><a href="/portfolio/distorium/"><img src="/media/cache/56/5a/565a94b7e0cd55e89744c25272c9c0ac.jpg" alt="DISTORIUM.RU ООО&quot;Акрон&quot; Крупнейший дистрибьютер"/></a></div>
-                  <div class="tt">
-                    <div class="tag" style="background-color: #C3E27F">Дистрибьютор</div>
-                    <p>DISTORIUM.RU ООО"Акрон" Крупнейший дистрибьютер</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="news-item work-item"><a class="over" href="/portfolio/stroybaza163ru/"></a>
-                  <div class="img"><a href="/portfolio/stroybaza163ru/"><img src="/media/cache/74/f9/74f91145cc2262d414323268e232aeb2.jpg" alt="STROYBAZA163.RU База стройматериалов ДК Водино"/></a></div>
-                  <div class="tt">
-                    <div class="tag" style="background-color: #FFEC2E">Ритейл проекты</div>
-                    <p>STROYBAZA163.RU База стройматериалов ДК Водино</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="work-box">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3 col-md-12 hidden-md hidden-sm hidden-xs">
-                <div class="banner-item"><img src="/media/bnrs/images/%D0%A0%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%BD%D1%8B%D0%B9_%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_1_LxO6RJE.jpg" alt="Фирменный стиль"/></div>
-                <div class="banner-item"><a href="https://stroyker.pro/catalog/product/sajt-platforma-strojker-pro-10-dlya-proizvoditelej/" target="_blank"><img src="/media/bnrs/images/%D0%A0%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%BD%D1%8B%D0%B9_%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_3.jpg" alt="Доверьте профессионалам"/></a></div>
-              </div>
-              <div class="col-lg-9 col-md-12">
-                <div class="title">Наши топ услуги</div>
-                <div class="work-box-list">
-                  <div class="tovar-item">
-                    <div class="left"><a href="/catalog/service/razrabotka-koncepcii-s-podborom-domenom/" title="Не так просто как кажется! Попробуйте сами на одном из сервисов по регистрации домена и потом обращайтесь к нам за помощью! Ну или сразу, не теряя время.                Мы подберём вам несколько вариантов доменных имён, которые концептуально будут отражать вашу индивидуальность и станут основой фирменного стиля и бренда в целом. У нас большой опыт и есть что вам предложить.&amp;nbsp;                Мы рекомендуем вам воспользоваться этой опцией в самую первую очередь. Даже если у вас уже есть домен, возможно вы совершили несколько фатальных ошибок о которых мы можем вас предупредить. Очень часто мы встречаем такие компании которые чего то не предусмотрели.                ">
-                        <div class="img"><img src="/media/cache/4f/54/4f549762830fe560b474129fedba8bd2.jpg" alt="Домен и концепция!"/></div>
-                        <div class="tt">
-                          <div class="name">Домен и концепция!</div>
-                        </div></a></div>
-                    <div class="right">
-                      <div class="price-bx">
-                        <div class="pr">10000,00<span class="sign"><img src="/static/img/rub.svg" alt=""/></span></div>
-                        <div class="old-pr">Цена, шт.: <span>30000,00 р</span></div>
-                      </div>
-                      <div class="wr">
-                        <div class="number-bx"><span class="minus">-</span>
-                          <input type="text" value="1" size="5"/><span class="plus">+</span>
-                        </div><a class="btn btn-more add-to-cart" href="/cart/add/63">Заказать</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tovar-item">
-                    <div class="left"><a href="/catalog/service/firmennyj-stil/" title="                Прогресс привел компании к тому, что в различных сферах производятся практически одинаковые продукты, отличающиеся друг от друга лишь незначительными мелочами. Фирменный стиль&amp;nbsp;(айдентика) &amp;ndash; это визуальный образ фирмы, набор графических элементов (логотип, визитка, конверт, бланк и другая продукция), созданных в одном стиле. Он нужен для того, чтобы сделать компанию более презентабельной перед партнерами и клиентами, а также повысить узнаваемость фирмы и уровень доверия.                Если Вы занимаетесь бизнесом в строительной отрасли, разве есть смысл обращаться к дизайнерам, которые не разбираются с специфике строительного рынка? Stroyker.Pro предлагает Вам разработку фирменного стиля на основе многолетнего опыта в строительной сфере. Работайте с профессионалами и наслаждайтесь результатом!                ">
-                        <div class="img"><img src="/media/cache/ed/06/ed067a64f0861f0286893179167192cf.jpg" alt="Фирменный стиль"/></div>
-                        <div class="tt">
-                          <div class="name">Фирменный стиль</div>
-                        </div></a></div>
-                    <div class="right">
-                      <div class="price-bx">
-                        <div class="pr">95000,00<span class="sign"><img src="/static/img/rub.svg" alt=""/></span></div>
-                        <div class="old-pr">Цена, шт.: <span>150000,00 р</span></div>
-                      </div>
-                      <div class="wr">
-                        <div class="number-bx"><span class="minus">-</span>
-                          <input type="text" value="1" size="5"/><span class="plus">+</span>
-                        </div><a class="btn btn-more add-to-cart" href="/cart/add/50">Заказать</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tovar-item">
-                    <div class="left"><a href="/catalog/service/razrabotka-logotipa/" title="                Разработка логотипа&amp;nbsp;требует от дизайнера не только художественного таланта, но и общей эрудиции, аналитического мышления и знания психологии потребителей. Ведь создание логотипа &amp;mdash; это лишь заключительный этап длительного труда по изучению специфики Вашего бизнеса, рыночной ниши, фирменного стиля конкурентов, подбор нужного&amp;nbsp;способа подачи для&amp;nbsp;аудитории максимально доступным способом.                Именно поэтому мы предлагаем Вам работать с компанией Stroyker.Pro, ведь мы разбираемся во всех тонкостях строительной сферы и способны создать шедевр для вашей компании, который станет ассоциироваться с качеством и стабильностью, при этом мы сделаем это быстрее и качественнее других специалистов.                ">
-                        <div class="img"><img src="/media/cache/89/2c/892c5f101d4a7a0a872034516a42a26b.jpg" alt="Разработка логотипа"/></div>
-                        <div class="tt">
-                          <div class="name">Разработка логотипа</div>
-                        </div></a></div>
-                    <div class="right">
-                      <div class="price-bx">
-                        <div class="pr">25000,00<span class="sign"><img src="/static/img/rub.svg" alt=""/></span></div>
-                        <div class="old-pr">Цена, шт.: <span>35000,00 р</span></div>
-                      </div>
-                      <div class="wr">
-                        <div class="number-bx"><span class="minus">-</span>
-                          <input type="text" value="1" size="5"/><span class="plus">+</span>
-                        </div><a class="btn btn-more add-to-cart" href="/cart/add/53">Заказать</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tovar-item">
-                    <div class="left"><a href="/catalog/service/sobrat-dizajn-umnoj-platformy-strojker-proizvodite/" title="                Рекомендуем для старта взять эту услугу! Поиграть с редактором у вас будет масса возможностей поскольку каждая придуманная схема сохраняется в памяти платформы. Если у вас нет времени доверьте эту работу нам мы сделаем всё красиво и быстро.                Компания Stroyker.pro является разработчиком&amp;nbsp;умной платформы для создания профессиональных Сайтов. Платформа &amp;quot;Стройкер-Производитель&amp;quot; предназначена исключительно для строительного бизнеса.&amp;nbsp;Шаблон сайта отвечает всем необходимым, современным требованиям и оснащен&amp;nbsp;базовыми элементами конструктора, фотобанка или данными предоставленными Заказчиком.&amp;nbsp;                Умная платформа проста и удобна в использовании, с которой справится даже ребенок,&amp;nbsp; - позволяет по мере необходимости менять дизайн, добавлять контент и фото, размещать рекламу и многое другое.                В услугу входит создание цветовой схемы сайта + 3 больших баннера + 3 боковых баннера +3 статьи (3000 символов)                ">
-                        <div class="img"><img src="/media/cache/20/c3/20c368bab578fdbfd84dfe2472cd3f16.jpg" alt="Собрать дизайн умной платформы Стройкер-Производитель  без фир. стиля"/></div>
-                        <div class="tt">
-                          <div class="name">Собрать дизайн умной платформы Стройкер-Производитель  без фир. стиля</div>
-                        </div></a></div>
-                    <div class="right">
-                      <div class="price-bx">
-                        <div class="pr">10000,00<span class="sign"><img src="/static/img/rub.svg" alt=""/></span></div>
-                      </div>
-                      <div class="wr">
-                        <div class="number-bx"><span class="minus">-</span>
-                          <input type="text" value="1" size="5"/><span class="plus">+</span>
-                        </div><a class="btn btn-more add-to-cart" href="/cart/add/23">Заказать</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tovar-item">
-                    <div class="left"><a href="/catalog/service/sobrat-dizajn-umnoj-platformy-strojker-distribyute/" title="                Рекомендуем для старта взять эту услугу! Поиграть с редактором у вас будет масса возможностей поскольку каждая придуманная схема сохраняется в памяти платформы. Если у вас нет времени доверьте эту работу нам мы сделаем всё красиво и быстро.                Компания Stroyker.pro является разработчиком&amp;nbsp;умной платформы для создания профессиональных Сайтов. Платформа &amp;quot;Стройкер-Дистрибьютер&amp;quot; предназначена исключительно для строительного бизнеса.&amp;nbsp;Шаблон сайта отвечает всем необходимым, современным требованиям и оснащен&amp;nbsp;базовыми элементами конструктора, фотобанка или данными предоставленными Заказчиком.                Умная платформа проста и удобна в использовании, с которой справится даже ребенок,&amp;nbsp; - позволяет по мере необходимости менять дизайн, добавлять контент и фото, размещать рекламу и многое другое.                В услугу входит создание цветовой схемы сайта + 3 больших баннера + 3 боковых баннера +3 статьи (3000 символов)                ">
-                        <div class="img"><img src="/media/cache/11/b2/11b2d7f58d1083b3069b3ca74da76392.jpg" alt="Собрать дизайн умной платформы Стройкер-Дистрибьютер  без фир. стиля"/></div>
-                        <div class="tt">
-                          <div class="name">Собрать дизайн умной платформы Стройкер-Дистрибьютер  без фир. стиля</div>
-                        </div></a></div>
-                    <div class="right">
-                      <div class="price-bx">
-                        <div class="pr">10000,00<span class="sign"><img src="/static/img/rub.svg" alt=""/></span></div>
-                      </div>
-                      <div class="wr">
-                        <div class="number-bx"><span class="minus">-</span>
-                          <input type="text" value="1" size="5"/><span class="plus">+</span>
-                        </div><a class="btn btn-more add-to-cart" href="/cart/add/24">Заказать</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tovar-item">
-                    <div class="left"><a href="/catalog/service/razrabotka-individualnoj-reklamnoj-kompanii-po-opr/" title="                Разработка индивидуальной рекламной компании представляет собой&amp;nbsp;комплекс взаимосвязанных мероприятий направленных на продвижение товара или услуги. Задача рекламной кампании &amp;ndash; правильно донести рекламное сообщение до целевой аудитории&amp;nbsp;учитывая концепцию бренда и товара, каналы коммуникации, время, место и их количество.                Доверьте разработку индивидуальной рекламной компании&amp;nbsp;по определенным и согласованным целям - профессионалам компании Stroyker.pro. Платное&amp;nbsp;продвижение.&amp;nbsp;Услугу группам или поставщику - оплачивает Заказчик.&amp;nbsp;Индивидуальная рекламная компания -&amp;nbsp;повысит&amp;nbsp;интерес к продуктам или услугам, увеличит&amp;nbsp;продажи,&amp;nbsp;повысит&amp;nbsp;узнаваемость бренда и расширит клиентскую базу.                &amp;nbsp;">
-                        <div class="img"><img src="/media/cache/34/3d/343da0cef8dd650dbbed201db0f14837.jpg" alt="Разработка индивидуальной рекламной компании"/></div>
-                        <div class="tt">
-                          <div class="name">Разработка индивидуальной рекламной компании</div>
-                        </div></a></div>
-                    <div class="right">
-                      <div class="price-bx">
-                        <div class="pr">3000,00<span class="sign"><img src="/static/img/rub.svg" alt=""/></span></div>
-                      </div>
-                      <div class="wr">
-                        <div class="number-bx"><span class="minus">-</span>
-                          <input type="text" value="1" size="5"/><span class="plus">+</span>
-                        </div><a class="btn btn-more add-to-cart" href="/cart/add/37">Заказать</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="seo-text">
-          <div class="container">
-            <div class="wrap content">
-              <h1>Не заказывайте сайт в вебстудии! Покупайте в Стройкер Про и сразу пользуйтесь!</h1>
-              <ul>
-                <li>87% сайтов в строительной тематике не отвечают требованиям поисковых систем и современным тенденциям IT-технологий и маркетинга. ООО СтройкерПро - это компания создающая передовое программное обеспечение исключительно для строительного рынка. Мы предлагаем передовые маркетинговые IT-решения для продажи строительных материалов в В2В и В2С секторе.<br/></li>
-                <li>Говоря простым языком, вы сможете заказать умный сайт платформу для строительной компании, сайт для производителей и интернет магазин для продажи стройматериалов.<br/></li>
-                <li>Почему мы так смело заявляем о том, что наше платформенное решение лучше для строительного бизнеса?<br/></li>
-                <li>Во-первых, 90% сайтов и интернет магазинов сделано на устаревших движках, а многие популярные движки с подпиской и продлением лицензии сделаны для всех секторов и рассчитанный только на прибыль компании, продающей программное обеспечение, а не на интересы заказчика.<br/></li>
-                <li>Мы сконцентрированы только на строительном секторе! Более того, мы имеем 10 лет успешного опыта в продаже строительных материалов и нам явно есть чем похвастаться. Это нормально, что сайты созданные обычными веб студиями для строительного рынка не эффективны - просто потому, что их создают дизайнеры, программист и студенты, которые абсолютно не разбираются в тонкостях бизнеса, а самое главное им абсолютно всё равно. Мы знаем лучше всех как привлечь клиентов или обслужить их через интернет ресурсы, наш опыт в продажах стройматериалов и постоянная оптимизация расходов на отдел продаж, рекламу и аналитику привёл к созданию эффективных и, главное, проверенных инструментов в виде наших it разработок.<br/></li>
-                <li>Задумайтесь! Компания СтройкерПро занимается исключительно одним сектором рынка - строительным. Пока вы управляете торговой базой, производством, пока веб-студия сделавшая вам сайт клепает очередному клиенту интернет магазин безделушек или суши лендинг, мы 24/7 улучшаем и совершенствуем свои технологи только в одной тематике.<br/></li>
-                <li>На страницах нашего сайта вы найдёте информацию о наших предложениях, разработках и услугах. Также мы раскрываем несколько профессиональных секретов и щедро делимся ими. Прочитайте внимательно о наших разработках и чем наши платформы отличаются от остальных, принимайте профессиональные решения и начинайте доминировать над конкурентами.<br/></li>
-                <li>Купить сайт-платформу или интернет-магазин очень просто! Управлять тоже просто! Всё уже готово! Активация в течении 24 часов на вашем сервере или на сервере компании Стройкер Про. Нет ожидания готовности производства сайта и миллиона вопросов по согласованию, всё уже предусмотрено. С помощью конструктора меняйте дизайн сайта самостоятельно, а сео-модуль не требует дополнительных затрат на продвижение.Также Стройкер Про предлагает интересное партнёрское решение, которое мы называем Витрина - это успешный сайт Краснаяцена.рф. Уважаемые предпринематели, нас и так не много, не пропускайте возможности из-за лени или невнимательности, изучите пожалуйста наши предложения, а если будут вопросы, мы готовы вести диалог и оказать любую помощь в достижение результата.<br/></li>
-                <li>90% людей всегда отрицают прогресс, но потом живут в нём, а остальные 10% - это предприниматели.</li>
-                <li>Спасибо за внимание и добро пожаловать!<br/><br/><img alt="" src="/media/uploads/2020/06/09/3.jpg"/></li>
-              </ul>
-            </div>
-          </div>
-        </div>
         <div class="form-box question-form">
           <div class="container">
             <div class="wrap">
@@ -666,14 +190,14 @@
     <div class="popup popup-call" style="display: none;">
       <div class="close"><img src="/static/img/close.svg" alt=""/></div>
       <div class="title">Заказать обратный звонок</div>
-      <form class="default-form lk-form" id="callme-request-form" action="/crm/callme-request/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="yhBXhqyc03tJ5qwDJ0L3Rce7YNAJWFcqSFLW54f4fuP0ESE4ETHXVB2V0v33dKxM"/>
-        <input type="hidden" name="url" value="/portfolio/"/>
+      <form class="default-form lk-form crm-form" id="callme-request-form" action="/crm/callme-request/">
+        <input type="hidden" name="csrfmiddlewaretoken" value="5F1dMAEMYhNJoBwQTd8jBQRyPSO2BdPyPyLxH9ZM4F4KfUp93vaUDk6INxrHlArr"/>
+        <input type="hidden" name="url" value="/catalog/product/"/>
         <div class="inp-wr">
           <input class="form-control" type="text" name="name" autocomplete="off" placeholder="Как к Вам обращаться" required=""/>
         </div>
         <div class="inp-wr">
-          <input class="form-control phone" type="text" name="phone" autocomplete="off" placeholder="+7 (999) 123 45 67" required="" maxlength="18"/>
+          <input class="form-control phone" type="text" name="phone" autocomplete="off" placeholder="+7 (999) 123 45 67" required=""/>
         </div>
         <input class="btn" type="submit" value="Отправить"/>
         <div class="pol">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с <a href="">политикой конфиденциальности</a></div>
@@ -682,8 +206,14 @@
     <div class="popup popup-tnx">
       <div class="ico"><img src="/static/img/tnx.svg" alt=""/></div>
       <div class="title">Сообщение отправлено!</div><a class="btn btn-close" href="">ОК</a>
-      <script src="/static/libs/jquery/jquery-1.11.2.min.js"></script>
     </div>
+    <!--if lt IE 9
+    script(src='/static/libs/html5shiv/es5-shim.min.js')
+    script(src='/static/libs/html5shiv/html5shiv.min.js')
+    script(src='/static/libs/html5shiv/html5shiv-printshiv.min.js')
+    script(src='/static/libs/respond/respond.min.js')
+    -->
+    <script src="/static/libs/jquery/jquery-1.11.2.min.js"></script>
     <script src="/static/js/ajax_setup.js"></script>
     <script src="/static/js/owl.carousel.js"></script>
     <script src="/static/js/jquery.mCustomScrollbar.min.js"></script>
@@ -696,35 +226,21 @@
     <script src="/static/js/common.js"></script>
     <script src="/static/js/custom.js"></script>
     <script src="/static/catalog/js/catalog.js"></script>
-    <script type="text/javascript">
-      // This url dictionary is used in js scripts instead of direct links.
-      const URLS = {
-      static: "/static/",
-      cart: "/cart/",
-      register: "/account/register/",
-      }
-      
-    </script>
     <script src="/static/crm/js/crm_forms.js"></script>
     <script src="/static/subscription/js/subscription.js"></script>
     <!--newjs-->
-    <script src="https://ruslanmmr.github.io/work/StroykerPro/build/scripts/new.js"></script>
+    <script src="http://localhost:9000/scripts/new.js"></script>
     <!--helper-->
-    <script src="https://ruslanmmr.github.io/work/StroykerPro/build/scripts/helper.js"></script>
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/StroykerPro/build/styles/helper.css"/>
+    <script src="http://localhost:9000/scripts/helper.js"></script>
+    <link rel="stylesheet" href="http://localhost:9000/styles/helper.css"/>
     <div class="helper"><a class="helper__trigger" href="javascript:void(0);"> 
         <svg class="icon" viewBox="0 0 100 100" fill="currentColor">
-          <g transform="translate(50 50)">
-            <g>
-              <animatetransform attributeName="transform" type="rotate" values="0;51.42857142857143" keyTimes="0;1" dur="0.6s" repeatCount="indefinite"></animatetransform>
-              <path d="M31.448370387032774 -10 L46.448370387032774 -10 L46.448370387032774 10 L31.448370387032774 10 A33 33 0 0 1 27.42605304607143 18.352428022310185 L27.42605304607143 18.352428022310185 L36.77840007395243 30.079900259330632 L21.141770424591833 42.5496962965053 L11.789423396710829 30.82222405948486 A33 33 0 0 1 2.7513583718916075 32.885103422513694 L2.7513583718916075 32.885103422513694 L-0.5864556374531071 47.509022105241044 L-20.085013881089584 43.05860342611476 L-16.74719987174487 28.434684743387407 A33 33 0 0 1 -23.995165273805295 22.654625211703866 L-23.995165273805295 22.654625211703866 L-37.50969829234158 29.16288129846724 L-46.18737307469275 11.143503940418853 L-32.67284005615647 4.635247853655478 A33 33 0 0 1 -32.67284005615647 -4.63524785365547 L-32.67284005615647 -4.63524785365547 L-46.18737307469276 -11.143503940418839 L-37.50969829234159 -29.162881298467227 L-23.995165273805302 -22.654625211703856 A33 33 0 0 1 -16.747199871744876 -28.434684743387404 L-16.747199871744876 -28.434684743387404 L-20.085013881089594 -43.05860342611476 L-0.5864556374531196 -47.509022105241044 L2.751358371891599 -32.885103422513694 A33 33 0 0 1 11.78942339671082 -30.82222405948486 L11.78942339671082 -30.82222405948486 L21.141770424591822 -42.54969629650531 L36.778400073952426 -30.079900259330635 L27.426053046071427 -18.35242802231019 A33 33 0 0 1 31.448370387032774 -10.000000000000009 M0 -20A20 20 0 1 0 0 20 A20 20 0 1 0 0 -20"></path>
-            </g>
-          </g>
+          <path d="M94,39.7h-4c-3.2,0-5.9-2.8-5.9-6.1c0-1.7,0.7-3.2,2-4.3l2.6-2.5c2.5-2.5,2.5-6.6,0-9.1L82.8,12c-1.1-1.1-2.8-1.8-4.6-1.8      c-1.7,0-3.4,0.7-4.6,1.8l-2.5,2.4c-1.2,1.3-2.7,2-4.4,2c-3.3,0-6.1-2.7-6.1-5.9v-4C60.6,3,57.8,0,54.2,0h-7.9C42.8,0,40,3,40,6.5v4      c0,3.2-2.8,5.9-6.1,5.9c-1.7,0-3.2-0.7-4.3-1.9L27,12c-1.1-1.2-2.8-1.8-4.6-1.8c-1.7,0-3.4,0.7-4.6,1.8L12,17.7      c-2.5,2.5-2.5,6.6,0,9.1l2.5,2.4c1.3,1.2,2,2.7,2,4.4c0,3.3-2.7,6.1-5.9,6.1h-4C3,39.7,0,42.5,0,46v4v4c0,3.5,3,6.3,6.6,6.3h4      c3.2,0,5.9,2.8,5.9,6.1c0,1.7-0.7,3.2-2,4.4L12,73.2c-2.5,2.5-2.5,6.6,0,9.1l5.8,5.8c1.1,1.2,2.8,1.8,4.6,1.8c1.7,0,3.4-0.7,4.6-1.8      l2.5-2.5c1.1-1.2,2.7-1.9,4.3-1.9c3.3,0,6.1,2.7,6.1,5.9v4c0,3.5,2.8,6.5,6.4,6.5h7.9c3.5,0,6.4-3,6.4-6.5v-4c0-3.2,2.8-5.9,6.1-5.9      c1.7,0,3.2,0.7,4.4,2l2.5,2.4c1.2,1.1,2.8,1.8,4.6,1.8s3.4-0.7,4.6-1.8l5.8-5.8c2.5-2.5,2.5-6.6,0-9.1L86,70.7c-1.3-1.1-2-2.7-2-4.3      c0-3.3,2.7-6.1,5.9-6.1h4c3.5,0,6.1-2.8,6.1-6.3v-4v-4C100.1,42.5,97.5,39.7,94,39.7z M71.1,50L71.1,50c0,11.5-9.3,20.8-20.9,20.8      S29.4,61.5,29.4,50l0,0l0,0c0-11.5,9.3-20.8,20.9-20.8S71.1,38.5,71.1,50L71.1,50z"></path>
         </svg></a>
       <div class="helper__container">
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Страницы:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="https://ruslanmmr.github.io/work/StroykerPro/build/index.html">Главная</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/StroykerPro/build/portfolio.html">Портфолио</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/StroykerPro/build/project.html">Проект</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="http://localhost:9000/index.html">Главная</a><a class="helper__section-button" href="http://localhost:9000/portfolio.html">Портфолио</a><a class="helper__section-button" href="http://localhost:9000/project.html">Проект</a><a class="helper__section-button" href="http://localhost:9000/produkty.html">Продукты</a></div>
         </div>
       </div>
     </div>

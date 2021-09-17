@@ -1,0 +1,68 @@
+footer.footer
+  .container
+    .row.wr
+      .col-lg-3.col-lg-push-9.col-md-push-8.col-md-4.col-sm-12
+        .email-bx
+          .t1 Оставайтесь на связи!
+          .t2 Подписка: Новинки, скидки, предложения
+          form#footer-subscription-form.search-form.email-form.footer-subscribe(method='POST' action='/subscription/new/')
+            input(type='hidden' name='csrfmiddlewaretoken' value='yhBXhqyc03tJ5qwDJ0L3Rce7YNAJWFcqSFLW54f4fuP0ESE4ETHXVB2V0v33dKxM')
+            input(type='email' name='email' placeholder='E-mail' autocomplete='off' required='')
+            input(type='submit' value='Ok')
+          ul.social
+            li
+              a(href='#')
+                img(src='/static/img/sc1.svg' alt='')
+            li
+              a(href='https://www.instagram.com/stroyker.pro/')
+                img(src='/static/img/sc2.svg' alt='')
+            li
+              a(href='#')
+                img(src='/static/img/sc3.svg' alt='')
+            li
+              a(href='#')
+                img(src='/static/img/sc4.svg' alt='')
+      .col-lg-4.col-lg-pull-3.col-md-pull-4.col-md-3.col-sm-12
+        .cont-bx
+          .flogo.hidden-xs.hidden-sm
+            img(src='/media/Логотип Стройкер (7).svg' alt='Главная страница сайта')
+          .tel
+            a.phone(href='tel:78462111129') +7 (846) 211-11-29
+          .adr г. Самара, пр. Кирова, 318
+          .adr
+            a(href='mailto:info@stroyker.pro') info@stroyker.pro
+      .col-lg-5.col-lg-pull-3.col-md-pull-4.col-md-5.col-sm-12
+        ul.list
+          li
+            b Платформы
+          li
+            a(title='Дистрибьютор' href='/catalog/product/stroyker-dis-10/') Дистрибьютор
+          li
+            a(title='Производитель' href='/catalog/product/stroyker-manufacturer-10/') Производитель
+          li
+            a(title='Строитель' href='/catalog/product/stroyker-builder-10/') Строитель
+          li
+            a(title='КраснаяЦена.рф' href='/catalog/product/redprice/') КраснаяЦена.рф
+        ul.list
+          li
+            b Клиентам
+          li
+            a(title='Каталог услуг' href='/catalog/') Каталог услуг
+          li
+            a(title='Портфолио' href='/portfolio/') Портфолио
+        ul.list
+          li
+            b О компании
+          li
+            a(title='Новости' href='/news/') Новости
+          li
+            a(title='Контакты' href='/contacts/') Контакты
+    .row.bot
+      .col-sm-4.col-xs-12.col-sm-push-8
+        .log
+          img(width='115' src='/media/Логотип Стройкер (7)_H5iz7Gn.svg' alt='Главная страница сайта')
+      .col-sm-4.col-xs-12
+        .polit
+          a(href='') Политика обработки данных
+      .col-sm-4.col-xs-12.col-sm-pull-8
+        .copy © 2020 Стройкер. Все права защищены

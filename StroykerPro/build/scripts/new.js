@@ -1,11 +1,12 @@
-"use strict";
 
-$(document).ready(function () {
+$(document).ready(function() {
   newslider();
-}); //gallery
+})
 
+
+//gallery
 function newslider() {
-  var $slider = $('.form-section__slider .owl-carousel');
+  let $slider = $('.form-section__slider .owl-carousel');
 
   if ($slider.length) {
     $slider.owlCarousel({
@@ -19,5 +20,5 @@ function newslider() {
       autoplayTimeout: 5000
     });
   }
+  
 }
-//# sourceMappingURL=maps/new.js.map

@@ -35,6 +35,7 @@ const Helper = {
     })
   },
   open: function() {
+    console.log('!')
     this.state = true;
     this.$block.classList.add('active');
   },

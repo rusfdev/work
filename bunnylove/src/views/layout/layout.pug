@@ -1,5 +1,5 @@
 -var href = 'https://ruslanmmr.github.io/work/bunnylove/build'
-//-var href = 'http://localhost:9000'
+//-var href = 'http://localhost:9001'
 
 block variables
 
@@ -1025,6 +1025,19 @@ html
         path(d='M13 8V2H20V8', stroke-miterlimit='22.9256')
         path(d='M20 6H23', stroke-miterlimit='22.9256')
         path(d='M30 10C33.866 10 37 7.98528 37 5.5C37 3.01472 33.866 1 30 1C26.134 1 23 3.01472 23 5.5C23 7.98528 26.134 10 30 10Z', stroke-miterlimit='22.9256')
+    
+    script(type='text/javascript').
+      // This url dictionary is used in js scripts instead of direct links.
+      var URLS = {
+      static: "/static/",
+      cart: "/catalog/cart/",
+      feedback: "/feedback/",
+      feedback_feedback: "/feedback/feedback/",
+      newsletter_subscribe: "/newsletter/subscribe/",
+      register: "/register/",
+      faq: "/faq/"
+      }
+
 
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
         

@@ -1,5 +1,5 @@
 -var href = 'https://ruslanmmr.github.io/work/StroykerPro/build'
-//-var href = 'http://localhost:9000'
+-var href = 'http://localhost:9000'
 
 block variables
 
@@ -15,14 +15,10 @@ html(lang='ru')
     link(rel='stylesheet' href='/static/css/owl.theme.default.min.css')
     link(rel='stylesheet' href='/static/css/jquery.mCustomScrollbar.min.css')
     link(rel='stylesheet' href='/static/libs/bootstrap/css/bootstrap-grid.min.css')
-    link(rel='stylesheet' href='/static/css/main.css')
-    link(rel='stylesheet' href='/static/css/media.css')
-    link(rel='stylesheet' href='/static/css/custom.css')
+
     link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&family=Russo+One&display=swap&family=Montserrat:wght@800&display=swap' rel='stylesheet')
     //script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js')
-    link(rel='stylesheet' href=href+'/styles/new.css')
-
-    //new
+  
     meta(property='og:title' content='STROYKER.PRO')
     meta(property='og:site_name' content='Разработка сайтов')
     //ссылка на текущую страницу абсолютная
@@ -31,131 +27,30 @@ html(lang='ru')
     //Абсолютная ссылка на картинку
     meta(property='og:image' content='https://stroyker.pro/media/cache/ed/06/ed067a64f0861f0286893179167192cf.jpg')
 
+    link(rel='stylesheet' href=href+'/styles/main.css')
+    link(rel='stylesheet' href=href+'/styles/media.css')
+    link(rel='stylesheet' href=href+'/styles/custom.css')
+    link(rel='stylesheet' href=href+'/styles/new.css')
   
   body
     #wrapper
-      header.header
-        .container
-          .logo
-            a(href='/')
-              img(src='/media/Логотип Стройкер с подписью.svg' alt='Главная страница сайта')
-          .icon-bx
-            .lk
-              a(href='/account/login/')
-                svg(width='16' height='19' viewBox='0 0 16 19' fill='none' xmlns='http://www.w3.org/2000/svg')
-                  circle(cx='8' cy='4' r='4' fill='#16151A')
-                  path(d='M0 18C0 13.5817 3.58172 10 8 10C12.4183 10 16 13.5817 16 18V19H0V18Z' fill='#16151A')
-            .basket
-              a(href='/cart/')
-                svg(width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg')
-                  path.line(d='M5.5 5H23.5L21 15H8L5.5 5Z' fill='#16151A')
-                  path(d='M0 1H4L8.5 14.5' stroke='#16151A' stroke-width='2')
-                  circle(cx='9.5' cy='18.5' r='1.5' fill='#16151A')
-                  circle(cx='19.5' cy='18.5' r='1.5' fill='#16151A')
-                span.n.cart-number 0
-          .toggle_mnu
-            span.sandwich
-              span.sw-topper
-              span.sw-bottom
-              span.sw-footer
-          .mob-mnu-bx
-            a.lk-link(href='/account/login/') Личный кабинет
-            ul.menu
-              li
-                a(title='Платформы' href='/catalog/product/') Платформы
-              li
-                a(title='Услуги' href='/catalog/') Услуги
-              li
-                a.active(title='Портфолио' href='/portfolio/') Портфолио
-              li
-                a(title='Бизнес' href='/agents/') Бизнес
-              li
-                a(title='Контакты' href='/contacts/') Контакты
-            .ph-bx
-              .phone +7 (846) 211-11-29
-              a.btn.btn-call.pop-open1(href='') Заказать звонок
+      include ../blocks/header
       main.main
         block content
-      footer.footer
-        .container
-          .row.wr
-            .col-lg-3.col-lg-push-9.col-md-push-8.col-md-4.col-sm-12
-              .email-bx
-                .t1 Оставайтесь на связи!
-                .t2 Подписка: Новинки, скидки, предложения
-                form#footer-subscription-form.search-form.email-form.footer-subscribe(method='POST' action='/subscription/new/')
-                  input(type='hidden' name='csrfmiddlewaretoken' value='yhBXhqyc03tJ5qwDJ0L3Rce7YNAJWFcqSFLW54f4fuP0ESE4ETHXVB2V0v33dKxM')
-                  input(type='email' name='email' placeholder='E-mail' autocomplete='off' required='')
-                  input(type='submit' value='Ok')
-                ul.social
-                  li
-                    a(href='#')
-                      img(src='/static/img/sc1.svg' alt='')
-                  li
-                    a(href='https://www.instagram.com/stroyker.pro/')
-                      img(src='/static/img/sc2.svg' alt='')
-                  li
-                    a(href='#')
-                      img(src='/static/img/sc3.svg' alt='')
-                  li
-                    a(href='#')
-                      img(src='/static/img/sc4.svg' alt='')
-            .col-lg-4.col-lg-pull-3.col-md-pull-4.col-md-3.col-sm-12
-              .cont-bx
-                .flogo.hidden-xs.hidden-sm
-                  img(src='/media/Логотип Стройкер (7).svg' alt='Главная страница сайта')
-                .tel
-                  a.phone(href='tel:78462111129') +7 (846) 211-11-29
-                .adr г. Самара, пр. Кирова, 318
-                .adr
-                  a(href='mailto:info@stroyker.pro') info@stroyker.pro
-            .col-lg-5.col-lg-pull-3.col-md-pull-4.col-md-5.col-sm-12
-              ul.list
-                li
-                  b Платформы
-                li
-                  a(title='Дистрибьютор' href='/catalog/product/stroyker-dis-10/') Дистрибьютор
-                li
-                  a(title='Производитель' href='/catalog/product/stroyker-manufacturer-10/') Производитель
-                li
-                  a(title='Строитель' href='/catalog/product/stroyker-builder-10/') Строитель
-                li
-                  a(title='КраснаяЦена.рф' href='/catalog/product/redprice/') КраснаяЦена.рф
-              ul.list
-                li
-                  b Клиентам
-                li
-                  a(title='Каталог услуг' href='/catalog/') Каталог услуг
-                li
-                  a(title='Портфолио' href='/portfolio/') Портфолио
-              ul.list
-                li
-                  b О компании
-                li
-                  a(title='Новости' href='/news/') Новости
-                li
-                  a(title='Контакты' href='/contacts/') Контакты
-          .row.bot
-            .col-sm-4.col-xs-12.col-sm-push-8
-              .log
-                img(width='115' src='/media/Логотип Стройкер (7)_H5iz7Gn.svg' alt='Главная страница сайта')
-            .col-sm-4.col-xs-12
-              .polit
-                a(href='') Политика обработки данных
-            .col-sm-4.col-xs-12.col-sm-pull-8
-              .copy © 2020 Стройкер. Все права защищены
+      include ../blocks/footer
+    
     .overlay(style='display: none;')
     .popup.popup-call(style='display: none;')
       .close
         img(src='/static/img/close.svg' alt='')
       .title Заказать обратный звонок
-      form#callme-request-form.default-form.lk-form(action='/crm/callme-request/')
-        input(type='hidden' name='csrfmiddlewaretoken' value='yhBXhqyc03tJ5qwDJ0L3Rce7YNAJWFcqSFLW54f4fuP0ESE4ETHXVB2V0v33dKxM')
-        input(type='hidden' name='url' value='/portfolio/')
+      form#callme-request-form.default-form.lk-form.crm-form(action='/crm/callme-request/')
+        input(type='hidden' name='csrfmiddlewaretoken' value='5F1dMAEMYhNJoBwQTd8jBQRyPSO2BdPyPyLxH9ZM4F4KfUp93vaUDk6INxrHlArr')
+        input(type='hidden' name='url' value='/catalog/product/')
         .inp-wr
           input.form-control(type='text' name='name' autocomplete='off' placeholder='Как к Вам обращаться' required='')
         .inp-wr
-          input.form-control.phone(type='text' name='phone' autocomplete='off' placeholder='+7 (999) 123 45 67' required='' maxlength='18')
+          input.form-control.phone(type='text' name='phone' autocomplete='off' placeholder='+7 (999) 123 45 67' required='')
         input.btn(type='submit' value='Отправить')
         .pol
           | Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с 
@@ -165,11 +60,14 @@ html(lang='ru')
         img(src='/static/img/tnx.svg' alt='')
       .title Сообщение отправлено!
       a.btn.btn-close(href='') ОК
-
-      script(src='/static/libs/jquery/jquery-1.11.2.min.js')
     
     
-    
+    //if lt IE 9
+      script(src='/static/libs/html5shiv/es5-shim.min.js')
+      script(src='/static/libs/html5shiv/html5shiv.min.js')
+      script(src='/static/libs/html5shiv/html5shiv-printshiv.min.js')
+      script(src='/static/libs/respond/respond.min.js')
+    script(src='/static/libs/jquery/jquery-1.11.2.min.js')
     script(src='/static/js/ajax_setup.js')
     script(src='/static/js/owl.carousel.js')
     script(src='/static/js/jquery.mCustomScrollbar.min.js')
@@ -182,22 +80,13 @@ html(lang='ru')
     script(src='/static/js/common.js')
     script(src='/static/js/custom.js')
     script(src='/static/catalog/js/catalog.js')
-    script(type='text/javascript').
-      // This url dictionary is used in js scripts instead of direct links.
-      const URLS = {
-      static: "/static/",
-      cart: "/cart/",
-      register: "/account/register/",
-      }
-    
     script(src='/static/crm/js/crm_forms.js')
     script(src='/static/subscription/js/subscription.js')
+    
 
     //newjs
     script(src=href+'/scripts/new.js')
 
     //helper
-    script(src=href+'/scripts/helper.js')
-    link(rel='stylesheet' href=href+'/styles/helper.css')
     include ../blocks/helper
     

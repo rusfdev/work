@@ -1,0 +1,68 @@
+//header
+header.header(data-scroll-lock-fill-gap)
+  .header__top
+    .container
+      //logo
+      .logo.header__logo 
+        a(href="index.html").logo__link
+          img(src="../../img/", alt="")
+      //nav
+      .header-nav
+        ul.header-nav__list
+          mixin item(title)
+            li.header-nav__item
+              a(href="#").header-nav__link=title
+          +item('Проекты')
+          +item('Услуги')
+          +item('Реализованные объекты')
+          +item('Акции')
+          +item('Контакты')
+      //else
+      .header__contact-group
+        .header__city
+          a(href="#cities" data-popup-open).header__city-link Самара
+            svg.icon
+              use(xlink:href="img/icons/icons-sprite.svg#arrow-down")
+          .small-popup.city-question-popup
+            span.city-question-popup__text Ваш город Нижний Новгород?
+            .city-question-popup__buttons.row
+              .col-auto
+                a(href="javascript:void(0);" data-popup-close).button.button_style-2.city-question-popup__button Да
+              .col-auto
+                a(href="#cities" data-popup-open data-popup-close).button.button_style-1.city-question-popup__button Нет
+        .header__contact-items
+          a(href="tel:+79874433777").header__phone +7 987 443-37-77
+          a(href="#feedback" data-popup-open).button.button_style-1 Заказать звонок
+        //nav toggle
+        a(href="javascript:void(0);").nav-toggle
+          span
+          span
+          span
+  
+  
+  .header__bottom(data-scroll-lock-fill-gap)
+    .container
+
+      .search.header__search
+        form(action="#").search__form
+          input(type="text" placeholder="Введите название, бренд...").search__input
+          button.search__button
+            svg.icon
+              use(xlink:href="img/icons/icons-sprite.svg#search")
+        
+      .header__buttons-group
+        //btn
+        a(href="#").header__small-button.header__small-button_auth
+          svg.icon
+            use(xlink:href="img/icons/icons-sprite.svg#user")
+          span “Строймонтаж”
+        //btn
+        a(href="#").header__small-button.header__small-button_comparison
+          svg.icon
+            use(xlink:href="img/icons/icons-sprite.svg#comparison")
+          span 0
+        //btn
+        a(href="#").header__small-button.header__small-button_cart 
+          svg.icon
+            use(xlink:href="img/icons/icons-sprite.svg#subtract")
+          span 12
