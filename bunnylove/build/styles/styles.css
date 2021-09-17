@@ -24868,12 +24868,10 @@ textarea.input {
 
 /* line 20453, ../sass/css.scss */
 .product-availability-label {
-  display: flex;
-  align-items: center; }
-
-/* line 20457, ../sass/css.scss */
-.product-availability-label img {
-  margin-right: 8px; }
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+  gap: 4px 10px; }
 
 /* line 20463, ../sass/css.scss */
 .product-availability-label_true img {
@@ -25776,12 +25774,6 @@ textarea.input {
   .text-content-section__container {
     padding: 0; } }
 
-.product-shops-available-list {
-  display: block;
-  color: #797985;
-  font-size: 0.875rem;
-  margin: -6px 0 16px 0; }
-
 .filterInfo_1bT-l, .mobileHeader_rR4eq {
   display: none !important; }
 
@@ -25802,6 +25794,20 @@ textarea.input {
   display: block;
   width: 100%;
   height: 100%; }
+
+.product-availability-label__list {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px 20px; }
+
+.product-availability-label__item {
+  font-size: 12px;
+  color: #797985; }
+
+@media (max-width: 575.98px) {
+  .product-availability-label__list {
+    grid-template-columns: 100%; } }
 
 .noty_layout_mixin, #noty_layout__top, #noty_layout__topLeft, #noty_layout__topCenter, #noty_layout__topRight, #noty_layout__bottom, #noty_layout__bottomLeft, #noty_layout__bottomCenter, #noty_layout__bottomRight, #noty_layout__center, #noty_layout__centerLeft, #noty_layout__centerRight {
   position: fixed;

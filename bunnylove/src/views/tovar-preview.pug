@@ -1,7 +1,8 @@
 extends layout/layout
 block variables
-  -var header_banner = true
+  -var header_banner = false
 block content
+
   .nfastBuy-type-callbackew-fastBuy.new-card__fastBuy.new-card__fastBuy-action-open(data-action='fastBuyShell')
     .new-fastBuy__overflow(data-action='fastBuyCloseButton')
     .new-fastBuy__wrapper
@@ -25,12 +26,9 @@ block content
                 //slide
                 .product-slider__slide.image.image_contain
                   img(data-lazy=href alt="image")
-              +slide('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
-              +slide('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
-              +slide('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
-              +slide('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
-              +slide('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
-              +slide('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
+              +slide('https://bunnylove.ru/media/cache/da/50/da50df2f0498cce56b4f4cade553cc8c.jpg')
+              +slide('https://bunnylove.ru/media/cache/3b/20/3b20ab2fc9789ec5c5af57ce34851ce6.jpg')
+              +slide('https://bunnylove.ru/media/cache/21/20/2120fe6a7bebb0042406a7b088f69bb5.jpg')
               
           //навигационный слайдер
           .slider.product-nav-slider
@@ -39,12 +37,9 @@ block content
               .product-nav-slider__slide
                 .image.image_contain
                   img(data-lazy=href alt="image")
-            +slide2('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
-            +slide2('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
-            +slide2('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
-            +slide2('https://bunnylove.ru/media/cache/75/2b/752b76918d20f3170428ff1ffe6b63f9.jpg')
-            +slide2('https://bunnylove.ru/media/cache/12/fd/12fd1f2598266c291f6c98b32d5aaaea.jpg')
-            +slide2('https://bunnylove.ru/media/cache/70/f6/70f691dbd2dfe3660f9b0e9444990563.jpg')
+            +slide2('https://bunnylove.ru/media/cache/da/50/da50df2f0498cce56b4f4cade553cc8c.jpg')
+            +slide2('https://bunnylove.ru/media/cache/3b/20/3b20ab2fc9789ec5c5af57ce34851ce6.jpg')
+            +slide2('https://bunnylove.ru/media/cache/21/20/2120fe6a7bebb0042406a7b088f69bb5.jpg')
         //content
         .product-section__description.col-lg-7.col-md-6
           .product-section__text
@@ -59,9 +54,12 @@ block content
               .product-availability-label.product-availability-label_true.product-section__info-label
                 img(src=href+"/img/check.svg", alt="ico")
                 span В наличии на складе в Москве
-            span.product-shops-available-list
-              | ул. Ленинградская, 31;
-              | Авроры, 199
+            
+                ul.product-availability-label__list
+                  li.product-availability-label__item Ново-вокзальная, 146а
+                  li.product-availability-label__item Гагарина, 48 
+                  li.product-availability-label__item Московскоше шоссе, Лит.В<br> Московскоше шоссе, Лит.a
+                  li.product-availability-label__item Авроры, 199
 
             .product-section__pricing
               span.product-section__price-label Цена:

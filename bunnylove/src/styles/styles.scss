@@ -30837,13 +30837,10 @@ textarea.input {
 
 /* line 20453, ../sass/css.scss */
 .product-availability-label {
-  display: flex;
+  display: grid;
   align-items: center;
-}
-
-/* line 20457, ../sass/css.scss */
-.product-availability-label img {
-  margin-right: 8px;
+  grid-template-columns: auto auto;
+  gap: 4px 10px;
 }
 
 /* line 20463, ../sass/css.scss */
