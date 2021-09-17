@@ -87,7 +87,7 @@ const Map = {
     this.$zoom_in = this.$map.querySelector('.map__control_zoom-in');
     this.$zoom_out = this.$map.querySelector('.map__control_zoom-out');
     this.zoom = 1;
-    this.zoom_max = 2.5;
+    this.zoom_max = 2;
 
     this.zoom_in = () => {
       this.zoom = Math.min(this.zoom_max, this.zoom + 0.5);

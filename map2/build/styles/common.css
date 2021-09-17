@@ -407,6 +407,11 @@ a {
   min-height: 100vh;
   overflow: hidden;
   position: relative; }
+  .wrapper::before {
+    content: '';
+    height: 10px;
+    display: block;
+    background: linear-gradient(90deg, #74b562 0%, #cdcd5c 100%); }
 
 .main {
   flex: 1 1 100%; }
@@ -418,6 +423,41 @@ a {
   margin: 0 auto; }
 
 /*========== Components ==========*/
+img {
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none; }
+  img.lazyload, img.lazyloading {
+    opacity: 0;
+    visibility: hidden; }
+  img.lazyloaded {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s ease-in-out, visibility .5s ease-in-out; }
+
+.image {
+  display: block;
+  position: relative; }
+  .image img {
+    width: 100%;
+    height: auto; }
+  .image_contain img, .image_cover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; }
+  .image_cover {
+    overflow: hidden; }
+    .image_cover img {
+      -o-object-fit: cover;
+         object-fit: cover; }
+  .image_contain img {
+    -o-object-fit: contain;
+       object-fit: contain; }
+
 /*========== Typography ==========*/
 html {
   font-size: 16px; }
@@ -463,15 +503,24 @@ p {
 /*========== Blocks ==========*/
 .map {
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  background-color: #e7e7e7; }
   .map__inner-elements {
     position: relative; }
+    .map__inner-elements::before {
+      content: '';
+      display: block;
+      padding-top: 141.3%; }
   .map__image {
     display: block;
-    width: 100%; }
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; }
   .map__regions {
     display: block;
-    width: 100%;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -489,6 +538,7 @@ p {
         display: block;
         padding-top: 100%; }
       .map__scroll {
+        overscroll-behavior-y: none;
         position: absolute;
         top: calc(var(--gap) * -1);
         left: calc(var(--gap) * -1);
@@ -531,7 +581,7 @@ p {
         .map__control_zoom-out::after {
           display: none; }
         .map__control.disabled {
-          background-color: #efefef;
+          opacity: 0.5;
           cursor: default; }
         .map__control[data-touch]:not(.disabled), .map__control[data-hover]:not(.disabled) {
           transform: scale(0.95); } }

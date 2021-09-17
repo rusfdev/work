@@ -4,6 +4,12 @@
   min-height: 100vh;
   overflow: hidden;
   position: relative;
+  &::before {
+    content: '';
+    height: 10px;
+    display: block;
+    background: linear-gradient(90deg, #74b562 0%, #cdcd5c 100%);
+  }
 }
 .main {
   flex: 1 1 100%;

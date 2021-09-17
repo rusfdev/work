@@ -7,8 +7,6 @@
     <meta name="format-detection" content="telephone=no">
     <!--styles-->
     <link rel="stylesheet" href="./styles/common.css">
-    <!--scripts-->
-    <script src="./scripts/scripts.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -19,7 +17,7 @@
         </div>
         <div class="map__scroll">
           <div class="map__inner">
-            <div class="map__inner-elements"> <img class="map__image" src="./img/map.svg" alt="map">
+            <div class="map__inner-elements"> <img class="lazyload map__image" data-src="./img/map.svg" alt="map">
               <svg class="map__regions" viewBox="0 0 842.3 1190.2">
                 <polygon class="region" onclick="goToPage('https://new.netanya.muni.il/CityHall/Engineering/UrbanRenewal/Pages/%d7%9b%d7%a8%d7%98%d7%99%d7%a1%d7%99%20%d7%9e%d7%aa%d7%97%d7%9d/mitham3.aspx');" points="325.8,255.4 322.6,228.5 335.5,215.4 360,206.7 416.6,214.6 405.1,307.6 371.2,303.2 375.9,262.7 "></polygon>
                 <polygon class="region" onclick="goToPage('https://new.netanya.muni.il/CityHall/Engineering/UrbanRenewal/Pages/%d7%9b%d7%a8%d7%98%d7%99%d7%a1%d7%99%20%d7%9e%d7%aa%d7%97%d7%9d/mitham4.aspx');" points="324.8,259.1 325,298.7 371.2,303.2 375.4,265.7 "></polygon>
@@ -81,5 +79,9 @@
         </div>
       </div>
     </div>
+    <!--libs-->
+    <script src="./scripts/libs/lazysizes.min.js"></script>
+    <!--scripts-->
+    <script src="./scripts/scripts.js"></script>
   </body>
 </html>

@@ -1,16 +1,26 @@
 .map {
   overflow: hidden;
   position: relative;
+  background-color: #e7e7e7;
   &__inner-elements {
     position: relative;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 141.3%;
+    }
   }
   &__image {
     display: block;
+    position: absolute;
     width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
   &__regions {
     display: block;
-    width: 100%;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -32,6 +42,7 @@
       padding-top: 100%;
     }
     &__scroll {
+      overscroll-behavior-y: none;
       position: absolute;
       top: calc(var(--gap) * -1);
       left: calc(var(--gap) * -1);
@@ -42,7 +53,7 @@
     }
     &__inner {
       padding: var(--gap);
-      
+
     }
     &__controls {
       position: absolute;
@@ -85,7 +96,7 @@
         }
       }
       &.disabled {
-        background-color: #efefef;
+        opacity: 0.5;
         cursor: default;
       }
       &[data-touch], &[data-hover] {
