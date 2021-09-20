@@ -45,10 +45,11 @@ a {
   }
   @media (max-width: 480px) {
     --gap: 20px;
+    max-height: calc(80vh - 10px);
     &::before {
       content: '';
       display: block;
-      padding-top: 100%;
+      padding-top: 141.4%;
     }
     &__scroll {
       overscroll-behavior-y: none;
@@ -117,8 +118,8 @@ a {
 }
 
 .map-links {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px var(--gutter);
   padding: 20px var(--gutter) 40px var(--gutter);
   font-size: 14px;
@@ -128,15 +129,15 @@ a {
 }
 
 .region {
-  fill:#000000;
-  stroke:#000000;
+  fill: transparent;
+  stroke: transparent;
   stroke-width:2;
   stroke-linejoin:round;
   stroke-miterlimit:10;
-  opacity: 0;
-  transition: opacity $trs1;
   cursor: pointer;
+  transition: $trs1;
   &[data-touch], &[data-hover] {
-    opacity: 0.1;
+    fill:rgba(167, 221, 255, 0.5);
+    stroke:#000;
   }
 }

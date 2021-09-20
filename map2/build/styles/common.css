@@ -1,7 +1,6 @@
 /*========== Variables ==========*/
 :root {
-  --color-text: #323232;
-  --color-bg-header: #227cb3;
+  --color-text: #125295;
   --gutter: 16px; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -502,7 +501,7 @@ p {
 /*========== Buttons ==========*/
 /*========== Blocks ==========*/
 a {
-  transition: color 0.1s ease-in-out; }
+  transition: color 0.05s ease-in-out; }
   a[data-touch], a[data-hover] {
     color: #FF0000; }
 
@@ -538,11 +537,12 @@ a {
       width: 100% !important; } }
   @media (max-width: 480px) {
     .map {
-      --gap: 20px; }
+      --gap: 20px;
+      max-height: calc(80vh - 10px); }
       .map::before {
         content: '';
         display: block;
-        padding-top: 100%; }
+        padding-top: 141.4%; }
       .map__scroll {
         overscroll-behavior-y: none;
         position: absolute;
@@ -567,7 +567,7 @@ a {
         display: block;
         position: relative;
         box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
-        transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out; }
+        transition: background-color 0.05s ease-in-out, transform 0.05s ease-in-out; }
         .map__control::before, .map__control::after {
           content: '';
           display: block;
@@ -593,8 +593,8 @@ a {
           transform: scale(0.95); } }
 
 .map-links {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px var(--gutter);
   padding: 20px var(--gutter) 40px var(--gutter);
   font-size: 14px; }
@@ -603,15 +603,15 @@ a {
       display: none; } }
 
 .region {
-  fill: #000000;
-  stroke: #000000;
+  fill: transparent;
+  stroke: transparent;
   stroke-width: 2;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
-  opacity: 0;
-  transition: opacity 0.1s ease-in-out;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 0.05s ease-in-out; }
   .region[data-touch], .region[data-hover] {
-    opacity: 0.1; }
+    fill: rgba(167, 221, 255, 0.5);
+    stroke: #000; }
 
 /*# sourceMappingURL=maps/common.css.map */
