@@ -77,7 +77,7 @@ const CustomInteractionEvents = Object.create({
 })
 
 function goToPage(href) {
-  document.location.href = href;
+  window.parent.location.href = href;
 }
 
 const Map = {
