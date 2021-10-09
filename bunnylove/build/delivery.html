@@ -13,7 +13,7 @@
     <meta name="description" content="Секс-шоп «Влюбленный кролик» - онлайн магазин интим товаров в Самаре. В нашем каталоге широкий ассортимент эротических аксессуаров по выгодным ценам.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://localhost:9000/styles/styles.css">
+    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/bunnylove/build/styles/styles.css">
   </head>
   <body>
     <header class="new-header new-header-type-standart">
@@ -237,7 +237,7 @@
           </div>
         </div>
         <div class="container">
-          <button class="new-button new-button-icon-humburger" data-action="menuButton"></button><a class="new-header-logo" href="#"> <img class="new-header-logo__image" src="http://localhost:9000/img/bunny_logo.svg" alt="logo"></a>
+          <button class="new-button new-button-icon-humburger" data-action="menuButton"></button><a class="new-header-logo" href="#"> <img class="new-header-logo__image" src="https://ruslanmmr.github.io/work/bunnylove/build/img/bunny_logo.svg" alt="logo"></a>
           <button class="new-button new-button-icon-city new-button-icon-city-type-table" data-action="cityButton">
             <svg class="new-button__icon-type-city">
               <use xlink:href="#markIcon"></use>
@@ -479,7 +479,7 @@
       </div>
       <div class="container">
         <section class="section">
-          <h1 class="new-content__title section__title">Оплата</h1>
+          <h1 class="new-content__title section__title">Доставка</h1>
           <div class="row">
             <div class="account col-xl-9"></div>
           </div>
@@ -488,72 +488,291 @@
           </div>
           <div class="row">
             <div class="col-lg-9">
-              <div class="order-total step-first ds-order-total order-total--payment">
-                <div class="sum">
-                  <label>Итого к оплате:</label>
-                  <var><span class="cart_total_price_with_discount">690 ₽</span></var>
-                </div>
-              </div>
-              <div class="title-large">Выберите способ оплаты:</div>
-              <div class="method-block">
-                <div class="method cash-method inactive" data-type="online">
-                  <div class="method__icon" id="rbkmoney_payment" style="cursor: pointer"><img src="/static/svg/online_pay.svg" alt="Онлайн-оплата"></div>
-                  <div class="method__title">Online</div>
-                </div><a class="method cash-method active" href="#" data-type="upon_receive">
-                  <div class="method__icon"><img src="/static/svg/pay_cash.svg" alt="Оплата наличными при получении заказа"></div>
-                  <div class="method__title">При получении</div></a>
-                <div class="need-change-wrap show">
-                  <form id="id_change_form" action="." method="post">
-                    <input id="id_payment_type_custom" type="hidden" name="payment_type_custom" value="upon_receive">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="5KC9lvvnRii9sLRioYefMnqwmh8Ua5iXeE7v11y8Vgn8w9aTJGD8GuJ8XOIA0KWK">
-                    <div class="upon_receive_only" style="display: block;"><span class="caption">Нужна сдача с суммы</span>
-                      <input id="id_change" type="number" name="change" step="0.01" required="required"> ₽
+              <div class="title-large">Выберите способ доставки:</div>
+              <div class="alert alert-info">При сумме заказа от 3000 руб скидка на доставку составляет 200 руб.</div>
+              <form class="form form-delivery" id="delivery_form" action="/catalog/cart/delivery/" method="post" data-cart-total-price="4708">
+                <input type="hidden" name="csrfmiddlewaretoken" value="oSiaEnmG0UkGIikCMhOKsmnx8u729HVaT4fEeBtBV0w34XR08qKCorQZyWx5KGB6">
+                <fieldset class="form__group -inline">
+                  <label class="radio radio-large" for="id_delivery_type_0">
+                    <input id="id_delivery_type_0" type="radio" name="delivery_type" value="48" required=""><span class="outer"><span class="inner"></span></span><span class="text">Самовывоз</span>
+                  </label>
+                  <label class="radio radio-large" for="id_delivery_type_1">
+                    <input id="id_delivery_type_1" type="radio" name="delivery_type" value="49" required=""><span class="outer"><span class="inner"></span></span><span class="text">Курьером</span>
+                  </label>
+                  <label class="radio radio-large" for="id_delivery_type_2">
+                    <input id="id_delivery_type_2" type="radio" name="delivery_type" value="50" required=""><span class="outer"><span class="inner"></span></span><span class="text">Почтой России</span>
+                  </label>
+                  <label class="radio radio-large" for="id_delivery_type_3">
+                    <input id="id_delivery_type_3" type="radio" name="delivery_type" value="51" required=""><span class="outer"><span class="inner"></span></span><span class="text">СДЭК</span>
+                  </label>
+                  <label class="radio radio-large" for="id_delivery_type_4">
+                    <input id="id_delivery_type_4" type="radio" name="delivery_type" value="52" required=""><span class="outer"><span class="inner"></span></span><span class="text">Pickpoint</span>
+                  </label>
+                  <label class="radio radio-large" for="id_delivery_type_5">
+                    <input id="id_delivery_type_5" type="radio" name="delivery_type" value="99" required=""><span class="outer"><span class="inner"></span></span><span class="text">OZON доставка</span>
+                  </label>
+                </fieldset>
+                <fieldset class="form__group form__grey -inline fields">
+                  <div class="delivery__form PickUpDeliveryForm" id="delivery_form_48" data-pickupdeliveryform-type="48">
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_first_name" type="text" name="first_name" placeholder="Имя" maxlength="30" required=""><span class="required_mark">*</span>
                     </div>
-                    <p class="caption">Выберете способ подтверждения:</p>
-                    <label class="radio radio-large" for="id_confirmation_method_0">
-                      <input id="id_confirmation_method_0" type="radio" name="confirmation_method" value="phone" required=""><span class="outer"><span class="inner"></span></span><span class="text">Звонок по телефону</span>
-                    </label>
-                    <label class="radio radio-large" for="id_confirmation_method_1">
-                      <input id="id_confirmation_method_1" type="radio" name="confirmation_method" value="telegram" required=""><span class="outer"><span class="inner"></span></span><span class="text">Telegram</span><img class="confirmation_type_logo" src="/static/svg/telegram_logo.svg" alt="">
-                    </label>
-                    <label class="radio radio-large" for="id_confirmation_method_2">
-                      <input id="id_confirmation_method_2" type="radio" name="confirmation_method" value="viber" required=""><span class="outer"><span class="inner"></span></span><span class="text">Viber</span><img class="confirmation_type_logo" src="/static/svg/viber_logo.svg" alt="">
-                    </label>
-                    <div id="confirmation-container" style="display: block;">
-                      <div class="new-checkbox">
-                        <input class="new-checkbox__input" id="id" type="checkbox" name="">
-                        <label class="new-checkbox__label" for="id">Перезвонить немедленно</label>
-                      </div>
-                      <div class="input-element">
-                        <label for="id_confirmation_phone_time">Удобное время для звонка:</label>
-                        <input id="id_confirmation_phone_time" type="text" name="confirmation_phone_time" maxlength="255" required="">
-                      </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input phone" id="id_phone" type="text" name="phone" placeholder="телефон" maxlength="12" minlength="11" required=""><span class="required_mark">*</span>
                     </div>
-                    <button class="new-button-type-fill button-inline" type="submit">Далее</button>
-                    <div style="clear: both;"></div>
-                  </form>
-                </div>
-              </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <label for="id_shop_0">Магазин<span class="required_mark required_mark__inline">*</span>:</label>
+                      <label class="radio" for="id_shop_0">
+                        <input id="id_shop_0" type="radio" name="shop" value="1" products="[(&lt;Product: Вибропуля Indeep Mady Purple (7703-02indeep) 9adfbbe5-c54b-11e8-8df8-a0481c79f9a5&gt;, 1), (&lt;Product: Аксессуары на палочке Ночной волшебник (305917) 1fce1b85-a18a-11e9-8ef4-a0481c79f9a5&gt;, 1), (&lt;Product: Анальная втулка A-toys Butt Plug (761303) c328dc9e-0039-11e8-80c5-002590d18696&gt;, 1), (&lt;Product: Crystal Jellies (0287-05-CD) dea6d633-212b-11e3-b8b7-08edb94ddea0&gt;, 1)]" required=""><span class="outer"><span class="inner"></span></span><span class="text"><em>ул. Ново-Вокзальная, 146а</em>
+                          <var>Через 1-3 дня, бесплатно</var>
+                          <var>КРУГЛОСУТОЧНО!</var></span>
+                      </label>
+                      <label class="radio" for="id_shop_1">
+                        <input id="id_shop_1" type="radio" name="shop" value="2" products="[(&lt;Product: Вибропуля Indeep Mady Purple (7703-02indeep) 9adfbbe5-c54b-11e8-8df8-a0481c79f9a5&gt;, 1), (&lt;Product: Аксессуары на палочке Ночной волшебник (305917) 1fce1b85-a18a-11e9-8ef4-a0481c79f9a5&gt;, 1), (&lt;Product: Анальная втулка A-toys Butt Plug (761303) c328dc9e-0039-11e8-80c5-002590d18696&gt;, 1), (&lt;Product: Crystal Jellies (0287-05-CD) dea6d633-212b-11e3-b8b7-08edb94ddea0&gt;, 1)]" required=""><span class="outer"><span class="inner"></span></span><span class="text"><em>г. Самара, ул. Ленинградская, 31</em>
+                          <var>Через 1-3 дня, бесплатно</var>
+                          <var>КРУГЛОСУТОЧНО!</var></span>
+                      </label>
+                      <label class="radio" for="id_shop_2">
+                        <input id="id_shop_2" type="radio" name="shop" value="3" products="[(&lt;Product: Вибропуля Indeep Mady Purple (7703-02indeep) 9adfbbe5-c54b-11e8-8df8-a0481c79f9a5&gt;, 1), (&lt;Product: Аксессуары на палочке Ночной волшебник (305917) 1fce1b85-a18a-11e9-8ef4-a0481c79f9a5&gt;, 1), (&lt;Product: Анальная втулка A-toys Butt Plug (761303) c328dc9e-0039-11e8-80c5-002590d18696&gt;, 1), (&lt;Product: Crystal Jellies (0287-05-CD) dea6d633-212b-11e3-b8b7-08edb94ddea0&gt;, 1)]" required=""><span class="outer"><span class="inner"></span></span><span class="text"><em>г. Самара, Московское шоссе, Лит.В</em>
+                          <var>Через 1-3 дня, бесплатно</var>
+                          <var>КРУГЛОСУТОЧНО!</var></span>
+                      </label>
+                      <label class="radio" for="id_shop_3">
+                        <input id="id_shop_3" type="radio" name="shop" value="4" products="[(&lt;Product: Вибропуля Indeep Mady Purple (7703-02indeep) 9adfbbe5-c54b-11e8-8df8-a0481c79f9a5&gt;, 1), (&lt;Product: Аксессуары на палочке Ночной волшебник (305917) 1fce1b85-a18a-11e9-8ef4-a0481c79f9a5&gt;, 1), (&lt;Product: Анальная втулка A-toys Butt Plug (761303) c328dc9e-0039-11e8-80c5-002590d18696&gt;, 1), (&lt;Product: Crystal Jellies (0287-05-CD) dea6d633-212b-11e3-b8b7-08edb94ddea0&gt;, 1)]" required=""><span class="outer"><span class="inner"></span></span><span class="text"><em>г. Самара, Гагарина, 48</em>
+                          <var>Через 1-3 дня, бесплатно</var>
+                          <var>c 10:00 до 22:00</var></span>
+                      </label>
+                      <label class="radio" for="id_shop_4">
+                        <input id="id_shop_4" type="radio" name="shop" value="6" products="[(&lt;Product: Вибропуля Indeep Mady Purple (7703-02indeep) 9adfbbe5-c54b-11e8-8df8-a0481c79f9a5&gt;, 1), (&lt;Product: Аксессуары на палочке Ночной волшебник (305917) 1fce1b85-a18a-11e9-8ef4-a0481c79f9a5&gt;, 1), (&lt;Product: Анальная втулка A-toys Butt Plug (761303) c328dc9e-0039-11e8-80c5-002590d18696&gt;, 1), (&lt;Product: Crystal Jellies (0287-05-CD) dea6d633-212b-11e3-b8b7-08edb94ddea0&gt;, 1)]" required=""><span class="outer"><span class="inner"></span></span><span class="text"><em>г. Самара, ул. Авроры, 199</em>
+                          <var>Через 1-3 дня, бесплатно</var>
+                          <var>c 10:00 до 22:00</var></span>
+                      </label>
+                    </div>
+                    <input class="new-button-type-fill button-inline" type="submit" value="Продолжить">
+                  </div>
+                  <div class="delivery__form CourierDeliveryForm" id="delivery_form_49" data-courierdeliveryform-type="49">
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_first_name" type="text" name="first_name" placeholder="Имя" maxlength="30" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input phone" id="id_phone" type="text" name="phone" placeholder="телефон" maxlength="12" minlength="11" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_city" type="text" name="city" placeholder="Город" maxlength="40" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_street" type="text" name="street" placeholder="Улица" maxlength="120" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_house_number" type="text" name="house_number" placeholder="Дом" maxlength="10" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_apartment_number" type="text" name="apartment_number" placeholder="Квартира" maxlength="10">
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <textarea class="form__textarea" id="id_comment" name="comment" cols="40" rows="10" placeholder="Дополнительные комментарии"></textarea>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <label for="id_delivery_zone">Зона доставки<span class="required_mark required_mark__inline">*</span>:</label>
+                      <select class="form__input" id="id_delivery_zone" name="delivery_zone" placeholder="зона доставки">
+                        <option value="1" selected="">Доставка по городу 200 руб</option>
+                        <option value="6">Южный город 350 руб</option>
+                        <option value="7">Сухая Самарка 400 руб</option>
+                        <option value="8">Стройкерамика 450 руб</option>
+                        <option value="9">п. Старосемейкино 650 руб</option>
+                        <option value="10">п. Смышляевка 400 руб</option>
+                        <option value="11">п. Петра Дубрава 500 руб</option>
+                        <option value="12">п. Управленческий 350 руб</option>
+                        <option value="13">п. Мехзавод 350 руб</option>
+                        <option value="14">Московское шоссе 18 км 250 руб</option>
+                        <option value="15">Ракитовское шоссе 250 руб</option>
+                        <option value="16">п. Волжский 700 руб</option>
+                        <option value="17">п. Мясокомбинат 300 руб</option>
+                        <option value="18">п. Малая Царевщина 700 руб</option>
+                        <option value="19">п. Курумоч 1000 руб</option>
+                        <option value="20">Красный Яр 800 руб</option>
+                        <option value="21">п. Красная Глинка 400 руб</option>
+                        <option value="22">Кошелев 400 руб</option>
+                        <option value="23">Кинель 650 руб</option>
+                        <option value="24">п. Зубчаниновка 350 руб</option>
+                        <option value="25">п. Запанской 300 руб</option>
+                        <option value="26">Горелый Хутор 350 руб</option>
+                        <option value="27">г. Чапаевск 1200 руб</option>
+                        <option value="28">г. Новокуйбышевск 600 руб</option>
+                        <option value="29">п. Алексеевка 600 руб</option>
+                        <option value="30">116 км 350 руб</option>
+                      </select>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <label for="id_delivery_date">Дата доставки:</label>
+                      <input class="form__input" id="id_delivery_date" type="text" name="delivery_date" readonly="readonly">
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <label for="id_delivery_time_frame">Время доставки<span class="required_mark required_mark__inline">*</span>:</label>
+                      <select class="form__input" id="id_delivery_time_frame" name="delivery_time_frame" placeholder="время доставки" required="">
+                        <option value="" selected="">---------</option>
+                        <option value="9:00 - 12:00">9:00 — 12:00</option>
+                        <option value="12:00 - 15:00">12:00 — 15:00</option>
+                        <option value="15:00 - 18:00">15:00 — 18:00</option>
+                        <option value="18:00 - 21:00">18:00 — 21:00</option>
+                        <option value="21:00 - 00:00">21:00 — 00:00</option>
+                        <option value="exact time">точное время доставки</option>
+                      </select>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_delivery_exact_time" type="text" name="delivery_exact_time" placeholder="Точное время доставки" maxlength="70">
+                    </div>
+                    <input class="new-button-type-fill button-inline" type="submit" value="Продолжить">
+                  </div>
+                  <div class="delivery__form PostDeliveryForm" id="delivery_form_50" data-postdeliveryform-type="50">
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_last_name" type="text" name="last_name" placeholder="Фамилия" maxlength="30" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_first_name" type="text" name="first_name" placeholder="Имя" maxlength="30" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_middle_name" type="text" name="middle_name" placeholder="Отчество" maxlength="30" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input phone" id="id_phone" type="text" name="phone" placeholder="телефон" maxlength="12" minlength="11" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_city" type="text" name="city" placeholder="Город" maxlength="40">
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_street" type="text" name="street" placeholder="Улица" maxlength="120">
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_house_number" type="text" name="house_number" placeholder="Дом" maxlength="10">
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_apartment_number" type="text" name="apartment_number" placeholder="Квартира" maxlength="10">
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_zip_code" type="text" name="zip_code" placeholder="Почтовый индекс" maxlength="6">
+                    </div>
+                    <input class="new-button-type-fill button-inline" type="submit" value="Продолжить">
+                  </div>
+                  <div class="delivery__form SdekDeliveryForm" id="delivery_form_51" data-sdekdeliveryform-type="51">
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_last_name" type="text" name="last_name" placeholder="Фамилия" maxlength="30" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_first_name" type="text" name="first_name" placeholder="Имя" maxlength="30" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_middle_name" type="text" name="middle_name" placeholder="Отчество" maxlength="30" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input phone" id="id_phone" type="text" name="phone" placeholder="телефон" maxlength="12" minlength="11" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input id="id_cdek_pickup_point" type="hidden" name="cdek_pickup_point" data-label="Пункт выдачи">
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input id="id_cdek_price" type="hidden" name="cdek_price" data-label="Примерная стоимость без учета скидок, руб.                  (оплачивается при получении)">
+                    </div>
+                    <script src="/static/cdek/widjet.min.js"></script>
+                    <script type="text/javascript">
+                      var cdekWidjet = new ISDEKWidjet ({
+                      defaultCity: 'auto', //какой город отображается по умолчанию. Или "auto" для самоопределения.
+                      cityFrom: 'Самара', // из какого города будет идти доставка
+                      country: 'Россия', // можно выбрать страну, для которой отображать список ПВЗ
+                      //link: 'forpvz', // id элемента страницы, в который будет вписан виджет
+                      path: 'https://widget.cdek.ru/widget/scripts/', //директория с библиотеками
+                      servicepath: '/cdek/service/', //ссылка на файл service.php на вашем сайте
+                      // API-key Yandex.MAP
+                      hidedress: true,
+                      hidedelt: true,
+                      popup: true,
+                      'goods': [
+                      {
+                      length: 30,
+                      width: 25,
+                      height: 17,
+                      weight: 5
+                      },
+                      ],
+                      onChoose: onChoose
+                      });
+                      function onChoose(wat) {
+                      const e = new Event("change");
+                      if (wat.price) {
+                      let priceField = document.getElementById('id_cdek_price');
+                      priceField.value = wat.price;
+                      priceField.dispatchEvent(e);
+                      }
+                      if (wat.PVZ.Address) {
+                      let poinField = document.getElementById('id_cdek_pickup_point'),
+                      address = wat.cityName + ', ' + wat.PVZ.Address;
+                      poinField.value = address;
+                      poinField.dispatchEvent(e);
+                      }
+                      }
+                    </script>
+                    <div class="cdek-select-point new-button-type-fill" onclick="cdekWidjet.open()">Выбрать пункт выдачи</div>
+                    <input class="new-button-type-fill button-inline" type="submit" value="Продолжить">
+                  </div>
+                  <div class="delivery__form PickPointDeliveryForm" id="delivery_form_52" data-pickpointdeliveryform-type="52">
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_last_name" type="text" name="last_name" placeholder="Фамилия" maxlength="30" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_first_name" type="text" name="first_name" placeholder="Имя" maxlength="30" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_middle_name" type="text" name="middle_name" placeholder="Отчество" maxlength="30" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input phone" id="id_phone" type="text" name="phone" placeholder="телефон" maxlength="12" minlength="11" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_city" type="text" name="city" placeholder="Город" maxlength="40">
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_postamat" type="text" name="postamat" placeholder="Постамат Pickpoint" maxlength="255" required=""><span class="required_mark">*</span>
+                      <p></p><a rel="nofollow" target="_blank" href="http://pickpoint.ru/postamats/Samara/">Выбрать постамат</a>
+                      <p></p>
+                    </div>
+                    <input class="new-button-type-fill button-inline" type="submit" value="Продолжить">
+                  </div>
+                  <div class="delivery__form OzonDeliveryForm" id="delivery_form_99" data-ozondeliveryform-type="99" style="display:block;">
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_last_name" type="text" name="last_name" placeholder="Фамилия" maxlength="30" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_first_name" type="text" name="first_name" placeholder="Имя" maxlength="30" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input" id="id_middle_name" type="text" name="middle_name" placeholder="Отчество" maxlength="30" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <input class="form__input phone" id="id_phone" type="text" name="phone" placeholder="телефон" maxlength="12" minlength="11" required=""><span class="required_mark">*</span>
+                    </div>
+                    <div class="form__item" dropshipping_mark="false">
+                      <div class="button button_style-1 button_bordered">Выбрать пункт выдачи</div><br><br>
+                      <div class="button button_style-2 button_bordered">Выбрать пункт выдачи</div><br><br>
+                      <div class="button button_style-1 button_bordered button_xl">Продолжить</div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
             </div>
             <div class="col-lg-3">
               <div class="step">
                 <div class="step__number">1</div>
                 <div class="step__title">Проверка заказа</div>
                 <div class="step__money">
-                  <div class="step__icon"><img src="/static/img/icon-st1.png" alt="Стоимость заказа"></div>
-                  <div class="step__count">490 ₽</div>
+                  <div class="step__icon"><img src="/static/img/icon-st1.png" alt="Сумма заказа"></div>
+                  <div class="step__count">4 708 ₽</div>
                 </div><a class="step__edit" href="/catalog/cart/">редактировать</a>
               </div>
-              <div class="step">
+              <div class="step active">
                 <div class="step__number">2</div>
                 <div class="step__title">Доставка</div>
-                <div class="step__money">
-                  <div class="step__icon"><img src="/static/img/icon-st2.png" alt="Стоимость доставки"></div>
-                  <div class="step__count">200 ₽</div>
-                </div>
-                <p>Курьером</p><a class="step__edit" href="/catalog/cart/delivery/">редактировать</a>
               </div>
-              <div class="step active">
+              <div class="step">
                 <div class="step__number">3</div>
                 <div class="step__title">Оплата</div>
               </div>
@@ -977,20 +1196,20 @@
     <script defer="" src="/static/js/select.js"></script>
     <script defer="" src="/static/js/jquery.fancybox.pack.js"></script>
     <script defer="" src="/static/js/jquery.mask.min.js"></script>
-    <script type="text/javascript" src="http://localhost:9000/scripts/new.js"></script>
+    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/scripts/new.js"></script>
     <script defer="" src="/static/js/noty.min.js"></script>
     <script defer="" src="/static/js/popper.min.js"></script>
     <script defer="" src="/static/js/tippy.min.js"></script>
     <script defer="" src="/static/js/script.js"></script>
     <script defer="" src="/static/js/mobile_cart_rel_products_carousel.js"></script>
     <script async="" src="/static/js/adaptive_scripts.js"></script>
-    <script type="text/javascript" src="http://localhost:9000/scripts/main.js"></script>
-    <script type="text/javascript" src="http://localhost:9000/scripts/notifications.js"></script>
+    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/scripts/main.js"></script>
+    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/scripts/notifications.js"></script>
     <script defer="" src="https://cdn.ravenjs.com/3.26.4/raven.min.js" crossorigin="anonymous"></script>
     <script defer="" src="/static/js/new.js"></script>
     <script src="https://google.com/recaptcha/api.js" async="" defer=""></script>
     <!--preview-->
-    <link rel="stylesheet" href="http://localhost:9000/styles/js-helper.css">
+    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/bunnylove/build/styles/js-helper.css">
     <div class="helper"><a class="helper__trigger" href="javascript:void(0);">
         <svg class="icon" viewBox="0 0 100 100" fill="currentColor">
           <g transform="translate(50 50)">
@@ -1003,10 +1222,10 @@
       <div class="helper__container">
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Страницы:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="http://localhost:9000/index.html">Главная</a><a class="helper__section-button" href="http://localhost:9000/search.html">Поиск-выдача</a><a class="helper__section-button" href="http://localhost:9000/tovar.html">Карточка товара</a><a class="helper__section-button" href="http://localhost:9000/notovar.html">Карточка товара (нет в наличии)</a><a class="helper__section-button" href="http://localhost:9000/tovar-preview.html">Превью товара</a><a class="helper__section-button" href="http://localhost:9000/articles.html">Статьи</a><a class="helper__section-button" href="http://localhost:9000/article.html">Статья</a><a class="helper__section-button" href="http://localhost:9000/contacts.html">Контакты</a><a class="helper__section-button" href="http://localhost:9000/lc.html">Лк — Избранное</a><a class="helper__section-button" href="http://localhost:9000/lc2.html">Лк — Мои скидки и бонусы</a><a class="helper__section-button" href="http://localhost:9000/lc3.html">Лк — Мои заказы</a><a class="helper__section-button" href="http://localhost:9000/lc4.html">Лк — Мои отзывы</a><a class="helper__section-button" href="http://localhost:9000/lc5.html">Лк — Мои данные</a><a class="helper__section-button" href="http://localhost:9000/messages.html">Всплывающиее подсказки</a><a class="helper__section-button" href="http://localhost:9000/certificates.html">Подарочные сертификаты</a><a class="helper__section-button" href="http://localhost:9000/catalogue.html">Каталог</a><a class="helper__section-button" href="http://localhost:9000/corzina.html">Корзина</a><a class="helper__section-button" href="http://localhost:9000/modal.html">Модальное окно</a><a class="helper__section-button" href="http://localhost:9000/auth.html">Вход</a><a class="helper__section-button" href="http://localhost:9000/registration.html">Регистрация</a><a class="helper__section-button" href="http://localhost:9000/questions.html">Вопросы</a><a class="helper__section-button" href="http://localhost:9000/promo.html">Акции</a><a class="helper__section-button" href="http://localhost:9000/zakaz-final.html">Заказ финал</a><a class="helper__section-button" href="http://localhost:9000/ozon.html">Озон — модальное окно</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/index.html">Главная</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/search.html">Поиск-выдача</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar.html">Карточка товара</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/notovar.html">Карточка товара (нет в наличии)</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar-preview.html">Превью товара</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/articles.html">Статьи</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/article.html">Статья</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/contacts.html">Контакты</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc.html">Лк — Избранное</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc2.html">Лк — Мои скидки и бонусы</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc3.html">Лк — Мои заказы</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc4.html">Лк — Мои отзывы</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc5.html">Лк — Мои данные</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/messages.html">Всплывающиее подсказки</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/certificates.html">Подарочные сертификаты</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/catalogue.html">Каталог</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/corzina.html">Корзина</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/modal.html">Модальное окно</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/auth.html">Вход</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/registration.html">Регистрация</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/questions.html">Вопросы</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/promo.html">Акции</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/zakaz-final.html">Заказ финал</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/ozon.html">Озон — модальное окно</a></div>
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="http://localhost:9000/scripts/js-helper.js"></script>
+    <script type="text/javascript" src="https://ruslanmmr.github.io/work/bunnylove/build/scripts/js-helper.js"></script>
   </body>
 </html>

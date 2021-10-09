@@ -1,5 +1,5 @@
 -var href = 'https://ruslanmmr.github.io/work/bunnylove/build'
-//-var href = 'http://localhost:9001'
+//-var href = 'http://localhost:9000'
 
 block variables
 
@@ -736,21 +736,21 @@ html
                 a(href="#").footer-socials__link
                   img(src='/static/svg/inst.svg', alt='instagram')
         .new-footer__shell
-          .new-dropdown.new-footer__dropdown
+          .new-dropdown.new-footer__dropdown(data-action="dropdown")
             button.new-button.new-dropdown__button.new-dropdown__button-type-footer(data-action='dropdownButton') Каталог
             .new-dropdown__wrapper.new-dropdown__wrapper-type-footer(data-action='dropdownWrapper')
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/catalog/seks-igrushki/') Секс игрушки
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/catalog/eroticheskoe-bele/') Эротическое белье
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/catalog/bdsm/') BDSM
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/catalog/intimnaya-kosmetika/') Интимная косметика
-          .new-dropdown.new-footer__dropdown
+          .new-dropdown.new-footer__dropdown(data-action="dropdown")
             button.new-button.new-dropdown__button.new-dropdown__button-type-footer(data-action='dropdownButton') Покупателям
             .new-dropdown__wrapper.new-dropdown__wrapper-type-footer(data-action='dropdownWrapper')
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/delivery/') Доставка
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/pay/') Оплата
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/faq/') Вопросы
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/certificates/') Подарочные сертификаты
-          .new-dropdown.new-footer__dropdown
+          .new-dropdown.new-footer__dropdown(data-action="dropdown")
             button.new-button.new-dropdown__button.new-dropdown__button-type-footer(data-action='dropdownButton') О компании
             .new-dropdown__wrapper.new-dropdown__wrapper-type-footer(data-action='dropdownWrapper')
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/about/') О нас
@@ -758,7 +758,7 @@ html
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/vacancy/') Вакансии
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/requisites/') Реквизиты
           
-          .new-dropdown.new-footer__dropdown
+          .new-dropdown.new-footer__dropdown(data-action="dropdown")
             button.new-button.new-dropdown__button.new-dropdown__button-type-footer(data-action='dropdownButton') 
             .new-footer__dropdown-link 
               a(href="#") Акции
@@ -767,7 +767,7 @@ html
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/promo/den-semi-lyubvi-i-vernosti/') День семьи, любви и верности
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/promo/big-may-sale/') BIG MAY SALE
               a.new-dropdown__link.new-dropdown__link-type-footer(href='/promo/dostavka-za-99/') Доставка за 99₽
-          .new-dropdown.new-footer__dropdown
+          .new-dropdown.new-footer__dropdown(data-action="dropdown")
             button.new-button.new-dropdown__button.new-dropdown__button-type-footer(data-action='dropdownButton')
             .new-footer__dropdown-link 
               a(href="#") Статьи

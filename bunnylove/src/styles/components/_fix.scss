@@ -1,0 +1,20 @@
+.cart-table-row {
+  @media (max-width: 575px) {
+    align-items: center;
+    .artikul-mobile {
+      a {
+        color: inherit;
+      }
+    }
+    .cart-product-price, .cart-product-price-new, .cart-thumb__title {
+      font-size: 18px;
+    }
+    .qty {
+      top: initial;
+      width: auto !important;
+      &__control {
+        flex-shrink: 0;
+      }
+    }
+  }
+}
