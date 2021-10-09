@@ -199,10 +199,10 @@ $(document).ready(function () {
 
     //Всплывающее окно сортировки
     $('[data-action="toSortByButton"]').click(function () {
-        $('[data-action="toSortByWrapper"]').toggleClass('new-content__sort-action-open');
+        $('[data-action="toSortByWrapper"]').toggleClass('new-content__filters-action-open');
     })
     $('[data-action="toSortByCloseButton"]').click(function () {
-        $('[data-action="toSortByWrapper"]').toggleClass('new-content__sort-action-open');
+        $('[data-action="toSortByWrapper"]').toggleClass('new-content__filters-action-open');
     })
 
 

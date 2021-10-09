@@ -808,6 +808,115 @@
                   </form>
                 </div>
               </div>
+              <!--Новые сортировки-->
+              <div class="new-filters new-content__filters new-sort-filters" data-action="toSortByWrapper">
+                <div class="new-console new-mobileMenu__console">
+                  <button class="new-header__close" data-action="toSortByCloseButton"></button>
+                </div>
+                <div class="new-filters__bottom product_filter">
+                  <form id="id" action="#">
+                    <fieldset class="new-dropdown new-filters__dropdown" data-action="dropdown">
+                      <legend class="new-button new-dropdown__button new-dropdown__button-type-bottomFilter new-dropdown__button-action-open" data-action="dropdownButton">Наличие</legend>
+                      <div class="new-dropdown__wrapper new-dropdown__wrapper-type-bottomFilter new-dropdown__wrapper-action-open" data-action="dropdownWrapper">
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_1" value="#" checked><span>все</span>
+                          </label>
+                        </div>
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_1" value="#"><span>в наличии</span>
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset class="new-dropdown new-filters__dropdown" data-action="dropdown">
+                      <legend class="new-button new-dropdown__button new-dropdown__button-type-bottomFilter" data-action="dropdownButton">Магазины</legend>
+                      <div class="new-dropdown__wrapper new-dropdown__wrapper-type-bottomFilter" data-action="dropdownWrapper">
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_2" value="#" checked><span>Все магазины</span>
+                          </label>
+                        </div>
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_2" value="#"><span>Ново-Вокз.</span>
+                          </label>
+                        </div>
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_2" value="#"><span>Ленинградская</span>
+                          </label>
+                        </div>
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_2" value="#"><span>Моск. шоссе</span>
+                          </label>
+                        </div>
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_2" value="#"><span>Гагарина</span>
+                          </label>
+                        </div>
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_2" value="#"><span>Авроры</span>
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset class="new-dropdown new-filters__dropdown" data-action="dropdown">
+                      <legend class="new-button new-dropdown__button new-dropdown__button-type-bottomFilter" data-action="dropdownButton">Тип</legend>
+                      <div class="new-dropdown__wrapper new-dropdown__wrapper-type-bottomFilter" data-action="dropdownWrapper">
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_3" value="#" checked><span>все</span>
+                          </label>
+                        </div>
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_3" value="#" checked><span>со скидкой</span>
+                          </label>
+                        </div>
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_3" value="#" checked><span>популярное</span>
+                          </label>
+                        </div>
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_3" value="#" checked><span>новые</span>
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset class="new-dropdown new-filters__dropdown" data-action="dropdown">
+                      <legend class="new-button new-dropdown__button new-dropdown__button-type-bottomFilter" data-action="dropdownButton">По цене</legend>
+                      <div class="new-dropdown__wrapper new-dropdown__wrapper-type-bottomFilter" data-action="dropdownWrapper">
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_3" value="#" checked><span>По возрастанию</span>
+                          </label>
+                        </div>
+                        <div class="checkbox-item">
+                          <label class="radio-item">
+                            <input class="radio" type="radio" name="test_radio_3" value="#" checked><span>По убыванию</span>
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset class="filter__item">
+                      <button class="new-button new-button-type-fill new-button new-button-type-filters" type="submit">Применить</button>
+                    </fieldset><a class="new-button new-button-type-empty new-button-type-clear" href="#">Сбросить все фильтры</a>
+                  </form>
+                </div>
+              </div>
+              <!--Мобильные результаты сортировок-->
+              <div class="new-resault-items">
+                <div class="new-resault-items__element"> <span>Материал:</span><span>Значение</span></div>
+                <div class="new-resault-items__element"> <span>Цена:</span><span>по возрастанию</span></div>
+                <div class="new-resault-items__element"> <span>Тип:</span><span>новые</span></div>
+              </div>
             </div>
             <div class="new-content__right">
               <div class="new-sort new-content__sort" data-action="toSortByWrapper">
@@ -1882,7 +1991,7 @@
       <div class="helper__container">
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Страницы:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/index.html">Главная</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/search.html">Поиск-выдача</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar.html">Карточка товара</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/notovar.html">Карточка товара (нет в наличии)</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar-preview.html">Превью товара</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/articles.html">Статьи</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/article.html">Статья</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/contacts.html">Контакты</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc.html">Лк — Избранное</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc2.html">Лк — Мои скидки и бонусы</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc3.html">Лк — Мои заказы</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc4.html">Лк — Мои отзывы</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc5.html">Лк — Мои данные</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/messages.html">Всплывающиее подсказки</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/certificates.html">Подарочные сертификаты</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/catalogue.html">Каталог</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/corzina.html">Корзина</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/modal.html">Модальное окно</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/auth.html">Вход</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/registration.html">Регистрация</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/questions.html">Вопросы</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/promo.html">Акции</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/zakaz-final.html">Заказ финал</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/ozon.html">Озон — модальное окно</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/index.html">Главная</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/search.html">Поиск-выдача</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar.html">Карточка товара</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/notovar.html">Карточка товара (нет в наличии)</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/tovar-preview.html">Превью товара</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/articles.html">Статьи</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/article.html">Статья</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/contacts.html">Контакты</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc.html">Лк — Избранное</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc2.html">Лк — Мои скидки и бонусы</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc3.html">Лк — Мои заказы</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc4.html">Лк — Мои отзывы</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/lc5.html">Лк — Мои данные</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/messages.html">Всплывающиее подсказки</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/certificates.html">Подарочные сертификаты</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/catalogue.html">Каталог</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/corzina.html">Корзина</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/modal.html">Модальное окно</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/auth.html">Вход</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/registration.html">Регистрация</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/questions.html">Вопросы</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/promo.html">Акции</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/zakaz-final.html">Заказ финал</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/ozon.html">Озон — модальное окно</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/bunnylove/build/delivery.html">Доставка</a></div>
         </div>
       </div>
     </div>

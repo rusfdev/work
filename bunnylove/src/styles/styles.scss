@@ -21997,8 +21997,6 @@ ol:not([class]) li:not([class]):before {
 /* line 14915, ../sass/css.scss */
 .new-why-type-standart {
   padding: 32px 0;
-  margin-right: 15px;
-  margin-left: 15px;
 }
 
 /* line 14920, ../sass/css.scss */
@@ -22530,7 +22528,8 @@ ol:not([class]) li:not([class]):before {
   top: 0;
   max-width: 100%;
   transform: translate(-100%, 0);
-  overflow-y: scroll;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding-bottom: 50px;
   box-sizing: border-box;
 }
@@ -25240,7 +25239,6 @@ div[data-move=dropdownScroll] .mCSB_inside > .mCSB_container {
   }
 
   /* line 17053, ../sass/css.scss */
-  .new-content-type-catalog,
   .new-content-type-halve {
     background: 0 0;
     margin: 0 15px;

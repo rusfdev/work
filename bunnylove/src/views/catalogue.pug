@@ -307,7 +307,107 @@ block content
                   i  
                   | Показать
                   span  
-        
+
+          //Новые сортировки
+          .new-filters.new-content__filters.new-sort-filters(data-action='toSortByWrapper')
+            .new-console.new-mobileMenu__console
+              button.new-header__close(data-action='toSortByCloseButton')
+            .new-filters__bottom.product_filter
+              form#id(action='#')
+                fieldset.new-dropdown.new-filters__dropdown(data-action='dropdown')
+                  legend.new-button.new-dropdown__button.new-dropdown__button-type-bottomFilter.new-dropdown__button-action-open(data-action='dropdownButton')
+                    | Наличие
+                  .new-dropdown__wrapper.new-dropdown__wrapper-type-bottomFilter.new-dropdown__wrapper-action-open(data-action='dropdownWrapper')
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_1' value='#' checked)
+                        span все
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_1' value='#')
+                        span в наличии
+                
+                fieldset.new-dropdown.new-filters__dropdown(data-action='dropdown')
+                  legend.new-button.new-dropdown__button.new-dropdown__button-type-bottomFilter(data-action='dropdownButton')
+                    | Магазины
+                  .new-dropdown__wrapper.new-dropdown__wrapper-type-bottomFilter(data-action='dropdownWrapper')
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_2' value='#' checked)
+                        span Все магазины
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_2' value='#')
+                        span Ново-Вокз.
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_2' value='#')
+                        span Ленинградская
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_2' value='#')
+                        span Моск. шоссе
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_2' value='#')
+                        span Гагарина
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_2' value='#')
+                        span Авроры
+
+                fieldset.new-dropdown.new-filters__dropdown(data-action='dropdown')
+                  legend.new-button.new-dropdown__button.new-dropdown__button-type-bottomFilter(data-action='dropdownButton')
+                    | Тип
+                  .new-dropdown__wrapper.new-dropdown__wrapper-type-bottomFilter(data-action='dropdownWrapper')
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_3' value='#' checked)
+                        span все
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_3' value='#' checked)
+                        span со скидкой
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_3' value='#' checked)
+                        span популярное
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_3' value='#' checked)
+                        span новые
+
+                fieldset.new-dropdown.new-filters__dropdown(data-action='dropdown')
+                  legend.new-button.new-dropdown__button.new-dropdown__button-type-bottomFilter(data-action='dropdownButton')
+                    | По цене
+                  .new-dropdown__wrapper.new-dropdown__wrapper-type-bottomFilter(data-action='dropdownWrapper')
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_3' value='#' checked)
+                        span По возрастанию
+                    .checkbox-item
+                      label.radio-item
+                        input.radio(type='radio' name='test_radio_3' value='#' checked)
+                        span По убыванию
+                    
+                fieldset.filter__item
+                  button.new-button.new-button-type-fill.new-button.new-button-type-filters(type='submit')
+                    | Применить
+                a.new-button.new-button-type-empty.new-button-type-clear(href='#')
+                  | Сбросить все фильтры
+
+          //Мобильные результаты сортировок
+          .new-resault-items 
+            .new-resault-items__element 
+              span Материал:
+              span Значение
+            .new-resault-items__element 
+              span Цена:
+              span по возрастанию
+            .new-resault-items__element 
+              span Тип:
+              span новые
+
         
         .new-content__right
         
