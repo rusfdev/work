@@ -642,17 +642,16 @@
   &__element {
     display: flex;
     flex-wrap: wrap;
-    &:not(:last-child) {
-      &::after {
-        content: ',';
-      }
-    }
+    gap: 4px 6px;
     span {
-      &:first-child {
-        margin-right: 8px;
-      }
-      &:last-child {
+      &:not(:first-child) {
         font-weight: 700;
+      }
+      &:not(:first-child):not(:last-child) {
+        &::after {
+          content: ', ';
+          font-weight: normal;
+        }
       }
     }
   }

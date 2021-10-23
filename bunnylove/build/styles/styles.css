@@ -25837,13 +25837,13 @@ textarea.input {
   margin-bottom: 20px; }
   .new-resault-items__element {
     display: flex;
-    flex-wrap: wrap; }
-    .new-resault-items__element:not(:last-child)::after {
-      content: ','; }
-    .new-resault-items__element span:first-child {
-      margin-right: 8px; }
-    .new-resault-items__element span:last-child {
+    flex-wrap: wrap;
+    gap: 4px 6px; }
+    .new-resault-items__element span:not(:first-child) {
       font-weight: 700; }
+    .new-resault-items__element span:not(:first-child):not(:last-child)::after {
+      content: ', ';
+      font-weight: normal; }
 
 .radio-item {
   display: block; }
