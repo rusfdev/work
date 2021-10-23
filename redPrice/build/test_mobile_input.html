@@ -832,7 +832,7 @@
     <div class="safety-message-fixed toggle-section"><a class="toggle-section__trigger fixed-btn" href="javascript:void(0);"><img class="icon" alt="icon" src="/static/img/print.svg"></a>
       <div class="safety-message-fixed__popup toggle-section__content"><span>Наш сайт использует cookie, данные об IP-адресе, местоположении. Если Вы не хотите, чтобы эти данные обрабатывались, то должны покинуть сайт.</span></div>
     </div>
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/redPrice/build/styles/helper.css">
+    <link rel="stylesheet" href="http://localhost:9000/styles/helper.css">
     <div class="helper"><a class="helper__trigger" href="javascript:void(0);"> 
         <svg class="icon" viewBox="0 0 100 100" fill="currentColor">
           <path d="M94,39.7h-4c-3.2,0-5.9-2.8-5.9-6.1c0-1.7,0.7-3.2,2-4.3l2.6-2.5c2.5-2.5,2.5-6.6,0-9.1L82.8,12c-1.1-1.1-2.8-1.8-4.6-1.8      c-1.7,0-3.4,0.7-4.6,1.8l-2.5,2.4c-1.2,1.3-2.7,2-4.4,2c-3.3,0-6.1-2.7-6.1-5.9v-4C60.6,3,57.8,0,54.2,0h-7.9C42.8,0,40,3,40,6.5v4      c0,3.2-2.8,5.9-6.1,5.9c-1.7,0-3.2-0.7-4.3-1.9L27,12c-1.1-1.2-2.8-1.8-4.6-1.8c-1.7,0-3.4,0.7-4.6,1.8L12,17.7      c-2.5,2.5-2.5,6.6,0,9.1l2.5,2.4c1.3,1.2,2,2.7,2,4.4c0,3.3-2.7,6.1-5.9,6.1h-4C3,39.7,0,42.5,0,46v4v4c0,3.5,3,6.3,6.6,6.3h4      c3.2,0,5.9,2.8,5.9,6.1c0,1.7-0.7,3.2-2,4.4L12,73.2c-2.5,2.5-2.5,6.6,0,9.1l5.8,5.8c1.1,1.2,2.8,1.8,4.6,1.8c1.7,0,3.4-0.7,4.6-1.8      l2.5-2.5c1.1-1.2,2.7-1.9,4.3-1.9c3.3,0,6.1,2.7,6.1,5.9v4c0,3.5,2.8,6.5,6.4,6.5h7.9c3.5,0,6.4-3,6.4-6.5v-4c0-3.2,2.8-5.9,6.1-5.9      c1.7,0,3.2,0.7,4.4,2l2.5,2.4c1.2,1.1,2.8,1.8,4.6,1.8s3.4-0.7,4.6-1.8l5.8-5.8c2.5-2.5,2.5-6.6,0-9.1L86,70.7c-1.3-1.1-2-2.7-2-4.3      c0-3.3,2.7-6.1,5.9-6.1h4c3.5,0,6.1-2.8,6.1-6.3v-4v-4C100.1,42.5,97.5,39.7,94,39.7z M71.1,50L71.1,50c0,11.5-9.3,20.8-20.9,20.8      S29.4,61.5,29.4,50l0,0l0,0c0-11.5,9.3-20.8,20.9-20.8S71.1,38.5,71.1,50L71.1,50z"></path>
@@ -844,13 +844,13 @@
         </div>
         <!--section-->
         <div class="helper__section"><span class="helper__section-title">Страницы:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="https://ruslanmmr.github.io/work/redPrice/build/index.html">Главная</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/redPrice/build/test_mobile_input.html">Инпут номер телефона</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="http://localhost:9000/index.html">Главная</a><a class="helper__section-button" href="http://localhost:9000/test_mobile_input.html">Инпут номер телефона</a></div>
         </div>
       </div>
     </div>
-    <script src="https://ruslanmmr.github.io/work/redPrice/build/scripts/helper.js"></script>
+    <script src="http://localhost:9000/scripts/helper.js"></script>
     <!--маска-->
-    <script src="https://ruslanmmr.github.io/work/redPrice/build/scripts/libs/inputmask.min.js"></script>
+    <script src="http://localhost:9000/scripts/libs/inputmask.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
       function test_number(value) {
@@ -871,7 +871,7 @@
       },
       onKeyDown: function (event, buffer, caretPos, opts) {
       let value = '';
-      if (caretPos.end == 18 && /^[0-9]$/.test(event.key) && buffer[4] == '8') {
+      if (caretPos.end == 18 && /^[0-9]$/.test(event.key) && /^[7, 8]$/.test(buffer[4])) {
       delete buffer[1];
       delete buffer[4];
       for (let val of buffer) {

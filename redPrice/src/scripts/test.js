@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     onKeyDown: function (event, buffer, caretPos, opts) {
       let value = '';
   
-      if (caretPos.end == 18 && /^[0-9]$/.test(event.key) && buffer[4] == '8') {
+      if (caretPos.end == 18 && /^[0-9]$/.test(event.key) && /^[7, 8]$/.test(buffer[4])) {
         delete buffer[1];
         delete buffer[4];
   
