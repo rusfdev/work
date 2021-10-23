@@ -25833,12 +25833,12 @@ textarea.input {
 .new-resault-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px 15px;
+  gap: 6px 15px;
   margin-bottom: 20px; }
   .new-resault-items__element {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px 6px; }
+    gap: 0px 6px; }
     .new-resault-items__element span:not(:first-child) {
       font-weight: 700; }
     .new-resault-items__element span:not(:first-child):not(:last-child)::after {

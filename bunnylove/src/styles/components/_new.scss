@@ -637,12 +637,12 @@
 .new-resault-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px 15px;
+  gap: 6px 15px;
   margin-bottom: 20px;
   &__element {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px 6px;
+    gap: 0px 6px;
     span {
       &:not(:first-child) {
         font-weight: 700;
