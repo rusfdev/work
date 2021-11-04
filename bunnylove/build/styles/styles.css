@@ -25350,6 +25350,12 @@ textarea.input {
       .cart-table-row .qty__control {
         flex-shrink: 0; } }
 
+.new-card__bottom-type-sold .new-card__button {
+  text-align: center;
+  width: 100%;
+  text-align: center;
+  justify-content: center; }
+
 .promo-item-card__container {
   display: flex;
   padding: 20px;
