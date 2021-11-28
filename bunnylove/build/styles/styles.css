@@ -25353,8 +25353,9 @@ textarea.input {
   text-align: center;
   justify-content: center; }
 
-.new-why-type-standart {
-  padding: 32px 15px; }
+@media (max-width: 1023px) {
+  .new-why-type-standart {
+    padding: 32px 15px; } }
 
 .promo-item-card__container {
   display: flex;
