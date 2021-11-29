@@ -116,3 +116,15 @@
     }
   }
 }
+
+.admin-form {
+  &__button {
+    min-width: 180px;
+  }
+  &__user-count {
+    display: block;
+    font-weight: 600;
+    color: var(--color-accent-1);
+    margin-top: 10px;
+  }
+}

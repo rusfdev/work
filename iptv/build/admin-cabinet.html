@@ -47,15 +47,83 @@
         <section class="section">
           <div class="container">
             <h1 class="section__title">административная часть</h1>
-            <form class="form" action="">
-              <div class="d-grid column-gap-grid row-gap-10 row-gap-lg-20 grid-columns-1 grid-columns-sm-2 grid-columns-md-3">
+            <form class="admin-form" action="">
+              <div class="d-grid column-gap-grid row-gap-10 row-gap-lg-20 grid-columns-1 grid-columns-sm-2 grid-columns-md-3 align-items-end">
                 <!--input-->
                 <div class="input">
                   <label class="input__label" for="1">Ключ юзера*</label>
                   <div class="input__element">
-                    <input type="password" id="1" placeholder="********">
+                    <input type="password" id="1" placeholder="********" required>
                   </div>
                 </div>
+                <!--input-->
+                <div class="input input-date">
+                  <label class="input__label" for="2">Дата окончания подписки юзера*</label>
+                  <div class="input__element input-date__element">
+                    <input type="text" id="2" placeholder="дд мм гг" autocomplete="off" required>
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons.svg#calendar"></use>
+                    </svg>
+                  </div>
+                </div>
+                <!--input-->
+                <div class="input">
+                  <label class="input__label" for="3">Ключ ilook*</label>
+                  <div class="input__element">
+                    <input type="text" id="3" placeholder="******" required>
+                  </div>
+                </div>
+                <!--input-->
+                <div class="input">
+                  <label class="input__label" for="4">Email юзера*</label>
+                  <div class="input__element">
+                    <input type="email" id="4" placeholder="mail@mail.ru" required>
+                  </div>
+                </div>
+                <!--input-->
+                <div class="input">
+                  <label class="input__label" for="5">Логин юзера*</label>
+                  <div class="input__element">
+                    <input type="text" id="5" placeholder="********" required>
+                  </div>
+                </div>
+                <!--input-->
+                <div class="input">
+                  <label class="input__label" for="6">Время* (сколько дней добавить к текущему вр.)</label>
+                  <div class="input__element">
+                    <input type="text" id="6" placeholder="3 дня" required>
+                  </div>
+                </div>
+                <!--input-->
+                <div class="input">
+                  <label class="input__label" for="7">Автопродление</label>
+                  <div class="select">
+                    <select id="7">
+                      <option value="Нет" selected>Нет</option>
+                      <option value="Да">Да</option>
+                    </select>
+                  </div>
+                </div>
+                <!--input-->
+                <div class="input">
+                  <label class="input__label" for="8">Сообщение юзеру</label>
+                  <div class="input__element">
+                    <input type="text" id="8" placeholder="Сообщение">
+                  </div>
+                </div>
+                <!--input-->
+                <div class="input">
+                  <label class="input__label" for="9">Отправить письмо юзеру с данными</label>
+                  <div class="select">
+                    <select id="9">
+                      <option value="Нет" selected>Нет</option>
+                      <option value="Да">Да</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-20 mt-sm-25 text-center">
+                <button class="button button_style-3 admin-form__button">Добавить</button><span class="admin-form__user-count">Всего: 152 юзеров</span>
               </div>
             </form>
           </div>
@@ -65,6 +133,9 @@
     </div>
     <!--scripts-->
     <script src="./scripts/libs/lazysizes.min.js"></script>
+    <script src="./scripts/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="./scripts/libs/flatpickr/ru.js"></script>
+    <script src="./scripts/libs/slim-select.min.js"></script>
     <script src="./scripts/scripts.js"> </script>
     <!--preview only-->
     <link rel="stylesheet" href="./styles/helper.css">

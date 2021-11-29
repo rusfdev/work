@@ -47,12 +47,15 @@
     font-weight: 600;
     display: inline-block;
     margin-bottom: 5px;
+    font-size: 14px;
   }
   &__element {
+    position: relative;
     border-radius: 5px;
     border: 1px solid var(--color-input-border);
     input {
       width: 100%;
+      font-size: 16px;
       line-height: 20px;
       padding: 14px;
       &::placeholder {
@@ -64,6 +67,115 @@
           opacity: 0;
         }
       }
+    }
+  }
+}
+
+.input-date {
+  &__element {
+    input {
+      padding-right: 45px;
+    }
+    .icon {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-muted-5);
+      pointer-events: none;
+    }
+  }
+}
+
+.select {
+  position: relative;
+  z-index: 1000;
+  select, .ss-single-selected {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 14px;
+    border: 1px solid var(--color-input-border);
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+  }
+  .ss-main {
+    position: relative;   
+  }
+  .ss-single-selected {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+  }
+  .placeholder {
+    display: block;
+  }
+  .ss-arrow {
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    .icon {
+      width: 100%;
+      height: 100%;
+      display: block;
+      transform: translateY(1px);
+    }
+    .arrow-down, .arrow-up {
+      display: block;
+      width: 12px;
+      height: 12px;
+      transition: transform var(--trs-1);
+    }
+    .arrow-up {
+      transform: rotate(180deg);
+    }
+  }
+  .ss-deselect, .ss-search {
+    display: none;
+  }
+  .ss-content {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    padding: 5px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--trs-1), visibility var(--trs-1);
+    &.ss-open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .ss-list {
+    background-color: #fff;
+    border: 1px solid var(--color-input-border);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: var(--modal-box-shadow);
+  }
+  .ss-option {
+    cursor: pointer;
+    display: block;
+    transition: color var(--trs-1), background-color var(--trs-1);
+    padding: 10px 14px;
+    &[data-touch], &[data-hover] {
+      color: var(--color-accent-1);
+    }
+    &.ss-disabled {
+      color: var(--color-muted-1);
+      cursor: default;
+    }
+    &.ss-option-selected {
+      background-color: var(--color-accent-1);
+      color: #fff;
     }
   }
 }

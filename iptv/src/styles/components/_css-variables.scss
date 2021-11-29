@@ -1,6 +1,7 @@
 :root {
   //font
   --font-family: 'Open Sans', sans-serif;
+  --modal-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
 
   //content gutter
   --content-gutter: calc((100vw - var(--content-width) + var(--container-gutter-x) * 2) / 2);
@@ -26,7 +27,7 @@
   //container 
   --container-gutter-x: 15px;
   --grid-gutter-width: 30px;
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     --grid-gutter-width: 15px;
   }
 
