@@ -1,0 +1,67 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: geometricPrecision;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  line-height: 1.35;
+  font-weight: 600;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1, .h1 {
+  font-size: 34px;
+  margin: 42px 0;
+  @include media-breakpoint-down(lg) {
+    margin: 24px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    margin: 22px 0;
+    font-size: 22px;
+  }
+}
+
+h2, .h2 {
+  font-size: 28px;
+  margin: 30px 0;
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+  }
+}
+
+
+p {
+  margin: 0 0 1em 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+img:not([class]) {
+  display: block;
+  width: auto;
+  max-width: 100%;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+a {
+  transition: color var(--trs-1);
+  &[data-touch], &[data-hover] {
+    color: var(--color-accent-1);
+  }
+}

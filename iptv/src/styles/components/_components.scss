@@ -1,0 +1,86 @@
+img {
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  &.lazyload, &.lazyloading {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &.lazyloaded {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--trs-1), visibility var(--trs-1);
+  }
+}
+
+//images
+.image {
+  display: block;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &_contain, &_cover {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+  &_cover {
+    overflow: hidden;
+    img {
+      object-fit: cover;
+    }
+  }
+  &_contain {
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.lang-toggle {
+  position: relative;
+  &__selected {
+    display: flex;
+    align-items: center;
+    color: var(--color-text-dark);
+    cursor: pointer;
+  }
+  &__selected-flag {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-right: 5px;
+  }
+  &__selected-title {
+    text-transform: uppercase;
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+  &__selected-icon {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    margin-left: 4px;
+  }
+}
+
+.auto-renewal-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+}

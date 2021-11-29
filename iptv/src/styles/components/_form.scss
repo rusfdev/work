@@ -1,0 +1,103 @@
+.login-input {
+  background-color: #fff;
+  border: 2px solid var(--login-input-border-color);
+  color: var(--color-text-dark);
+  position: relative;
+  font-weight: 600;
+  font-size: 16px;
+  &_top-left {
+    border-top-left-radius: 10px;
+  }
+  &_top-right {
+    border-top-right-radius: 10px;
+  }
+  &_bottom-left {
+    border-bottom-left-radius: 10px;
+  }
+  &_bottom-right {
+    border-bottom-right-radius: 10px;
+  }
+  input {
+    width: 100%;
+    line-height: 20px;
+    padding: 8px 14px;
+    &::placeholder {
+      color: var(--login-input-placeholder-color);
+      transition: opacity var(--trs-1);
+    }
+    &:focus {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+
+  input {
+    &:-webkit-autofill {
+      -webkit-text-fill-color: var(--color-text);
+      box-shadow: 0 0 0px 1000px transparent inset;
+      transition: background-color 5000s;
+    }
+  }
+}
+
+.input {
+  &__label {
+    color: var(--color-input-label);
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  &__element {
+    border-radius: 5px;
+    border: 1px solid var(--color-input-border);
+    input {
+      width: 100%;
+      line-height: 20px;
+      padding: 14px;
+      &::placeholder {
+        color: var(--color-input-placeholder);
+        transition: opacity var(--trs-1);
+      }
+      &:focus {
+        &::placeholder {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.check-slide {
+  input {
+    display: none;
+    &:checked ~ span {
+      &::before {
+        transform: translate(32px);
+        background-color: var(--color-accent-2);
+      }
+    }
+  }
+
+  span {
+    --height: 30px;
+    display: block;
+    height: var(--height);
+    width: 62px;
+    border-radius: calc(var(--height) / 2);
+    border: 1px solid var(--color-muted-4);
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: var(--color-muted-4);
+      top: 2px;
+      left: 2px;
+      transition: background-color var(--trs-1), transform var(--trs-1);
+    }
+  }
+}

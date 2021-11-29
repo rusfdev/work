@@ -1,0 +1,27 @@
+extends layout/layout
+
+block variables
+  -var title = 'Кабинет администратора'
+
+block header 
+  include blocks/header
+
+block content
+
+  section.section 
+    .container
+      h1.section__title административная часть
+      
+      form(action="").form
+        .d-grid.column-gap-grid.row-gap-10.row-gap-lg-20.grid-columns-1.grid-columns-sm-2.grid-columns-md-3
+          //input
+          .input 
+            label(for="1").input__label Ключ юзера*
+            .input__element
+              input(type="password" id="1" placeholder="********")
+
+
+block footer 
+  include blocks/footer
+
+  

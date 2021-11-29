@@ -1,0 +1,30 @@
+extends layout/layout
+
+block variables
+  -var title = 'Вход для клиентов'
+  -var page = 'login'
+
+block content
+
+  section.section.login-section 
+    .login-section__wrapper 
+
+      .login-section__content
+
+        a(href="./").logo.login-section__logo.mb-20
+          img(src="./img/logos/logo.jpeg", alt="logo")
+        form(action="#").login-form
+          .login-form__item.mb-10
+            .login-input.login-input_top-left.login-input_top-right
+              input(type="email" placeholder="Email" required)
+
+          .login-form__item.mb-10 
+            .login-input.login-input_bottom-left
+              input(type="password" placeholder="Password" required)
+
+          .login-form__submit
+            button.login-button Login
+
+    .login-section__image.image.image_cover 
+      img(data-src="./img/unsplash_2oYMwuFgnTg.jpg", alt="image").lazyload
+

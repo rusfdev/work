@@ -1,0 +1,56 @@
+extends layout/layout
+
+block variables
+  -var title = 'Клиентский кабинет'
+
+block header 
+  include blocks/header
+
+block content
+
+  section.section 
+    .container 
+      h1.section__title Управление подпиской
+    
+      .row.justify-content-center
+        .col-sm-10.col-md-8.col-lg-7.col-xl-5
+          
+          .tariff-box
+            .tariff-box__head 
+              h2 Тариф: Название
+            .tariff-box__content 
+              .tariff-box__section.tariff-box__subscription
+                .tariff-box__subscription-text.mb-15.mb-md-20
+                  span Ваша подписка до: 
+                  br.d-sm-none 
+                  strong 01.12.2021
+                a(href="javascript:void(0);").button.button_style-2.tariff-box__subscription-button Продлить пописку
+
+
+              .tariff-box__section 
+                .auto-renewal-element
+                  .auto-renewal-element__text 
+                    span Автопродление:
+                    br.d-sm-none 
+                    strong не включено
+
+                  label.check-slide.auto-renewal-element__check
+                    input(type="checkbox") 
+                    span
+
+              .tariff-box__section
+                .tariff-box__link
+                  | Ваша прямая ссылка на плейлист: 
+                  a(href="http//www.figma.com/file/Fj285cZNMmIXJbWbZm8fU")
+                    strong http//www.figma.com/file/Fj285cZNMmIXJbWbZm8fU 
+
+                a(href="javascript:void(0);" onclick="navigator.clipboard.writeText('http//www.figma.com/file/Fj285cZNMmIXJbWbZm8fU')").tariff-box__copy-link Скопировать
+
+
+
+
+
+block footer 
+  include blocks/footer
+
+  
