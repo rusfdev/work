@@ -90,8 +90,6 @@
 }
 
 .select {
-  position: relative;
-  z-index: 1000;
   select, .ss-single-selected {
     display: block;
     width: 100%;
@@ -158,7 +156,8 @@
     background-color: #fff;
     border: 1px solid var(--color-input-border);
     border-radius: 5px;
-    overflow: hidden;
+    overflow: auto;
+    max-height: 220px;
     box-shadow: var(--modal-box-shadow);
   }
   .ss-option {
