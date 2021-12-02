@@ -1,0 +1,36 @@
+header.header
+  .container.header__container 
+    a(href="#").logo.header__logo
+      img(src="./img/logos/logo.jpeg", alt="logo")
+    
+    .header__content 
+      .header__support
+        strong.color-dark Поддержка: 
+        a(href="mailto:support@gayiptv.com") support@gayiptv.com
+      
+      a(href="#").button.button_style-1.header__desktop-button Выход 
+
+      a(href="#").header__mobile-button
+        svg.icon
+          use(xlink:href='./img/icons/icons.svg#logout')
+
+    .header__lang 
+
+      .lang-toggle  
+        a(href="javascript:void(0);").lang-toggle__selected 
+          img(src="./img/icons/russian.svg", alt="image").lang-toggle__selected-flag
+          span.lang-toggle__selected-title ru 
+          svg.lang-toggle__selected-icon
+            use(xlink:href='./img/icons/icons.svg#caret-bottom')
+        
+        .lang-toggle__list
+          .lang-toggle__list-inner
+            a(href=adress).lang-toggle__element
+              img(src="./img/icons/spanish.svg", alt="image").lang-toggle__element-flag
+              span.lang-toggle__selected-title es 
+            a(href=adress).lang-toggle__element
+              img(src="./img/icons/english.png", alt="image").lang-toggle__element-flag
+              span.lang-toggle__selected-title en
+
+
+      

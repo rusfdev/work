@@ -1,0 +1,180 @@
+extends layout/layout
+
+block styles 
+  //стили для новой страницы
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap' rel='stylesheet')
+  link(rel="stylesheet" href=`${href}/styles/new.css`)
+
+block scripts
+  //скрипты для новой страницы
+  script(src=`${href}/scripts/new.js`) 
+
+block content
+
+  .cards-banner 
+
+    img(src=`${href}/img/test.jpg`, alt="background").cards-banner__test
+
+    img(src=`${href}/img/back.jpg`, alt="background").cards-banner__back
+    .cards-banner__backgrounds 
+      img(src=`${href}/img/back1000.jpg`, alt="background").cards-banner__background
+      img(src=`${href}/img/back500.jpg`, alt="background").cards-banner__background
+
+    .cards-banner__container
+      h1.cards-banner__title Лучший подарок с заботой о ваших близких!
+      
+      .cards-banner__tabs
+        .cards-banner__tabs-title Номиналы карт
+        .cards-banner__tabs-content
+
+          .cards-banner__tabs-inner
+            .cards-banner__tabs-elements
+              button.cards-banner__tabs-element.active
+                span 1000 ₽
+              button.cards-banner__tabs-element 
+                span 500 ₽
+            .cards-banner__tabs-slider.active-1
+
+          .cards-banner__cards 
+            .cards-banner__card
+              .cards-banner__card-inner 
+                img(src=`${href}/img/card1000.png`, alt="front")
+              .cards-banner__card-inner
+                img(src=`${href}/img/card1000back.png`, alt="back")
+            .cards-banner__card 
+              .cards-banner__card-inner 
+                img(src=`${href}/img/card500.png`, alt="front")
+              .cards-banner__card-inner
+                img(src=`${href}/img/card500back.png`, alt="back")
+
+      .cards-banner__text 
+        .cards-banner__text-element Подарочная карта ДА представляет собой пластиковую карту фиксированного номинала с магнитной полосой и штрих-кодом.
+        .cards-banner__text-element Подарочные карты ДА приобретаются и используются при покупке товаров в сети магазинов О’КЕЙ.
+  
+  
+  
+  
+  section.section.new-rules-section 
+    .new-rules-section__title Правила использования карты
+    .new-rules-section__tabs(data-tabs="parent")
+      .new-rules-section__tabs-head 
+        a(href="javascript:void(0);" data-tabs="link").new-rules-section__tabs-button.active
+          span Для физ<span class="d-mobile-inline">.</span><span class="d-mobile-none">ического</span> лица
+        a(href="javascript:void(0);" data-tabs="link").new-rules-section__tabs-button
+          span Для юр<span class="d-mobile-inline">.</span><span class="d-mobile-none">идического</span> лица
+      
+      .new-rules-section__content 
+        .new-rules-section__tabs-content 
+
+          .new-rules-section__tabs-block(data-tabs="block").d-block
+
+            .new-rules-box 
+              img(src=`${href}/img/icons/wallet.png`, alt="icon").new-rules-box__icon.new-rules-box__icon_1
+              .new-rules-box__text 
+                p Приобрести подарочную карту можно на кассах и на стойке Информации в магазинах ДА.
+            
+            .new-rules-box 
+              img(src=`${href}/img/icons/calendar.png`, alt="icon").new-rules-box__icon.new-rules-box__icon_2
+              .new-rules-box__text 
+                p Срок действия подарочной карты указан на самой карте или картхолдере.
+
+            .new-rules-box 
+              img(src=`${href}/img/icons/credit-card.png`, alt="icon").new-rules-box__icon.new-rules-box__icon_3
+              .new-rules-box__text 
+                p Воспользоваться подарочной картой можно только один раз, оплатив товары на общую сумму, равную номиналу карты.
+
+            .new-rules-box 
+              img(src=`${href}/img/icons/arrow-right.png`, alt="icon").new-rules-box__icon.new-rules-box__icon_4
+              .new-rules-box__text 
+                p Подарочная карта не подлежит обмену на денежные средства или на другую подарочную карту.
+
+            .new-rules-box 
+              img(src=`${href}/img/icons/coins.png`, alt="icon").new-rules-box__icon.new-rules-box__icon_5
+              .new-rules-box__text 
+                p Если стоимость выбранного товара меньше номинала карты, остаток суммы покупателю не возвращается.
+
+            .new-rules-box 
+              img(src=`${href}/img/icons/plus.png`, alt="icon").new-rules-box__icon.new-rules-box__icon_6
+              .new-rules-box__text 
+                p Если стоимость товара больше номинала карты, то необходи&shy;мо доплатить недостающую сумму наличными или банков&shy;ской картой.
+            
+
+          .new-rules-section__tabs-block(data-tabs="block")
+
+            .new-rules-box 
+              .new-rules-box__index 1
+              .new-rules-box__text 
+                p Для приобретения подарочных карт (только по безналичному расчету) необходимо скачать договор и заполнить три обязательных пункта:
+                ul 
+                  li 
+                    strong шапку договора
+                  li 
+                    strong ваши реквизиты
+                  li 
+                    strong таблицу в приложении
+
+            .new-rules-box 
+              .new-rules-box__index 2
+              .new-rules-box__text 
+                p Выбрать магазин и отправить на эл. почту этого магазина заполненный договор и отсканированные копии заверенных документов на проверку согласно списку.
+
+            .new-rules-box 
+              .new-rules-box__index 3
+              .new-rules-box__text 
+                p После проверки документов на адрес вашей эл.почты будут высланы заполненные договор и приложение. Данные документы необходимо подписать, скрепить печатью и отправить скан-копию на тот же адрес эл. почты.
+
+            .new-rules-box 
+              .new-rules-box__index 4
+              .new-rules-box__text 
+                p После получения скан-копии счета – оплатить его и направить в ответном письме скан-копию платежного поручения для подтверждения оплаты.
+
+            .new-rules-box 
+              .new-rules-box__index 5
+              .new-rules-box__text 
+                p Получить уведомление о том, что подарочные карты готовы.
+            
+            .new-rules-box 
+              .new-rules-box__index 6
+              .new-rules-box__text 
+                p Подъехать в магазин «О’КЕЙ», выбранный ранее (в п. 2), для:
+                ul 
+                  li передачи подписанного и заверенного печатью договора с вашей стороны;
+                  li передачи заверенных копий списка документов;
+                  li получения вашего экземпляра подписанного договора со стороны «О’КЕЙ»;
+                  li получения оригинала счета;
+                  li получения подарочных карт;
+                  li подписания акта приема-передачи (если подписание акта на месте невозможно, вы сможете подписать акт и направить его почтой, или привезти при последующем посещении магазина).
+
+            .new-rules-box 
+              .new-rules-box__index 7
+              .new-rules-box__text 
+                p При получении подарочных карт в магазине, необходимо иметь доверенность (свободная форма). 
+                  br
+                  | В доверенности должны быть прописаны номинал подарочных карт, количество прописью, общая сумма; паспортные данные и подпись сотрудника, получающего подарочные карты, подписи руководителя и бухгалтера предприятия, удостоверяющие подпись получателя.
+            
+            .new-rules-box 
+              .new-rules-box__index 8
+              .new-rules-box__text 
+                p При повторном приобретении подарочных карт заключать договор еще раз не нужно, необходимо будет только заполнить приложение , (присвоив ему соответствующий номер) и отправить по электронной почте выбранного магазина (пункт 2).
+                
+
+        .new-rules-section__aside-content
+
+          .new-rules-box.new-rules-box_phone
+            .new-rules-box__phone-section 
+              span Телефон горячей линии:
+              a(href="tel:84959700008") 8 (495) 970-00-08
+            .new-rules-box__text 
+              p Если у вас остались вопросы или вы хотите уточнить правила использования подарочной карты, позвоните нам.
+
+          .new-rules-box.new-rules-box_document
+            img(src=`${href}/img/icons/document.png`, alt="icon").new-rules-box__icon.new-rules-box__icon_document
+            .new-rules-box__text 
+              h6.new-rules-box__title Полные правила программы
+              a(href="#").new-rules-box__download PDF  46 Кб
+          
+
+
+    

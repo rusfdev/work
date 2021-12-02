@@ -1,0 +1,58 @@
+.button {
+  position: relative;
+  white-space: nowrap;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  transition: background-color var(--trs-1), color var(--trs-1);
+
+  &_style-1 {
+    color: var(--color-muted-1);
+    border: 1px solid var(--color-muted-1);
+    border-radius: 5px;
+    font-weight: 600;
+    line-height: 38px;
+    padding: 0 30px;
+    &[data-touch], &[data-hover] {
+      background-color: var(--color-muted-1);
+      color: #fff;
+    }
+  }
+  &_style-2 {
+    color: #fff !important;
+    line-height: 60px;
+    border-radius: 30px;
+    background-color: var(--color-accent-2);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 38px;
+    &[data-touch], &[data-hover] {
+      background-color: var(--color-accent-2_2);
+    }
+  }
+  &_style-3 {
+    color: #fff !important;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: var(--color-accent-1);
+    font-weight: 600;
+    padding: 0 30px;
+    &[data-touch], &[data-hover] {
+      background-color: var(--color-accent-1_2);
+    }
+  }
+}
+
+.login-button {
+  font-size: 16px;
+  line-height: 40px;
+  border-radius: 0 0 10px 0;
+  padding: 0 20px;
+  font-weight: 700;
+  background-color: var(--color-accent-1);
+  color: #fff;
+  transition: background-color var(--trs-1);
+  &[data-touch], &[data-hover] {
+    background-color: var(--color-accent-1_2);
+  }
+}

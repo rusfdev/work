@@ -1,0 +1,131 @@
+img {
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  &.lazyload, &.lazyloading {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &.lazyloaded {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--trs-1), visibility var(--trs-1);
+  }
+}
+
+//images
+.image {
+  display: block;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &_contain, &_cover {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+  &_cover {
+    overflow: hidden;
+    img {
+      object-fit: cover;
+    }
+  }
+  &_contain {
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.lang-toggle {
+  position: relative;
+  &__selected {
+    display: flex;
+    align-items: center;
+    color: var(--color-text-dark);
+    &:hover {
+      & ~ .lang-toggle__list {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &-title {
+      text-transform: uppercase;
+      flex-shrink: 0;
+      font-weight: 600;
+    }
+    &-flag {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-right: 5px;
+    }
+    &-icon {
+      width: 10px;
+      height: 10px;
+      flex-shrink: 0;
+      margin-left: 4px;
+    }
+  }
+  &__list {
+    position: absolute;
+    padding-top: 5px;
+    top: 100%;
+    min-width: calc(100% + 8px);
+    left: -8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility var(--trs-1), opacity var(--trs-1);
+    &:hover {
+      opacity: 1;
+      visibility: visible;
+    }
+    &-inner {
+      padding: 8px;
+      border-radius: 5px;
+      box-shadow: var(--modal-box-shadow);
+      background-color: #fff;
+    }
+  }
+  &__element {
+    display: flex;
+    align-items: center;
+    color: var(--color-text-dark);
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    &-flag {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-right: 5px;
+    }
+    &-title {
+      text-transform: uppercase;
+      flex-shrink: 0;
+      font-weight: 600;
+    }
+  }
+}
+
+.auto-renewal-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+}
+

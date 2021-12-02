@@ -1,0 +1,101 @@
+extends layout/layout
+
+block variables
+  -var title = 'Кабинет администратора'
+  -var adress = './admin-cabinet.html'
+
+block header 
+  include blocks/header
+
+block content
+
+  section.section
+    .container
+      h1.section__title административная часть
+      
+      form(action="").admin-form
+        .d-grid.column-gap-grid.row-gap-10.row-gap-lg-20.grid-columns-1.grid-columns-sm-2.grid-columns-md-3.align-items-end
+          //input
+          .input 
+            label(for="1").input__label Ключ юзера*
+            .input__element
+              input(type="password" id="1" placeholder="********" required)
+          
+          //input
+          .input.input-date
+            label(for="2").input__label Дата окончания подписки юзера*
+            .input__element.input-date__element
+              input(type="text" id="2" placeholder="дд мм гг" autocomplete="off" required)
+              svg.icon
+                use(xlink:href='./img/icons/icons.svg#calendar')
+
+          //input
+          .input 
+            label(for="3").input__label Ключ ilook*
+            .input__element
+              input(type="text" id="3" placeholder="******" required)
+
+          //input
+          .input 
+            label(for="4").input__label Email юзера*
+            .input__element
+              input(type="email" id="4" placeholder="mail@mail.ru" required)
+
+          //input
+          .input 
+            label(for="5").input__label Логин юзера*
+            .input__element
+              input(type="text" id="5" placeholder="********" required)
+
+          //input
+          .input 
+            label(for="6").input__label Время* (сколько дней добавить к текущему вр.)
+            .select
+              select(id="6")
+                option(value='1') 1
+                option(value='2') 2
+                option(value='3' selected) 3
+                option(value='4') 4
+                option(value='5') 5
+                option(value='6') 6
+                option(value='7') 7
+                option(value='8') 8
+                option(value='9') 9
+                option(value='10') 10
+                option(value='11') 11
+                option(value='12') 12
+                option(value='13') 13
+                option(value='14') 14
+                option(value='15') 15
+
+          //input
+          .input 
+            label(for="7").input__label Автопродление
+            .select
+              select(id="7")
+                option(value='Нет' selected) Нет
+                option(value='Да') Да
+
+          //input
+          .input 
+            label(for="8").input__label Сообщение юзеру
+            .input__element
+              input(type="text" id="8" placeholder="Сообщение")
+
+          //input
+          .input 
+            label(for="9").input__label Отправить письмо юзеру с данными
+            .select
+              select(id="9")
+                option(value='Нет' selected) Нет
+                option(value='Да') Да
+
+        .mt-20.mt-sm-25.text-center 
+          button.button.button_style-3.admin-form__button Добавить
+          span.admin-form__user-count Всего: 152 юзеров
+        
+
+block footer 
+  include blocks/footer
+
+  

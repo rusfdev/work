@@ -1,0 +1,27 @@
+extends layout/layout
+
+block variables
+  -var title = 'Вход для администратора'
+  -var page = 'login'
+  -var adress = './login-admin.html'
+
+block content
+
+  section.section.login-section 
+    .login-section__wrapper 
+
+      .login-section__content
+
+        a(href="./").logo.login-section__logo.mb-20
+          img(src="./img/logos/logo.jpeg", alt="logo")
+        form(action="#").login-form
+          .login-form__item.mb-10 
+            .login-input.login-input_bottom-left.login-input_bottom-right
+              input(type="password" placeholder="Password" required)
+
+          .login-form__submit
+            button.login-button Login
+
+    .login-section__image.image.image_cover 
+      img(data-src="./img/unsplash_x8MZ2MoEKLE.jpg", alt="image").lazyload
+

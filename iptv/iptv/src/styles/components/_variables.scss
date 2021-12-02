@@ -1,0 +1,33 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1600px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+
+$spacers: (
+  grid: var(--grid-gutter-width),
+  0: 0px,
+  10: 10px,
+  15: 15px,
+  20: 20px,
+  25: 25px,
+  30: 30px,
+  35: 35px,
+  40: 40px,
+  45: 45px,
+  50: 50px
+);
+
+$grid-gutter-width: var(--grid-gutter-width);
+$container-padding-x: var(--container-gutter-x);
+$card-group-margin: $grid-gutter-width;
