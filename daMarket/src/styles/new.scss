@@ -410,7 +410,7 @@ $semibold: 'MyriadProSemibold', sans-serif;
   &__title {
     font-size: 36px;
     color: #000;
-    margin-bottom: 22px;
+    margin-bottom: 28px;
   }
 
   &__tabs-button {
@@ -469,12 +469,9 @@ $semibold: 'MyriadProSemibold', sans-serif;
   }
 
   &__tabs-block {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--gutter);
-    display: none;
-    &.d-block {
-      display: grid;
-    }
   }
 
   @media (max-width: 1120px) {

@@ -336,7 +336,7 @@
   .new-rules-section__title {
     font-size: 36px;
     color: #000;
-    margin-bottom: 22px; }
+    margin-bottom: 28px; }
   .new-rules-section__tabs-button {
     color: #000;
     height: 50px;
@@ -379,11 +379,9 @@
     grid-template-columns: repeat(1, 1fr);
     gap: var(--gutter); }
   .new-rules-section__tabs-block {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--gutter);
-    display: none; }
-    .new-rules-section__tabs-block.d-block {
-      display: grid; }
+    gap: var(--gutter); }
   @media (max-width: 1120px) {
     .new-rules-section__content {
       grid-template-columns: repeat(2, 1fr); }
