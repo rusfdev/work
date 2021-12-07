@@ -1,3 +1,0 @@
-RewriteEngine On
-Скидка RewriteCond% {HTTPS}
-RewriteRule ^ (. *) $ Https: //% {HTTP_HOST}% {REQUEST_URI} [L, R = 301]

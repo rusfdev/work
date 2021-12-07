@@ -1,1 +1,0 @@
-{"version":3,"sources":["theme.scss"],"names":[],"mappings":"AAAA;EACE,uBAAe;EACf,kBAAa;EAEb,mBAAW;EAGX,wCAAoB,EAAA","file":"../theme.css","sourcesContent":[":root {\n  --color-accent: #dcc190;\n  --color-text: #fff;\n\n  --color-bg: #212121;\n  \n\n  --color-header-bg-3: rgba(0, 0, 0, 0.55);\n\n}"]}
