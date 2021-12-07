@@ -1,0 +1,65 @@
+header.header
+  .container.header__container 
+    .header__logo
+      a(href="#").logo
+        img(src="./img/logos/logo.png", alt="logo")
+      .header__logo-text Обучающая платформа для начинающих и действующих предпринимателей
+
+    .header-search
+      form(action="#").header-search__form
+        input(type="text" placeholder="Поиск").header-search__input
+        button.header-search__submit 
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#search')
+
+    a(href="#").header__profile 
+      .image.image_cover
+        img(src="./img/photo4.png", alt="image").lazyload
+      span Ернар Кабдулов
+      
+
+  nav.header-nav 
+    .container.header-nav__container
+      ul.header-nav__list 
+        li.header-nav__item 
+          a(href="#").header-nav__link Программы обучения 
+        li.header-nav__item 
+          a(href="#").header-nav__link Бизнес симуляции
+        li.header-nav__item 
+          a(href="#").header-nav__link Курсы и тренинги
+        li.header-nav__item 
+          a(href="#").header-nav__link Истории успеха
+        li.header-nav__item 
+          a(href="#").header-nav__link Инструментариум для бизнеса
+        li.header-nav__item 
+          a(href="#").header-nav__link Бизнес проекты
+        li.header-nav__item 
+          a(href="#").header-nav__link Конструктор бизнес-планов
+        li.header-nav__item 
+          a(href="#").header-nav__link StartUp проекты
+
+nav.mobile-nav#mobile-nav
+  .mobile-nav__container(data-scroll-lock-scrollable)
+    button.mobile-nav__close(data-action="Modal:close")
+      span 
+      span
+    .mobile-nav__wrapper(data-action="Modal:close")
+      ul.mobile-nav__list 
+        li.mobile-nav__item 
+          a(href="#").mobile-nav__link Программы обучения 
+        li.mobile-nav__item 
+          a(href="#").mobile-nav__link Бизнес симуляции
+        li.mobile-nav__item 
+          a(href="#").mobile-nav__link Курсы и тренинги
+        li.mobile-nav__item 
+          a(href="#").mobile-nav__link Истории успеха
+        li.mobile-nav__item 
+          a(href="#").mobile-nav__link Инструментариум для бизнеса
+        li.mobile-nav__item 
+          a(href="#").mobile-nav__link Бизнес проекты
+        li.mobile-nav__item 
+          a(href="#").mobile-nav__link Конструктор бизнес-планов
+        li.mobile-nav__item 
+          a(href="#").mobile-nav__link StartUp проекты
+      
+  .mobile-nav__overlay(data-action="Modal:close")

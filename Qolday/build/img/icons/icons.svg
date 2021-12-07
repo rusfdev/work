@@ -1,0 +1,43 @@
+<svg width="0" height="0" class="hidden">
+  <symbol fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="calendar">
+    <path
+      d="M17.9994 4.00001H5.99936C3.79022 4.00001 1.99936 5.79087 1.99936 8.00001V18C1.99936 20.2092 3.79022 22 5.99936 22H17.9994C20.2085 22 21.9994 20.2092 21.9994 18V8.00001C21.9994 5.79087 20.2085 4.00001 17.9994 4.00001Z"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M7.99936 2.00001V6.00001" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M15.9987 2.00001V6.00001" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M1.99936 10H21.9994" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+  <symbol fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6" id="caret-bottom">
+    <path d="M9 1L5 5L1 1"></path>
+  </symbol>
+  <symbol fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="clock">
+    <path
+      d="M11.9994 22C17.5222 22 21.9994 17.5229 21.9994 12C21.9994 6.47716 17.5222 2.00001 11.9994 2.00001C6.4765 2.00001 1.99935 6.47716 1.99935 12C1.99935 17.5229 6.4765 22 11.9994 22Z"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M15 16L12.586 13.586C12.2109 13.211 12.0001 12.7024 12 12.172V6" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round"></path>
+  </symbol>
+  <symbol fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="location">
+    <path
+      d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34316 13.6569 7.00001 12 7.00001C10.3431 7.00001 9 8.34316 9 10C9 11.6569 10.3431 13 12 13Z"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path
+      d="M12.0006 2.00001C9.87892 2.00001 7.84409 2.84286 6.3438 4.34315C4.84351 5.84344 4.00065 7.87827 4.00065 10C4.00065 11.892 4.40265 13.13 5.50065 14.5L12.0006 22L18.5006 14.5C19.5986 13.13 20.0006 11.892 20.0006 10C20.0006 7.87827 19.1578 5.84344 17.6575 4.34315C16.1572 2.84286 14.1224 2.00001 12.0006 2.00001V2.00001Z"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+  <symbol fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="mail">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M1.5 5.25L2.25 4.5H21.75L22.5 5.25V18.75L21.75 19.5H2.25L1.5 18.75V5.25ZM3 6.8025V18H21V6.804L12.465 13.35H11.55L3 6.8025ZM19.545 6H4.455L12 11.8035L19.545 6Z">
+    </path>
+  </symbol>
+  <symbol fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="search">
+    <path
+      d="M17.5013 17.5L13.763 13.755L17.5013 17.5ZM15.8346 8.75002C15.8346 10.6286 15.0884 12.4303 13.76 13.7587C12.4316 15.0871 10.6299 15.8334 8.7513 15.8334C6.87269 15.8334 5.07101 15.0871 3.74263 13.7587C2.41425 12.4303 1.66797 10.6286 1.66797 8.75002C1.66797 6.8714 2.41425 5.06973 3.74263 3.74135C5.07101 2.41296 6.87269 1.66669 8.7513 1.66669C10.6299 1.66669 12.4316 2.41296 13.76 3.74135C15.0884 5.06973 15.8346 6.8714 15.8346 8.75002V8.75002Z"
+      stroke-width="2" stroke-linecap="round"></path>
+  </symbol>
+  <symbol fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="phone">
+    <path
+      d="M10.554 6.24003L7.17099 2.33503C6.78099 1.88503 6.06599 1.88703 5.61299 2.34103L2.83099 5.12803C2.00299 5.95703 1.76599 7.18803 2.24499 8.17503C5.10661 14.1 9.88503 18.8851 15.806 21.755C16.792 22.234 18.022 21.997 18.85 21.168L21.658 18.355C22.113 17.9 22.114 17.181 21.66 16.791L17.74 13.426C17.33 13.074 16.693 13.12 16.282 13.532L14.918 14.898C14.8482 14.9712 14.7562 15.0195 14.6563 15.0354C14.5564 15.0513 14.4541 15.0339 14.365 14.986C12.1354 13.7021 10.286 11.8503 9.00499 9.61903C8.95702 9.52978 8.93964 9.42726 8.95554 9.32719C8.97144 9.22711 9.01972 9.13502 9.09299 9.06503L10.453 7.70403C10.865 7.29003 10.91 6.65003 10.554 6.23903V6.24003Z"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+</svg>

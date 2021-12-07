@@ -1,0 +1,95 @@
+extends layout/layout
+
+block variables
+  -var title = 'Главная'
+  
+block content
+
+  section.section.main-banner
+    .container
+      .main-banner__content
+
+        .main-banner__image.image.image_cover
+          img(data-src="./img/bg.jpg", alt="image").lazyload
+
+        .main-banner__text-content
+          h1 Крутой цепляющий оффер
+          p Крутое описание для крутого оффера<br> чтобы раскрыть ее крутость
+
+      .row.justify-content-center
+        .col-lg-10
+
+          .main-banner-info
+
+            .main-banner-info__items 
+              .main-banner-info__item
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#calendar')
+                span 10 Ноября
+              .main-banner-info__item
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#clock')
+                span 10:00
+              .main-banner-info__item
+                svg.icon
+                  use(xlink:href='./img/icons/icons.svg#location')
+                span Online
+
+            span.main-banner-info__dash
+
+            span.main-banner-info__delimiter
+
+            .main-banner-info__timer 
+              .timer
+                h5.timer__title До начала осталось
+                .timer__element 
+                  span 01
+                  span :
+                  span 22
+                  span :
+                  span 25
+                  span :
+                  span 25
+
+            .main-banner-info__button 
+              a(href="#").button.button_style-1 Записаться сейчас 
+
+            
+
+
+  section.section 
+    .container 
+      .row.justify-content-center
+        .col-lg-8
+          h3.text-center Описание
+          p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus sed orci, amet sit nulla feugiat viverra. Proin vitae eget massa id. Nisl tristique feugiat nullam porttitor rhoncus, est. Sollicitudin ut erat lacus tincidunt aliquet. Quam sit ac ac pretium elit. Vulputate consectetur donec sit vitae nunc lacus, eget arcu sit. Erat aliquet urna augue nec iaculis. Eu tempus neque dui lorem massa diam erat tempor. Mauris libero congue vitae nibh semper sapien nibh etiam.
+  
+  section.section.speakers 
+    .container 
+      h3.text-center Спикеры
+
+      .row.speakers__row
+        mixin speaker(title, text, image)
+          //element
+          .col-md-6.col-lg-4.col-xl-3
+            .speakers-box
+              .speakers-box__image.image.image_cover
+                img(data-src=image, alt="image").lazyload
+              .speakers-box__text 
+                h6.speakers-box__title=title
+                p=text
+
+        +speaker('Лазарева Л.В.', 'Эксперт по оценке соответствия лифтов требованиям безопасности', './img/photo1.png')
+        +speaker('Зубарев С.', 'Директор типографии', './img/photo2.png')
+        +speaker('Рабаева С.', 'Начальник отдела по связям с общественностью', './img/photo3.png')
+        +speaker('Мусабеков М.', 'Главный энергетик', './img/photo1.png')
+        
+        +speaker('Лазарева Л.В.', 'Эксперт по оценке соответствия лифтов требованиям безопасности', './img/photo1.png')
+        +speaker('Зубарев С.', 'Директор типографии', './img/photo2.png')
+        +speaker('Рабаева С.', 'Начальник отдела по связям с общественностью', './img/photo3.png')
+        +speaker('Мусабеков М.', 'Главный энергетик', './img/photo1.png')
+
+        +speaker('Лазарева Л.В.', 'Эксперт по оценке соответствия лифтов требованиям безопасности', './img/photo1.png')
+        +speaker('Зубарев С.', 'Директор типографии', './img/photo2.png')
+        +speaker('Рабаева С.', 'Начальник отдела по связям с общественностью', './img/photo3.png')
+        +speaker('Мусабеков М.', 'Главный энергетик', './img/photo1.png')

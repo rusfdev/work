@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <!--color-->
+    <meta name="theme-color" content="#fff">
+    <!--favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+    <!--open graph-->
+    <meta property="og:title" content="Заголовок страницы">
+    <meta property="og:site_name" content="Название сайта">
+    <meta property="og:url" content="Ссылка на текущую страницу">
+    <meta property="og:description" content="Описание страницы">
+    <meta property="og:image" content="Изображение страницы">
+    <!--styles-->
+    <link rel="stylesheet" href="./styles/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__logo"><a class="logo" href="#"><img src="./img/logos/logo.png" alt="logo"></a>
+            <div class="header__logo-text">Обучающая платформа для начинающих и действующих предпринимателей</div>
+          </div>
+          <div class="header-search">
+            <form class="header-search__form" action="#">
+              <input class="header-search__input" type="text" placeholder="Поиск">
+              <button class="header-search__submit">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons.svg#search"></use>
+                </svg>
+              </button>
+            </form>
+          </div><a class="header__profile" href="#">
+            <div class="image image_cover"><img class="lazyload" src="./img/photo4.png" alt="image"></div><span>Ернар Кабдулов</span></a>
+        </div>
+        <nav class="header-nav">
+          <div class="container header-nav__container">
+            <ul class="header-nav__list">
+              <li class="header-nav__item"> <a class="header-nav__link" href="#">Программы обучения </a></li>
+              <li class="header-nav__item"> <a class="header-nav__link" href="#">Бизнес симуляции</a></li>
+              <li class="header-nav__item"> <a class="header-nav__link" href="#">Курсы и тренинги</a></li>
+              <li class="header-nav__item"> <a class="header-nav__link" href="#">Истории успеха</a></li>
+              <li class="header-nav__item"> <a class="header-nav__link" href="#">Инструментариум для бизнеса</a></li>
+              <li class="header-nav__item"> <a class="header-nav__link" href="#">Бизнес проекты</a></li>
+              <li class="header-nav__item"> <a class="header-nav__link" href="#">Конструктор бизнес-планов</a></li>
+              <li class="header-nav__item"> <a class="header-nav__link" href="#">StartUp проекты</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <nav class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav__container" data-scroll-lock-scrollable>
+          <button class="mobile-nav__close" data-action="Modal:close"><span> </span><span></span></button>
+          <div class="mobile-nav__wrapper" data-action="Modal:close">
+            <ul class="mobile-nav__list">
+              <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#">Программы обучения </a></li>
+              <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#">Бизнес симуляции</a></li>
+              <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#">Курсы и тренинги</a></li>
+              <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#">Истории успеха</a></li>
+              <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#">Инструментариум для бизнеса</a></li>
+              <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#">Бизнес проекты</a></li>
+              <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#">Конструктор бизнес-планов</a></li>
+              <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#">StartUp проекты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mobile-nav__overlay" data-action="Modal:close"></div>
+      </nav>
+      <main class="main">
+        <section class="section main-banner">
+          <div class="container">
+            <div class="main-banner__content">
+              <div class="main-banner__image image image_cover"><img class="lazyload" data-src="./img/bg.jpg" alt="image"></div>
+              <div class="main-banner__text-content">
+                <h1>Крутой цепляющий оффер</h1>
+                <p>Крутое описание для крутого оффера<br> чтобы раскрыть ее крутость</p>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <div class="main-banner-info">
+                  <div class="main-banner-info__items">
+                    <div class="main-banner-info__item">
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#calendar"></use>
+                      </svg><span>10 Ноября</span>
+                    </div>
+                    <div class="main-banner-info__item">
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#clock"></use>
+                      </svg><span>10:00</span>
+                    </div>
+                    <div class="main-banner-info__item">
+                      <svg class="icon">
+                        <use xlink:href="./img/icons/icons.svg#location"></use>
+                      </svg><span>Online</span>
+                    </div>
+                  </div><span class="main-banner-info__dash"></span><span class="main-banner-info__delimiter"></span>
+                  <div class="main-banner-info__timer">
+                    <div class="timer">
+                      <h5 class="timer__title">До начала осталось</h5>
+                      <div class="timer__element"> <span>01</span><span>:</span><span>22</span><span>:</span><span>25</span><span>:</span><span>25</span></div>
+                    </div>
+                  </div>
+                  <div class="main-banner-info__button"> <a class="button button_style-1" href="#">Записаться сейчас </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <h3 class="text-center">Описание</h3>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus sed orci, amet sit nulla feugiat viverra. Proin vitae eget massa id. Nisl tristique feugiat nullam porttitor rhoncus, est. Sollicitudin ut erat lacus tincidunt aliquet. Quam sit ac ac pretium elit. Vulputate consectetur donec sit vitae nunc lacus, eget arcu sit. Erat aliquet urna augue nec iaculis. Eu tempus neque dui lorem massa diam erat tempor. Mauris libero congue vitae nibh semper sapien nibh etiam.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section speakers">
+          <div class="container">
+            <h3 class="text-center">Спикеры</h3>
+            <div class="row speakers__row">
+                            <!--element-->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                              <div class="speakers-box">
+                                <div class="speakers-box__image image image_cover"><img class="lazyload" data-src="./img/photo1.png" alt="image"></div>
+                                <div class="speakers-box__text">
+                                  <h6 class="speakers-box__title">Лазарева Л.В.</h6>
+                                  <p>Эксперт по оценке соответствия лифтов требованиям безопасности</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!--element-->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                              <div class="speakers-box">
+                                <div class="speakers-box__image image image_cover"><img class="lazyload" data-src="./img/photo2.png" alt="image"></div>
+                                <div class="speakers-box__text">
+                                  <h6 class="speakers-box__title">Зубарев С.</h6>
+                                  <p>Директор типографии</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!--element-->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                              <div class="speakers-box">
+                                <div class="speakers-box__image image image_cover"><img class="lazyload" data-src="./img/photo3.png" alt="image"></div>
+                                <div class="speakers-box__text">
+                                  <h6 class="speakers-box__title">Рабаева С.</h6>
+                                  <p>Начальник отдела по связям с общественностью</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!--element-->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                              <div class="speakers-box">
+                                <div class="speakers-box__image image image_cover"><img class="lazyload" data-src="./img/photo1.png" alt="image"></div>
+                                <div class="speakers-box__text">
+                                  <h6 class="speakers-box__title">Мусабеков М.</h6>
+                                  <p>Главный энергетик</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!--element-->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                              <div class="speakers-box">
+                                <div class="speakers-box__image image image_cover"><img class="lazyload" data-src="./img/photo1.png" alt="image"></div>
+                                <div class="speakers-box__text">
+                                  <h6 class="speakers-box__title">Лазарева Л.В.</h6>
+                                  <p>Эксперт по оценке соответствия лифтов требованиям безопасности</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!--element-->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                              <div class="speakers-box">
+                                <div class="speakers-box__image image image_cover"><img class="lazyload" data-src="./img/photo2.png" alt="image"></div>
+                                <div class="speakers-box__text">
+                                  <h6 class="speakers-box__title">Зубарев С.</h6>
+                                  <p>Директор типографии</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!--element-->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                              <div class="speakers-box">
+                                <div class="speakers-box__image image image_cover"><img class="lazyload" data-src="./img/photo3.png" alt="image"></div>
+                                <div class="speakers-box__text">
+                                  <h6 class="speakers-box__title">Рабаева С.</h6>
+                                  <p>Начальник отдела по связям с общественностью</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!--element-->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                              <div class="speakers-box">
+                                <div class="speakers-box__image image image_cover"><img class="lazyload" data-src="./img/photo1.png" alt="image"></div>
+                                <div class="speakers-box__text">
+                                  <h6 class="speakers-box__title">Мусабеков М.</h6>
+                                  <p>Главный энергетик</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!--element-->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                              <div class="speakers-box">
+                                <div class="speakers-box__image image image_cover"><img class="lazyload" data-src="./img/photo1.png" alt="image"></div>
+                                <div class="speakers-box__text">
+                                  <h6 class="speakers-box__title">Лазарева Л.В.</h6>
+                                  <p>Эксперт по оценке соответствия лифтов требованиям безопасности</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!--element-->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                              <div class="speakers-box">
+                                <div class="speakers-box__image image image_cover"><img class="lazyload" data-src="./img/photo2.png" alt="image"></div>
+                                <div class="speakers-box__text">
+                                  <h6 class="speakers-box__title">Зубарев С.</h6>
+                                  <p>Директор типографии</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!--element-->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                              <div class="speakers-box">
+                                <div class="speakers-box__image image image_cover"><img class="lazyload" data-src="./img/photo3.png" alt="image"></div>
+                                <div class="speakers-box__text">
+                                  <h6 class="speakers-box__title">Рабаева С.</h6>
+                                  <p>Начальник отдела по связям с общественностью</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!--element-->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                              <div class="speakers-box">
+                                <div class="speakers-box__image image image_cover"><img class="lazyload" data-src="./img/photo1.png" alt="image"></div>
+                                <div class="speakers-box__text">
+                                  <h6 class="speakers-box__title">Мусабеков М.</h6>
+                                  <p>Главный энергетик</p>
+                                </div>
+                              </div>
+                            </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__top row">
+            <div class="footer__info col-xl-4"><a class="logo footer__logo" href="#"><img src="./img/logos/logo.png" alt="logo"></a>
+              <ul class="footer__info-list">
+                <li class="footer__info-item">
+                  <div class="footer__info-element">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons.svg#location"></use>
+                    </svg><span>г. Алматы, Байзакова 303, Дом инвестиций, 2 этаж</span>
+                  </div>
+                </li>
+                <li class="footer__info-item"> <a class="footer__info-element" href="tel:77772251079">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons.svg#phone"></use>
+                    </svg><span>+7 (777-22) 5-10-79</span></a></li>
+                <li class="footer__info-item"> <a class="footer__info-element" href="mailto:info@qolday.kz">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/icons.svg#mail"></use>
+                    </svg><span>info@qolday.kz</span></a></li>
+              </ul>
+            </div>
+            <div class="footer__nav col-xl-5 offset-xl-2">
+              <div class="footer__nav-group">
+                <h5 class="footer__nav-title">О центре</h5>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Миссия </a></li>
+                  <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Стратегия</a></li>
+                  <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Команда</a></li>
+                  <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Направления</a></li>
+                </ul>
+              </div>
+              <div class="footer__nav-group">
+                <h5 class="footer__nav-title">Разделы</h5>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Бизнес планы</a></li>
+                  <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Стартапы</a></li>
+                  <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Бизнес тренеры</a></li>
+                  <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Конструктор БП</a></li>
+                </ul>
+              </div>
+              <div class="footer__nav-group">
+                <h5 class="footer__nav-title">Обучение</h5>
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Курсы</a></li>
+                  <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Видеоуроки</a></li>
+                  <li class="footer__nav-item"> <a class="footer__nav-link" href="#">Мероприятия</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__copyright">Все права зарегестрированы. ©Qolday</div>
+            <div class="socials footer__socials">
+              <ul class="socials__list">
+                <li class="socials__item"> <a class="socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/socials.svg#facebook"></use>
+                    </svg></a></li>
+                <li class="socials__item"> <a class="socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/socials.svg#twitter"></use>
+                    </svg></a></li>
+                <li class="socials__item"> <a class="socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/socials.svg#instagram"></use>
+                    </svg></a></li>
+                <li class="socials__item"> <a class="socials__link" href="#">
+                    <svg class="icon">
+                      <use xlink:href="./img/icons/socials.svg#linkedin"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--scripts-->
+    <script src="./scripts/libs/lazysizes.min.js"></script>
+    <script src="./scripts/libs/gsap.min.js"></script>
+    <script src="./scripts/libs/scroll-lock.min.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  height: 40px;
+  transition: color var(--trs-1), background-color var(--trs-1);
+  padding: 0 30px;
+  &_style-1 {
+    background-color: #376900;
+    color: #fff !important;
+    &:hover {
+      background-color: #2d5700;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    height: 50px;
+    font-size: 16px;
+  }
+}

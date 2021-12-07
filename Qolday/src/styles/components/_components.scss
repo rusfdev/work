@@ -1,0 +1,97 @@
+img {
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  &.lazyload, &.lazyloading {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &.lazyloaded {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--trs-1), visibility var(--trs-1);
+  }
+}
+
+//images
+.image {
+  display: block;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &_contain, &_cover {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+  &_cover {
+    overflow: hidden;
+    img {
+      object-fit: cover;
+    }
+  }
+  &_contain {
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.logo {
+  display: block;
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.socials {
+  --size: 36px;
+  --gap: 32px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+  }
+  &__link {
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    color: #222222;
+    transition: color var(--trs-1);
+    .icon {
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      color: #376900;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    --gap: 15px;
+  }
+}
+
+.timer {
+  &__title {
+    margin-bottom: 4px;
+  }
+  &__element {
+    color: #FF5267;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    gap: 12px;
+  }
+}
