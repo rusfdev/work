@@ -116,7 +116,7 @@ ol:not([class]) {
   }
 }
 
-a {
+a, .link {
   transition: color var(--trs-1);
   &:hover {
     text-decoration: none;

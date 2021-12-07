@@ -12,11 +12,27 @@ header.header
           svg.icon
             use(xlink:href='./img/icons/icons.svg#search')
 
-    a(href="#").header__profile 
-      .image.image_cover
-        img(src="./img/photo4.png", alt="image").lazyload
-      span Ернар Кабдулов
-      
+    .header__right-group
+      .dropdown.header-langs
+        button#dropdownLangs.dropdown-toggle.header-langs__toggle.link(type='button' data-toggle='dropdown' aria-expanded='false')
+          span KZ
+          svg.icon
+            use(xlink:href='./img/icons/icons.svg#caret-bottom')
+          
+        .dropdown-menu.header-langs__dropdown(aria-labelledby='dropdownLangs')
+          a.dropdown-item(href='#') RU
+          a.dropdown-item(href='#') EN
+
+
+      a(href="#").header__profile 
+        .image.image_cover
+          img(src="./img/photo4.png", alt="image").lazyload
+        span Ернар Кабдулов
+
+      a(href="#mobile-nav" data-action="Modal:open").header__mobile-open.link
+        span 
+        span 
+        span
 
   nav.header-nav 
     .container.header-nav__container
@@ -43,7 +59,7 @@ nav.mobile-nav#mobile-nav
     button.mobile-nav__close(data-action="Modal:close")
       span 
       span
-    .mobile-nav__wrapper(data-action="Modal:close")
+    .mobile-nav__wrapper
       ul.mobile-nav__list 
         li.mobile-nav__item 
           a(href="#").mobile-nav__link Программы обучения 

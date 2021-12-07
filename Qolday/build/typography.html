@@ -37,8 +37,18 @@
                 </svg>
               </button>
             </form>
-          </div><a class="header__profile" href="#">
-            <div class="image image_cover"><img class="lazyload" src="./img/photo4.png" alt="image"></div><span>Ернар Кабдулов</span></a>
+          </div>
+          <div class="header__right-group">
+            <div class="dropdown header-langs">
+              <button class="dropdown-toggle header-langs__toggle link" id="dropdownLangs" type="button" data-toggle="dropdown" aria-expanded="false"><span>KZ</span>
+                <svg class="icon">
+                  <use xlink:href="./img/icons/icons.svg#caret-bottom"></use>
+                </svg>
+              </button>
+              <div class="dropdown-menu header-langs__dropdown" aria-labelledby="dropdownLangs"><a class="dropdown-item" href="#">RU</a><a class="dropdown-item" href="#">EN</a></div>
+            </div><a class="header__profile" href="#">
+              <div class="image image_cover"><img class="lazyload" src="./img/photo4.png" alt="image"></div><span>Ернар Кабдулов</span></a><a class="header__mobile-open link" href="#mobile-nav" data-action="Modal:open"><span> </span><span> </span><span></span></a>
+          </div>
         </div>
         <nav class="header-nav">
           <div class="container header-nav__container">
@@ -58,7 +68,7 @@
       <nav class="mobile-nav" id="mobile-nav">
         <div class="mobile-nav__container" data-scroll-lock-scrollable>
           <button class="mobile-nav__close" data-action="Modal:close"><span> </span><span></span></button>
-          <div class="mobile-nav__wrapper" data-action="Modal:close">
+          <div class="mobile-nav__wrapper">
             <ul class="mobile-nav__list">
               <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#">Программы обучения </a></li>
               <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#">Бизнес симуляции</a></li>
@@ -187,10 +197,14 @@
         </div>
       </footer>
     </div>
-    <!--scripts-->
+    <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--libs-->
     <script src="./scripts/libs/lazysizes.min.js"></script>
     <script src="./scripts/libs/gsap.min.js"></script>
     <script src="./scripts/libs/scroll-lock.min.js"></script>
+    <script src="https://qolday.clearex.kz/assets/2cfef9fe/js/bootstrap.bundle.js"></script>
+    <!--scripts-->
     <script src="./scripts/main.js"></script>
   </body>
 </html>
