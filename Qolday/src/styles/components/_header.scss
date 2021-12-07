@@ -29,21 +29,6 @@
   }
   &__profile {
     flex: 0 0 auto;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #376900;
-    transition: opacity var(--trs-1);
-    .image {
-      border-radius: 5px;
-      width: 32px;
-      height: 32px;
-      flex: 0 0 auto;
-    }
-    &:hover {
-      opacity: 0.75;
-    }
   }
 
   @include media-breakpoint-up(xl) {
@@ -103,15 +88,12 @@
   }
   @include media-breakpoint-down(xs) {
     &__logo {
-      flex: 1 1 100%;
-      justify-content: center;
       .logo {
         width: 160px;
       }
     }
-    &__right-group {
-      flex: 1 1 100%;
-      justify-content: space-between;
+    &__profile {
+      display: none;
     }
   }
 }
@@ -190,6 +172,11 @@
 }
 
 .mobile-nav {
+  @include media-breakpoint-up(sm) {
+    &__profile {
+      display: none;
+    }
+  }
   @include media-breakpoint-up(xl) {
     display: none !important;
   }
@@ -265,6 +252,9 @@
     &__container {
       width: calc(100% - 50px);
       max-width: initial;
+    }
+    &__profile {
+      margin-bottom: 30px;
     }
   }
 }

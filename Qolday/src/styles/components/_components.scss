@@ -95,3 +95,21 @@ img {
     gap: 12px;
   }
 }
+
+.profile-link {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #376900;
+  transition: opacity var(--trs-1);
+  .image {
+    border-radius: 5px;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 auto;
+  }
+  &:hover {
+    opacity: 0.75;
+  }
+}
