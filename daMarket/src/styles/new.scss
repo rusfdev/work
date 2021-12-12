@@ -20,7 +20,7 @@ $semibold: 'MyriadProSemibold', sans-serif;
     li {
       border-color: transparent;
       a {
-        background-color: rgba(0, 65, 81, 0.10);
+        background-color: #57a34b;
       }
     }
   }
@@ -261,16 +261,27 @@ $semibold: 'MyriadProSemibold', sans-serif;
 
   @media (min-width: 821px) {
     margin: -129px -35px 75px -35px;
-    &::before {
-      content: '';
-      display: block;
+    position: relative;
+    &__gradient {
+      width: 100%;
+      height: 100%;
       position: absolute;
-      width: 135px;
-      height: 101px;
-      background-color: #fff;
-      left: 28px;
       top: 0;
+      left: 0;
       z-index: 3;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.1);
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: -10px;
+        left: -10px;
+        border-radius: 5px;
+        box-shadow: 50px -100px 200px 300px rgba(255, 255, 255, 0.8);
+      }
     }
   }
   @media (max-width: 1120px) {
@@ -299,6 +310,9 @@ $semibold: 'MyriadProSemibold', sans-serif;
   }
   @media (max-width: 820px) {
     margin: -20px -20px 80px -20px;
+    &__gradient {
+      display: none;
+    }
     &__container {
       padding: 60px 30px;
     }
