@@ -1,0 +1,8 @@
+:root {
+  --grid-gutter-width: 20px;
+  --container-padding-x: 16px;
+
+  @include media-breakpoint-down(sm) {
+    --grid-gutter-width: 16px;
+  }
+}

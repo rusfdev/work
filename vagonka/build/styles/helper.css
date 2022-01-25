@@ -1,38 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 .helper {
+  font-family: "Roboto", sans-serif;
   position: fixed;
+  z-index: 10000;
   left: 0;
   top: 50%;
   transform: translate(-100%, -50%);
-  z-index: 1000;
-  transition: transform 0.25s ease-in-out !important;
-  width: 100%;
-  max-width: 280px;
-  color: #000; }
+  transition: transform 0.25s ease-in-out;
+  width: calc(100% - 40px);
+  max-width: 420px;
+  max-height: 100%;
+  color: #000;
+  display: flex; }
   .helper__trigger {
     display: block;
     position: absolute;
     left: calc(100% - 1px);
+    top: 50%;
+    transform: translateY(-50%);
     width: 40px;
     height: 40px;
     border-radius: 0 2px 2px 0;
     border-width: 1px 1px 1px 0;
     border-style: solid;
-    border-color: #D9D9DE !important;
+    border-color: #D9D9DE;
     background-color: #fff;
     box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.05);
     display: flex;
     z-index: 2;
-    color: #353535 !important;
-    transition: color 0.25s ease-in-out !important; }
+    color: #353535;
+    transition: color 0.25s ease-in-out; }
     .helper__trigger .icon {
       margin: auto;
       width: 18px;
       height: 18px;
       color: inherit;
-      transition: transform 0.25s ease-in-out !important; }
-    .helper__trigger:hover {
-      color: #ca2323 !important; }
+      fill: currentColor;
+      stroke: currentColor;
+      transition: transform 0.25s ease-in-out; }
+    .helper__trigger[data-touch], .helper__trigger[data-hover] {
+      color: #ca2323; }
   .helper__container {
+    overflow: auto;
     position: relative;
     z-index: 1;
     padding: 20px 15px;
@@ -47,31 +57,34 @@
     margin-bottom: 15px; }
   .helper__section-title {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     display: block;
-    margin: 0 0 10px 0; }
+    margin: 0 0 10px 0;
+    font-family: "Open Sans", sans-serif; }
   .helper__section-content {
     margin: 0 -5px -5px 0;
     display: flex;
     flex-wrap: wrap; }
   .helper__section-button {
-    margin: 0 5px 5px 0;
+    margin: 0 4px 4px 0;
     font-size: 10px;
     font-weight: 500;
     text-align: center;
-    background-color: #353535 !important;
-    color: #fff !important;
-    transition: background-color 0.25s ease-in-out !important;
-    line-height: 32px;
-    padding: 0 10px;
+    background-color: #353535;
+    color: #fff;
+    transition: background-color 0.25s ease-in-out;
+    line-height: 24px;
+    min-height: 24px;
+    min-width: 24px;
+    padding: 0 5px;
     border-radius: 2px;
     text-decoration: none;
     border: none; }
-    .helper__section-button:hover {
-      background-color: #000 !important; }
+    .helper__section-button[data-touch], .helper__section-button[data-hover] {
+      background-color: #000; }
     .helper__section-button.active {
       pointer-events: none;
-      background-color: #ca2323 !important; }
+      background-color: #ca2323; }
   .helper.active {
     transform: translate(0, -50%); }
     .helper.active .helper__trigger .icon {

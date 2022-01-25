@@ -25357,6 +25357,37 @@ textarea.input {
   .new-why-type-standart {
     padding: 32px 15px; } }
 
+@media (max-width: 767px) {
+  .new-card__fastBuy-type-city {
+    z-index: 103;
+    height: auto;
+    overflow: auto; }
+    .new-card__fastBuy-type-city.new-card__fastBuy-action-open {
+      display: block; }
+    .new-card__fastBuy-type-city .new-city {
+      padding: 20px; }
+    .new-card__fastBuy-type-city .new-city__shell {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px; }
+    .new-card__fastBuy-type-city .new-button-type-city {
+      font-size: 18px; }
+      .new-card__fastBuy-type-city .new-button-type-city.new-button-action-check {
+        padding-right: 25px; }
+        .new-card__fastBuy-type-city .new-button-type-city.new-button-action-check::before {
+          position: absolute;
+          content: '';
+          height: 12px;
+          width: 8px;
+          box-shadow: 2px 2px 0 0 #d51e28;
+          right: 2px;
+          top: 1px;
+          transform: rotate(45deg); } }
+
+@media (max-width: 575px) {
+  .new-card__fastBuy-type-city {
+    height: 100%; } }
+
 .promo-item-card__container {
   display: flex;
   padding: 20px;
@@ -25888,6 +25919,71 @@ textarea.input {
       top: 7px;
       opacity: 0;
       transition: opacity 0.25s ease-out; }
+
+.city-confirmation-modal {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
+  z-index: 102;
+  padding: 20px 15px; }
+  .city-confirmation-modal.active {
+    opacity: 1;
+    visibility: visible; }
+  .city-confirmation-modal::before {
+    content: '';
+    display: block;
+    background-color: #fff;
+    border-width: 1px 0 0 1px;
+    border-style: solid;
+    border-color: #dedede;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: -9px;
+    left: 20px;
+    transform: rotate(45deg); }
+  .city-confirmation-modal__buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px; }
+  .city-confirmation-modal__success-button {
+    min-width: initial;
+    flex: 0 0 auto;
+    width: 100px; }
+  .city-confirmation-modal__change-button {
+    font-size: 16px;
+    flex: 0 0 auto;
+    border-bottom: 1px dashed currentColor;
+    transition: color 0.25s ease-out; }
+    .city-confirmation-modal__change-button:hover {
+      color: #d51e28; }
+  .city-confirmation-modal__text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; }
+    .city-confirmation-modal__text .icon {
+      width: 17px;
+      height: 21px;
+      margin: 0 5px; }
+  @media (max-width: 767px) {
+    .city-confirmation-modal {
+      width: 240px;
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 40px; }
+      .city-confirmation-modal__success-button {
+        flex: 1 0 auto;
+        width: auto; }
+      .city-confirmation-modal::before {
+        display: none; } }
+  @media (max-width: 575px) {
+    .city-confirmation-modal {
+      bottom: 20px; } }
 
 .noty_layout_mixin, #noty_layout__top, #noty_layout__topLeft, #noty_layout__topCenter, #noty_layout__topRight, #noty_layout__bottom, #noty_layout__bottomLeft, #noty_layout__bottomCenter, #noty_layout__bottomRight, #noty_layout__center, #noty_layout__centerLeft, #noty_layout__centerRight {
   position: fixed;

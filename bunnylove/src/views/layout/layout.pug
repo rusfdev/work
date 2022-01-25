@@ -318,20 +318,7 @@ html
               use(xlink:href='#markIcon')
             span.new-button__span-type-city(data-action='cityChanger')
               | Самара
-          .new-fastBuy.new-card__fastBuy.new-card__fastBuy-type-city(data-action='cityShell')
-            .new-fastBuy__overflow(data-action='cityCloseButton')
-            .new-fastBuy__wrapper.new-fastBuy__wrapper-type-city
-              .new-console.new-mobileMenu__console.new-console-type-fastBuy
-                button.new-header__close.new-header__close-type-fastBuy(data-action='cityCloseButton')
-              .new-city.new-city-type-standart
-                p.new-city__title Выберите свой город
-                .new-city__shell
-                  button.new-button.new-button-type-city.new-button-action-check(data-action='cityLink')
-                    a(href='//bunnylove.ru/')
-                      | Самара
-                  button.new-button.new-button-type-city(data-action='cityLink')
-                    a(href='//kazan.bunnylove.ru/')
-                      | Казань
+          
           form.new-search.new-header__search.new-search-type-header(method='GET', action='/catalog/search/')
             input#id_query.new-search__input(type='text', name='query', placeholder='Поиск по каталогу', minlength='3', required='')
             button.new-search__submit.new-search__submit-type-header(type='submit')
@@ -702,6 +689,35 @@ html
               picture.new-slider__img
                 img.new-slider__img(src='/media/big_slides/6086b631-dccc-451e-96a4-d1435eec4198.slide.png', alt='Акция на доставку')
     
+    //Модалка с городами вынесена из header 
+    .new-fastBuy.new-card__fastBuy.new-card__fastBuy-type-city(data-action='cityShell')
+      .new-fastBuy__overflow(data-action='cityCloseButton')
+      .new-fastBuy__wrapper.new-fastBuy__wrapper-type-city
+        .new-console.new-mobileMenu__console.new-console-type-fastBuy
+          button.new-header__close.new-header__close-type-fastBuy(data-action='cityCloseButton')
+        .new-city.new-city-type-standart
+          p.new-city__title Выберите свой город
+          .new-city__shell
+            button.new-button.new-button-type-city.new-button-action-check(data-action='cityLink')
+              a(href='//bunnylove.ru/')
+                | Самара
+            button.new-button.new-button-type-city(data-action='cityLink')
+              a(href='//kazan.bunnylove.ru/')
+                | Казань
+
+    //новое всплывающее окно    
+    .city-confirmation-modal
+      span.city-confirmation-modal__text Ваш город 
+        svg.icon
+          use(xlink:href='#markIcon')
+        strong Самара
+        | ?
+      .city-confirmation-modal__buttons
+        button.button.button_bordered.button_style-1.city-confirmation-modal__success-button(type="button" data-action="close")
+          span Да
+        button.city-confirmation-modal__change-button(type="button" data-action="desktopCityButton") Выбрать другой 
+
+
     main
       block content
 

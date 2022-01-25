@@ -1,0 +1,70 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../../node_modules/bootstrap/scss/mixins/container";
+@import "../../../node_modules/bootstrap/scss/mixins/grid";
+@import "../../../node_modules/bootstrap/scss/mixins/utilities";
+@import "../../../node_modules/bootstrap/scss/vendor/rfs";
+@import "../../../node_modules/bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "column-gap": (
+      property: column-gap,
+      class: column-gap,
+      responsive: true,
+      values: $spacers
+    ),
+    "row-gap": (
+      property: row-gap,
+      class: row-gap,
+      responsive: true,
+      values: $spacers
+    ),
+    "grid-columns": (
+      property: grid-template-columns,
+      class: grid-columns,
+      responsive: true,
+      values: (
+        1: repeat(1, 1fr),
+        2: repeat(2, 1fr),
+        3: repeat(3, 1fr),
+        4: repeat(4, 1fr),
+        5: repeat(5, 1fr),
+        6: repeat(6, 1fr)
+      )
+    ),
+    "width": map-merge(
+      map-get($utilities, "width"),
+      ( responsive: true )
+    )
+  )
+);
+
+$utilities: map-get-multiple($utilities, (
+  "display", 
+  "order", 
+  "flex", 
+  "flex-shrink", 
+  "flex-direction", 
+  "flex-wrap", 
+  "justify-content", 
+  "align-items", 
+  "margin-top", 
+  "margin-bottom", 
+  "margin-start", 
+  "margin-end", 
+  "padding-top", 
+  "padding-bottom", 
+  "padding-start", 
+  "padding-end", 
+  "font-weight", 
+  "text-align", 
+  "gap", 
+  "width", 
+  "column-gap", 
+  "row-gap", 
+  "grid-columns"));
+
+@import "../../../node_modules/bootstrap/scss/utilities/api";

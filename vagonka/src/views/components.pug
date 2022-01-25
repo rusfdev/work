@@ -1,0 +1,190 @@
+extends layout/layout
+
+block scripts 
+  script(type='text/javascript' src='/static/js/jquery-3.2.1.min.js')
+  script(type='text/javascript' src='/static/js/jquery.fancybox.v3.5.7.min.js')
+  script(type='text/javascript' src='/static/js/owl.carousel.js')
+  script(type='text/javascript' src='/static/js/jquery.mask.min.js')
+  script(type='text/javascript').
+    window.onload = windowload;
+    window.onresize = AppendScript;
+    function windowload() {
+    AppendScript();
+    }
+    function AppendScript() {
+    if (window.innerWidth >= 767) {
+    Include('/static/js/scripts-desktop.js', 'on')
+    } else {
+    Include('/static/js/scripts-mobile.js', 'on')
+    }
+    }
+    function Include(filename, status) {
+    var head = document.getElementsByTagName('head')[0];
+    if (status == 'on') {
+    script = document.createElement('script');
+    script.src = filename;
+    script.type = 'text/javascript';
+    head.appendChild(script)
+    } else if (status == 'off') {
+    var scripts = head.getElementsByTagName('script');
+    if (scripts.length > 0) {
+    head.removeChild(scripts[1]);
+    }
+    }
+    }
+  script(type='text/javascript').
+    // This url dictionary is used in js scripts instead of direct links.
+    const URLS = {
+    static: "/static/",
+    cart: "/cart/",
+    register: "/account/register/",
+    }
+  script(src='/static/js/notify.min.js')
+  script(src='/static/js/ajax_setup.js')
+  script(src='/static/catalog/js/search.js')
+  script(src='/static/js/common.js')
+  script(src='/static/js/contentSelectionDisable.js')
+  script(src='/static/commerce/js/cart.js')
+  script(src='/static/catalog/js/catalog.js')
+  script.
+    var BNR_URLS = {
+    'inc_views': '/bnrs/ajax/view-cnt-incr',
+    'inc_clicks': '/bnrs/ajax/clck-cnt-incr'
+    };
+  script(src='/static/banners/js/bnrs.js')
+  script(type='text/javascript' src='/static/crm/js/crm_forms.js')
+  script(src='/static/addresses/js/addresses_yamap.js')
+  script(src='/static/js/frontpage.js')
+  script(type='text/javascript' src='/static/subscription/js/subscription.js')
+  script(src='/static/js/scripts.js')
+  
+block content
+
+  section.section
+    .container
+      .mb-25
+        h2 Кнопки
+
+      .d-flex.flex-wrap.column-gap-grid.row-gap-20
+      
+        .d-flex.flex-column.align-items-start.row-gap-15
+          button.button.button_style-1.button_xl 
+            svg.icon
+              use(xlink:href="#shopping-cart")
+            span Шаблон кнопки
+          button.button.button_style-1.button_xl 
+            span Шаблон кнопки
+            svg.icon
+              use(xlink:href="#shopping-cart")
+          button.button.button_style-1
+            svg.icon
+              use(xlink:href="#shopping-cart")
+            span Шаблон кнопки
+          button.button.button_style-1
+            span Шаблон кнопки
+            svg.icon
+              use(xlink:href="#shopping-cart")
+
+        .d-flex.flex-column.align-items-start.row-gap-15
+            button.button.button_style-2.button_xl 
+              svg.icon
+                use(xlink:href="#shopping-cart")
+              span Шаблон кнопки
+            button.button.button_style-2.button_xl 
+              span Шаблон кнопки
+              svg.icon
+                use(xlink:href="#shopping-cart") 
+            button.button.button_style-2 
+              svg.icon
+                use(xlink:href="#shopping-cart")
+              span Шаблон кнопки
+            button.button.button_style-2
+              span Шаблон кнопки
+              svg.icon
+                use(xlink:href="#shopping-cart") 
+    
+  section.section
+    .container  
+      .mb-25
+        h2.mb-20 Карточки товаров 
+          span.text-color-accent 2.0
+        p Отличие по стилю в мобильной версии.<br> 
+          | Меняется только класс у родителя <strong>product-card-v2_type-1</strong>
+
+      .d-grid.gap-grid.row-gap-sm-20.grid-columns-2.grid-columns-md-3.grid-columns-lg-4.grid-columns-xl-5
+        +product-card-v2()
+        +product-card-v2({
+          style: '2'
+        })
+        +product-card-v2({
+          style: '3'
+        })
+
+  section.section
+    .container  
+      .mb-25
+        h2.mb-20 Карточки товаров 
+          span.text-color-accent 2.1
+        p Отличие по стилю в мобильной версии.<br> 
+          | Меняется только класс у родителя <strong>product-card-v2_type-2</strong>
+
+      .d-grid.gap-grid.row-gap-sm-20.grid-columns-sm-2.grid-columns-md-3.grid-columns-lg-4.grid-columns-xl-5
+        +product-card-v2({
+          type: '2'
+        })
+        +product-card-v2({
+          style: '2',
+          type: '2'
+        })
+        +product-card-v2({
+          style: '3',
+          type: '2'
+        })
+
+  section.section
+    .container  
+      .mb-25
+        h2.mb-20 Сетка для каталога с фильтром 
+          span.text-color-accent 2.0
+
+      .catalog-container 
+        .catalog-filter 
+          h4 Фильтр
+        .catalog-body
+          //меняется родительский div для карточек
+          .d-grid.gap-grid.row-gap-sm-20.grid-columns-2.grid-columns-lg-3.grid-columns-xl-4
+            +product-card-v2()
+            +product-card-v2({
+              style: '2'
+            })
+            +product-card-v2({
+              style: '3'
+            })
+            +product-card-v2()
+
+  section.section
+    .container  
+      .mb-25
+        h2.mb-20 Сетка для каталога с фильтром 
+          span.text-color-accent 2.1
+          
+      .catalog-container 
+        .catalog-filter 
+          h4 Фильтр
+        .catalog-body
+          //меняется родительский div для карточек
+          .d-grid.gap-grid.row-gap-sm-20.grid-columns-sm-2.grid-columns-lg-3.grid-columns-xl-4
+            +product-card-v2({
+              type: '2'
+            })
+            +product-card-v2({
+              style: '2',
+              type: '2'
+            })
+            +product-card-v2({
+              style: '3',
+              type: '2'
+            })
+            +product-card-v2({
+              type: '2'
+            })

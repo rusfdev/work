@@ -1,0 +1,76 @@
+.button {
+  //reset
+  outline: none;
+  text-decoration: none;
+  box-shadow: none;
+  border: 0;
+  appearance: none;
+  color: inherit;
+  font-weight: inherit;
+  text-rendering: inherit;
+  //style
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  transition: color $trs1, border-color $trs1, background-color $trs1, opacity $trs1, visibility $trs1;
+  height: 40px;
+  line-height: 38px;
+  padding: 0 15px;
+  border-radius: 2px;
+  min-width: 144px;
+  font-weight: 400;
+
+  .icon {
+    height: 18px;
+    width: 18px;
+  }
+
+  &_style-1 {
+    border: 1px solid var(--main-elements-color, #2363D1);
+    background-color: var(--color-button1-bg, transparent);
+    color: var(--main-elements-color, #2363D1);
+    &[data-touch], &[data-hover] {
+      background-color: #E7EEF6;
+      border-color: var(--main-elements-hover-color, #1C52AC);
+    }
+  }
+
+  &_style-2 {
+    border: 1px solid var(--main-elements-color, #2363D1);
+    background-color: var(--main-elements-color, #2363D1);
+    color: #fff;
+    &[data-touch], &[data-hover] {
+      background-color: var(--main-elements-hover-color, #1C52AC);
+      border-color: var(--main-elements-hover-color, #1C52AC);
+    }
+  }
+
+  &_disabled {
+    border: 1px solid #767676;
+    color: #fff;
+    background-color: #767676;
+    &[data-touch], &[data-hover] {
+      background-color: #818181;
+    }
+  }
+
+  &_xl {
+    line-height: 46px;
+    padding: 0 20px;
+    height: 48px;
+    font-size: 18px;
+    .icon {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+}

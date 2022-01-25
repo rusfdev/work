@@ -2,7 +2,14 @@
 
 window.addEventListener('load', function () {
   Helper.init();
-});
+}); //url clean
+
+function cleanUp(url) {
+  var url = $.trim(url);
+  if (url.search(/^https?\:\/\//) != -1) url = url.match(/^https?\:\/\/([^?#]+)(?:[?#]|$)/i, "");else url = url.match(/^([^?#]+)(?:[?#]|$)/i, "");
+  return url[1];
+}
+
 var Helper = {
   init: function init() {
     var _this = this;
@@ -19,7 +26,7 @@ var Helper = {
     });
   },
   set_active_page: function set_active_page() {
-    var values = location.href.split('/'),
+    var values = cleanUp(location.href).split('/'),
         last_value = values[values.length - 1],
         page = last_value == '' ? 'index.html' : last_value;
     var $links = this.$block.querySelectorAll('a');

@@ -33,3 +33,41 @@
     padding: 32px 15px;
   }
 }
+
+.new-card__fastBuy-type-city {
+  @media (max-width: 767px) {
+    z-index: 103;
+    &.new-card__fastBuy-action-open {
+      display: block;
+    }
+    height: auto;
+    overflow: auto;
+    .new-city {
+      padding: 20px;
+    }
+    .new-city__shell {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
+    .new-button-type-city {
+      font-size: 18px;
+      &.new-button-action-check {
+        padding-right: 25px;
+        &::before {
+          position: absolute;
+          content: '';
+          height: 12px;
+          width: 8px;
+          box-shadow: 2px 2px 0 0 #d51e28;
+          right: 2px;
+          top: 1px;
+          transform: rotate(45deg);
+        }
+      }
+    } 
+  }
+  @media (max-width: 575px) {
+    height: 100%;
+  }
+}

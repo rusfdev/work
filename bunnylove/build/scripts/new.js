@@ -2,6 +2,7 @@ $(document).ready(function(){
   mobileSearch();
   header();
   slider.init();
+  CityConfirmationModal.init();
 })
 
 const gridbrakepoints = {
@@ -164,5 +165,50 @@ window.slider = {
       }
     
     });
+  }
+}
+
+const CityConfirmationModal = {
+  init() {
+    const elements = {};
+    elements.parent = document.querySelector('.city-confirmation-modal');
+    elements.close = elements.parent.querySelectorAll('[data-action="close"], [data-action="desktopCityButton"]');
+    elements.successButton = document.querySelector('.city-confirmation-modal__success-button');
+
+    this.checkPosition = () => {
+      if (window.innerWidth >= 1024) {
+        elements.target = document.querySelector('.new-button-icon-city');
+      } else if (window.innerWidth >= 768) {
+        elements.target = document.querySelector('.new-button-icon-city-type-table');
+      } else {
+        elements.target = false;
+      }
+
+      if (elements.target) {
+        const targetTop = elements.target.getBoundingClientRect().top;
+        const targetLeft = elements.target.getBoundingClientRect().left;
+        const targetHeight = elements.target.getBoundingClientRect().height;
+
+        elements.parent.style.cssText = `
+          top: ${targetTop + targetHeight + 15}px;
+          left: ${targetLeft}px;
+        `;
+      } else {
+        elements.parent.removeAttribute('style');
+      }
+    }
+
+    setTimeout(() => {
+      elements.parent.classList.add('active');
+    }, 500);
+
+    elements.close.forEach(element => {
+      element.addEventListener('click', () => {
+        elements.parent.classList.remove('active');
+      })
+    })
+
+    this.checkPosition();
+    window.addEventListener('resize', this.checkPosition);
   }
 }

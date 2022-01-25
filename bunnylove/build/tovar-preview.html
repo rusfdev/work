@@ -243,21 +243,6 @@
               <use xlink:href="#markIcon"></use>
             </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
           </button>
-          <div class="new-fastBuy new-card__fastBuy new-card__fastBuy-type-city" data-action="cityShell">
-            <div class="new-fastBuy__overflow" data-action="cityCloseButton"></div>
-            <div class="new-fastBuy__wrapper new-fastBuy__wrapper-type-city">
-              <div class="new-console new-mobileMenu__console new-console-type-fastBuy">
-                <button class="new-header__close new-header__close-type-fastBuy" data-action="cityCloseButton"></button>
-              </div>
-              <div class="new-city new-city-type-standart">
-                <p class="new-city__title">Выберите свой город</p>
-                <div class="new-city__shell">
-                  <button class="new-button new-button-type-city new-button-action-check" data-action="cityLink"><a href="//bunnylove.ru/">Самара</a></button>
-                  <button class="new-button new-button-type-city" data-action="cityLink"><a href="//kazan.bunnylove.ru/">Казань</a></button>
-                </div>
-              </div>
-            </div>
-          </div>
           <form class="new-search new-header__search new-search-type-header" method="GET" action="/catalog/search/">
             <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
             <button class="new-search__submit new-search__submit-type-header" type="submit">
@@ -473,6 +458,32 @@
         </div>
       </div>
     </header>
+    <!--Модалка с городами вынесена из header -->
+    <div class="new-fastBuy new-card__fastBuy new-card__fastBuy-type-city" data-action="cityShell">
+      <div class="new-fastBuy__overflow" data-action="cityCloseButton"></div>
+      <div class="new-fastBuy__wrapper new-fastBuy__wrapper-type-city">
+        <div class="new-console new-mobileMenu__console new-console-type-fastBuy">
+          <button class="new-header__close new-header__close-type-fastBuy" data-action="cityCloseButton"></button>
+        </div>
+        <div class="new-city new-city-type-standart">
+          <p class="new-city__title">Выберите свой город</p>
+          <div class="new-city__shell">
+            <button class="new-button new-button-type-city new-button-action-check" data-action="cityLink"><a href="//bunnylove.ru/">Самара</a></button>
+            <button class="new-button new-button-type-city" data-action="cityLink"><a href="//kazan.bunnylove.ru/">Казань</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--новое всплывающее окно    -->
+    <div class="city-confirmation-modal"><span class="city-confirmation-modal__text">Ваш город
+        <svg class="icon">
+          <use xlink:href="#markIcon"></use>
+        </svg><strong>Самара</strong>?</span>
+      <div class="city-confirmation-modal__buttons">
+        <button class="button button_bordered button_style-1 city-confirmation-modal__success-button" type="button" data-action="close"><span>Да</span></button>
+        <button class="city-confirmation-modal__change-button" type="button" data-action="desktopCityButton">Выбрать другой </button>
+      </div>
+    </div>
     <main>
       <div class="nfastBuy-type-callbackew-fastBuy new-card__fastBuy new-card__fastBuy-action-open" data-action="fastBuyShell">
         <div class="new-fastBuy__overflow" data-action="fastBuyCloseButton"></div>

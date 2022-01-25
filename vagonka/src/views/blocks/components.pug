@@ -1,0 +1,67 @@
+mixin product-card-v2(params = {})
+  .product-card-v2(class=`${params.type=='2'?'product-card-v2_type-2':'product-card-v2_type-1'}` data-custom-interaction) 
+    a(href="#").product-card-v2__link
+
+    .product-card-v2__image 
+      if params.style=='3'
+        .image.image_contain.image_no-image
+          img(src=`${href}/img/icons/product-placeholder.svg`, alt="image")
+      else
+        .image.image_contain
+          img(src=`${href}/img/b49c856cb0b15abac9a63bda5f241eff.jpeg`, alt="image")
+        
+      .product-card-v2__rating
+        img(src=`${href}/img/icons/rating.svg`, alt="image").product-card-v2__rating-stars
+
+      if params.style!=='3'
+        .product-card-v2__labels
+          if params.style=='2'
+            .card-label.card-label_style-stock.product-card-v2__label Уценка
+          else 
+            .card-label.card-label_style-sale.product-card-v2__label Распродажа
+            .card-label.card-label_style-hit.product-card-v2__label Хит 
+
+    .product-card-v2__content 
+      .product-card-v2__title 
+        if params.style=='2'
+          | Фанера влагостойкая 12x2500х1250 мм (длинное название товара, которое не влезает)
+        else if params.style=='3'
+          | Фанера влагостойкая
+        else 
+          | Фанера влагостойкая 12x2500х1250 mm
+      
+      .product-card-v2__content-bottom
+        if params.style=='2'
+          .product-card-v2__pricing
+            .product-card-v2__pricing-txt Последний раз товар был продан по этой цене:
+            .product-card-v2__price.text-color-light 89537,50 <span>₽/шт.</span>
+        else if params.style=='3'
+          
+        else 
+          .product-card-v2__pricing
+            .product-card-v2__old-price 99 999,99
+            .product-card-v2__price.text-color-accent 92986,50 <span>₽/шт.</span>
+            .product-card-v2__pricing-txt Цена со скиндкой через корзину:
+            .product-card-v2__price 89537,50 <span>₽/шт.</span>
+
+        .product-card-v2__buttons
+          if params.style=='2'
+
+            button.button.button_disabled.button_xl.product-card-v2__cart-button
+              span  
+                span Товар ожидается 
+                span узнать о наличии
+
+          else if params.style=='3'
+
+            button.button.button_style-1.button_xl.product-card-v2__button 
+              span Узнать стоимость
+
+          else 
+
+            button.button.button_style-2.button_xl.product-card-v2__cart-button 
+              svg.icon
+                use(xlink:href="#shopping-cart")
+              span  
+                span Много товара
+                span В корзину

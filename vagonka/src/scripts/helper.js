@@ -2,6 +2,16 @@ window.addEventListener('load', ()=>{
   Helper.init();
 })
 
+//url clean
+function cleanUp(url) {
+  var url = $.trim(url);
+  if(url.search(/^https?\:\/\//) != -1)
+      url = url.match(/^https?\:\/\/([^?#]+)(?:[?#]|$)/i, "");
+  else
+      url = url.match(/^([^?#]+)(?:[?#]|$)/i, "");
+  return url[1];
+}
+
 const Helper = {
   init: function() {
     this.$block = document.querySelector('.helper');
@@ -19,7 +29,7 @@ const Helper = {
 
   },
   set_active_page: function() {
-    let values = location.href.split('/'),
+    let values = cleanUp(location.href).split('/'),
         last_value = values[values.length-1],
         page = last_value=='' ? 'index.html': last_value;
 

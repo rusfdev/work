@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="/static/css/jquery.fancybox.v3.5.7.min.css" type="text/css">
     <link rel="stylesheet" href="/static/css/custom.css" type="text/css">
     <link rel="stylesheet" href="/static/css/common.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:9000/styles/font-front-fix.css">
+    <link rel="stylesheet" href="http://localhost:9000/styles/theme.css">
     <!--new-->
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/vagonka/build/styles/font.css">
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/vagonka/build/styles/theme.css">
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/vagonka/build/styles/new.css">
+    <link rel="stylesheet" href="http://localhost:9000/styles/new.css">
   </head>
   <body class="noselect">
     <header>
@@ -585,7 +585,7 @@
         </div>
       </section>
     </main>
-    <footer><img src="https://ruslanmmr.github.io/work/vagonka/build/img/Frame30.png" alt="img">
+    <footer>
       <div class="container">
         <div class="footer-content">
           <div class="footer-first-column">
@@ -843,7 +843,6 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.581l7.758 8.94 34.567 10.191 10.615-12.21L6.587 3.821 0 10.582z" fill="currentColor"></path>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M48.775.103L11.293 0l45.251 13.358L59 10.547 48.775.103z" fill="currentColor"></path>
       </symbol>
-      <script src="https://api-maps.yandex.ru/2.1/?apikey=c3161078-41ce-4809-936f-dd4c9bcc8a50&amp;lang=ru_RU" type="text/javascript"></script>
     </svg>
     <script type="text/javascript" src="/static/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/static/js/jquery.fancybox.v3.5.7.min.js"></script>
@@ -859,7 +858,7 @@
       if (window.innerWidth >= 767) {
       Include('/static/js/scripts-desktop.js', 'on')
       } else {
-      Include(`https://ruslanmmr.github.io/work/vagonka/build/scripts/scripts-mobile.js`, 'on')
+      Include(`http://localhost:9000/scripts/scripts-mobile.js`, 'on')
       }
       }
       function Include(filename, status) {
@@ -887,8 +886,8 @@
     <script type="text/javascript" src="/static/crm/js/crm_forms.js"></script>
     <script type="text/javascript" src="/static/subscription/js/subscription.js"></script>
     <script src="/static/js/scripts.js"></script>
-    <script src="https://ruslanmmr.github.io/work/vagonka/build/scripts/new.js"></script>
-    <link rel="stylesheet" href="https://ruslanmmr.github.io/work/vagonka/build/styles/helper.css">
+    <script src="http://localhost:9000/scripts/new.js"></script>
+    <link rel="stylesheet" href="http://localhost:9000/styles/helper.css">
     <div class="helper"><a class="helper__trigger" href="javascript:void(0);"> 
         <svg class="icon" viewBox="0 0 100 100" fill="currentColor">
           <g transform="translate(50 50)">
@@ -899,16 +898,17 @@
           </g>
         </svg></a>
       <div class="helper__container">
-        <!--section-->
-        <div class="helper__section"><span class="helper__section-title">Страницы:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="https://ruslanmmr.github.io/work/vagonka/build/index.html">Главная</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/vagonka/build/contacts.html">Контакты</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/vagonka/build/catalogue.html">Каталог</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/vagonka/build/catalogue2.html">Каталог (тип 2)</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/vagonka/build/card.html">Карточка товара</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/vagonka/build/landing.html">Лендинг</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/vagonka/build/wiki.html">Вики</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/vagonka/build/article.html">Статья</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/vagonka/build/partners.html">Партнеры</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/vagonka/build/cart.html">Корзина</a><a class="helper__section-button" href="https://ruslanmmr.github.io/work/vagonka/build/cart-final.html">Корзина - финал</a></div>
+        <div class="helper__section"><span class="helper__section-title">Компоненты:</span>
+          <div class="helper__section-content"><a class="helper__section-button" href="http://localhost:9000/components.html">Компоненты</a></div>
         </div>
-        <!--section-->
+        <div class="helper__section"><span class="helper__section-title">Контент:</span>
+          <div class="helper__section-content"><a class="helper__section-button" href="http://localhost:9000/index.html">Главная</a><a class="helper__section-button" href="http://localhost:9000/contacts.html">Контакты</a><a class="helper__section-button" href="http://localhost:9000/catalogue.html">Каталог</a><a class="helper__section-button" href="http://localhost:9000/catalogue2.html">Каталог (тип 2)</a><a class="helper__section-button" href="http://localhost:9000/card.html">Карточка товара</a><a class="helper__section-button" href="http://localhost:9000/landing.html">Лендинг</a><a class="helper__section-button" href="http://localhost:9000/wiki.html">Вики</a><a class="helper__section-button" href="http://localhost:9000/article.html">Статья</a><a class="helper__section-button" href="http://localhost:9000/partners.html">Партнеры</a><a class="helper__section-button" href="http://localhost:9000/cart.html">Корзина</a><a class="helper__section-button" href="http://localhost:9000/cart-final.html">Корзина - финал</a></div>
+        </div>
         <div class="helper__section"><span class="helper__section-title">ЛК:</span>
-          <div class="helper__section-content"><a class="helper__section-button" href="https://ruslanmmr.github.io/work/vagonka/build/lk0.html">Лк - Старт</a></div>
+          <div class="helper__section-content"><a class="helper__section-button" href="http://localhost:9000/lk0.html">Лк - Старт</a></div>
         </div>
       </div>
     </div>
-    <script src="https://ruslanmmr.github.io/work/vagonka/build/scripts/helper.js"></script>
+    <script src="http://localhost:9000/scripts/helper.js"></script>
   </body>
 </html>

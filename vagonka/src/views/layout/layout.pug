@@ -1,7 +1,8 @@
 -var href = 'https://ruslanmmr.github.io/work/vagonka/build'
-//-var href = 'http://localhost:9000'
+-var href = 'http://localhost:9000'
 
 block variables
+include ../blocks/components
 
 doctype html
 html
@@ -20,9 +21,9 @@ html
     link(rel='stylesheet', href='/static/css/custom.css', type='text/css')
     link(rel='stylesheet', href='/static/css/common.css', type='text/css')
     block styles
-    //new
-    link(rel='stylesheet' href=href+'/styles/font.css')
+    link(rel='stylesheet' href=href+'/styles/font-front-fix.css')
     link(rel='stylesheet' href=href+'/styles/theme.css')
+    //new
     link(rel='stylesheet' href=href+'/styles/new.css')
   
   body.noselect(class=bodyClass)
@@ -198,7 +199,6 @@ html
         path(fill-rule='evenodd' clip-rule='evenodd' d='M0 10.581l7.758 8.94 34.567 10.191 10.615-12.21L6.587 3.821 0 10.582z' fill='currentColor')
         path(fill-rule='evenodd' clip-rule='evenodd' d='M48.775.103L11.293 0l45.251 13.358L59 10.547 48.775.103z' fill='currentColor')
     
-      script(src='https://api-maps.yandex.ru/2.1/?apikey=c3161078-41ce-4809-936f-dd4c9bcc8a50&lang=ru_RU' type='text/javascript')
     
     block scripts 
 

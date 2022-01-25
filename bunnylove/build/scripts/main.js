@@ -173,12 +173,17 @@ $(document).ready(function () {
 
 
     //Всплывающее окно выбора города
-    $('[data-action="mobileCityButton"],[data-action="cityButton"],[data-action="desktopCityButton"],[data-action="cityCloseButton"]').click(function () {
+    $('[data-action="cityButton"],[data-action="desktopCityButton"],[data-action="cityCloseButton"]').click(function () {
         $('[data-action="cityShell"]').toggleClass('new-card__fastBuy-action-open');
         $('[data-action="cityChoice"]').hide();
-        $('[data-action="mobileCityShell"]').toggleClass('new-city-action-open');
-
     })
+    
+    $('[data-action="mobileCityButton"]').click(function () {
+        $('[data-action="mobileCityShell"]').toggleClass('new-city-action-open');
+    })
+
+
+
     $('[data-action="cityLink"]').click(function () {
         $(this).addClass('new-button-action-check').siblings().removeClass('new-button-action-check');
         cityChanger = $(this).text();
