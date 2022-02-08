@@ -33,10 +33,10 @@
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^5.15.1",
 		"bootstrap": "^5.0.0-alpha1",
-		"gsap": "^3.5.1",
+		"gsap": "^3.9.1",
 		"inputmask": "^5.0.5",
 		"lazysizes": "^5.2.2",
 		"normalize.css": "^8.0.1",
-		"scroll-lock": "^2.1.4"
+		"scroll-lock": "^2.1.5"
 	}
 }

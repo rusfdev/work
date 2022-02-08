@@ -32,15 +32,12 @@ function headerTabs() {
                 $this.parent().append('<div class="new-tabs__cell-type-alternative ' +
                     rootCategorySlug + '" data-action="tabLinkContent">' + tabContent + '</div>');
             }
-
-            console.log('text')
             $this.on('mouseenter', function() {
                 var tabLinkContent = $this.parent().find('[data-action="tabLinkContent"]'),
                     totalWidth = 0;
 
                 tabLinkContent.children().each(function () {
                     totalWidth = totalWidth + $(this).outerWidth()+1;
-                    console.log($(this).outerWidth()+1)
                 });
                 tabLinkContent.css({'width': totalWidth});
             })
@@ -82,8 +79,6 @@ $(document).ready(function () {
             $siblings = $parent.closest('.new-dropdown__wrapper').length?$parent.closest('.new-dropdown__wrapper').find('[data-action="dropdown"]').not($parent):$parent.siblings(),
             $siblings_button = $siblings.find('[data-action="dropdownButton"]'),
             $siblings_content = $siblings.find('[data-action="dropdownWrapper"]');
-
-        console.log($parent)
 
         $siblings_button.removeClass(btn_class);
         $siblings_content.removeClass(cnt_class);

@@ -1,15 +1,70 @@
-$(document).ready(function(){
-  mobileSearch();
-  header();
-  slider.init();
-  CityConfirmationModal.init();
-})
+import { gsap } from "gsap";
+gsap.defaults({
+  ease: "power2.inOut",
+  duration: 1
+});
+import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
-const gridbrakepoints = {
+const breakpoints = {
   xs: 576,
   sm: 768,
   md: 1024,
   lg: 1200
+}
+
+const duration = {
+  1: 0.15,
+  2: 0.3,
+  3: 0.5,
+  4: 1
+}
+
+//animations
+gsap.registerEffect({
+  name: "fadeIn",
+  effect: ($element, config) => {
+    return gsap.fromTo($element, {autoAlpha: 0}, {immediateRender: false, autoAlpha: 1, duration: config.duration || duration[1],
+      onStart: () => {
+        $element.forEach($this => {
+          $this.classList.add('d-block');
+        })
+      },
+      onReverseComplete: () => {
+        $element.forEach($this => {
+          gsap.set($this, {clearProps: "all"});
+          $this.classList.remove('d-block');
+        })
+      }
+    })
+  },
+  extendTimeline: true
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  checkScrollbar();
+  mobileSearch();
+  header();
+  slider.init();
+  CityConfirmationModal.init();
+  Modal.init();
+});
+
+function checkScrollbar() {
+  const testDiv = document.createElement('div');
+
+  testDiv.style.cssText = `
+    position: fixed;
+    width: 100%;`;
+
+  document.body.insertAdjacentElement('afterbegin', testDiv);
+
+  let testWidth = testDiv.getBoundingClientRect().width,
+      windowWidth = window.innerWidth,
+      value = windowWidth - testWidth;
+
+  testDiv.remove();
+
+  document.documentElement.style.setProperty('--scrollbar-width-property', `${value}px`);
 }
 
 function mobileSearch() {
@@ -43,6 +98,7 @@ function header() {
     }
   }
 }
+
 window.slider = {
   arrowPrev: '<svg class="icon" stroke="none" fill="currentColor" viewBox="0 0 10.5 18.1"><path d="M9,0l1.4,1.4L2.8,9l7.6,7.6L9,18.1L0,9C0,9,9.1,0,9,0z"></path></svg>',
   arrowNext: '<svg class="icon" stroke="none" fill="currentColor" viewBox="0 0 10.5 18.1"><path d="M1.4,18.1L0,16.7l7.6-7.6L0,1.5L1.4,0l9,9.1C10.4,9.1,1.3,18.1,1.4,18.1z"></path></svg>',
@@ -101,28 +157,28 @@ window.slider = {
           autoplay: autoplay,
           autoplaySpeed: 3000,
           responsive: [{
-              breakpoint: gridbrakepoints.lg,
+              breakpoint: breakpoints.lg,
               settings: {
                 slidesToShow: slideCountLg,
                 slidesToScroll: slideCountLg
               }
             },
             {
-              breakpoint: gridbrakepoints.md,
+              breakpoint: breakpoints.md,
               settings: {
                 slidesToShow: slideCountMd,
                 slidesToScroll: slideCountMd
               }
             },
             {
-              breakpoint: gridbrakepoints.sm,
+              breakpoint: breakpoints.sm,
               settings: {
                 slidesToShow: slideCountSm,
                 slidesToScroll: slideCountSm
               }
             },
             {
-              breakpoint: gridbrakepoints.xs,
+              breakpoint: breakpoints.xs,
               settings: {
                 slidesToShow: slideCountXs,
                 slidesToScroll: slideCountXs
@@ -172,7 +228,7 @@ const CityConfirmationModal = {
   init() {
     const elements = {};
     elements.parent = document.querySelector('.city-confirmation-modal');
-    elements.close = elements.parent.querySelectorAll('[data-action="close"], [data-action="desktopCityButton"]');
+    elements.close = document.querySelectorAll('[data-action="close"], [data-action="Modal:open"]');
     elements.successButton = document.querySelector('.city-confirmation-modal__success-button');
 
     this.checkPosition = () => {
@@ -210,5 +266,68 @@ const CityConfirmationModal = {
 
     this.checkPosition();
     window.addEventListener('resize', this.checkPosition);
+  }
+}
+
+const Modal = {
+  init: function () {
+    document.addEventListener('click', (event) => {
+      const _modalContent_ = '[data-modal-block]';
+      const _openButton_ = '[data-action="Modal:open"]';
+      const _closeButton_ = '[data-action="Modal:close"]';
+
+      const $trigger = event.target.closest(_openButton_);
+      const $target = $trigger ? document.querySelector(`${$trigger.getAttribute('href')}`) : undefined;
+
+      const $close = event.target.closest(_closeButton_);
+      const clickOutside = !event.target.closest(_modalContent_) && this.$active;
+
+      if ($trigger && $target) {
+        event.preventDefault();
+        this.open($target, $trigger);
+      } else if ($close || clickOutside) {
+        this.close();
+      }
+    })
+  },
+
+  open($target, $trigger) {
+    if ($target === this.$active) return;
+
+    const open = () => {
+      const $block = $target.querySelector('[data-modal-block]');
+
+      $target.dispatchEvent(new CustomEvent("Modal:opened", {
+        detail: { $trigger: $trigger }
+      }), true);
+
+      this.animation = gsap.timeline()
+        .fadeIn($target, { duration: duration[2] })
+        .eventCallback('onStart', () => {
+          disablePageScroll();
+          gsap.fromTo($block, { y: 20 }, { y: 0, duration: duration[2], ease: 'power2.out' });
+        });
+
+      this.$active = $target;
+    }
+    
+    if(this.$active) this.close( open );
+    else open();
+  },
+
+  close(callback) {
+    if (!this.$active) return;
+
+    if (this.timeout) {
+      clearTimeout(this.timeout);
+      delete this.timeout;
+    }
+
+    this.animation.reverse().eventCallback('onReverseComplete', () => {
+      enablePageScroll();
+      this.$active.dispatchEvent(new CustomEvent("Modal:closed"), true);
+      delete this.$active;
+      if (callback) callback();
+    })
   }
 }

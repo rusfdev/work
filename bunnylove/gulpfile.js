@@ -27,7 +27,7 @@ let $images = ["./src/img/**/*.{jpg,jpeg,png,gif}", "!./src/img/favicons/*.{jpg,
     $scripts_watch = ["./src/scripts/**/*"],
 
     $webpack = "./src/scripts/webpack/**/*.js",
-    $webpack_watch = "./src/scripts/webpack/**/*",
+    $webpackWatch = "./src/scripts/webpack/**/*",
 
     $styles = ["./src/styles/**/*.scss", "!./src/styles/components/**/*.scss"],
     $styles_watch = "./src/styles/**/*.scss",
@@ -68,12 +68,12 @@ gulp.task("scripts_production", function() {
     .pipe(gulp.dest("./build/scripts/"))
 });
 
-gulp.task("webpack_scripts", function() {
+gulp.task("webpackScripts", function() {
   return gulp.src($webpack)
     .pipe(webpackStream({
-      mode: 'development',
+      mode: 'production',
       output: {
-        filename: 'app.js',
+        filename: 'new.js',
       },
       performance: {
         hints: false,
@@ -104,42 +104,6 @@ gulp.task("webpack_scripts", function() {
     }))
     .pipe(gulp.dest("./build/scripts/"))
     .on("end", browsersync.reload);
-});
-gulp.task("webpack_scripts_production", function() {
-  return gulp.src($webpack)
-    .pipe(webpackStream({
-      mode: 'production',
-      output: {
-        filename: 'app.min.js',
-      },
-      performance: {
-        hints: false,
-        maxEntrypointSize: 1000,
-        maxAssetSize: 1000
-      },
-      module: {
-        rules: [{
-          test: /\.(js|jsx)$/,
-          exclude: /node_modules/,
-          loader: 'babel-loader',
-          options: {
-            presets: ["@babel/preset-env", {'plugins': ['@babel/plugin-proposal-class-properties']}]
-          }
-        }]
-      },
-      module: {
-        rules: [{
-          test: /\.(frag|vert|glsl)$/,
-          use: [
-            { 
-              loader: 'glsl-shader-loader',
-              options: {}  
-            }
-          ]
-        }]
-      }
-    }))
-    .pipe(gulp.dest("./build/scripts/"))
 });
 
 gulp.task("styles", function() {
@@ -214,7 +178,7 @@ gulp.task("watch", function () {
     watch($pug_watch, gulp.series("pug"));
     watch($styles_watch, gulp.series("styles"));
     watch($scripts_watch, gulp.series("scripts"));
-    watch($webpack_watch, gulp.series("webpack_scripts"));
+    watch($webpackWatch, gulp.series("webpackScripts"));
     watch($images_watch, gulp.series("images"));
     watch($favicons, gulp.series("favicons"));
     watch($other, gulp.series("other"));
@@ -225,25 +189,7 @@ gulp.task("watch", function () {
 gulp.task("default", 
   gulp.series(
     "clean",
-    gulp.parallel("pug", "styles", "scripts", "webpack_scripts", "images", "favicons", "other"),
+    gulp.parallel("pug", "styles", "scripts", "webpackScripts", "images", "favicons", "other"),
     gulp.parallel("watch", "serve")
   )
 );
-
-gulp.task("production", 
-  gulp.series(
-    "clean", gulp.parallel("pug", "styles", "styles_production", "scripts", "scripts_production", "webpack_scripts", "webpack_scripts_production", "images", "favicons", "other")
-  )
-);
-
-gulp.task("transfer", function () {
-  return gulp.src('./build/**')
-    .pipe(rsync({
-      root: './build/',
-      hostname: 'user@00.000.000.000',
-      destination: 'www/domain.com/',
-      archive: true,
-      silent: false,
-      chmod : "Du=rwx,Dgo=rx,Fu=rw,Fog=r" 
-    }));
-});

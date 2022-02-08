@@ -1,0 +1,14 @@
+.modal-wrapper#modal-cities
+  .modal-block.modal-city(data-modal-block)
+    button(type="button" data-action="Modal:close").modal-close
+
+    .modal-city__content
+      h3.modal-city__title Выберите свой город
+      ul.modal-city__list 
+        li.modal-city__item 
+          .modal-city__link.modal-city__link_selected 
+            span Тольятти
+        li.modal-city__item
+          a(href="#").modal-city__link 
+            span Самара
+    

@@ -53,19 +53,14 @@ html
               a#link_call_me_back_modal.new-button.new-button-icon-callback.modals(data-modal-id='call_me_back_modal', href='/feedback/', title='Заказать обратный звонок')
                 svg.new-button__icon-type-callback
                   use(xlink:href='#callbackIcon')
-          button.new-button.new-mobileMenu__cityButton(data-action='mobileCityButton')
+
+          a(href="#modal-cities" data-action='Modal:open').new-button.new-mobileMenu__cityButton
             svg.new-button__icon-type-city
               use(xlink:href='#markMobileIcon')
-            span.new-button__span-type-city(data-action='cityChanger')
+            span.new-button__span-type-city
               | Самара
-          .new-city.new-city-type-mobile(data-action='mobileCityShell')
-            .new-city__shell.new-city__shell-type-mobile
-              button.new-button.new-button-type-city.new-button-action-check(data-action='cityLink')
-                a(href='//bunnylove.ru/')
-                  | Самара
-              button.new-button.new-button-type-city(data-action='cityLink')
-                a(href='//kazan.bunnylove.ru/')
-                  | Казань
+              
+
           .new-mobileMenu__form.container
             form.new-search.new-search-type-standart.new-search-type-mobileMenu(method='GET', action='/catalog/search/')
               input#id_query.new-search__input(type='text', name='query', placeholder='Поиск по каталогу', minlength='3', required='')
@@ -280,7 +275,7 @@ html
             | Подарочные сертификаты
       .new-header__top
         .container
-          button.new-button.new-button-icon-city(data-action='desktopCityButton')
+          a(href="#modal-cities" data-action="Modal:open").new-button.new-button-icon-city
             svg.new-button__icon-type-city
               use(xlink:href='#markIcon')
             span.new-button__span-type-city(data-action='cityChanger')
@@ -313,7 +308,8 @@ html
           button.new-button.new-button-icon-humburger(data-action='menuButton')
           a(href="#").new-header-logo 
             img(src=href+"/img/bunny_logo.svg", alt="logo").new-header-logo__image
-          button.new-button.new-button-icon-city.new-button-icon-city-type-table(data-action='cityButton')
+            
+          a(href="#modal-cities" data-action="Modal:open").new-button.new-button-icon-city.new-button-icon-city-type-table
             svg.new-button__icon-type-city
               use(xlink:href='#markIcon')
             span.new-button__span-type-city(data-action='cityChanger')
@@ -676,18 +672,17 @@ html
                         a(href="#").new-dropdown__link Наборы 2 
                         a(href="#").new-dropdown__link Наборы 3
 
-      if header_banner==true
+      if header_banner === true
         .new-header__slider.new-header__slider-type-main.container-fluid
           .new-slider.new-slider__shell(data-action='adSliderInMain')
-            a.new-slider__cell(href='https://bunnylove.ru/bonus/')
+            a.new-slider__cell(href='#')
               picture.new-slider__img
-                img.new-slider__img(src='/media/big_slides/d6b4d098-826a-4db9-b37d-a844b7d6f20e.slide.png', alt='Дисконтная программа')
-            a.new-slider__cell(href='/certificates/')
+                img.new-slider__img(src=href+'/img/banner.png', alt='image')
+            a.new-slider__cell(href='#')
               picture.new-slider__img
-                img.new-slider__img(src='/media/big_slides/5f8f71a9-fec7-456e-9d05-a712f5b550b7.slide.png', alt='Подарочный сертификат')
-            a.new-slider__cell(href='https://bunnylove.ru/promo/dostavka-za-99/')
-              picture.new-slider__img
-                img.new-slider__img(src='/media/big_slides/6086b631-dccc-451e-96a4-d1435eec4198.slide.png', alt='Акция на доставку')
+                img.new-slider__img(src=href+'/img/banner.png', alt='image')
+    
+
     
     //Модалка с городами вынесена из header 
     .new-fastBuy.new-card__fastBuy.new-card__fastBuy-type-city(data-action='cityShell')
@@ -715,7 +710,7 @@ html
       .city-confirmation-modal__buttons
         button.button.button_bordered.button_style-1.city-confirmation-modal__success-button(type="button" data-action="close")
           span Да
-        button.city-confirmation-modal__change-button(type="button" data-action="desktopCityButton") Выбрать другой 
+        a(href="#modal-cities" data-action="Modal:open").city-confirmation-modal__change-button Выбрать другой 
 
 
     main
@@ -803,6 +798,8 @@ html
           .new-footer__payment
             svg.new-footer__svg.new-footer__svg-type-master
               use(xlink:href='#masterIcon')
+
+    include ../blocks/modals
 
     svg(style='display:none')
       symbol#wallet(fill='currentColor' viewbox='0 0 890.5 854.8')
@@ -1098,7 +1095,6 @@ html
     script(defer='' src='/static/js/jquery.fancybox.pack.js')
     script(defer='' src='/static/js/jquery.mask.min.js')
 
-    
     
     script(type='text/javascript', src=href+'/scripts/new.js')
 

@@ -44,18 +44,10 @@
                 <svg class="new-button__icon-type-callback">
                   <use xlink:href="#callbackIcon"></use>
                 </svg></a></div>
-          </div>
-          <button class="new-button new-mobileMenu__cityButton" data-action="mobileCityButton">
+          </div><a class="new-button new-mobileMenu__cityButton" href="#modal-cities" data-action="Modal:open">
             <svg class="new-button__icon-type-city">
               <use xlink:href="#markMobileIcon"></use>
-            </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
-          </button>
-          <div class="new-city new-city-type-mobile" data-action="mobileCityShell">
-            <div class="new-city__shell new-city__shell-type-mobile">
-              <button class="new-button new-button-type-city new-button-action-check" data-action="cityLink"><a href="//bunnylove.ru/">Самара</a></button>
-              <button class="new-button new-button-type-city" data-action="cityLink"><a href="//kazan.bunnylove.ru/">Казань</a></button>
-            </div>
-          </div>
+            </svg><span class="new-button__span-type-city">Самара</span></a>
           <div class="new-mobileMenu__form container">
             <form class="new-search new-search-type-standart new-search-type-mobileMenu" method="GET" action="/catalog/search/">
               <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
@@ -206,12 +198,10 @@
         </div>
       </div>
       <div class="new-header__top">
-        <div class="container">
-          <button class="new-button new-button-icon-city" data-action="desktopCityButton">
+        <div class="container"><a class="new-button new-button-icon-city" href="#modal-cities" data-action="Modal:open">
             <svg class="new-button__icon-type-city">
               <use xlink:href="#markIcon"></use>
-            </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
-          </button><a class="new-phone new-header__phone new-header__phone-type-desktop new-header__phone-icon-phone" href="tel:+7 (846) 300-44-49">
+            </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span></a><a class="new-phone new-header__phone new-header__phone-type-desktop new-header__phone-icon-phone" href="tel:+7 (846) 300-44-49">
             <svg class="new-phone__svg">
               <use xlink:href="#phoneIcon"></use>
             </svg> +7 (846-30) 0-44-49</a><a class="new-button new-button-icon-callback modals" id="link_call_me_back_modal" data-modal-id="call_me_back_modal" href="/feedback/" title="Заказать обратный звонок">
@@ -237,12 +227,10 @@
           </div>
         </div>
         <div class="container">
-          <button class="new-button new-button-icon-humburger" data-action="menuButton"></button><a class="new-header-logo" href="#"> <img class="new-header-logo__image" src="https://ruslanmmr.github.io/work/bunnylove/build/img/bunny_logo.svg" alt="logo"></a>
-          <button class="new-button new-button-icon-city new-button-icon-city-type-table" data-action="cityButton">
+          <button class="new-button new-button-icon-humburger" data-action="menuButton"></button><a class="new-header-logo" href="#"> <img class="new-header-logo__image" src="https://ruslanmmr.github.io/work/bunnylove/build/img/bunny_logo.svg" alt="logo"></a><a class="new-button new-button-icon-city new-button-icon-city-type-table" href="#modal-cities" data-action="Modal:open">
             <svg class="new-button__icon-type-city">
               <use xlink:href="#markIcon"></use>
-            </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span>
-          </button>
+            </svg><span class="new-button__span-type-city" data-action="cityChanger">Самара</span></a>
           <form class="new-search new-header__search new-search-type-header" method="GET" action="/catalog/search/">
             <input class="new-search__input" id="id_query" type="text" name="query" placeholder="Поиск по каталогу" minlength="3" required="">
             <button class="new-search__submit new-search__submit-type-header" type="submit">
@@ -480,8 +468,7 @@
           <use xlink:href="#markIcon"></use>
         </svg><strong>Самара</strong>?</span>
       <div class="city-confirmation-modal__buttons">
-        <button class="button button_bordered button_style-1 city-confirmation-modal__success-button" type="button" data-action="close"><span>Да</span></button>
-        <button class="city-confirmation-modal__change-button" type="button" data-action="desktopCityButton">Выбрать другой </button>
+        <button class="button button_bordered button_style-1 city-confirmation-modal__success-button" type="button" data-action="close"><span>Да</span></button><a class="city-confirmation-modal__change-button" href="#modal-cities" data-action="Modal:open">Выбрать другой </a>
       </div>
     </div>
     <main>
@@ -784,6 +771,20 @@
         </div>
       </div>
     </footer>
+    <div class="modal-wrapper" id="modal-cities">
+      <div class="modal-block modal-city" data-modal-block>
+        <button class="modal-close" type="button" data-action="Modal:close"></button>
+        <div class="modal-city__content">
+          <h3 class="modal-city__title">Выберите свой город</h3>
+          <ul class="modal-city__list">
+            <li class="modal-city__item">
+              <div class="modal-city__link modal-city__link_selected"> <span>Тольятти</span></div>
+            </li>
+            <li class="modal-city__item"><a class="modal-city__link" href="#"> <span>Самара</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <svg style="display:none">
       <symbol id="wallet" fill="currentColor" viewbox="0 0 890.5 854.8">
         <path d="M208.1 162.7l355-96.9-18.8-38C532 3.1 502-7.1 477.3 5.2L159.5 162.7h48.6zm465.2-94.1c-4.4 0-8.8.6-13.2 1.8l-83.4 22.8L322 162.7h415.1l-15.6-57.2c-6-22.3-26.2-36.9-48.2-36.9zm115.9 129.1H50.1c-15.8 0-29.9 7.3-39.1 18.8-4.2 5.3-7.4 11.4-9.2 18.1-1.1 4.2-1.8 8.6-1.8 13.1v557.1c0 27.6 22.4 50 50 50h739.1c27.6 0 50-22.4 50-50V665.3H542.4c-46.9 0-85-38.1-85-85V469.1c0-23 9.2-43.9 24.1-59.2 13.2-13.6 30.9-22.8 50.7-25.1 3.3-.4 6.7-.6 10.1-.6h296.8V247.7c.1-27.6-22.3-50-49.9-50z"></path>
