@@ -1,7 +1,9 @@
-.m-banner-slider__slide-content h1, .m-banner-slider__slide-content h2, .m-banner-slider__slide-content h3, .m-banner-slider__slide-content h4, .m-banner-slider__slide-content h5, .m-banner-slider__slide-content h6, .m-banner-slider__slide-content p, .m-banner-slider__slide-content ul, .m-banner-slider__slide-content ol, .m-banner-slider__slide-content strong {
-  position: relative;
-  z-index: 3;
+.m-banner-slider__slide-content p {
   font-size: 16px; }
+
+.m-banner-slider__slide-content h1, .m-banner-slider__slide-content h2, .m-banner-slider__slide-content h3, .m-banner-slider__slide-content h4, .m-banner-slider__slide-content h5, .m-banner-slider__slide-content h6, .m-banner-slider__slide-content p {
+  position: relative;
+  z-index: 3; }
 
 .m-banner-slider__slide-content h1, .m-banner-slider__slide-content h2, .m-banner-slider__slide-content h3, .m-banner-slider__slide-content h4, .m-banner-slider__slide-content h5, .m-banner-slider__slide-content h6 {
   font-weight: 700;
