@@ -25552,6 +25552,9 @@ textarea.input {
   width: max-content;
   color: inherit; }
 
+.new-button-icon-cake {
+  white-space: nowrap; }
+
 .promo-item-card__container {
   display: flex;
   padding: 20px;
