@@ -1,5 +1,5 @@
 -var href = 'https://ruslanmmr.github.io/work/bunnylove/build'
-//-var href = 'http://localhost:9000'
+//-var href = 'http://localhost:9002'
 
 block variables
 
@@ -683,24 +683,6 @@ html
               picture.new-slider__img
                 img.new-slider__img(src=href+'/img/banner.png', alt='image')
     
-
-    
-    //Модалка с городами вынесена из header 
-    .new-fastBuy.new-card__fastBuy.new-card__fastBuy-type-city(data-action='cityShell')
-      .new-fastBuy__overflow(data-action='cityCloseButton')
-      .new-fastBuy__wrapper.new-fastBuy__wrapper-type-city
-        .new-console.new-mobileMenu__console.new-console-type-fastBuy
-          button.new-header__close.new-header__close-type-fastBuy(data-action='cityCloseButton')
-        .new-city.new-city-type-standart
-          p.new-city__title Выберите свой город
-          .new-city__shell
-            button.new-button.new-button-type-city.new-button-action-check(data-action='cityLink')
-              a(href='//bunnylove.ru/')
-                | Самара
-            button.new-button.new-button-type-city(data-action='cityLink')
-              a(href='//kazan.bunnylove.ru/')
-                | Казань
-
     //новое всплывающее окно    
     .city-confirmation-modal
       span.city-confirmation-modal__text Ваш город 
@@ -712,7 +694,6 @@ html
         button.button.button_bordered.button_style-1.city-confirmation-modal__success-button(type="button" data-action="close")
           span Да
         a(href="#modal-cities" data-action="Modal:open").city-confirmation-modal__change-button Выбрать другой 
-
 
     main
       block content
@@ -1110,7 +1091,6 @@ html
     script(type='text/javascript', src=href+'/scripts/notifications.js')
 
     script(defer='' src='https://cdn.ravenjs.com/3.26.4/raven.min.js' crossorigin='anonymous')
-    script(defer='' src='/static/js/new.js')
     script(src='https://google.com/recaptcha/api.js' async='' defer='')
 
 

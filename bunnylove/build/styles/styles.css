@@ -4932,8 +4932,11 @@ body > .page:after {
   margin-top: -10px;
   padding: 30px 30px 0 30px; }
 
-button {
+button, input {
   font-family: inherit; }
+
+input {
+  font-weight: inherit; }
 
 /* line 3721, ../sass/css.scss */
 .tabs__item {
