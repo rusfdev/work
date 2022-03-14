@@ -1,0 +1,30 @@
+.mobile-nav
+  .mobile-nav__inner(data-scroll-lock-scrollable)
+    .container.mobile-nav__container
+      nav.mobile-nav__element 
+        ul.mobile-nav__list 
+          li.mobile-nav__item 
+            a.mobile-nav__link(href="#about" data-action="ScrollToAnchor")
+              span=$i18n.header.nav[0]
+              span=$i18n.header.nav[0] 
+          li.mobile-nav__item 
+            a.mobile-nav__link(href="#process" data-action="ScrollToAnchor")
+              span=$i18n.header.nav[1]
+              span=$i18n.header.nav[1] 
+          li.mobile-nav__item 
+            a.mobile-nav__link(href="#services" data-action="ScrollToAnchor") 
+              span=$i18n.header.nav[2]
+              span=$i18n.header.nav[2] 
+          li.mobile-nav__item 
+            a.mobile-nav__link(href="#solutions" data-action="ScrollToAnchor") 
+              span=$i18n.header.nav[3]
+              span=$i18n.header.nav[3] 
+          li.mobile-nav__item 
+            a.mobile-nav__link(href="#faq" data-action="ScrollToAnchor") 
+              span=$i18n.header.nav[4]
+              span=$i18n.header.nav[4] 
+
+      a(href="#modal-get-in-touch" data-action="Modal:open").button.mobile-nav__contact-button
+        span.button__front=$i18n.header.contact
+        span.button__back
+    

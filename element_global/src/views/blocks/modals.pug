@@ -1,0 +1,36 @@
+.modal-wrapper#modal-wfn(data-scroll-lock-scrollable) 
+  .modal-close-area(data-action="Modal:close")
+  .modal-block.modal-wfn
+    .modal-block__background
+    .modal-block__content
+      h2.modal-wfn__title #WFH
+      .modal-wfn__text
+        each text in $i18n.wfn.text
+          p=text
+
+      .modal-wfn__button
+        button(type="button" data-action="Modal:close").button
+          span.button__front=$i18n.wfn.button
+          span.button__back
+
+.modal-wrapper#modal-success(data-scroll-lock-scrollable)
+  .modal-close-area(data-action="Modal:close")
+  .modal-block.modal-success
+    .modal-block__background
+    .modal-block__content
+      .modal-success__text
+        each text in $i18n.success.text
+          p=text
+
+      .modal-success__button
+        button(type="button" data-action="Modal:close").button
+          span.button__front=$i18n.success.button
+          span.button__back
+
+.modal-wrapper#modal-get-in-touch(data-scroll-lock-scrollable)
+  .modal-close-area(data-action="Modal:close")
+  .modal-block.modal-get-in-touch
+    button.modal-close(data-action="Modal:close")
+    .modal-block__background.modal-get-in-touch__background
+    .modal-block__content
+      include form

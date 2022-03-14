@@ -1,0 +1,38 @@
+.form-block
+  h2.h1.form-block__title=$i18n.contacts.title
+  .form-block__content
+    p.form-block__description=$i18n.contacts.description
+    
+    form(action="/send.php" method="post" enctype="multipart/form-data" novalidate data-validation).form
+      .form-element.form__element
+        .select 
+          select(name="subject" required)
+            option.placeholder(value='') #{$i18n.contacts.form.subject.name}
+            each subject in $i18n.contacts.form.subject.subjects
+              option.value(value=subject)=subject
+      .form-element.form__element
+        .input
+          input(type="text" name="name" required)
+          span=$i18n.contacts.form.name
+      .form-element.form__element
+        .input
+          input(type="text" name='email' required data-validator='email')
+          span=$i18n.contacts.form.email
+      .form-element.form__element
+        .input
+          textarea(name='message')
+          span=$i18n.contacts.form.message
+      .form-element.form__file
+        -var index = Math.round(Math.random() * 1000);
+        .input-file
+          input(type="file" name="file" id=index)
+          label.input-file-element(data-custom-interaction for=index)
+            span=$i18n.contacts.form.file
+          .input-file-selected(data-custom-interaction)
+            img.icon(src="/assets/images/icons/file.svg", alt="icon")
+            span 
+
+      .form__submit 
+        button(type="submit").button
+          span.button__front=$i18n.contacts.button
+          span.button__back

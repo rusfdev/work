@@ -1,0 +1,39 @@
+footer.footer
+  .container
+    .footer__content
+      a(href=mainUrl).logo.footer__logo
+        img(src="/assets/images/logos/logo.svg", alt="logo")
+      .footer__nav-group
+        ul.footer-list 
+          li.footer-list__item 
+            a.footer-list__link.gradient-link(href="#about" data-action="ScrollToAnchor")
+              span=$i18n.header.nav[0]
+              span=$i18n.header.nav[0]
+          li.footer-list__item 
+            a.footer-list__link.gradient-link(href="#process" data-action="ScrollToAnchor")
+              span=$i18n.header.nav[1]
+              span=$i18n.header.nav[1]
+        ul.footer-list 
+          li.footer-list__item 
+            a.footer-list__link.gradient-link(href="#solutions" data-action="ScrollToAnchor")
+              span=$i18n.header.nav[3]
+              span=$i18n.header.nav[3]
+          li.footer-list__item 
+            a.footer-list__link.gradient-link(href="#faq" data-action="ScrollToAnchor")
+              span=$i18n.header.nav[4]
+              span=$i18n.header.nav[4]
+
+      .footer__right-group
+        ul.footer-list 
+          li.footer-list__item 
+            a(href=mainUrl).footer-list__link.gradient-link
+              span welovesoft.net
+              span welovesoft.net
+          li.footer-list__item 
+            a(href="tel:79160182031").footer-list__link.gradient-link
+              span +7 916 018 20 31
+              span +7 916 018 20 31
+
+    .footer__bottom
+      .footer__bottom-inner
+        span.footer__copyright © 2022 We Love Soft LLC

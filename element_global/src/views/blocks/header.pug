@@ -1,0 +1,72 @@
+-const langs = ['en', 'ru'];
+
+header.header
+  .container 
+    .header__container
+      a(href=mainUrl).logo.header__logo.header__fixed-hidden
+        img(src="/assets/images/logos/logo.svg", alt="logo")
+      nav.header-nav
+        ul.header-nav__list
+          li.header-nav__item 
+            a.header-nav__link.gradient-link(href="#about" data-action="ScrollToAnchor")
+              span=$i18n.header.nav[0]
+              span=$i18n.header.nav[0]
+          li.header-nav__item 
+            a.header-nav__link.gradient-link(href="#process" data-action="ScrollToAnchor")
+              span=$i18n.header.nav[1]
+              span=$i18n.header.nav[1]
+          li.header-nav__item 
+            a.header-nav__link.gradient-link(href="#services" data-action="ScrollToAnchor")
+              span=$i18n.header.nav[2]
+              span=$i18n.header.nav[2]
+          li.header-nav__item 
+            a.header-nav__link.gradient-link(href="#solutions" data-action="ScrollToAnchor")
+              span=$i18n.header.nav[3]
+              span=$i18n.header.nav[3]
+          li.header-nav__item 
+            a.header-nav__link.gradient-link(href="#faq" data-action="ScrollToAnchor")
+              span=$i18n.header.nav[4]
+              span=$i18n.header.nav[4]
+          
+          li.header-nav__item 
+            .lang-toggle.header__lang-toggle
+              ul.lang-toggle__list
+                each lang in langs
+                  li.lang-toggle__item
+                    -const path = `${lang === defaultLang ? '/' : '/' + lang + '/'}`
+                    if lang === $i18n.lang
+                      .lang-toggle__element.lang-toggle__element_selected=lang
+                    else 
+                      a(href=path).gradient-link.lang-toggle__element
+                        span=lang
+                        span=lang
+
+      a(href="#modal-get-in-touch" data-action="Modal:open").button.header__contact-button
+        span.button__front=$i18n.header.contact
+        span.button__back
+
+      .header__right
+        a(href="#modal-wfn" data-action="Modal:open").wfn-button.header__wfn.header__fixed-hidden #WFH
+
+        .lang-toggle.header__lang-toggle.d-xl-none.header__fixed-hidden
+          ul.lang-toggle__list
+            each lang in langs
+              li.lang-toggle__item
+                -const path = `${lang === defaultLang ? '/' : '/' + lang + '/'}`
+                if lang === $i18n.lang
+                  .lang-toggle__element.lang-toggle__element_selected=lang
+                else 
+                  a(href=path).gradient-link.lang-toggle__element
+                    span=lang
+                    span=lang
+
+        button(type="button" data-action="Nav:trigger").nav-burger
+          span 
+          span 
+          span
+
+      
+
+      
+
+

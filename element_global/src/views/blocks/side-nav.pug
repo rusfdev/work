@@ -1,0 +1,23 @@
+.side-nav 
+  .side-nav__trigger.side-nav__round(data-custom-interaction)
+    .side-nav__trigger-burger
+      span 
+      span 
+      span
+
+  ul.side-nav__list
+    li.side-nav__item 
+      a(href="#about" data-action="ScrollToAnchor").side-nav__link.side-nav__round 
+        span=$i18n.header.nav[0]
+    li.side-nav__item 
+      a(href="#process" data-action="ScrollToAnchor").side-nav__link.side-nav__round
+        span=$i18n.header.nav[1]
+    li.side-nav__item 
+      a(href="#services" data-action="ScrollToAnchor").side-nav__link.side-nav__round
+        span=$i18n.header.nav[2]
+    li.side-nav__item 
+      a(href="#solutions" data-action="ScrollToAnchor").side-nav__link.side-nav__round
+        span=$i18n.header.nav[3]
+    li.side-nav__item 
+      a(href="#faq" data-action="ScrollToAnchor").side-nav__link.side-nav__round
+        span=$i18n.header.nav[4]
