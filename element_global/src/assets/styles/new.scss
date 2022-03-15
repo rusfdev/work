@@ -91,7 +91,18 @@ $trs: .15s;
     h1, h2, h3, h4, h5, h6 {
       font-weight: 500;
       color: #000;
-      margin-bottom: 2rem;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    h1, h2, h3 {
+      margin: 2rem 0;
+    }
+    h4, h5, h6 {
+      margin: 1.5rem 0 1rem 0;
     }
     ul {
       &:not(:last-child) {
@@ -116,32 +127,22 @@ $trs: .15s;
         }
       }
     }
-    /* h2 {
-      font-size: 18px;
-    } */
+    p {
+      &:last-child {
+        margin: 0;
+      }
+    }
   }
   @media (min-width: 768px) {
     &__image {
       margin-bottom: 0;
     }
-    &__text {
-      /* h2 {
-        font-size: 22px;
-      } */
-    }
   }
   @media (min-width: 1200px) {
     &__text {
-      h1, h2, h3, h4, h5, h6 {
-        margin-bottom: 2.5rem;
+      h1, h2, h3 {
+        margin: 2.5rem 0;
       }
-    }
-  }
-  @media (min-width: 1600px) {
-    &__text {
-      /* h2 {
-        font-size: 30px;
-      } */
     }
   }
 }
