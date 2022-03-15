@@ -27,7 +27,7 @@ $trs: .15s;
     counter-reset: section;
   }
   &__item {
-    font-size: 18px;
+    font-size: 16px;
     color: #4D4D4D;
     font-weight: 500;
     &:before {
@@ -82,6 +82,11 @@ $trs: .15s;
     }
     &__item {
       font-size: 30px;
+    }
+  }
+  @media (max-width: 575px) {
+    &__button.h1 {
+      font-size: 24px;
     }
   }
 }
@@ -154,7 +159,6 @@ $trs: .15s;
 .heading-numbered-title {
   position: relative;
   margin-bottom: 30px;
-  font-size: 24px;
   &__index {
     display: inline-block;
     position: absolute;
@@ -182,10 +186,9 @@ $trs: .15s;
   }
   @media (min-width: 1200px) {
     margin-bottom: 20px;
-    font-size: 36px;
   }
-  @media (min-width: 1600px) {
-    font-size: 40px;
+  @media (max-width: 575px) {
+    font-size: 24px;
   }
 }
 
@@ -212,6 +215,8 @@ $trs: .15s;
   font-weight: 500;
   color: #000;
   display: inline-block;
+  text-align: left;
+  padding: 0;
   span {
     border-bottom: 1px solid #EA5432;
     transition: border-color $trs;
@@ -258,5 +263,39 @@ $trs: .15s;
   @media (min-width: 1600px) {
     --size: 80px;
     font-size: 24px;
+  }
+}
+
+.modal-case {
+  .modal-body {
+    padding: 120px 15px 50px 15px;
+  }
+  &__content {
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 500;
+      color: #000;
+    }
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .modal-body {
+      padding: 120px 70px 50px 70px;
+    }
+    &__content {
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    &__content {
+      p {
+        font-size: 20px;
+      }
+    }
   }
 }
