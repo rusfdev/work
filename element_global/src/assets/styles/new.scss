@@ -7,7 +7,7 @@ $trs: .15s;
     align-items: center;
     padding: 0;
     gap: 0.5em;
-    color: #4D4D4D;
+    color: #000;
     text-align: left;
     transition: color $trs;
     svg {
@@ -176,6 +176,7 @@ $trs: .15s;
   @media (min-width: 768px) and (max-width: 1199px) {
     padding-left: 1.5em;
     &__index {
+      left: 0;
       transform: translate(0, -50%);
     }
   }
