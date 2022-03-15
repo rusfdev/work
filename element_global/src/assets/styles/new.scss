@@ -268,7 +268,7 @@ $trs: .15s;
 
 .modal-case {
   .modal-body {
-    padding: 120px 15px 50px 15px;
+    padding: 100px 15px 50px 15px;
   }
   &__content {
     h1, h2, h3, h4, h5, h6 {
@@ -283,7 +283,7 @@ $trs: .15s;
   }
   @media (min-width: 768px) {
     .modal-body {
-      padding: 120px 70px 50px 70px;
+      padding: 100px 70px 50px 70px;
     }
     &__content {
       p {
