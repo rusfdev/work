@@ -22,7 +22,6 @@ $trs: .15s;
     }
   }
   &__list {
-    padding-left: 20px;
     counter-reset: section;
   }
   &__item {
@@ -52,6 +51,7 @@ $trs: .15s;
   @media (min-width: 768px) {
     &__item {
       font-size: 20px;
+      padding-left: 20px;
     }
   }
   @media (min-width: 1200px) {
