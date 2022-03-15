@@ -4,7 +4,7 @@ block content
 
   section.section.mt-4
     .content-collapse 
-      button#collapse-button.content-collapse__button(data-toggle="collapse" data-target="#collapse-list" aria-expanded="true")
+      button#collapse-button.content-collapse__button.h1(data-toggle="collapse" data-target="#collapse-list" aria-expanded="true")
         span Содержание
         svg(width='10' height='7' viewBox='0 0 10 7' fill='none' stroke='currentColor' xmlns='http://www.w3.org/2000/svg')
           path(d='M1 1L5 5L9 1')
@@ -19,19 +19,19 @@ block content
         li.content-collapse__item
           a(href=localUrl+"/#section-item-4" data-action="ScrollToAnchor").content-collapse__link Части щековых дробилок
         li.content-collapse__item
-          a(href="").content-collapse__link Части для роторных дробилок
+          a(href=localUrl+"/#section-item-5" data-action="ScrollToAnchor").content-collapse__link Части для роторных дробилок
         li.content-collapse__item
-          a(href="").content-collapse__link Запчасти валковых дробилок
+          a(href=localUrl+"/#section-item-6" data-action="ScrollToAnchor").content-collapse__link Запчасти валковых дробилок
         li.content-collapse__item
-          a(href="").content-collapse__link Запчасти грохотов и питателей
+          a(href=localUrl+"/#section-item-7" data-action="ScrollToAnchor").content-collapse__link Запчасти грохотов и питателей
         li.content-collapse__item
-          a(href="").content-collapse__link Части общепромышленного назначения
+          a(href=localUrl+"/#section-item-8" data-action="ScrollToAnchor").content-collapse__link Части общепромышленного назначения
         li.content-collapse__item
-          a(href="").content-collapse__link Стоимость запчастей для дробилок и грохотов
+          a(href=localUrl+"/#section-item-9" data-action="ScrollToAnchor").content-collapse__link Стоимость запчастей для дробилок и грохотов
         li.content-collapse__item
-          a(href="").content-collapse__link Индивидуальный инжиниринг
+          a(href=localUrl+"/#section-item-10" data-action="ScrollToAnchor").content-collapse__link Индивидуальный инжиниринг
         li.content-collapse__item
-          a(href="").content-collapse__link Гарантия и сроки поставки
+          a(href=localUrl+"/#section-item-11" data-action="ScrollToAnchor").content-collapse__link Гарантия и сроки поставки
 
   section#section-item-1.section.content-section
     .row.align-items-lg-center
@@ -50,7 +50,7 @@ block content
           p Преждевременный износ запчастей для дробилок влечет за собой остановку оборудования и убытки.
           p В некоторых случаях потери от простоя в десятки раз превышают стоимость самих деталей. Поэтому задача горных предприятий ремонтировать дробильное и сортировочное оборудование редко и только планово.
 
-        a(href="#").case-link.mt-4.mt-lg-5
+        a(href="#").case-link.mt-4
           span Кейс: Повышение ходимости футеровки дробилки «Уралмаш КСД 1750» от 22% до 100% 
 
   section.section.content-section
@@ -64,7 +64,7 @@ block content
         .content-section__text
           p Cтоимость частей Element в перерасчете на тонну переработанного материала ниже деталей от производителей горного оборудования до четырех раз. Узнайте, насколько вы можете увеличить ходимость футеровок для дробилок на вашем предприятии. Специалисты Element рассчитают, насколько вы можете увеличить межремонтный интервал дробильно-сортировочного оборудования (ДСО).
         
-        button(type="button" data-toggle="modal" data-target="#contact-us-modal").mt-4.mt-lg-5.rounded-button РАССЧИТАТЬ ХОДИМОСТЬ
+        button(type="button" data-toggle="modal" data-target="#contact-us-modal").mt-4.rounded-button РАССЧИТАТЬ ХОДИМОСТЬ
 
   section#section-item-2.section.content-section
     .row.align-items-lg-center
@@ -112,7 +112,7 @@ block content
           p Футеровки конуса, чаши, траверсы,  приводного  вала,  рамы, а также распределительные диски и плиты. 
           p Комплектующие для дробилок от Element — это гарантированная совместимость с любым типом дробильного оборудования, качественные материалы, полный контроль производственного цикла. 
         
-        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4.mt-lg-5
+        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4
           span.submit-button__wrapper
             span Подробнее
 
@@ -129,10 +129,10 @@ block content
           p THOR — технология модификации структуры марганцовистой стали. В расплавленный металл добавляется модификатор. Благодаря ему структура получается более однородной и плотной. Это также снижает вредные примеси и неметаллические включения, что увеличивает прочность изделия. 
           p Element применяет технологию THOR для производства броней для щековых, конусных и гирационных дробилок, а также литых изнашиваемых частей для питателей. 
         
-        a(href="#").case-link.mt-4.mt-lg-5
+        a(href="#").case-link.mt-4
           span Кейс: Испытания броней THOR от Element на дробилку «Уралмаш»
 
-        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4.mt-lg-5
+        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4
           span.submit-button__wrapper
             span Подробнее
 
@@ -153,7 +153,7 @@ block content
             .col Широкая складская программа: получите аварийные части в течение двух недель.
           p Полный список доступного оборудования к вашей дробилке от менеджера Element
         
-        button(type="button" data-toggle="modal" data-target="#contact-us-modal").mt-4.mt-lg-5.rounded-button ЗАПРОСИТЬ СПИСОК
+        button(type="button" data-toggle="modal" data-target="#contact-us-modal").mt-4.rounded-button ЗАПРОСИТЬ СПИСОК
 
   section#section-item-4.section.content-section
     .row.align-items-lg-center
@@ -179,7 +179,7 @@ block content
             li Сокращает времени простоя фабрики на перефутеровки
             li Снижает расходы фабрики
             
-        a(href="#").case-link.mt-4.mt-lg-5
+        a(href="#").case-link.mt-4
           span Кейс: Увеличена наработка футеровок щёк
   
   section.section.content-section
@@ -206,7 +206,7 @@ block content
           h3 Боковые футеровки, отбойные плиты и крепёж
           p Предлагаем стандартный крепёж – болты, гайки, шайбы, – и специальные крепёжные изделия: клинья, прижимные и поддерживающие планки. <br>Боковые футеровки рамы и отбойную плиту подвижной щеки изготавливаем из марганцовистой стали или износостойкой стали с высокой твёрдостью по Бринеллю.
         
-        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4.mt-lg-5
+        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4
           span.submit-button__wrapper
             span Подробнее
 
@@ -228,10 +228,10 @@ block content
           p Благодаря высокой степени снижения крупности они широко распространены в добыче угля и в отрасли нерудных материалов. Однако при невысокой удельной стоимости у роторных дробилок достаточно большой расход.
           p Применение различных по геометрии и сплаву изнашиваемых частей обеспечивает нужную производительность и характеристики готового продукта в каждом конкретном случае.
 
-        a(href="#").case-link.mt-4.mt-lg-5
+        a(href="#").case-link.mt-4
           span Кейс: Била Element для роторных дробилок прослужили в 4 раза дольше аналогов
 
-        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4.mt-lg-5
+        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4
           span.submit-button__wrapper
             span Подробнее
 
@@ -252,10 +252,10 @@ block content
           p Ремонт валковой дробилки в основном подразумевает замену бандажей или дробящих сегментов для валков — наиболее изнашиваемых частей дробящего механизма. Чем тверже руда или камень, тем раньше детали потребуют замены. 
           p Element производит изнашиваемые части для валковых прессов, а также  дробилок  с  гладкими, рифлеными и зубчатыми валками. 
 
-        a(href="#").case-link.mt-4.mt-lg-5
+        a(href="#").case-link.mt-4
           span Кейс: Уникальные части для валковой дробилки втрое снизили себестоимость переработки руды
 
-        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4.mt-lg-5
+        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4
           span.submit-button__wrapper
             span Подробнее
 
@@ -274,9 +274,121 @@ block content
       .content-section__content.order-md-2.col-10.offset-2.col-md-6.offset-md-0.col-lg-5.pl-lg-5
         .content-section__text
           p Element предлагает запасные части для грохотови питателей различных торговых марок, представленных на рынке. Специалисты изготовят необходимую запчасть по чертежу заказчика или спроектируют модернизированную версию по запросу клиента.
-          h4 Типы деталей для грохотов и питателей:
+          h5 Типы деталей для грохотов и питателей:
           p Корпуса подшипников, колосники из износостойких сталей, в том числе с наплавкой из биметалла, поперечные балки, перекладины, пружины, подшипники, футеровки, износостойкие пластины, виброопоры, лабиринтные уплотнения.
 
-        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4.mt-lg-5
+        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4
           span.submit-button__wrapper
             span Подробнее
+
+    .row.mt-5
+      .col-xl-6.offset-xl-3
+        .content-collapse 
+          button#collapse-button-1.content-collapse__button.h3(data-toggle="collapse" data-target="#collapse-content-1" aria-expanded="true")
+            span Запасные части
+            svg(width='10' height='7' viewBox='0 0 10 7' fill='none' stroke='currentColor' xmlns='http://www.w3.org/2000/svg')
+              path(d='M1 1L5 5L9 1')
+
+          #collapse-content-1.content-collapse__content.show(data-parent="#collapse-button-1")
+            p Горизонтальные грохоты, Наклонные грохоты, Грохоты с мультинаклоном, Пластинчатые питатели, Колосниковые питатели, Вибрационные питатели, Валковые питатели
+
+        .content-collapse.mt-4 
+          button#collapse-button-2.content-collapse__button.collapsed.h3(data-toggle="collapse" data-target="#collapse-content-2" aria-expanded="false")
+            span Просеивающие поверхности
+            svg(width='10' height='7' viewBox='0 0 10 7' fill='none' stroke='currentColor' xmlns='http://www.w3.org/2000/svg')
+              path(d='M1 1L5 5L9 1')
+
+          #collapse-content-2.content-collapse__content.collapse(data-parent="#collapse-button-2")
+            p Сита изготавливаем преимущественноиз синтетических материалов — резиныи полиуретана. По запросу клиента также производим проволочные сита и металлические панели, в том числе специального исполнения, например, жаропрочные.
+  
+  section#section-item-8.section.content-section
+    .row.align-items-lg-center
+      
+      .content-section__image.order-md-2.col-10.offset-2.col-md-6.offset-md-0.col-lg-6.offset-lg-1
+        .content-image.content-image_mobile-right
+          img(src=localUrl+"/assets/images/14-min.jpg", alt="image")
+
+      .col-11.offset-1.col-md-12.offset-md-0
+        .heading-numbered-title
+          span.heading-numbered-title__index 8
+          h2.heading-numbered-title__element Части общепромышленного<br> назначения
+
+      .content-section__content.order-md-2.col-10.col-md-6.col-lg-5.pl-lg-5
+        .content-section__text
+          p Части общепромышленного назначения от Element изготовлены по стандартам DIN, ISO и ГОСТ. Ассортимент включает подшипники, крепеж, клиноременные передачи, электрические и гидравлические компоненты, фильтры.
+          p Element знает составы машин, используемыхв горнорудной промышленности, поэтому части общепромышленного назначения в комплектес запасными и изнашиваемыми частями для дробильного, сортировочного, насосногои конвейерного оборудования в одном заказе.
+
+        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4
+          span.submit-button__wrapper
+            span Подробнее
+
+  section#section-item-9.section.content-section
+    .row.align-items-lg-center
+      
+      .content-section__image.order-md-2.col-10.col-md-6.col-lg-6.offset-lg-1
+        .content-image.content-image_mobile-left
+          img(src=localUrl+"/assets/images/15-min.jpg", alt="image")
+
+      .col-11.offset-1.col-md-12.offset-md-0
+        .heading-numbered-title
+          span.heading-numbered-title__index 9
+          h2.heading-numbered-title__element Стоимость запчастей<br> для дробилок и грохотов
+
+      .content-section__content.order-md-2.col-10.offset-2.col-md-6.offset-md-0.col-lg-5.pl-lg-5
+        .content-section__text
+          p По стоимости ДСО от Element занимают золотую середину между неоправданно дорогими частями от производителей оборудования и безымянными альтернативными деталями с непредсказуемым качеством. В среднем запчасти для дробилок и грохотов стоят на 30% дешевле OEM деталей при равной или превышающей ходимости. 
+  
+  section#section-item-10.section.content-section
+    .row.align-items-lg-center
+      
+      .content-section__image.order-md-2.col-10.offset-2.col-md-6.offset-md-0.col-lg-6.offset-lg-1
+        .content-image.content-image_mobile-right
+          img(src=localUrl+"/assets/images/16-min.jpg", alt="image")
+
+      .col-11.offset-1.col-md-12.offset-md-0
+        .heading-numbered-title
+          span.heading-numbered-title__index 10
+          h2.heading-numbered-title__element Инжиниринг<br> на заказ
+
+      .content-section__content.order-md-2.col-10.col-md-6.col-lg-5.pl-lg-5
+        .content-section__text
+          p Element предлагает не только полные аналоги деталей производителей оборудования, но и изделия, разработанные специально под потребности заказчиков.
+          p Индивидуальный инжиниринг, впервую очередь, призван увеличить экономическую эффективность оборудования.  С помощью индивидуального инжиниринга предприятия могут регулировать ходимость изнашиваемых частей. Повышение срока службы детали избавляетот регулярных простоев из-за перефутеровоки необходимости держать склад запасных броней. Кроме того, детали можно модифицировать так, что монтаж станет проще, а качество выходного материала выше.  
+          p Опираясь на задачи заказчиков и условия эксплуатации оборудования, мы определяем, что улучшить в детали. Так специалисты Element подбирают оптимальный материал и профиль, в том числе отсутствующие в линейке производителя оборудования.
+
+        button(type="button" data-toggle="modal" data-target="#contact-us-modal").submit-button.ml-0.mt-4
+          span.submit-button__wrapper
+            span Подробнее
+
+  section#section-item-11.section.content-section
+    .row.align-items-lg-center
+      
+      .content-section__image.order-md-2.col-10.col-md-6.col-lg-6.offset-lg-1
+        .content-image.content-image_mobile-left
+          img(src=localUrl+"/assets/images/17-min.jpg", alt="image")
+
+      .col-11.offset-1.col-md-12.offset-md-0
+        .heading-numbered-title
+          span.heading-numbered-title__index 11
+          h2.heading-numbered-title__element Гарантия<br> и сроки поставки
+
+      .content-section__content.order-md-2.col-10.offset-2.col-md-6.offset-md-0.col-lg-5.pl-lg-5
+        .content-section__text
+          p Element гарантирует конкретную наработку в часах или тоннах переработанного материала в зависимости от оборудования и условий эксплуатации. Инженеры могут предоставить обоснование срока окупаемости и показать прошлые проекты компании, демонстрирующие экономическую эффективность изделий бренда Element.
+  
+  section.section.content-section
+    .row.align-items-lg-center
+      
+      .content-section__image.order-md-3.col-10.offset-2.col-md-6.offset-md-0.col-lg-5.offset-lg-1
+        .content-image.content-image_mobile-right
+          img(src=localUrl+"/assets/images/18-min.jpg", alt="image")
+
+      .content-section__content.order-md-2.col-10.offset-1.col-md-6.offset-md-0
+        .content-section__text
+          h2 Складская программа
+          p Благодаря анализу базы установленного на горнодобывающих предприятиях оборудования, компания Element заполняет собственные склады востребованной продукцией, чтобы при заказе доставить детали в кратчайшие сроки.
+          p При наличии на складе по России время доставки составит от нескольких часов до недели.
+          p Если на складах Element нет нужной детали, компания принимает заказы на индивидуальное изготовление и доставку частей.
+          p Закажите запчасти для дробилок или грохотов через форму ниже, и мы свяжемся с вами в течение двух дней. К заявке можете прикрепить чертеж или заполненный опросный лист по частям ДСО: это ускорит подготовку коммерческого предложения для вас.
+
+        button(type="button" data-toggle="modal" data-target="#contact-us-modal").mt-4.rounded-button ОФОРМИТЬ ЗАКАЗ

@@ -2,20 +2,22 @@ $trs: .15s;
 
 .content-collapse {
   &__button {
-    font-size: 24px;
     font-weight: 500;
     display: inline-flex;
     align-items: center;
     padding: 0;
-    color: #ea5432;
-    gap: 20px;
+    gap: 0.5em;
+    color: #4D4D4D;
+    text-align: left;
+    transition: color $trs;
     svg {
-      width: 18px;
+      width: 0.5em;
       stroke-width: 1.25px;
       height: auto;
       transition: transform .25s;
     }
     &:not(.collapsed) {
+      color: #ea5432;
       svg {
         transform: rotate(-180deg);
       }
@@ -48,16 +50,19 @@ $trs: .15s;
       border-color: transparent;
     }
   }
+  &__content {
+    p {
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
   @media (min-width: 768px) {
     &__item {
-      font-size: 20px;
       padding-left: 20px;
     }
   }
   @media (min-width: 1200px) {
-    &__button {
-      font-size: 36px;
-    }
     &__list {
       padding-left: 48px;
     }
@@ -73,7 +78,6 @@ $trs: .15s;
   }
   @media (min-width: 1600px) {
     &__button {
-      font-size: 40px;
       gap: 25px;
     }
     &__item {
@@ -157,10 +161,10 @@ $trs: .15s;
     color: #C7C7C7;
     opacity: 0.4;
     font-weight: 900;
-    font-size: 4.75em;
+    font-size: 4.5em;
     top: 50%;
-    left: 0;
-    transform: translate(-50%, -50%);
+    left: -0.3em;
+    transform: translate(0, -50%);
   }
   &__element {
     color: #000;
