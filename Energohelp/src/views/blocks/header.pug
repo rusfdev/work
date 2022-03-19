@@ -1,0 +1,44 @@
+header.header 
+  .header-top
+    .container.header-top__container
+      .header-top__left
+        .header-top__item.header-top__item_location(data-custom-interaction)
+          svg.icon
+            use(xlink:href='./assets/images/icons/icons.svg#location')
+          span г. Москва
+          span.d-none.d-sm-inline , ул. Пестеля, 2А, офис 345
+      .header-top__center
+        a(href="#").header-top__item.header-top__item_skype
+          svg.icon
+            use(xlink:href='./assets/images/icons/icons.svg#skype')
+          span Energohelp
+      .header-top__right
+        a(href="#").header-top__item.header-top__item_whatsapp
+          svg.icon
+            use(xlink:href='./assets/images/icons/icons.svg#whatsapp')
+        a(href="#").header-top__item.header-top__item_viber
+          svg.icon
+            use(xlink:href='./assets/images/icons/icons.svg#viber')
+        a(href="tel:+70000000000").header-top__item +7 (000) 000-00-00
+
+  .header-main
+    .container.header-main__container
+      .header-main__logo
+        a(href="#").logo
+          img(src="./assets/images/logos/logo-white.png", alt="logo").logo__image
+    
+      nav.header-nav 
+        ul.header-nav__list 
+          li.header-nav__item 
+            a(href="#about" data-action="ScrollToAnchor").header-nav__link О нас
+          li.header-nav__item 
+            a(href="#services" data-action="ScrollToAnchor").header-nav__link Услуги
+          li.header-nav__item 
+            a(href="#" data-action="ScrollToAnchor").header-nav__link Партнеры
+          li.header-nav__item 
+            a(href="#" data-action="ScrollToAnchor").header-nav__link Контакты
+
+      .header-main__phone
+        a(href="tel:+70000000000") +7 (000) 000-00-00
+
+

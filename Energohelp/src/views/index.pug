@@ -1,0 +1,70 @@
+extends layouts/default
+
+block variables
+
+block content
+
+  section.section.home
+    .home__light
+
+    .home__lamp
+      img(src="./assets/images/lamp.png", alt="lamp")
+      
+    .image.image_cover.home__background
+      img.lazyload(data-src="./assets/images/screen.jpg", alt="bg")
+    .container.home__container 
+      .home__content 
+        img(src="./assets/images/logos/logo-white.png", alt="logo").home__logo
+        h1.home__title Электротехническая компания 
+        p.home__text Работаем в Москве и МО
+        a(href="#" data-action="ScrollToAnchor").button.home__button Заказать услугу
+
+  .message-label-section 
+    .container
+      h6.message-label-section__text Аварийная бригада 24/7  выезд в пределах Новой Москвы
+  
+  section#about.section.about
+    .container 
+      h2.mb-30 О нашей компании
+      .row 
+        .col-lg-6.about__text
+          p Электротехническая компания <strong>Energohelp</strong> специализируется в области услуг по выполнению электротехнических и слаботочных работ, а также получению технических условий для физичиских и юридических лиц.
+
+        .col-lg-6
+          .image.image_cover.about__image
+            img.lazyload(data-src="./assets/images/about/1.jpg", alt="image")
+            
+  section#services.section.services
+    .container 
+      h2.text-center.mb-50 Наши услуги
+      .services__container 
+        .services-block
+          .services-block__image.image.image_cover 
+            img.lazyload(data-src="./assets/images/services/1.jpg", alt="image")
+          .services-block__content 
+            p Подключение электричества на земельный участок, дом в населенном пункте, СНТ, ЖСК и т.д.
+        .services-block
+          .services-block__image.image.image_cover 
+            img.lazyload(data-src="./assets/images/services/2.jpg", alt="image")
+          .services-block__content
+            p Получим технические условия на любую мощность для физических и юридических лиц
+        .services-block
+          .services-block__image.image.image_cover 
+            img.lazyload(data-src="./assets/images/services/3.jpg", alt="image")
+          .services-block__content 
+            p Представим интересы СНТ и других юридических лиц при передаче электрохозяйства в сетевые компании ПАО “Россети”, АО “ОЭК”, “Мособлэнерго”
+        .services-block
+          .services-block__image.image.image_cover 
+            img.lazyload(data-src="./assets/images/services/4.jpg", alt="image")
+          .services-block__content 
+            p Выполним любые виды внутренних и наружных электротехнических работ
+        .services-block
+          .services-block__image.image.image_cover 
+            img.lazyload(data-src="./assets/images/services/5.jpg", alt="image")
+          .services-block__content 
+            p Спроектируем и выполним работы по слаботочным системам
+        .services-block
+          .services-block__image.image.image_cover 
+            img.lazyload(data-src="./assets/images/services/6.jpg", alt="image")
+          .services-block__content 
+            p Установим систему видеонаблюдения с возможностью удаленного доступа

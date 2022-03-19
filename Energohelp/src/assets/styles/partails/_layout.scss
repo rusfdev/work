@@ -1,0 +1,40 @@
+html, body {
+  height: 100%;
+  width: var(--page-width);
+  padding: 0 !important;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #09091F;
+  transition: background-color 1.5s ease-in-out;
+  overscroll-behavior-y: none;
+  &.light {
+    background-color: #323070;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: var(--window-safe-height);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.main {
+  flex: 1 1 100%;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.section {
+  position: relative;
+  margin: 0 0 var(--section-margin) 0;
+}

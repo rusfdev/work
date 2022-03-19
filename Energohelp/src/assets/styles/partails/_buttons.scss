@@ -1,0 +1,17 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 46px;
+  border-radius: 6px;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 0 30px;
+  transition: color var(--trs-1), background-color var(--trs-1);
+  &[data-touch], &[data-hover] {
+    background-color: var(--color-accent);
+    color: #0E1736;
+  }
+}

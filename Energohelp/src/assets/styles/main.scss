@@ -1,0 +1,38 @@
+//variables
+@import "partails/global";
+
+//theme
+@import "partails/theme";
+
+//css variables
+@import "partails/css-variables";
+
+//normalize
+@import "../../../node_modules/normalize.css/normalize";
+
+//create bootstrap grid
+@import "../../../node_modules/bootstrap/scss/containers";
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/utilities/api";
+
+@import "modules/lazysizes";
+
+@import "partails/basic";
+
+@import "partails/typography";
+
+@import "partails/layout";
+
+@import "partails/components";
+
+@import 'partails/helpers';
+
+@import 'partails/buttons';
+
+@import "partails/form";
+
+@import 'partails/blocks';
+
+@import 'partails/header';
+
+@import 'partails/footer';

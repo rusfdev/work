@@ -1,0 +1,36 @@
+//images
+.image {
+  display: block;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &_contain, &_cover {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+  &_cover {
+    overflow: hidden;
+    img {
+      object-fit: cover;
+    }
+  }
+  &_contain {
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.logo {
+  display: block;
+  width: 108px;
+  &__image {
+    width: 100%;
+  }
+}

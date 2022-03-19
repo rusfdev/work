@@ -1,0 +1,53 @@
+:root {
+  --container-padding-x: 15px;
+  --grid-gutter-width: 30px;
+
+  --scrollbar-width: var(--scrollbar-width-property, 0px);
+  --window-safe-height: var(--window-safe-height-property, 100vh);
+  --window-min-width: 360px;
+  --window-width: max(100vw, var(--window-min-width));
+  --page-width: calc(var(--window-width) - var(--scrollbar-width));
+  --container-width: #{map-get($container-max-widths, xxl)};
+  --content-width: calc(var(--container-width) - var(--container-padding-x) * 2);
+  --content-fields-width: calc((var(--page-width) - var(--content-width)) / 2);
+
+  --screen-max-height: calc(var(--page-width) * 0.625);
+  
+  @include media-breakpoint-down(xxl) {
+    --container-width: #{map-get($container-max-widths, xl)};
+  }
+
+  @include media-breakpoint-down(xl) {
+    --container-width: #{map-get($container-max-widths, lg)};
+  }
+
+  @include media-breakpoint-down(lg) {
+    --container-width: #{map-get($container-max-widths, md)};
+    --screen-max-height: calc(var(--page-width) * 1.25);
+  }
+
+  @include media-breakpoint-down(md) {
+    --container-width: #{map-get($container-max-widths, sm)};
+  }
+
+  @include media-breakpoint-down(sm) {
+    --container-width: var(--page-width);
+    --screen-max-height: calc(var(--page-width) * 2);
+    --container-padding-x: 20px;
+    --grid-gutter-width: 16px;
+  }
+
+  //animations
+  --animation-duration-1: 150ms;
+  --animation-duration-2: 300ms;
+  --animation-duration-3: 500ms;
+  --animation-duration-4: 1000ms;
+  --trs-1: var(--animation-duration-1) ease-out;
+  --trs-2: var(--animation-duration-2) ease-out;
+  --trs-3: var(--animation-duration-3) ease-out;
+  --trs-4: var(--animation-duration-4) ease-out;
+
+  --header-height: 80px;
+  --header-top-height: 30px;
+  --section-margin: 100px;
+}

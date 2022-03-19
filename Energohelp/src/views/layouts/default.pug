@@ -1,0 +1,40 @@
+include ../blocks/variables
+block variables
+doctype html
+html(lang='ru')
+  head
+    meta(charset="utf-8")
+    title #{title}
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='format-detection' content='telephone=no')
+    meta(name='description' content='')
+    //color
+    meta(name="theme-color" content="#323070")
+    //favicons
+    link(rel='shortcut icon' href=`/assets/favicons/favicon.ico`)
+    link(rel='icon' type='image/png' sizes='16x16' href=`/assets/favicons/favicon-16x16.png`)
+    link(rel='icon' type='image/png' sizes='32x32' href=`/assets/favicons/favicon-32x32.png`)
+    link(rel='icon' type='image/png' sizes='48x48' href=`/assets/favicons/favicon-48x48.png`)
+    link(rel='icon' type='image/png' sizes='228x228' href=`/assets/favicons/coast-228x228.png`)
+    //open graph
+    meta(property='og:title' content='Заголовок сайта')
+    meta(property='og:site_name' content='Имя сайта')
+    meta(property='og:url' content='') 
+    meta(property='og:description' content='Описание сайта')
+    meta(property='og:image' content='')
+    //fonts
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+    //styles
+    link(rel="stylesheet" href="./assets/styles/main.css")
+
+  body(style="opacity: 0; visibility: 0;")
+    .wrapper
+      include ../blocks/header
+      main.main
+        block content
+      include ../blocks/footer
+    
+    //scripts
+    script(src="./assets/scripts/main.js")
