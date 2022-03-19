@@ -7998,7 +7998,7 @@ function PlayStartAnimation() {
   }, {
     scale: scale,
     duration: 1.5,
-    ease: 'power1.inOut',
+    ease: 'power1.out',
     onStart: function onStart() {
       document.body.classList.add('light');
     },

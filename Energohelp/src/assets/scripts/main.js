@@ -45,7 +45,7 @@ function PlayStartAnimation() {
       { autoAlpha: 0 }, { autoAlpha: 1, duration: sDur[2] })
     .fromTo(lightEl, 
       { scale: 0.2 },
-      { scale: scale, duration: 1.5, ease: 'power1.inOut', 
+      { scale: scale, duration: 1.5, ease: 'power1.out', 
         onStart: () => {
           document.body.classList.add('light');
         },
