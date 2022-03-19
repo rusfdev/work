@@ -12,6 +12,7 @@
     margin-bottom: 20px;
   }
   &__contacts-item {
+    display: flex;
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -42,13 +43,14 @@
   }
   &__right-top {
     display: flex;
-    gap: 20px 80px;
+    gap: 30px 80px;
+    margin-bottom: 30px;
   }
   &__right-bottom {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px 20px;
+    gap: 15px 20px;
   }
   &__privacy {
     font-size: 12px;
@@ -62,6 +64,26 @@
     font-size: 12px;
     color: rgba(255, 255, 255, 0.5);
   }
+  @include media-breakpoint-down(lg) {
+    &__container {
+      gap: 60px;
+    }
+    &__right-top {
+      flex-wrap: wrap;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 60px 0;
+    &__container {
+      display: block;
+    }
+    &__left {
+      margin-bottom: 30px;
+    }
+    &__button {
+      display: none;
+    }
+  }
 }
 
 .footer-nav {
@@ -69,11 +91,22 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  &__item {
+    display: flex;
   }
   &__link {
     transition: color var(--trs-1);
     &[data-touch], &[data-hover] {
       color: #fff;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

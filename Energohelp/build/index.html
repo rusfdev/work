@@ -36,42 +36,60 @@
               <div class="header-top__item header-top__item_location" data-custom-interaction>
                 <svg class="icon">
                   <use xlink:href="./assets/images/icons/icons.svg#location"></use>
-                </svg><span>г. Москва</span><span class="d-none d-sm-inline">, ул. Пестеля, 2А, офис 345</span>
+                </svg><span>г. Москва</span><span class="d-none d-md-inline">, ул. Пестеля, 2А, офис 345</span>
               </div>
             </div>
             <div class="header-top__center"><a class="header-top__item header-top__item_skype" href="#">
                 <svg class="icon">
                   <use xlink:href="./assets/images/icons/icons.svg#skype"></use>
                 </svg><span>Energohelp</span></a></div>
-            <div class="header-top__right"><a class="header-top__item header-top__item_whatsapp" href="#">
+            <div class="header-top__right" data-interaction-group><a class="header-top__item header-top__item_phone" href="tel:+70000000000">
+                <svg class="icon">
+                  <use xlink:href="./assets/images/icons/icons.svg#phone"></use>
+                </svg><span>+7 (000-00) 0-00-00</span></a><a class="header-top__item header-top__item_whatsapp" href="#">
                 <svg class="icon">
                   <use xlink:href="./assets/images/icons/icons.svg#whatsapp"></use>
                 </svg></a><a class="header-top__item header-top__item_viber" href="#">
                 <svg class="icon">
                   <use xlink:href="./assets/images/icons/icons.svg#viber"></use>
-                </svg></a><a class="header-top__item" href="tel:+70000000000">+7 (000-00) 0-00-00</a></div>
+                </svg></a></div>
           </div>
         </div>
         <div class="header-main">
           <div class="container header-main__container">
-            <div class="header-main__logo"><a class="logo" href="#"><img class="logo__image" src="./assets/images/logos/logo-white.png" alt="logo"></a></div>
+            <div class="header-main__logo"><a class="logo" href="/"><img class="logo__image" src="./assets/images/logos/logo-white.png" alt="logo"></a></div>
             <nav class="header-nav">
               <ul class="header-nav__list">
-                <li class="header-nav__item"> <a class="header-nav__link" href="#about" data-action="ScrollToAnchor">О нас</a></li>
-                <li class="header-nav__item"> <a class="header-nav__link" href="#services" data-action="ScrollToAnchor">Услуги</a></li>
-                <li class="header-nav__item"> <a class="header-nav__link" href="#partners" data-action="ScrollToAnchor">Партнеры</a></li>
-                <li class="header-nav__item"> <a class="header-nav__link" href="#contacts" data-action="ScrollToAnchor">Контакты</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#about" data-action="ScrollToAnchor">О нас</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#services" data-action="ScrollToAnchor">Услуги</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#partners" data-action="ScrollToAnchor">Партнеры</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#contacts" data-action="ScrollToAnchor">Контакты</a></li>
               </ul>
             </nav>
             <div class="header-main__phone"><a class="header-main__phone-link" href="tel:+70000000000">+7 (000-00) 0-00-00</a></div>
+            <button class="nav-burger" type="button" data-action="Nav:trigger"><span> </span><span> </span><span></span></button>
           </div>
         </div>
       </header>
+      <div class="mobile-nav" data-scroll-lock-scrollable>
+        <div class="mobile-nav__inner">
+          <div class="container mobile-nav__container">
+            <nav class="mobile-nav__element">
+              <ul class="mobile-nav__list">
+                <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#about" data-action="ScrollToAnchor">О нас</a></li>
+                <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#services" data-action="ScrollToAnchor">Услуги</a></li>
+                <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#partners" data-action="ScrollToAnchor">Партнеры</a></li>
+                <li class="mobile-nav__item"> <a class="mobile-nav__link" href="#contacts" data-action="ScrollToAnchor">Контакты</a></li>
+              </ul>
+            </nav><a class="mobile-nav__phone" href="tel:+70000000000">+7 (000-00) 0-00-00</a>
+          </div>
+        </div>
+      </div>
       <main class="main">
         <section class="section home">
           <div class="home__light"></div>
           <div class="home__lamp"><img src="./assets/images/lamp.png" alt="lamp"></div>
-          <div class="image image_cover home__background"><img class="lazyload" data-src="./assets/images/screen.jpg" alt="bg"></div>
+          <div class="image image_cover home__background"><img class="lazyload" src="#" data-src="./assets/images/screen.jpg" alt="bg"></div>
           <div class="container home__container">
             <div class="home__content"> <img class="home__logo home__animated-item" src="./assets/images/logos/logo-white.png" alt="logo">
               <h1 class="home__title home__animated-item">Электротехническая компания </h1>
@@ -86,53 +104,53 @@
         </div>
         <section class="section about" id="about">
           <div class="container">
-            <h2 class="mb-30">О нашей компании</h2>
+            <h2 class="mb-20 mb-lg-30">О нашей компании</h2>
             <div class="row">
-              <div class="col-lg-6 about__text">
+              <div class="col-lg-6 about__text mb-40 mb-lg-0">
                 <p>Электротехническая компания <strong>Energohelp</strong> специализируется в области услуг по выполнению электротехнических и слаботочных работ, а также получению технических условий для физичиских и юридических лиц.</p>
               </div>
               <div class="col-lg-6">
-                <div class="image image_cover about__image"><img class="lazyload" data-src="./assets/images/about/1.jpg" alt="image"></div>
+                <div class="image image_cover about__image"><img class="lazyload" src="#" data-src="./assets/images/about/1.jpg" alt="image"></div>
               </div>
             </div>
           </div>
         </section>
         <section class="section services" id="services">
           <div class="container">
-            <h2 class="text-center mb-50">Наши услуги</h2>
+            <h2 class="text-md-center mb-30 mb-lg-50">Наши услуги</h2>
             <div class="services__container">
               <div class="services-block">
-                <div class="services-block__image image image_cover"> <img class="lazyload" data-src="./assets/images/services/1.jpg" alt="image"></div>
+                <div class="services-block__image image image_cover"> <img class="lazyload" src="#" data-src="./assets/images/services/1.jpg" alt="image"></div>
                 <div class="services-block__content">
                   <p>Подключение электричества на земельный участок, дом в населенном пункте, СНТ, ЖСК и т. д.</p>
                 </div>
               </div>
               <div class="services-block">
-                <div class="services-block__image image image_cover"> <img class="lazyload" data-src="./assets/images/services/2.jpg" alt="image"></div>
+                <div class="services-block__image image image_cover"> <img class="lazyload" src="#" data-src="./assets/images/services/2.jpg" alt="image"></div>
                 <div class="services-block__content">
                   <p>Получим технические условия на любую мощность для физических и юридических лиц</p>
                 </div>
               </div>
               <div class="services-block">
-                <div class="services-block__image image image_cover"> <img class="lazyload" data-src="./assets/images/services/3.jpg" alt="image"></div>
+                <div class="services-block__image image image_cover"> <img class="lazyload" src="#" data-src="./assets/images/services/3.jpg" alt="image"></div>
                 <div class="services-block__content">
                   <p>Представим интересы СНТ и других юридических лиц при передаче электрохозяйства в сетевые компании ПАО «Россети», АО «ОЭК», «Мособлэнерго»</p>
                 </div>
               </div>
               <div class="services-block">
-                <div class="services-block__image image image_cover"> <img class="lazyload" data-src="./assets/images/services/4.jpg" alt="image"></div>
+                <div class="services-block__image image image_cover"> <img class="lazyload" src="#" data-src="./assets/images/services/4.jpg" alt="image"></div>
                 <div class="services-block__content">
                   <p>Выполним любые виды внутренних и наружных электротехнических работ</p>
                 </div>
               </div>
               <div class="services-block">
-                <div class="services-block__image image image_cover"> <img class="lazyload" data-src="./assets/images/services/5.jpg" alt="image"></div>
+                <div class="services-block__image image image_cover"> <img class="lazyload" src="#" data-src="./assets/images/services/5.jpg" alt="image"></div>
                 <div class="services-block__content">
                   <p>Спроектируем и выполним работы по слаботочным системам</p>
                 </div>
               </div>
               <div class="services-block">
-                <div class="services-block__image image image_cover"> <img class="lazyload" data-src="./assets/images/services/6.jpg" alt="image"></div>
+                <div class="services-block__image image image_cover"> <img class="lazyload" src="#" data-src="./assets/images/services/6.jpg" alt="image"></div>
                 <div class="services-block__content">
                   <p>Установим систему видеонаблюдения с возможностью удаленного доступа</p>
                 </div>
@@ -143,9 +161,9 @@
         <section class="section section-meter">
           <div class="container">
             <div class="meter-box">
-              <div class="image image_cover meter-box__background"> <img class="lazyload" data-src="./assets/images/meter-bg.jpg" alt="bg"></div>
+              <div class="image image_cover meter-box__background"> <img class="lazyload" src="#" data-src="./assets/images/meter-bg.jpg" alt="bg"></div>
               <div class="meter-box__container">
-                <div class="meter-box__image"><img class="lazyload" data-src="./assets/images/meter.png" alt="image"></div>
+                <div class="meter-box__image"><img class="lazyload" src="#" data-src="./assets/images/meter.png" alt="image"></div>
                 <div class="meter-box__content">
                   <h2 class="meter-box__title">Счетчики Миртек</h2>
                   <p class="meter-box__text">Разберемся с показаниями счетчиков Миртек, перепрограммируем или заменим пульт.</p>
@@ -156,34 +174,34 @@
         </section>
         <section class="section partners" id="partners">
           <div class="container">
-            <h2 class="mb-50">Наши партнеры</h2>
+            <h2 class="text-center text-sm-start mb-50">Наши партнеры</h2>
             <div class="partners__container">
               <div class="partners__item" data-custom-interaction>
-                <div class="image"><img class="lazyload" data-src="./assets/images/partners/p1_1.png" alt="image"></div>
-                <div class="image"><img class="lazyload" data-src="./assets/images/partners/p1_2.png" alt="image"></div>
+                <div class="image"><img class="lazyload" src="#" data-src="./assets/images/partners/p1_1.png" alt="image"></div>
+                <div class="image"><img class="lazyload" src="#" data-src="./assets/images/partners/p1_2.png" alt="image"></div>
               </div>
               <div class="partners__item" data-custom-interaction>
-                <div class="image"><img class="lazyload" data-src="./assets/images/partners/p2_1.png" alt="image"></div>
-                <div class="image"><img class="lazyload" data-src="./assets/images/partners/p2_2.png" alt="image"></div>
+                <div class="image"><img class="lazyload" src="#" data-src="./assets/images/partners/p2_1.png" alt="image"></div>
+                <div class="image"><img class="lazyload" src="#" data-src="./assets/images/partners/p2_2.png" alt="image"></div>
               </div>
               <div class="partners__item" data-custom-interaction>
-                <div class="image"><img class="lazyload" data-src="./assets/images/partners/p3_1.png" alt="image"></div>
-                <div class="image"><img class="lazyload" data-src="./assets/images/partners/p3_2.png" alt="image"></div>
+                <div class="image"><img class="lazyload" src="#" data-src="./assets/images/partners/p3_1.png" alt="image"></div>
+                <div class="image"><img class="lazyload" src="#" data-src="./assets/images/partners/p3_2.png" alt="image"></div>
               </div>
               <div class="partners__item" data-custom-interaction>
-                <div class="image"><img class="lazyload" data-src="./assets/images/partners/p4_1.png" alt="image"></div>
-                <div class="image"><img class="lazyload" data-src="./assets/images/partners/p4_2.png" alt="image"></div>
+                <div class="image"><img class="lazyload" src="#" data-src="./assets/images/partners/p4_1.png" alt="image"></div>
+                <div class="image"><img class="lazyload" src="#" data-src="./assets/images/partners/p4_2.png" alt="image"></div>
               </div>
             </div>
           </div>
         </section>
         <section class="section form-section" id="form-section">
           <div class="container">
-            <div class="form-block"> <img class="lazyload form-block__image" data-src="./assets/images/man.png" alt="image">
+            <div class="form-block"> <img class="lazyload form-block__image" src="#" data-src="./assets/images/man.png" alt="image">
               <div class="form-block__content">
                 <div class="form-block__head">
                   <h2 class="mb-15">Свяжитесь с нами</h2>
-                  <p>Закажите услугу или узнайте предварительную стоимость. Введите свои данные и менеджер с вами свяжется</p>
+                  <p class="form-block__text">Закажите услугу или узнайте предварительную стоимость. Введите свои данные и менеджер с вами свяжется</p>
                 </div>
                 <form class="form form-block__form" action="#">
                   <div class="form__group row">
@@ -205,7 +223,7 @@
                         <input class="input__element" id="input-email" type="email" name="email" placeholder="Введите адрес эл.почты">
                       </div>
                     </div>
-                    <div class="form__element col-lg-6">
+                    <div class="form__element col-lg-6 mt-10 mt-lg-0">
                       <button class="button form__submit" type="submit">Отправить заявку</button>
                     </div>
                   </div>
@@ -216,9 +234,6 @@
           </div>
         </section>
         <section class="section contacts" id="contacts">
-          <div class="contacts__map">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A95634a831f65da38b5901c84654aed794389a60ea663459d7ca046660d8d869e&amp;source=constructor"></iframe>
-          </div>
           <div class="contacts__content">
             <h2 class="contacts__title">Контакты</h2>
             <ul class="contacts__list">
@@ -251,11 +266,15 @@
                   </svg><span>+7 (000-00) 0-00-00</span></a></li>
             </ul>
           </div>
+          <div class="contacts__map">
+            <iframe class="d-none d-md-block" src="https://yandex.ru/map-widget/v1/?um=constructor%3A75f3c66f09089d8d5f4475ccfe5cff124ed4d64e48841f13233d9bd68ebf9add&amp;source=constructor"></iframe>
+            <iframe class="d-md-none" src="https://yandex.ru/map-widget/v1/?um=constructor%3A86449acb3914fe665c3ec5502669957e3708837049112298bea07def88e14fc7&amp;amp;source=constructor"></iframe>
+          </div>
         </section>
       </main>
       <footer class="footer">
         <div class="container footer__container">
-          <div class="footer__left"> <a class="logo footer__logo" href="#"><img class="logo__image" src="./assets/images/logos/logo-white.png" alt="logo"></a>
+          <div class="footer__left"> <a class="logo footer__logo" href="/"><img class="logo__image" src="./assets/images/logos/logo-white.png" alt="logo"></a>
             <ul class="footer__contacts-list">
               <li class="footer__contacts-item"> <a class="footer__contacts-element" href="tel:70000000000">
                   <svg class="icon">

@@ -7953,12 +7953,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Dev = window.location.host === 'localhost:3000';
+Object(_modules_test_screen__WEBPACK_IMPORTED_MODULE_4__["default"])();
 document.addEventListener('DOMContentLoaded', function () {
   new _modules_custom_interaction__WEBPACK_IMPORTED_MODULE_1__["default"]({
     targets: ['a', 'button']
   });
   ScrollToAnchor.init();
   Header.init();
+  Nav.init();
+  InteractionGroup();
 });
 window.addEventListener('load', function () {
   setTimeout(function () {
@@ -7975,7 +7978,9 @@ function PlayStartAnimation() {
   var size1 = lightEl.getBoundingClientRect().width;
   var size2 = wrapperEl.getBoundingClientRect().width;
   var scale = size2 / size1 * 2;
-  _modules_gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline().to(document.body, {
+  var animation = _modules_gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    paused: true
+  }).to(document.body, {
     autoAlpha: 1,
     duration: 0.5
   }).fromTo(lampEl, {
@@ -7984,7 +7989,7 @@ function PlayStartAnimation() {
   }, {
     x: 0,
     y: 0,
-    duration: 0.5,
+    duration: 0.75,
     ease: 'power2.out',
     onComplete: function onComplete() {
       lampEl.classList.add('active');
@@ -8014,16 +8019,46 @@ function PlayStartAnimation() {
     stagger: {
       each: 0.1
     }
-  }, '-=1.75').fromTo(animatedItems, {
-    x: -20
-  }, {
-    x: 0,
-    duration: 1,
-    ease: 'power2.out',
-    stagger: {
-      each: 0.1
-    }
-  }, '<');
+  }, '-=1.75');
+  var finalTimeline;
+
+  if (window.innerWidth >= _modules_breakpoints__WEBPACK_IMPORTED_MODULE_2__["default"].sm) {
+    finalTimeline = _modules_gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(animatedItems, {
+      x: -20
+    }, {
+      x: 0,
+      duration: 1,
+      ease: 'power2.out',
+      stagger: {
+        each: 0.1
+      }
+    });
+  } else {
+    finalTimeline = _modules_gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(animatedItems, {
+      y: -20
+    }, {
+      y: 0,
+      duration: 1,
+      ease: 'power2.out',
+      stagger: {
+        each: 0.1
+      }
+    });
+  }
+
+  animation.add(finalTimeline, '<').play();
+}
+
+function InteractionGroup() {
+  var _attr = 'data-interaction-group';
+  window.addEventListener('custom:mouseenter', function (event) {
+    var group = event.target.closest("[".concat(_attr, "]"));
+    if (group) group.classList.add('active');
+  });
+  window.addEventListener('custom:mouseleave', function (event) {
+    var group = event.target.closest("[".concat(_attr, "]"));
+    if (group) group.classList.remove('active');
+  });
 }
 
 var ScrollToAnchor = {
@@ -8043,7 +8078,8 @@ var ScrollToAnchor = {
     };
 
     var scrollEvent = function scrollEvent(targetElement) {
-      var scrollY = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      var fixedHeaderHeight = document.querySelector('.header-main').getBoundingClientRect().height;
+      var scrollY = targetElement.getBoundingClientRect().top + window.pageYOffset - fixedHeaderHeight;
       _this.inScroll = true;
       window.dispatchEvent(new CustomEvent("ScrollToAnchor"));
       if (_this.animation && _this.animation.isActive()) _this.animation.pause();
@@ -8060,28 +8096,31 @@ var ScrollToAnchor = {
   }
 };
 var Header = {
+  element: document.querySelector('.header'),
   init: function init() {
     var _this2 = this;
 
-    this.$element = document.querySelector('.header');
-
     this.checkState = function () {
-      var fixed = _this2.$element.classList.contains('header_fixed'),
-          hidden = _this2.$element.classList.contains('header_hidden'),
+      var fixed = _this2.element.classList.contains('header_fixed'),
+          hidden = _this2.element.classList.contains('header_hidden'),
           scrollTop = window.pageYOffset < _this2.oldScroll,
           scrollEnough = window.pageYOffset > _this2.height,
           visibleEnough = window.pageYOffset > window.innerHeight;
 
       if (scrollEnough && !fixed) {
-        _this2.$element.classList.add('header_fixed');
+        _this2.element.classList.add('header_fixed');
+
+        Nav.element.classList.add('header-is-fixed');
       } else if (!scrollEnough && fixed) {
-        _this2.$element.classList.remove('header_fixed');
+        _this2.element.classList.remove('header_fixed');
+
+        Nav.element.classList.remove('header-is-fixed');
       }
 
       if (!hidden && visibleEnough && (!scrollTop || ScrollToAnchor.inScroll)) {
-        _this2.$element.classList.add('header_hidden');
+        _this2.element.classList.add('header_hidden');
       } else if (hidden && (!visibleEnough || scrollTop && !ScrollToAnchor.inScroll)) {
-        _this2.$element.classList.remove('header_hidden');
+        _this2.element.classList.remove('header_hidden');
       }
 
       _this2.oldScroll = window.pageYOffset;
@@ -8092,9 +8131,36 @@ var Header = {
   },
 
   get height() {
-    return this.$element.getBoundingClientRect().height;
+    return this.element.getBoundingClientRect().height;
   }
 
+};
+var Nav = {
+  element: document.querySelector('.mobile-nav'),
+  trigger: document.querySelector('[data-action="Nav:trigger"]'),
+  state: false,
+  init: function init() {
+    var _this3 = this;
+
+    this.trigger.addEventListener('click', function () {
+      if (!_this3.state) _this3.open();else _this3.close();
+    });
+    window.addEventListener('ScrollToAnchor', function () {
+      if (_this3.state) _this3.close();
+    });
+  },
+  open: function open() {
+    this.state = true;
+    Object(scroll_lock__WEBPACK_IMPORTED_MODULE_6__["disablePageScroll"])();
+    this.trigger.classList.add('active');
+    this.element.classList.add('active');
+  },
+  close: function close() {
+    this.state = false;
+    Object(scroll_lock__WEBPACK_IMPORTED_MODULE_6__["enablePageScroll"])();
+    this.trigger.classList.remove('active');
+    this.element.classList.remove('active');
+  }
 };
 
 /***/ }),

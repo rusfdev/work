@@ -8,12 +8,17 @@ import { disablePageScroll, enablePageScroll }  from  'scroll-lock';
 
 const Dev = window.location.host === 'localhost:3000';
 
+testScreen();
+
 document.addEventListener('DOMContentLoaded', function() {
   new СustomInteraction({
     targets: ['a', 'button']
   });
   ScrollToAnchor.init();
   Header.init();
+  Nav.init();
+
+  InteractionGroup();
 });
 
 window.addEventListener('load', function() {
@@ -22,6 +27,7 @@ window.addEventListener('load', function() {
     PlayStartAnimation();
   }, 250);
 })
+
 
 function PlayStartAnimation() {
   const lampEl = document.querySelector('.home__lamp');
@@ -33,11 +39,11 @@ function PlayStartAnimation() {
   const size2 = wrapperEl.getBoundingClientRect().width;
   const scale = size2 / size1 * 2;
 
-  gsap.timeline()
+  const animation = gsap.timeline({ paused: true })
     .to(document.body, { autoAlpha: 1, duration: 0.5 })
     .fromTo(lampEl, 
       { x: -20, y: -20 }, 
-      { x: 0, y: 0, duration: 0.5, ease: 'power2.out', 
+      { x: 0, y: 0, duration: 0.75, ease: 'power2.out', 
         onComplete: () => {
           lampEl.classList.add('active');
         } 
@@ -54,14 +60,38 @@ function PlayStartAnimation() {
           lightEl.remove();
         }
       }, '<')
-
     .fromTo(animatedItems, 
       { autoAlpha: 0 }, 
       { autoAlpha: 1, duration: 1, stagger: { each: 0.1 } }, '-=1.75')
-    .fromTo(animatedItems, 
-      { x: -20 }, 
-      { x: 0, duration: 1, ease: 'power2.out', stagger: { each: 0.1 } }, '<')
+    
 
+  let finalTimeline;
+
+  if (window.innerWidth >= breakpoints.sm) {
+    finalTimeline = gsap.fromTo(animatedItems, 
+      { x: -20 }, 
+      { x: 0, duration: 1, ease: 'power2.out', stagger: { each: 0.1 } })
+  } else {
+    finalTimeline = gsap.fromTo(animatedItems, 
+      { y: -20 }, 
+      { y: 0, duration: 1, ease: 'power2.out', stagger: { each: 0.1 } })
+  }
+
+  animation.add(finalTimeline, '<').play();
+}
+
+function InteractionGroup() {
+  const _attr = 'data-interaction-group';
+
+  window.addEventListener('custom:mouseenter', (event) => {
+    const group = event.target.closest(`[${_attr}]`);
+    if (group) group.classList.add('active');
+  });
+
+  window.addEventListener('custom:mouseleave', (event) => {
+    const group = event.target.closest(`[${_attr}]`);
+    if (group) group.classList.remove('active');
+  });
 }
 
 const ScrollToAnchor = {
@@ -83,7 +113,8 @@ const ScrollToAnchor = {
     }
 
     const scrollEvent = (targetElement) => {
-      const scrollY = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const fixedHeaderHeight = document.querySelector('.header-main').getBoundingClientRect().height;
+      const scrollY = targetElement.getBoundingClientRect().top + window.pageYOffset - fixedHeaderHeight;
 
       this.inScroll = true;
         
@@ -91,9 +122,13 @@ const ScrollToAnchor = {
 
       if (this.animation && this.animation.isActive()) this.animation.pause(); 
 
-      this.animation = gsap.to(window, { scrollTo: scrollY, duration: sDur[3], onComplete: () => {
+      this.animation = gsap.to(window, { 
+        scrollTo: scrollY, 
+        duration: sDur[3], 
+        onComplete: () => {
           this.inScroll = false;
-      }});
+        }
+      });
     }
 
     document.addEventListener('click', clickEvent);
@@ -101,26 +136,28 @@ const ScrollToAnchor = {
 }
 
 const Header = {
-  init: function() {
-    this.$element = document.querySelector('.header');
+  element: document.querySelector('.header'),
 
+  init: function() {
     this.checkState = () => {
-      let fixed = this.$element.classList.contains('header_fixed'),
-          hidden = this.$element.classList.contains('header_hidden'),
+      let fixed = this.element.classList.contains('header_fixed'),
+          hidden = this.element.classList.contains('header_hidden'),
           scrollTop = window.pageYOffset < this.oldScroll,
           scrollEnough = window.pageYOffset > this.height,
           visibleEnough = window.pageYOffset > window.innerHeight;
 
       if (scrollEnough && !fixed) {
-        this.$element.classList.add('header_fixed');
+        this.element.classList.add('header_fixed');
+        Nav.element.classList.add('header-is-fixed');
       } else if (!scrollEnough && fixed) {
-        this.$element.classList.remove('header_fixed');
+        this.element.classList.remove('header_fixed');
+        Nav.element.classList.remove('header-is-fixed');
       }
 
       if (!hidden && visibleEnough && (!scrollTop || ScrollToAnchor.inScroll)) {
-        this.$element.classList.add('header_hidden');
+        this.element.classList.add('header_hidden');
       } else if (hidden && (!visibleEnough || (scrollTop && !ScrollToAnchor.inScroll))) {
-        this.$element.classList.remove('header_hidden');
+        this.element.classList.remove('header_hidden');
       }
 
       this.oldScroll = window.pageYOffset;
@@ -130,6 +167,38 @@ const Header = {
     this.checkState();
   },
   get height() {
-    return this.$element.getBoundingClientRect().height;
+    return this.element.getBoundingClientRect().height;
+  }
+}
+
+const Nav = {
+  element: document.querySelector('.mobile-nav'),
+  trigger: document.querySelector('[data-action="Nav:trigger"]'),
+
+  state: false,
+
+  init() {
+    this.trigger.addEventListener('click', () => {
+      if (!this.state) this.open();
+      else this.close();
+    })
+
+    window.addEventListener('ScrollToAnchor', () => {
+      if (this.state) this.close();
+    });
+  },
+
+  open() {
+    this.state = true;
+    disablePageScroll();
+    this.trigger.classList.add('active');
+    this.element.classList.add('active');
+  },
+
+  close() {
+    this.state = false;
+    enablePageScroll();
+    this.trigger.classList.remove('active');
+    this.element.classList.remove('active');
   }
 }

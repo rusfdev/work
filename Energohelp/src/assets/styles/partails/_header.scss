@@ -7,9 +7,9 @@
   &_fixed {
     transform: translateY(calc(var(--header-top-height) * -1));
   }
-  &_hidden {
+  /* &_hidden {
     transform: translateY(calc((var(--header-top-height) + var(--header-height)) * -1));
-  }
+  } */
 }
 
 .header-top {
@@ -47,7 +47,7 @@
       color: rgba(255, 255, 255, 0.5);
       transition: inherit;
     }
-    &[data-touch], &[data-hover] {
+    &[data-touch], &[data-hover], .active & {
       color: #fff;
       .icon {
         color: var(--icon-color);
@@ -65,17 +65,53 @@
     &_whatsapp {
       --icon-color: #79E571;
     }
+    &_phone {
+      --icon-color: #fff;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__item {
+      &_phone {
+        order: 3;
+        .icon {
+          display: none;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__container {
+      display: flex;
+    }
+    &__center {
+      order: 3;
+      flex: 0 0 auto;
+    }
+    &__right {
+      flex: 1 1 auto;
+    }
+    &__item {
+      &_skype {
+        span {
+          display: none;
+        }
+      }
+      &_phone {
+        span {
+          display: none;
+        }
+      }
+    }
   }
 }
 
 .header-main {
   background-color: rgba(8, 7, 29, 0.95);
-  height: var(--header-height);
   position: static;
   &__container {
     display: grid;
     align-items: center;
-    height: 80px;
+    height: var(--header-height);
     grid-template-columns: 1fr auto 1fr;
   }
   &__phone {
@@ -83,6 +119,15 @@
     display: flex;
     justify-content: flex-end;
     color: #fff;
+  }
+  @include media-breakpoint-down(lg) {
+    &__phone {
+      display: none;
+    }
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -96,6 +141,50 @@
     transition: color var(--trs-1);
     &[data-touch], &[data-hover] {
       color: #fff;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
+.nav-burger {
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+  @include media-breakpoint-down(lg) {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -8px;
+    transition: opacity var(--trs-1);
+    span {
+      margin: 3px 0;
+      width: 24px;
+      height: 2px;
+      background-color: #DADADA;
+      transition: transform var(--trs-2), opacity var(--trs-2);
+    }
+    &.active {
+      span {
+        &:first-child {
+          transform: translateY(8px) rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: scaleX(0);
+          opacity: 0;
+        }
+        &:last-child {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+    &[data-touch], &[data-hover] {
+      opacity: 0.75;
     }
   }
 }

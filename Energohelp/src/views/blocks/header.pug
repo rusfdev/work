@@ -6,39 +6,49 @@ header.header
           svg.icon
             use(xlink:href='./assets/images/icons/icons.svg#location')
           span г. Москва
-          span.d-none.d-sm-inline , ул. Пестеля, 2А, офис 345
+          span.d-none.d-md-inline , ул. Пестеля, 2А, офис 345
+      
       .header-top__center
         a(href="#").header-top__item.header-top__item_skype
           svg.icon
             use(xlink:href='./assets/images/icons/icons.svg#skype')
           span Energohelp
-      .header-top__right
+      
+      .header-top__right(data-interaction-group)
+        a(href="tel:+70000000000").header-top__item.header-top__item_phone
+          svg.icon
+            use(xlink:href='./assets/images/icons/icons.svg#phone')
+          span +7 (000) 000-00-00
         a(href="#").header-top__item.header-top__item_whatsapp
           svg.icon
             use(xlink:href='./assets/images/icons/icons.svg#whatsapp')
         a(href="#").header-top__item.header-top__item_viber
           svg.icon
             use(xlink:href='./assets/images/icons/icons.svg#viber')
-        a(href="tel:+70000000000").header-top__item +7 (000) 000-00-00
+        
 
   .header-main
     .container.header-main__container
       .header-main__logo
-        a(href="#").logo
+        a(href="/").logo
           img(src="./assets/images/logos/logo-white.png", alt="logo").logo__image
     
       nav.header-nav 
         ul.header-nav__list 
-          li.header-nav__item 
+          li.header-nav__item
             a(href="#about" data-action="ScrollToAnchor").header-nav__link О нас
-          li.header-nav__item 
+          li.header-nav__item
             a(href="#services" data-action="ScrollToAnchor").header-nav__link Услуги
-          li.header-nav__item 
+          li.header-nav__item
             a(href="#partners" data-action="ScrollToAnchor").header-nav__link Партнеры
-          li.header-nav__item 
+          li.header-nav__item
             a(href="#contacts" data-action="ScrollToAnchor").header-nav__link Контакты
 
       .header-main__phone
         a(href="tel:+70000000000").header-main__phone-link +7 (000) 000-00-00
 
+      button(type="button" data-action="Nav:trigger").nav-burger
+        span 
+        span 
+        span
 
