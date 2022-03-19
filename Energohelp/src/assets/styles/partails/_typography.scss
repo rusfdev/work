@@ -55,3 +55,14 @@ p {
 strong, b {
   font-weight: 700;
 }
+
+a {
+  &:not([class]), &.link {
+    color: #fff;
+    border-bottom: 1px solid currentColor;
+    transition: color var(--trs-1);
+    &[data-touch], &[data-hover] {
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+}

@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   background-color: #09091F;
-  transition: background-color 1.5s ease-in-out;
+  transition: background-color 2s ease-in-out;
   overscroll-behavior-y: none;
   &.light {
     background-color: #323070;
@@ -36,5 +36,5 @@ body {
 
 .section {
   position: relative;
-  margin: 0 0 var(--section-margin) 0;
+  padding: calc(var(--section-margin) / 2) 0;
 }

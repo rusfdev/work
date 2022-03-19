@@ -7971,6 +7971,7 @@ function PlayStartAnimation() {
   var lampEl = document.querySelector('.home__lamp');
   var lightEl = document.querySelector('.home__light');
   var wrapperEl = document.querySelector('.wrapper');
+  var animatedItems = document.querySelectorAll('.home__animated-item');
   var size1 = lightEl.getBoundingClientRect().width;
   var size2 = wrapperEl.getBoundingClientRect().width;
   var scale = size2 / size1 * 2;
@@ -7983,7 +7984,7 @@ function PlayStartAnimation() {
   }, {
     x: 0,
     y: 0,
-    duration: 0.75,
+    duration: 0.5,
     ease: 'power2.out',
     onComplete: function onComplete() {
       lampEl.classList.add('active');
@@ -7997,13 +7998,30 @@ function PlayStartAnimation() {
     scale: 0.2
   }, {
     scale: scale,
-    duration: 1.5,
-    ease: 'power1.out',
+    duration: 2,
+    ease: 'sine.inOut',
     onStart: function onStart() {
       document.body.classList.add('light');
     },
     onComplete: function onComplete() {
       lightEl.remove();
+    }
+  }, '<').fromTo(animatedItems, {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 1,
+    duration: 1,
+    stagger: {
+      each: 0.1
+    }
+  }, '-=1.75').fromTo(animatedItems, {
+    x: -20
+  }, {
+    x: 0,
+    duration: 1,
+    ease: 'power2.out',
+    stagger: {
+      each: 0.1
     }
   }, '<');
 }
@@ -8025,8 +8043,7 @@ var ScrollToAnchor = {
     };
 
     var scrollEvent = function scrollEvent(targetElement) {
-      var margin = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--section-margin').replace(/[^\d.-]/g, ''));
-      var scrollY = targetElement.getBoundingClientRect().top + window.pageYOffset - margin;
+      var scrollY = targetElement.getBoundingClientRect().top + window.pageYOffset;
       _this.inScroll = true;
       window.dispatchEvent(new CustomEvent("ScrollToAnchor"));
       if (_this.animation && _this.animation.isActive()) _this.animation.pause();

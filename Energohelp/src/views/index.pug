@@ -14,14 +14,14 @@ block content
       img.lazyload(data-src="./assets/images/screen.jpg", alt="bg")
     .container.home__container 
       .home__content 
-        img(src="./assets/images/logos/logo-white.png", alt="logo").home__logo
-        h1.home__title Электротехническая компания 
-        p.home__text Работаем в Москве и МО
-        a(href="#" data-action="ScrollToAnchor").button.home__button Заказать услугу
+        img(src="./assets/images/logos/logo-white.png", alt="logo").home__logo.home__animated-item
+        h1.home__title.home__animated-item Электротехническая компания 
+        p.home__text.home__animated-item Работаем в Москве и МО
+        a(href="#form-section" data-action="ScrollToAnchor").button.home__button.home__animated-item Заказать услугу
 
   .message-label-section 
     .container
-      h6.message-label-section__text Аварийная бригада 24/7  выезд в пределах Новой Москвы
+      h6.message-label-section__text Аварийная бригада 24/7 выезд в пределах Новой Москвы
   
   section#about.section.about
     .container 
@@ -68,3 +68,106 @@ block content
             img.lazyload(data-src="./assets/images/services/6.jpg", alt="image")
           .services-block__content 
             p Установим систему видеонаблюдения с возможностью удаленного доступа
+
+  section.section.section-meter 
+    .container
+      .meter-box 
+        .image.image_cover.meter-box__background 
+          img.lazyload(data-src="./assets/images/meter-bg.jpg", alt="bg")
+        .meter-box__container
+          .meter-box__image
+            img.lazyload(data-src="./assets/images/meter.png", alt="image")
+          .meter-box__content
+            h2.meter-box__title Счетчики Миртек
+            p.meter-box__text Разберемся с показаниями счетчиков Миртек, перепрограммируем или заменим пульт.
+
+  section#partners.section.partners
+    .container 
+      h2.mb-50 Наши партнеры
+      .partners__container 
+        .partners__item(data-custom-interaction)
+          .image
+            img.lazyload(data-src="./assets/images/partners/p1_1.png", alt="image")
+          .image
+            img.lazyload(data-src="./assets/images/partners/p1_2.png", alt="image")
+        .partners__item(data-custom-interaction)
+          .image
+            img.lazyload(data-src="./assets/images/partners/p2_1.png", alt="image")
+          .image
+            img.lazyload(data-src="./assets/images/partners/p2_2.png", alt="image")
+        .partners__item(data-custom-interaction)
+          .image
+            img.lazyload(data-src="./assets/images/partners/p3_1.png", alt="image")
+          .image
+            img.lazyload(data-src="./assets/images/partners/p3_2.png", alt="image")
+        .partners__item(data-custom-interaction)
+          .image
+            img.lazyload(data-src="./assets/images/partners/p4_1.png", alt="image")
+          .image
+            img.lazyload(data-src="./assets/images/partners/p4_2.png", alt="image")
+        
+  section#form-section.section.form-section   
+    .container 
+      .form-block 
+        img.lazyload.form-block__image(data-src="./assets/images/man.png", alt="image")
+        .form-block__content
+          .form-block__head
+            h2.mb-15 Свяжитесь с нами
+            p Закажите услугу или узнайте предварительную стоимость. Введите свои данные и менеджер с вами свяжется
+          
+          form(action="#").form.form-block__form
+            .form__group.row
+              .form__element.col-lg-6 
+                .input 
+                  label.input__label(for="input-name") Имя
+                  input#input-name.input__element(type="text" name="name" placeholder="Введите ваше имя")
+              .form__element.col-lg-6 
+                .input 
+                  label.input__label(for="input-phone") Номер телефона
+                  input#input-phone.input__element(type="text" name="phone" placeholder="Введите номер телефона")
+              .form__element.col-lg-6 
+                .input 
+                  label.input__label(for="input-email") E-mail
+                  input#input-email.input__element(type="email" name="email" placeholder="Введите адрес эл.почты")
+              .form__element.col-lg-6 
+                button.button.form__submit(type="submit") Отправить заявку
+            
+            p.text-muted.text-small.mt-20 Нажимая на кнопку, вы двете согласие на 
+              a(href="#") обработку персональных данных 
+
+  section#contacts.section.contacts
+    .contacts__map  
+      iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A95634a831f65da38b5901c84654aed794389a60ea663459d7ca046660d8d869e&source=constructor')
+    .contacts__content
+      h2.contacts__title Контакты
+      ul.contacts__list 
+        li.contacts__item 
+          a(href="tel:70000000000").contacts__element
+            svg.icon(style="color:#F7CF00;")
+              use(xlink:href='./assets/images/icons/icons.svg#phone')
+            span +7 (000) 000-00-00
+        li.contacts__item 
+          a(href="mailto:energohelp@gmail.com").contacts__element
+            svg.icon(style="color:#F7CF00;")
+              use(xlink:href='./assets/images/icons/icons.svg#envelope')
+            span energohelp@gmail.com
+        li.contacts__item 
+          .contacts__element
+            svg.icon(style="color:#F7CF00;")
+              use(xlink:href='./assets/images/icons/icons.svg#location')
+            span г. Москва, ул. Бориса Пастернака, д. 19
+        li.contacts__item 
+          a(href="#").contacts__element
+            svg.icon(style="color:#48AEEA;")
+              use(xlink:href='./assets/images/icons/icons.svg#skype')
+            span Energohelp
+        li.contacts__item 
+          a(href="tel:70000000000").contacts__element
+            svg.icon(style="color:#79E571;")
+              use(xlink:href='./assets/images/icons/icons.svg#whatsapp')
+            span +7 (000) 000-00-00
+        li.contacts__item 
+          a(href="tel:70000000000").contacts__element
+            svg.icon(style="color:#76559B;")
+              use(xlink:href='./assets/images/icons/icons.svg#viber')
+            span +7 (000) 000-00-00

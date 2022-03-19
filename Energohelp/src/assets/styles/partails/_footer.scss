@@ -1,0 +1,79 @@
+.footer {
+  background-color: #08071D;
+  padding: 60px 0 45px 0;
+  &__container {
+    display: flex;
+    gap: 100px;
+  }
+  &__left {
+    flex: 0 0 auto;
+  }
+  &__logo {
+    margin-bottom: 20px;
+  }
+  &__contacts-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__contacts-element {
+    font-size: 14px;
+    padding-left: 28px;
+    position: relative;
+    transition: color var(--trs-1);
+    .icon {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-accent);
+    }
+    &[data-touch], &[data-hover] {
+      color: #fff;
+    }
+  }
+
+  &__right {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  &__right-top {
+    display: flex;
+    gap: 20px 80px;
+  }
+  &__right-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+  }
+  &__privacy {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color var(--trs-1);
+    &[data-touch], &[data-hover] {
+      color: #fff;
+    }
+  }
+  &__copyright {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.footer-nav {
+  flex: 1 1 auto;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link {
+    transition: color var(--trs-1);
+    &[data-touch], &[data-hover] {
+      color: #fff;
+    }
+  }
+}

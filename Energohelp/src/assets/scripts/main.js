@@ -27,6 +27,7 @@ function PlayStartAnimation() {
   const lampEl = document.querySelector('.home__lamp');
   const lightEl = document.querySelector('.home__light');
   const wrapperEl = document.querySelector('.wrapper');
+  const animatedItems = document.querySelectorAll('.home__animated-item');
 
   const size1 = lightEl.getBoundingClientRect().width;
   const size2 = wrapperEl.getBoundingClientRect().width;
@@ -36,7 +37,7 @@ function PlayStartAnimation() {
     .to(document.body, { autoAlpha: 1, duration: 0.5 })
     .fromTo(lampEl, 
       { x: -20, y: -20 }, 
-      { x: 0, y: 0, duration: 0.75, ease: 'power2.out', 
+      { x: 0, y: 0, duration: 0.5, ease: 'power2.out', 
         onComplete: () => {
           lampEl.classList.add('active');
         } 
@@ -45,7 +46,7 @@ function PlayStartAnimation() {
       { autoAlpha: 0 }, { autoAlpha: 1, duration: sDur[2] })
     .fromTo(lightEl, 
       { scale: 0.2 },
-      { scale: scale, duration: 1.5, ease: 'power1.out', 
+      { scale: scale, duration: 2, ease: 'sine.inOut', 
         onStart: () => {
           document.body.classList.add('light');
         },
@@ -53,6 +54,13 @@ function PlayStartAnimation() {
           lightEl.remove();
         }
       }, '<')
+
+    .fromTo(animatedItems, 
+      { autoAlpha: 0 }, 
+      { autoAlpha: 1, duration: 1, stagger: { each: 0.1 } }, '-=1.75')
+    .fromTo(animatedItems, 
+      { x: -20 }, 
+      { x: 0, duration: 1, ease: 'power2.out', stagger: { each: 0.1 } }, '<')
 
 }
 
@@ -75,10 +83,7 @@ const ScrollToAnchor = {
     }
 
     const scrollEvent = (targetElement) => {
-      const margin = parseInt(getComputedStyle(document.documentElement)
-        .getPropertyValue('--section-margin')
-        .replace(/[^\d.-]/g, ''));
-      const scrollY = targetElement.getBoundingClientRect().top + window.pageYOffset - margin;
+      const scrollY = targetElement.getBoundingClientRect().top + window.pageYOffset;
 
       this.inScroll = true;
         
