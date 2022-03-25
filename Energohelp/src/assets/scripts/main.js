@@ -30,7 +30,8 @@ window.addEventListener('load', function() {
 
 
 function PlayStartAnimation() {
-  const lampEl = document.querySelector('.home__lamp');
+  const lampWrapperEl = document.querySelector('.home__lamp');
+
   const lightEl = document.querySelector('.home__light');
   const wrapperEl = document.querySelector('.wrapper');
   const animatedItems = document.querySelectorAll('.home__animated-item');
@@ -41,11 +42,11 @@ function PlayStartAnimation() {
 
   const animation = gsap.timeline({ paused: true })
     .to(document.body, { autoAlpha: 1, duration: 0.5 })
-    .fromTo(lampEl, 
+    .fromTo(lampWrapperEl, 
       { x: -20, y: -20 }, 
       { x: 0, y: 0, duration: 0.75, ease: 'power2.out', 
         onComplete: () => {
-          lampEl.classList.add('active');
+          lampWrapperEl.classList.add('active');
         } 
       }, '<')
     .fromTo(lightEl, 

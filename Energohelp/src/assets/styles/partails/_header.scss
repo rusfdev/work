@@ -25,6 +25,11 @@
   &__left {
     display: flex;
   }
+  &__center {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
   &__right {
     display: flex;
     align-items: center;
@@ -68,6 +73,9 @@
     &_phone {
       --icon-color: #fff;
     }
+    &_telegram {
+      --icon-color: #4CA2DC;
+    }
   }
   @include media-breakpoint-up(lg) {
     &__item {
@@ -91,7 +99,7 @@
       flex: 1 1 auto;
     }
     &__item {
-      &_skype {
+      &_skype, &_telegram {
         span {
           display: none;
         }

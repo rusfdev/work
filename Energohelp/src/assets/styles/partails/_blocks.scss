@@ -1,59 +1,61 @@
 .home {
   --pt: calc(var(--header-height) + var(--header-top-height));
-  --lamp-size: 360px;
+  --lamp-size: 417px;
   padding: var(--pt) 0 0 0;
   min-height: var(--window-safe-height);
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
   display: flex;
-  @supports (filter: blur(150px)) {
-    &::before {
-      content: '';
-      --size: calc(var(--lamp-size) * 0.83);
-      width: var(--size);
-      height: var(--size);
-      border-radius: 100%;
-      background: #122145;
-      filter: blur(120px);
-      position: absolute;
-      right: calc(var(--content-fields-width) - 100px);
-      top: 24%;
-      z-index: 3;
-    }
-  }
   &__lamp {
-    --size: calc(var(--lamp-size) * 0.83);
     position: absolute;
     z-index: 3;
     left: 0;
-    top: 0;
-    opacity: 0.5;
-    transition: opacity var(--trs-2);
+    top: calc(var(--header-height) + var(--header-top-height));
     img {
       width: var(--lamp-size);
       height: auto;
-      transform: translate(-10%, 0) rotate(-45deg);
       position: relative;
-      z-index: 2;
+      transition: opacity var(--trs-3), visibility var(--trs-3);
+      &:last-child {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+      }
     }
     &.active {
-      opacity: 1;
+      img {
+        &:first-child {
+          opacity: 0;
+          visibility: hidden;
+        }
+        &:last-child {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
     }
     @supports (filter: blur(250px)) {
       &::after {
+        --size: calc(var(--lamp-size) * 0.75);
         content: '';
         display: block;
         width: var(--size);
         height: var(--size);
         border-radius: 100%;
         position: absolute;
-        bottom: -7%;
-        right: -18%;
+        bottom: 11%;
+        right: 13%;
         background-color: #D2476F;
         filter: blur(250px);
         opacity: 0;
-        transition: opacity var(--trs-2);
+        transition: opacity var(--trs-3);
+        will-change: opacity;
       }
       &.active {
         &::after {
@@ -61,27 +63,18 @@
         }
       }
     }
-    @supports (filter: drop-shadow(12px 12px 32px rgba(237, 161, 14, 0.7))) {
-      img {
-        transition: filter var(--trs-2);
-      }
-      &.active {
-        img {
-          filter: drop-shadow(12px 12px 32px rgba(237, 161, 14, 0.7));
-        }
-      }
-    }
   }
   &__light {
-    --size: calc(var(--lamp-size) * 0.83);
+    --size: calc(var(--lamp-size) * 0.75);
     width: var(--size);
     height: var(--size);
     border-radius: 100%;
     background-color: #323070;
     position: absolute;
     top: 168px;
-    left: 58px;
+    left: 50px;
     box-shadow: 0px 0px 200px 200px #323070;
+    will-change: opacity;
   }
   &__background {
     position: absolute;
@@ -133,6 +126,10 @@
     &__container {
       padding-top: 300px;
     }
+    &__light {
+      top: 155px;
+      left: 39px;
+    }
   }
   @include media-breakpoint-down(md) {
     &__content {
@@ -142,6 +139,10 @@
   }
   @include media-breakpoint-down(sm) {
     --lamp-size: 270px;
+    &__light {
+      top: 129px;
+      left: 32px;
+    }
     &__logo {
       margin-bottom: 15px;
     }

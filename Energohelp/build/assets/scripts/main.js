@@ -7971,7 +7971,7 @@ window.addEventListener('load', function () {
 });
 
 function PlayStartAnimation() {
-  var lampEl = document.querySelector('.home__lamp');
+  var lampWrapperEl = document.querySelector('.home__lamp');
   var lightEl = document.querySelector('.home__light');
   var wrapperEl = document.querySelector('.wrapper');
   var animatedItems = document.querySelectorAll('.home__animated-item');
@@ -7983,7 +7983,7 @@ function PlayStartAnimation() {
   }).to(document.body, {
     autoAlpha: 1,
     duration: 0.5
-  }).fromTo(lampEl, {
+  }).fromTo(lampWrapperEl, {
     x: -20,
     y: -20
   }, {
@@ -7992,7 +7992,7 @@ function PlayStartAnimation() {
     duration: 0.75,
     ease: 'power2.out',
     onComplete: function onComplete() {
-      lampEl.classList.add('active');
+      lampWrapperEl.classList.add('active');
     }
   }, '<').fromTo(lightEl, {
     autoAlpha: 0

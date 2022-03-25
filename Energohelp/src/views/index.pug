@@ -8,7 +8,8 @@ block content
     .home__light
 
     .home__lamp
-      img(src="./assets/images/lamp.png", alt="lamp")
+      img(src="./assets/images/lamp-disabled.png", alt="lamp")
+      img(src="./assets/images/lamp-active.png", alt="lamp")
       
     .image.image_cover.home__background
       img.lazyload(src="#" data-src="./assets/images/screen.jpg", alt="bg")
@@ -159,6 +160,11 @@ block content
             svg.icon(style="color:#48AEEA;")
               use(xlink:href='./assets/images/icons/icons.svg#skype')
             span Energohelp
+        li.contacts__item 
+          a(href="#").contacts__element
+            svg.icon(style="color:#4CA2DC;")
+              use(xlink:href='./assets/images/icons/icons.svg#telegram')
+            span energohelppp
         li.contacts__item 
           a(href="tel:70000000000").contacts__element
             svg.icon(style="color:#79E571;")
