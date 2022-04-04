@@ -85,6 +85,7 @@
     border-radius: 1px;
     background-color: var(--color-light);
     transition: transform var(--trs-1), width var(--trs-1);
+    will-change: transform;
     &:nth-child(1), &:nth-child(3) {
       width: calc(100% - 4px);
     }
