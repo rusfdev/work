@@ -1,0 +1,11 @@
+img {
+  &.lazyload, &.lazyloading {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &.lazyloaded {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--trs-3), visibility var(--trs-3);
+  }
+}

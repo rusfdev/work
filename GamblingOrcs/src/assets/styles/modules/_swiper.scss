@@ -1,0 +1,73 @@
+.swiper {
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--trs-1), visibility var(--trs-1);
+  transition-timing-function: ease;
+
+  .swiper-slide {
+    height: initial;
+  }
+
+  &-button {
+    --arrow-x-indent: 10px;
+    --size: 30px;
+    --icon-size: calc(var(--size) - 5px);
+    display: flex;
+    position: absolute;
+    top: calc(50% - var(--size) / 2);
+    z-index: 2;
+    width: var(--size);
+    height: var(--size);
+    color: var(--color-light);
+    transition: opacity var(--trs-1), visibility var(--trs-1);
+    .icon {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      margin: auto;
+    }
+    &-prev {
+      left: var(--arrow-x-indent);
+    }
+    &-next {
+      right: var(--arrow-x-indent);
+    }
+    &[data-touch], &[data-hover] {
+      opacity: 0.5;
+    }
+    &-disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+
+  &-scrollbar {
+
+  }
+
+  &-scrollbar-drag {
+
+  }
+
+  &-lazy {
+    opacity: 0;
+    visibility: hidden;
+    &-loaded {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity var(--trs-3), visibility var(--trs-3);
+    }
+  }
+
+  &-initialized {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &-button {
+      --arrow-x-indent: 8px;
+      --size: 24px;
+    }
+  }
+}

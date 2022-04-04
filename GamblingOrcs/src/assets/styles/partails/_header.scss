@@ -1,0 +1,129 @@
+.header {
+  --gap: 100px;
+  position: fixed;
+  width: var(--page-width);
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(40px);
+  &__container {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap);
+  }
+  &__logo-wrapper {
+    flex: 1 1 auto;
+    display: flex;
+  }
+  &__content {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+  }
+  @include media-breakpoint-down(xxl) {
+    &__socials {
+      --size: 24px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    --gap: 60px;
+    &__logo {
+      --size: 40px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__logo {
+      --size: 34px;
+    }
+    &__socials {
+      display: none;
+    }
+  }
+}
+
+.header-nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  &__link {
+    font-size: 24px;
+    color: var(--color-light);
+    font-family: var(--font-family-accent);
+    font-weight: 600;
+    transition: color var(--trs-1);
+    &[data-touch], &[data-hover] {
+      color: var(--color-accent);
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    &__link {
+      font-size: 22px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__list {
+      gap: 40px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
+.nav-burger {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  span {
+    height: 2px;
+    border-radius: 1px;
+    background-color: var(--color-light);
+    transition: var(--trs-1);
+    &:nth-child(1), &:nth-child(3) {
+      width: calc(100% - 4px);
+    }
+    &:nth-child(2) {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+  &[data-touch], &[data-hover] {
+    &:not(.active) {
+      span {
+        &:nth-child(1), &:nth-child(3) {
+          width: 100%;
+        }
+        &:nth-child(2) {
+          width: calc(100% - 4px);
+        }
+      }
+    }
+  }
+
+  &.active {
+    span {
+      &:first-child {
+        transform: translateY(7px) rotate(45deg);
+        width: 100%;
+      }
+      &:nth-child(2) {
+        transform: translateX(-50%);
+        opacity: 0;
+      }
+      &:last-child {
+        transform: translateY(-7px) rotate(-45deg);
+        width: 100%;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}

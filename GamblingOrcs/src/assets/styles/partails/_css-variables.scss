@@ -1,0 +1,69 @@
+:root {
+  --container-padding-x: 46px;
+  --grid-gutter-width: 46px;
+
+  --scrollbar-width: var(--scrollbar-width-property, 0px);
+  --window-safe-height: var(--window-safe-height-property, 100vh);
+  --window-min-width: 360px;
+  --window-width: max(100vw, var(--window-min-width));
+  --page-width: calc(var(--window-width) - var(--scrollbar-width));
+  --container-width: #{map-get($container-max-widths, xxl)};
+  --content-width: calc(var(--container-width) - var(--container-padding-x) * 2);
+  --content-fields-width: calc((var(--page-width) - var(--content-width)) / 2);
+  --screen-max-height: calc(var(--page-width) * 0.625);
+
+  --screen-section-min-height: calc(min(var(--screen-max-height), var(--window-safe-height)));
+  
+  @include media-breakpoint-down(xxl) {
+    --container-width: #{map-get($container-max-widths, xl)};
+  }
+
+  @include media-breakpoint-down(xl) {
+    --container-width: #{map-get($container-max-widths, lg)};
+    --container-padding-x: 36px;
+    --grid-gutter-width: 36px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    --container-width: #{map-get($container-max-widths, md)};
+    --screen-max-height: calc(var(--page-width) * 1.25);
+  }
+
+  @include media-breakpoint-down(md) {
+    --container-width: #{map-get($container-max-widths, sm)};
+    --container-padding-x: 24px;
+    --grid-gutter-width: 24px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    --container-width: var(--page-width);
+    --screen-max-height: calc(var(--page-width) * 2);
+  }
+
+  //animations
+  --animation-duration-1: 150ms;
+  --animation-duration-2: 300ms;
+  --animation-duration-3: 500ms;
+  --animation-duration-4: 1000ms;
+  --trs-1: var(--animation-duration-1) ease-out;
+  --trs-2: var(--animation-duration-2) ease-out;
+  --trs-3: var(--animation-duration-3) ease-out;
+  --trs-4: var(--animation-duration-4) ease-out;
+
+  //
+  --header-height: 110px;
+  @include media-breakpoint-down(xxl) {
+    --header-height: 100px;
+  }
+  @include media-breakpoint-down(sm) {
+    --header-height: 90px;
+  }
+
+  --section-indent: 160px;
+  @include media-breakpoint-down(xxl) {
+    --section-indent: 140px;
+  }
+  @include media-breakpoint-down(sm) {
+    --section-indent: 80px;
+  }
+}

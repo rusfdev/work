@@ -1,0 +1,19 @@
+.mobile-nav
+  .mobile-nav__inner(data-scroll-lock-scrollable)
+    .container.mobile-nav__container
+      nav.mobile-nav__element 
+        ul.mobile-nav__list.h4
+          li.mobile-nav__item 
+            a.mobile-nav__link(href="#") Litepaper
+          li.mobile-nav__item 
+            a.mobile-nav__link(href="#gallery" data-action="ScrollToAnchor") Gallery
+          li.mobile-nav__item 
+            a.mobile-nav__link(href="#roadmap" data-action="ScrollToAnchor") Roadmap
+          li.mobile-nav__item 
+            a.mobile-nav__link(href="#team" data-action="ScrollToAnchor") Team
+          li.mobile-nav__item 
+            a.mobile-nav__link(href="#faq" data-action="ScrollToAnchor") FAQ
+
+      -socialsClasses = 'mobile-nav__socials'
+      include socials
+    

@@ -1,0 +1,209 @@
+extends layouts/default
+
+block variables
+
+block content
+
+  section.section.home 
+    .image.image_cover.home__background
+      img.lazyload(data-src="./assets/img/bg.jpg", alt="bg")
+    .container.home__container
+      .home__content
+        .mb-30.mb-sm-40.mb-xxl-50 
+          h1 Gambling Orcs
+          p.text-medium Unique NFT collection of 3,333 beautiful orcs preparing to invade Solana Blockchain! Growing NFT Gambling website with revenue sharing.   
+        a(href="#").button
+          span Explore
+          svg.icon
+            use(xlink:href='./assets/img/icons/icons.svg#arrow-right')
+
+    .home__bg-figure
+      .home__bg-figure-square
+      .home__bg-figure-image
+        img(src="./assets/img/bg-figure.png" srcset="./assets/img/bg-figure@2x.png 2x" alt="figure")
+        img(src="./assets/img/bg-figure.png" srcset="./assets/img/bg-figure@2x.png 2x" alt="figure")
+
+  section.section.who-are-we
+    .container 
+      .row
+        .col-md-6.col-xl-7.mb-35.mb-sm-35.mb-md-0.pe-xl-50.pe-xxl-60
+          .mb-25.mb-sm-30.mb-xl-40
+            h2 Who are we?
+            p.text-medium Gambling Orcs is a team of software developers and NFT enthusiasts, who do genuinely believe in the future growth of the Solana blockchain and are ready to exercise our ideas and engage them with the NFT world. Join our growing community and see for yourself! 
+          a(href=discord target="_blank").button-discord
+            img(src="./assets/img/icons/discord-icon.svg", alt="icon").icon
+            span Join to Discord
+        
+        .col-md-6.col-xl-5.ps-xl-50.ps-xxl-60
+          .swiper.single-image-slider
+            .swiper-wrapper 
+              .swiper-slide.image.image_cover.single-image-slider__slide
+                img(data-src="./assets/img/slider-image.jpg", alt="image").swiper-lazy
+              .swiper-slide.image.image_cover.single-image-slider__slide
+                img(data-src="./assets/img/slider-image.jpg", alt="image").swiper-lazy
+            
+            button.swiper-button.swiper-button-prev(type="button")
+              svg.icon
+                use(xlink:href='./assets/img/icons/icons.svg#caret-left')
+            button.swiper-button.swiper-button-next(type="button")
+              svg.icon
+                use(xlink:href='./assets/img/icons/icons.svg#caret-right')
+
+
+  section.section.beyond-nft 
+    .container 
+      .row
+        .col-md-6.pt-xl-50.pe-xl-50
+          h3 Beyond NFT
+          p.text-medium The main goal of our project is long-term utility. We are developing the world’s first NFT gambling website, whereby users would bet their NFTs and compete with other players for the prize! Gambling Orcs holders receive 50% revenue from the website weekly and 80% of playing fees. Get acquainted with a detailed concept of our idea in our Litepaper/Roadmap.  
+        .col-md-6.d-none.d-md-block.ps-xl-50
+          .image-content.image.image_contain(style="--size: 93%;")
+            img.lazyload(data-src="./assets/img/orks-composition.png", alt="image")
+
+  section.section#gallery
+    .container
+      .gallery-slider
+        .swiper
+          .swiper-wrapper
+            each index in [1, 2, 3, 4, 5, 6]
+              .swiper-slide.gallery-slider__slide
+                .image-content.image.image_cover
+                  img(data-src=`./assets/img/gallery/${index}.PNG`, alt="image").lazyload
+
+        .gallery-slider__scrollbar
+          .swiper-scrollbar
+
+  section.section#roadmap
+
+    section.section.pt-0.pb-0.mb-30.mb-sm-40.mb-xl-50
+      .container
+        h4.mb-sm-30 Phase 1
+        ul.phase-list
+          li.phase-list__item Launch of the Gambling Orcs Website as well as 
+            a(href=twitter target="_blank") Twitter 
+            | & 
+            a(href=discord target="_blank") Discord
+          li.phase-list__item Create high quality beautiful art
+          li.phase-list__item Start Twitter/Discord marketing campaign
+          li.phase-list__item Fill out the first whitelist
+
+    section.section.pt-0.pb-0.mb-30.mb-sm-40.mb-xl-50
+      .container
+        h4.mb-sm-30 Phase 2
+        ul.phase-list
+          li.phase-list__item Mint of 300 Orc unique golden tickets
+          li.phase-list__item Close interaction with our community: giveaways, contests, AMA etc.
+          li.phase-list__item Start gambling website development
+          li.phase-list__item Kick off a bigger marketing campaign
+          li.phase-list__item Website promo video
+    
+    section.section.pt-0.pb-0.mb-30.mb-sm-40.mb-xl-50
+      .container
+        h4.mb-sm-30 Phase 3
+        ul.phase-list
+          li.phase-list__item Mint of 3.333 Orcs
+          li.phase-list__item $GORC token introduction
+          li.phase-list__item Staking
+          li.phase-list__item Community events with $GORC rewards.
+          li.phase-list__item Launch gambling website!
+    
+    section.section.pt-0.pb-0.mb-30.mb-sm-40.mb-xl-50
+      .container
+        h4.mb-sm-30 Phase 4
+        ul.phase-list
+          li.phase-list__item Start sharing revenue with our holders and investors
+          li.phase-list__item Partnership with YouTube/Twitter influencers
+          li.phase-list__item Partnerships with secondary NFT marketplaces.
+          li.phase-list__item Further website improvement and marketing as well as community requests and ideas
+
+    section.section.pt-0.pb-0
+      .container
+        h4.mb-sm-30 Future plans
+        ul.phase-list
+          li.phase-list__item Integration into Metaverse
+          li.phase-list__item First Metaverse based NFT-casino
+  
+  section.section#team
+    .container 
+      h3.mb-25.mb-lg-30.mb-xxl-40 Our team
+      .our-team
+        .swiper 
+          .swiper-wrapper
+            .swiper-slide 
+              .our-team-block(data-custom-interaction)
+                .our-team-block__image.image-content.image.image_cover 
+                  img(data-src="../assets/img/team/1.PNG", alt="image").lazyload
+                .our-team-block__content 
+                  h5.our-team-block__title KRAMPUS
+                  h6.our-team-block__description Founder/Software Developer
+            .swiper-slide 
+              .our-team-block(data-custom-interaction)
+                .our-team-block__image.image-content.image.image_cover 
+                  img(data-src="../assets/img/team/2.PNG", alt="image").lazyload
+                .our-team-block__content 
+                  h5.our-team-block__title Caiman
+                  h6.our-team-block__description Co-Founder/Marketing strategist
+            .swiper-slide 
+              .our-team-block(data-custom-interaction)
+                .our-team-block__image.image-content.image.image_cover 
+                  img(data-src="../assets/img/team/3.PNG", alt="image").lazyload
+                .our-team-block__content 
+                  h5.our-team-block__title Rafig
+                  h6.our-team-block__description Community manager/ Software Developer
+            .swiper-slide 
+              .our-team-block(data-custom-interaction)
+                .our-team-block__image.image-content.image.image_cover 
+                  img(data-src="../assets/img/team/4.PNG", alt="image").lazyload
+                .our-team-block__content 
+                  h5.our-team-block__title Pavels
+                  h6.our-team-block__description Software Developer
+            .swiper-slide 
+              .our-team-block(data-custom-interaction)
+                .our-team-block__image.image-content.image.image_cover 
+                  img(data-src="../assets/img/team/5.PNG", alt="image").lazyload
+                .our-team-block__content 
+                  h5.our-team-block__title Daria Dosh
+                  h6.our-team-block__description Artist
+
+  section.section.faq#faq
+    .container
+      h3.mb-25.mb-lg-30.mb-xxl-40 FAQ
+      .faq__container(data-collapse="list")
+        -
+          const faqText = [
+            {
+              question: 'When is your mint date?',
+              answer: 'We are planning to launch mint in May/Early June.'
+            }, {
+              question: 'How many NFTs will be created?',
+              answer: 'The initial infusion will be 3,333 NFTs.'
+            }, {
+              question: 'How do I join?',
+              answer: 'The best way to stay tuned is to join our Discord and Twitter.'
+            }, {
+              question: 'Where can I learn more about your project?',
+              answer: 'We advise you to start by taking a look at our Roadmap and Litepaper. Join Discord for more!'
+            }, {
+              question: 'Which marketplaces will you be listed on?',
+              answer: 'We will be listed on Magic Eden immediately after mint.'
+            }, {
+              question: 'I am completely unfamiliar NFTs… Can I still participate?',
+              answer: 'Absolutely! We have a special beginner’s guide on our Discord where you can learn more about NFTs.'
+            }
+          ]; 
+        each item in faqText
+          .faq-item(data-collapse="item")
+            button.faq-item__button(type="button" data-collapse="button")
+
+            .faq-item__head
+              h6.faq-item__title !{item.question}
+
+            .faq-item__content(data-collapse="content")
+              .faq-item__content-inner
+                p !{item.answer}
+
+            span.faq-item__icon
+
+          
+
+

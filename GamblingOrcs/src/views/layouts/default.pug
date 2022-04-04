@@ -1,0 +1,42 @@
+include ../blocks/variables
+block variables
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset="utf-8")
+    title #{title}
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='format-detection' content='telephone=no')
+    meta(name='description' content='Unique NFT collection of 3,333 beautiful orcs preparing to invade Solana Blockchain! Growing NFT Gambling website with revenue sharing.')
+    //color
+    meta(name="theme-color" content="#1D1D1D")
+    //favicons
+    link(rel='shortcut icon' href=`/assets/favicons/favicon.ico`)
+    link(rel='icon' type='image/png' sizes='16x16' href=`/assets/favicons/favicon-16x16.png`)
+    link(rel='icon' type='image/png' sizes='32x32' href=`/assets/favicons/favicon-32x32.png`)
+    link(rel='icon' type='image/png' sizes='48x48' href=`/assets/favicons/favicon-48x48.png`)
+    link(rel='icon' type='image/png' sizes='228x228' href=`/assets/favicons/coast-228x228.png`)
+    //open graph
+    meta(property='og:title' content='Unique NFT collection')
+    meta(property='og:site_name' content='Gambling Orcs')
+    meta(property='og:url' content='') 
+    meta(property='og:description' content='Unique NFT collection of 3,333 beautiful orcs preparing to invade Solana Blockchain! Growing NFT Gambling website with revenue sharing.')
+    meta(property='og:image' content='')
+    //fonts
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika+Negative:wght@300;400;500;600;700&display=swap' rel='stylesheet')
+    //styles
+    link(rel="stylesheet" href="./assets/styles/main.css")
+
+  body
+    .wrapper(style="opacity: 0; visibility: hidden;")
+      include ../blocks/header
+      include ../blocks/mobile-nav
+      main.main
+        block content
+      include ../blocks/footer
+    
+    //scripts
+    script(src="./assets/scripts/main.js")

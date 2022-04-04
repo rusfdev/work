@@ -1,0 +1,71 @@
+//images
+.image {
+  display: block;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &_contain, &_cover {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+  &_cover {
+    overflow: hidden;
+    img {
+      object-fit: cover;
+    }
+  }
+  &_contain {
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.image-content {
+  --size: 100%;
+  &::after {
+    content: '';
+    display: block;
+    padding-top: var(--size);
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.logo {
+  --size: 45px;
+  display: flex;
+  align-items: center;
+  gap: calc(var(--size) * 0.3);
+  &__image {
+    width: calc(var(--size) * 1.05);
+    height: calc(var(--size) * 1.05);
+  }
+  &__text {
+    font-size: calc(var(--size) * 0.55);
+    font-family: var(--font-family-accent);
+    font-weight: 600;
+    color: var(--color-light);
+    span {
+      color: var(--color-accent);
+    }
+  }
+}
+
+[data-collapse='content'] {
+  overflow: hidden;
+  height: 0;
+  &.active {
+    height: auto;
+  }
+}

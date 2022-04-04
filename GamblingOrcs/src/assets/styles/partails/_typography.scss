@@ -1,0 +1,138 @@
+:root {
+  --font-family: 'Kanit', sans-serif;
+  --font-family-accent: 'Signika Negative', sans-serif;
+  --line-height: 1.5;
+  --line-height-accent: 1.35;
+}
+
+html, body {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-default);
+  line-height: var(--line-height);
+  text-rendering: geometricPrecision;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin: 40px 0 20px 0;
+  line-height: var(--line-height-accent);
+  font-family: var(--font-family-accent);
+  color: var(--color-light);
+  font-weight: 600;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1, .h1 {
+  font-size: 80px;
+  @include media-breakpoint-down(xxl) {
+    font-size: 68px;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 54px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 32px;
+  }
+}
+
+h2, .h2 {
+  font-size: 68px;
+  @include media-breakpoint-down(xxl) {
+    font-size: 60px;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 48px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 32px;
+  }
+}
+
+h3, .h3 {
+  font-size: 56px;
+  @include media-breakpoint-down(xxl) {
+    font-size: 52px;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 42px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 32px;
+  }
+}
+
+h4, .h4 {
+  font-size: 56px;
+  @include media-breakpoint-down(xxl) {
+    font-size: 46px;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 36px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 26px;
+  }
+}
+
+
+h5, .h5 {
+  font-size: 38px;
+  @include media-breakpoint-down(xxl) {
+    font-size: 32px;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 26px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 22px;
+  }
+}
+h6, .h6 {
+  font-size: 26px;
+  @include media-breakpoint-down(xxl) {
+    font-size: 24px;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 22px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 16px;
+  }
+}
+
+p {
+  margin: 0 0 1rem 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+a:not([class]) {
+  transition: color var(--trs-1);
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    position: absolute;
+    bottom: 0.1em;
+    left: 0;
+  }
+  &[data-touch], &[data-hover] {
+    color: var(--color-light);
+  }
+}
