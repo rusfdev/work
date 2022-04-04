@@ -6,7 +6,7 @@ block content
 
   section.section.home 
     .image.image_cover.home__background
-      img.lazyload(data-src="./assets/img/bg.jpg", alt="bg")
+      img.lazyload(src="#" data-src="./assets/img/bg.jpg", alt="bg")
     .container.home__container
       .home__content
         .mb-30.mb-sm-40.mb-xxl-50 
@@ -38,9 +38,9 @@ block content
           .swiper.single-image-slider
             .swiper-wrapper 
               .swiper-slide.image.image_cover.single-image-slider__slide
-                img(data-src="./assets/img/slider-image.jpg", alt="image").swiper-lazy
+                img(src="#" data-src="./assets/img/slider-image.jpg", alt="image").swiper-lazy
               .swiper-slide.image.image_cover.single-image-slider__slide
-                img(data-src="./assets/img/slider-image.jpg", alt="image").swiper-lazy
+                img(src="#" data-src="./assets/img/slider-image.jpg", alt="image").swiper-lazy
             
             button.swiper-button.swiper-button-prev(type="button")
               svg.icon
@@ -58,7 +58,7 @@ block content
           p.text-medium The main goal of our project is long-term utility. We are developing the world’s first NFT gambling website, whereby users would bet their NFTs and compete with other players for the prize! Gambling Orcs holders receive 50% revenue from the website weekly and 80% of playing fees. Get acquainted with a detailed concept of our idea in our Litepaper/Roadmap.  
         .col-md-6.d-none.d-md-block.ps-xl-50
           .image-content.image.image_contain(style="--size: 93%;")
-            img.lazyload(data-src="./assets/img/orks-composition.png", alt="image")
+            img.lazyload(src="#" data-src="./assets/img/orks-composition.png", alt="image")
 
   section.section#gallery
     .container
@@ -68,7 +68,7 @@ block content
             each index in [1, 2, 3, 4, 5, 6]
               .swiper-slide.gallery-slider__slide
                 .image-content.image.image_cover
-                  img(data-src=`./assets/img/gallery/${index}.PNG`, alt="image").lazyload
+                  img(src="#" data-src=`./assets/img/gallery/${index}.PNG`, alt="image").lazyload
 
         .gallery-slider__scrollbar
           .swiper-scrollbar
@@ -132,35 +132,35 @@ block content
             .swiper-slide 
               .our-team-block(data-custom-interaction)
                 .our-team-block__image.image-content.image.image_cover 
-                  img(data-src="../assets/img/team/1.PNG", alt="image").lazyload
+                  img(src="#" data-src="../assets/img/team/1.PNG", alt="image").lazyload
                 .our-team-block__content 
                   h5.our-team-block__title KRAMPUS
                   h6.our-team-block__description Founder/Software Developer
             .swiper-slide 
               .our-team-block(data-custom-interaction)
                 .our-team-block__image.image-content.image.image_cover 
-                  img(data-src="../assets/img/team/2.PNG", alt="image").lazyload
+                  img(src="#" data-src="../assets/img/team/2.PNG", alt="image").lazyload
                 .our-team-block__content 
                   h5.our-team-block__title Caiman
                   h6.our-team-block__description Co-Founder/Marketing strategist
             .swiper-slide 
               .our-team-block(data-custom-interaction)
                 .our-team-block__image.image-content.image.image_cover 
-                  img(data-src="../assets/img/team/3.PNG", alt="image").lazyload
+                  img(src="#" data-src="../assets/img/team/3.PNG", alt="image").lazyload
                 .our-team-block__content 
                   h5.our-team-block__title Rafig
                   h6.our-team-block__description Community manager/ Software Developer
             .swiper-slide 
               .our-team-block(data-custom-interaction)
                 .our-team-block__image.image-content.image.image_cover 
-                  img(data-src="../assets/img/team/4.PNG", alt="image").lazyload
+                  img(src="#" data-src="../assets/img/team/4.PNG", alt="image").lazyload
                 .our-team-block__content 
                   h5.our-team-block__title Pavels
                   h6.our-team-block__description Software Developer
             .swiper-slide 
               .our-team-block(data-custom-interaction)
                 .our-team-block__image.image-content.image.image_cover 
-                  img(data-src="../assets/img/team/5.PNG", alt="image").lazyload
+                  img(src="#" data-src="../assets/img/team/5.PNG", alt="image").lazyload
                 .our-team-block__content 
                   h5.our-team-block__title Daria Dosh
                   h6.our-team-block__description Artist
