@@ -120,6 +120,7 @@ strong, b {
 }
 
 a:not([class]) {
+  --hover-color: var(--color-light);
   transition: color var(--trs-1);
   position: relative;
   &::after {
@@ -133,6 +134,27 @@ a:not([class]) {
     left: 0;
   }
   &[data-touch], &[data-hover] {
-    color: var(--color-light);
+    color: var(--hover-color);
+  }
+}
+
+ul:not([class]), .list {
+  li {
+    position: relative;
+    padding-left: 1em;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &::before {
+      content: '';
+      display: block;
+      width: 0.4em;
+      height: 0.4em;
+      background-color: currentColor;
+      border-radius: 100%;
+      position: absolute;
+      top: calc((1em * var(--line-height) / 2) - 0.2em);
+      left: 0;
+    }
   }
 }
