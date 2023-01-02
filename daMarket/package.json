@@ -9,7 +9,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.5.5",
 		"@babel/preset-env": "^7.5.5",
-		"babel-loader": "^8.0.6",
+		"babel-loader": "^8.3.0",
 		"browser-sync": "^2.26.7",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.1",
@@ -24,8 +24,8 @@
 		"gulp-typograf": "^4.0.3",
 		"gulp-uglify": "^3.0.2",
 		"gulp-watch": "^5.0.1",
-		"webpack": "^4.44.2",
-		"webpack-stream": "^6.1.0"
+		"webpack": "^5.75.0",
+		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
 		"gsap": "^3.8.0"
